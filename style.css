@@ -1,4 +1,4 @@
-﻿@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap');
 
 :root {
   --max-width: 1280px;
@@ -589,7 +589,7 @@ button {
   display: flex;
 }
 
-.modal-container {
+.modal-container, .modal-content {
   width: min(100%, 540px);
   background: rgba(10, 16, 28, 0.98);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -619,22 +619,26 @@ button {
   color: var(--text-muted);
 }
 
-.modal-form {
+.modal-form, .contact-form {
   display: grid;
   gap: 1rem;
 }
 
-.form-row {
+.form-row, .form-group {
   display: grid;
   gap: 0.6rem;
 }
 
-.form-row label {
+.form-row label, .form-group label {
   font-size: 0.95rem;
   color: var(--text-muted);
 }
 
-.form-control {
+.form-control, 
+.modal-form input, 
+.modal-form textarea, 
+.contact-form input, 
+.contact-form textarea {
   width: 100%;
   min-height: 48px;
   border-radius: 16px;
@@ -644,12 +648,18 @@ button {
   padding: 0.95rem 1rem;
 }
 
-.form-control:focus {
+.form-control:focus, 
+.modal-form input:focus, 
+.modal-form textarea:focus, 
+.contact-form input:focus, 
+.contact-form textarea:focus {
   outline: 2px solid rgba(167, 226, 45, 0.35);
   outline-offset: 2px;
 }
 
-textarea.form-control {
+textarea.form-control, 
+.modal-form textarea, 
+.contact-form textarea {
   min-height: 140px;
   resize: vertical;
 }

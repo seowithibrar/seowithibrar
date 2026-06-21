@@ -49,19 +49,23 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // --- CONSULTATION MODAL ---
-  const modal = document.getElementById('contact-modal');
+  const modal = document.getElementById('contact-modal') || document.getElementById('contactModal');
   const openModalBtns = document.querySelectorAll('.open-modal-btn');
-  const closeModalBtn = document.getElementById('modal-close');
-  const consultationForm = document.getElementById('consultation-form');
+  const closeModalBtn = document.getElementById('modal-close') || (document.getElementById('contactModal') ? document.querySelector('#contactModal .modal-close') : null);
+  const consultationForm = document.getElementById('consultation-form') || document.getElementById('modalForm');
 
   const openModal = () => {
-    modal.classList.add('open');
-    document.body.style.overflow = 'hidden'; // Stop background scrolling
+    if (modal) {
+      modal.classList.add('open');
+      document.body.style.overflow = 'hidden'; // Stop background scrolling
+    }
   };
 
   const closeModal = () => {
-    modal.classList.remove('open');
-    document.body.style.overflow = ''; // Resume scrolling
+    if (modal) {
+      modal.classList.remove('open');
+      document.body.style.overflow = ''; // Resume scrolling
+    }
   };
 
   openModalBtns.forEach(btn => btn.addEventListener('click', openModal));
@@ -76,16 +80,41 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
+  // Global toggle function for inline onclick handlers
+  window.toggleModal = function(modalId) {
+    let m = document.getElementById(modalId);
+    if (!m) {
+      if (modalId === 'contactModal') {
+        m = document.getElementById('contact-modal');
+      } else if (modalId === 'contact-modal') {
+        m = document.getElementById('contactModal');
+      }
+    }
+    if (m) {
+      m.classList.toggle('open');
+      if (m.classList.contains('open')) {
+        document.body.style.overflow = 'hidden';
+      } else {
+        document.body.style.overflow = '';
+      }
+    }
+  };
+
   // Handle Form Submission
   if (consultationForm) {
     consultationForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
-      // Select input elements
-      const name = document.getElementById('form-name').value;
-      const email = document.getElementById('form-email').value;
-      const website = document.getElementById('form-website').value;
-      const message = document.getElementById('form-message').value;
+      // Select input elements dynamically from the form
+      const nameInput = consultationForm.querySelector('input[type="text"]') || document.getElementById('form-name');
+      const emailInput = consultationForm.querySelector('input[type="email"]') || document.getElementById('form-email');
+      const websiteInput = consultationForm.querySelector('input[type="url"]') || document.getElementById('form-website');
+      const messageInput = consultationForm.querySelector('textarea') || document.getElementById('form-message');
+
+      const name = nameInput ? nameInput.value : '';
+      const email = emailInput ? emailInput.value : '';
+      const website = websiteInput ? websiteInput.value : '';
+      const message = messageInput ? messageInput.value : '';
 
       // Mock submitting states
       const submitBtn = consultationForm.querySelector('button[type="submit"]');

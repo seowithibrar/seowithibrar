@@ -21,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="saas.css">
   <script src="https://unpkg.com/lucide@latest"></script>
   <script src="script.js" defer></script>
 </head>
@@ -28,108 +29,131 @@
   <div class="announcement-bar">
     <div class="container announcement-inner">
       <p><strong>New:</strong> Free SEO review for education and visa brands in Lahore — limited spots available.</p>
-      <a href="#contact" class="announcement-link">Book your audit</a>
+      <a href="contact.html" class="announcement-link">Book your audit</a>
     </div>
   </div>
 
   <header class="header" id="header" style="background: rgba(10, 15, 28, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 1.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 99999; font-family: 'Outfit', sans-serif;">
     <div class="saas-container" style="display: flex; justify-content: space-between; align-items: center;">
-        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
-            <img src="assets/SEO With Ibrar Logo.png" alt="SEO with Ibrar" style="height: 38px; width: auto; object-fit: contain;">
-        </a>
-        <div style="display: flex; gap: 2rem; align-items: center;">
-            <a href="index.html" class="nav-link-item">HOME</a>
-            <div class="nav-dropdown">
-                <a href="services.html" class="nav-link-item">SERVICE <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i></a>
-                <div class="nav-dropdown-content mega-menu glass-panel">
-                    <div class="mega-menu-grid">
-                        <div class="mega-column">
-                            <div class="mega-column-title">
-                                <span>SEO SERVICES</span>
-                                <span class="mega-dot"></span>
-                            </div>
-                            <div class="mega-column-items">
-                                <a href="seo-services.html" class="mega-item">
-                                    <div class="mega-item-icon" style="background:#00E599"></div>
-                                    <div>
-                                        <div class="mega-item-title">SEO Expert Services</div>
-                                        <div class="mega-item-desc">Our primary organic growth plans</div>
-                                    </div>
-                                </a>
-                                <a href="seo-visa.html" class="mega-item">
-                                    <div class="mega-item-icon" style="background:#0EA5E9"></div>
-                                    <div>
-                                        <div class="mega-item-title">Visa Consultancy SEO</div>
-                                        <div class="mega-item-desc">Drive target candidate leads</div>
-                                    </div>
-                                </a>
-                                <a href="seo-education.html" class="mega-item">
-                                    <div class="mega-item-icon" style="background:#00E599"></div>
-                                    <div>
-                                        <div class="mega-item-title">Education SEO</div>
-                                        <div class="mega-item-desc">Optimize academic trust &amp; signups</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                        <div class="mega-column">
-                            <div class="mega-column-title">
-                                <span>WORDPRESS SOLUTIONS</span>
-                                <span class="mega-dot"></span>
-                            </div>
-                            <div class="mega-column-items">
-                                <a href="seo-wordpress.html" class="mega-item">
-                                    <div class="mega-item-icon" style="background:#00E599"></div>
-                                    <div>
-                                        <div class="mega-item-title">WordPress Solutions</div>
-                                        <div class="mega-item-desc">High performance enterprise sites</div>
-                                    </div>
-                                </a>
-                                <a href="seo-wordpress-visa.html" class="mega-item">
-                                    <div class="mega-item-icon" style="background:#F59E0B"></div>
-                                    <div>
-                                        <div class="mega-item-title">WordPress Visa Services</div>
-                                        <div class="mega-item-desc">Immigration consulting portals</div>
-                                    </div>
-                                </a>
-                                <a href="seo-wordpress-education.html" class="mega-item">
-                                    <div class="mega-item-icon" style="background:#00E599"></div>
-                                    <div>
-                                        <div class="mega-item-title">WordPress Education Services</div>
-                                        <div class="mega-item-desc">Academies, colleges &amp; platforms</div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <a href="about.html" class="nav-link-item">ABOUT US</a>
-            <a href="#contact" class="nav-link-item">CONTACT US</a>
-            <a href="#portfolio" class="nav-link-item">PORTFOLIO</a>
-            <a href="blog.html" class="nav-link-item">BLOG</a>
-            <a href="#contact" class="btn-saas-green" onclick="toggleModal('contactModal')">Get Free Consultation</a>
-        </div>
-    </div>
-</header>
-    <div class="container header-inner">
-      <a href="index.html" class="brand" aria-label="Homepage">
-        <img src="assets/SEO With Ibrar Logo.png" alt="SEO with Ibrar logo" class="brand-mark">
-        <span class="brand-name">SEO with Ibrar</span>
+      <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/SEO With Ibrar Logo.png" alt="SEO with Ibrar" style="height: 38px; width: auto; object-fit: contain;">
       </a>
+      <div style="display: flex; gap: 2rem; align-items: center;">
+        <a href="index.html" class="nav-link-item active" style="color: var(--green);">HOME</a>
+        
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-link-item">SERVICE <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i></a>
+          <div class="nav-dropdown-content mega-menu glass-panel">
+            <div class="mega-menu-grid">
+              <!-- Column 1 -->
+              <div class="mega-column">
+                <div class="mega-column-title">
+                  <span>SEO SERVICES</span>
+                  <span class="mega-dot"></span>
+                </div>
+                <div class="mega-column-items">
+                  <a href="seo-services.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">SEO Expert Services</div>
+                      <div class="mega-item-desc">Our primary organic growth plans</div>
+                    </div>
+                  </a>
+                  <a href="seo-visa.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#0EA5E9"></div>
+                    <div>
+                      <div class="mega-item-title">Visa Consultancy SEO</div>
+                      <div class="mega-item-desc">Drive target candidate leads</div>
+                    </div>
+                  </a>
+                  <a href="seo-education.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">Education SEO</div>
+                      <div class="mega-item-desc">Optimize academic trust &amp; signups</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- Column 2 -->
+              <div class="mega-column">
+                <div class="mega-column-title">
+                  <span>WORDPRESS SOLUTIONS</span>
+                  <span class="mega-dot"></span>
+                </div>
+                <div class="mega-column-items">
+                  <a href="seo-wordpress.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">WordPress Solutions</div>
+                      <div class="mega-item-desc">High performance enterprise sites</div>
+                    </div>
+                  </a>
+                  <a href="seo-wordpress-visa.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#F59E0B"></div>
+                    <div>
+                      <div class="mega-item-title">WordPress Visa Services</div>
+                      <div class="mega-item-desc">Immigration consulting portals</div>
+                    </div>
+                  </a>
+                  <a href="seo-wordpress-education.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">WordPress Education Services</div>
+                      <div class="mega-item-desc">Academies, colleges &amp; platforms</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-      <button id="hamburger" class="hamburger" aria-expanded="false" aria-controls="nav-links" aria-label="Open navigation menu">
-        <i data-lucide="menu"></i>
-      </button>
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link-item">LOCATIONS <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i></a>
+          <div class="nav-dropdown-content locations-mega-menu glass-panel">
+            <div class="mega-column-title">
+              <span>PAKISTAN LOCAL SEO</span>
+              <i data-lucide="map-pin" style="width: 14px; height: 14px; color: var(--green);"></i>
+            </div>
+            
+            <div class="mega-column-items">
+              <a href="seo-services-pakistan.html" class="mega-item">
+                <div class="mega-item-icon" style="background:#6B7280; margin-top: 8px;"></div>
+                <div style="flex-grow: 1;">
+                  <div class="mega-item-title">SEO Services in Pakistan</div>
+                  <div class="mega-item-desc">Our dedicated regional SEO strategy</div>
+                </div>
+              </a>
+              <a href="seo-services-lahore.html" class="mega-item">
+                <div class="mega-item-icon" style="background:#00E599; margin-top: 8px;"></div>
+                <div style="flex-grow: 1; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <div class="mega-item-title">SEO Services in Lahore</div>
+                    <div class="mega-item-desc">Custom local optimization for Lahore brands</div>
+                  </div>
+                  <i data-lucide="check" style="width: 16px; height: 16px; color: var(--green);"></i>
+                </div>
+              </a>
+            </div>
 
-      <nav id="nav-links" class="nav-links" role="navigation">
-        <a href="#hero">Home</a>
-        <a href="#services">Services</a>
-        <a href="#projects">Portfolio</a>
-        <a href="#workflow">Process</a>
-        <a href="#faqs">FAQ</a>
-        <a href="#contact" class="nav-cta">Book consultation</a>
-      </nav>
+            <div style="border-top: 1px solid rgba(255,255,255,0.05); margin: 1.5rem 0 1rem; padding-top: 1.5rem;">
+              <div style="color: #6B7280; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.75rem; text-transform: uppercase;">Quick City Anchors</div>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.25rem;">
+                <li><a href="seo-services-lahore.html" class="quick-city-link"><span class="quick-city-dot"></span> Lahore SEO Services</a></li>
+                <li><a href="#" class="quick-city-link"><span class="quick-city-dot"></span> Karachi SEO Services</a></li>
+                <li><a href="#" class="quick-city-link"><span class="quick-city-dot"></span> Islamabad SEO Services</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link-item">ABOUT US</a>
+        <a href="contact.html" class="nav-link-item">CONTACT US</a>
+        <a href="portfolio.html" class="nav-link-item">PORTFOLIO</a>
+        <a href="blog.html" class="nav-link-item">BLOG</a>
+      </div>
+      <a href="#contact" class="btn-saas-green" style="text-decoration: none;" onclick="toggleModal('contactModal')">Get Free Consultation</a>
     </div>
   </header>
 
