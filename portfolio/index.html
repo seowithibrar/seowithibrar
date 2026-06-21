@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio | SEO with Ibrar</title>
+  <meta name="description" content="View our successful SEO case studies for education and visa consultancies. See our proven organic traffic growth results." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- CSS: Design System FIRST, then page-specific -->
+  <link rel="stylesheet" href="/assets/css/design-system.css" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  <!-- NAVBAR (same on every page) -->
+  <header class="site-header" id="site-header">
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-inner">
+
+          <!-- LOGO -->
+          <a href="/index.html" class="nav-logo">
+            <img src="/assets/images/logo.png" alt="SEO with Ibrar" />
+          </a>
+
+          <!-- DESKTOP LINKS -->
+          <ul class="nav-links">
+            <li><a href="/index.html" class="nav-link">Home</a></li>
+
+            <li class="has-dropdown">
+              <a href="#" class="nav-link">
+                Service <span class="chevron">▾</span>
+              </a>
+              <ul class="dropdown">
+                <li><a href="/services/index.html">All Services</a></li>
+                <li><a href="/services/seo/index.html">SEO Services</a></li>
+                <li><a href="/services/seo-education/index.html">Education SEO</a></li>
+                <li><a href="/services/seo-visa/index.html">Visa SEO</a></li>
+                <li><a href="/services/seo-wordpress/index.html">WordPress SEO</a></li>
+              </ul>
+            </li>
+
+            <li class="has-dropdown">
+              <a href="#" class="nav-link">
+                Locations <span class="chevron">▾</span>
+              </a>
+              <ul class="dropdown">
+                <li><a href="/services/seo-lahore/index.html">SEO Lahore</a></li>
+                <li><a href="/services/seo-pakistan/index.html">SEO Pakistan</a></li>
+              </ul>
+            </li>
+
+            <li><a href="/about/index.html" class="nav-link">About Us</a></li>
+            <li><a href="/contact/index.html" class="nav-link">Contact Us</a></li>
+            <li><a href="/portfolio/index.html" class="nav-link">Portfolio</a></li>
+            <li><a href="/blog/index.html" class="nav-link">Blog</a></li>
+          </ul>
+
+          <!-- CTA BUTTON -->
+          <a href="/contact/index.html" class="btn btn-primary nav-cta">
+            Get Free Consultation
+          </a>
+
+          <!-- HAMBURGER (mobile) -->
+          <button class="hamburger" id="hamburger" aria-label="Menu">
+            <span></span><span></span><span></span>
+          </button>
+
+        </div>
+      </div>
+    </nav>
+
+    <!-- MOBILE MENU -->
+    <div class="mobile-menu" id="mobile-menu">
+      <ul class="mobile-links">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/services/index.html">Services</a></li>
+        <li><a href="/services/seo/index.html">SEO Services</a></li>
+        <li><a href="/services/seo-education/index.html">Education SEO</a></li>
+        <li><a href="/services/seo-visa/index.html">Visa SEO</a></li>
+        <li><a href="/services/seo-wordpress/index.html">WordPress SEO</a></li>
+        <li><a href="/services/seo-lahore/index.html">SEO Lahore</a></li>
+        <li><a href="/services/seo-pakistan/index.html">SEO Pakistan</a></li>
+        <li><a href="/about/index.html">About Us</a></li>
+        <li><a href="/contact/index.html">Contact Us</a></li>
+        <li><a href="/portfolio/index.html">Portfolio</a></li>
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li>
+          <a href="/contact/index.html" class="btn btn-primary" 
+             style="width:100%; text-align:center; margin-top:12px;">
+            Get Free Consultation
+          </a>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- PAGE HERO BANNER -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow">CASE STUDIES</span>
+      <h1>Our SEO Portfolio</h1>
+      <p>Real search growth, verified rankings, and conversion improvements managed by Ibrar.</p>
+      <div class="flex gap-sm" style="margin-top:32px; flex-wrap:wrap; justify-content:center;">
+        <a href="/contact/index.html" class="btn btn-primary btn-lg">
+          Get Free Consultation
+        </a>
+        <a href="/portfolio/index.html" class="btn btn-outline btn-lg">
+          View Portfolio
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAGE CONTENT SECTIONS HERE -->
+  <main>
+    <!-- FILTER TABS -->
+    <section style="padding-top:0; padding-bottom:0; border-bottom:1px solid var(--border);">
+      <div class="container">
+        <div class="portfolio-filters flex gap-sm" 
+             style="padding:24px 0; flex-wrap:wrap; justify-content:center;">
+          <button class="filter-btn active" data-filter="all">
+            All Work
+          </button>
+          <button class="filter-btn" data-filter="education">
+            Education SEO
+          </button>
+          <button class="filter-btn" data-filter="visa">
+            Visa SEO
+          </button>
+          <button class="filter-btn" data-filter="wordpress">
+            WordPress
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO GRID -->
+    <section>
+      <div class="container">
+        <div class="portfolio-grid grid-3" id="portfolio-grid">
+
+          <!-- PROJECT 1 -->
+          <article class="portfolio-card card" data-category="education">
+            <div class="portfolio-thumb">
+              <img src="/assets/images/School webiste.png" 
+                   alt="KIMS Cambridge School website" />
+              <div class="portfolio-overlay">
+                <a href="/contact/index.html" class="btn btn-primary btn-sm">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="tag">Education SEO</span>
+              <h3>KIMS Cambridge</h3>
+              <p>+180% organic leads in 6 months through targeted education SEO strategy.</p>
+              <div class="portfolio-stats flex gap-md" 
+                   style="margin-top:16px; flex-wrap:wrap;">
+                <div>
+                  <strong style="color:var(--green);">+180%</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Organic Growth
+                  </span>
+                </div>
+                <div>
+                  <strong style="color:var(--green);">98/100</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Core Web Vitals
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 2 -->
+          <article class="portfolio-card card" data-category="visa">
+            <div class="portfolio-thumb">
+              <img src="/assets/images/Visa Consutlancy in islamabad.png" 
+                   alt="SPARK Visa Consultancy website" />
+              <div class="portfolio-overlay">
+                <a href="/contact/index.html" class="btn btn-primary btn-sm">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="tag">Visa SEO</span>
+              <h3>SPARK Visa</h3>
+              <p>+140% organic search traffic growth by fixing indexation gaps and structural metadata.</p>
+              <div class="portfolio-stats flex gap-md" 
+                   style="margin-top:16px; flex-wrap:wrap;">
+                <div>
+                  <strong style="color:var(--green);">+140%</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Organic Growth
+                  </span>
+                </div>
+                <div>
+                  <strong style="color:var(--green);">96/100</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Core Web Vitals
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 3 -->
+          <article class="portfolio-card card" data-category="education">
+            <div class="portfolio-thumb">
+              <img src="/assets/images/Education plateform.png" 
+                   alt="KnowledgeKastle Education platform" />
+              <div class="portfolio-overlay">
+                <a href="/contact/index.html" class="btn btn-primary btn-sm">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="tag">Education SEO</span>
+              <h3>KnowledgeKastle</h3>
+              <p>+210% search visibility with structural course schemas and high-intent keyword alignment.</p>
+              <div class="portfolio-stats flex gap-md" 
+                   style="margin-top:16px; flex-wrap:wrap;">
+                <div>
+                  <strong style="color:var(--green);">+210%</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Search Visibility
+                  </span>
+                </div>
+                <div>
+                  <strong style="color:var(--green);">99/100</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Core Web Vitals
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 4 -->
+          <article class="portfolio-card card" data-category="visa">
+            <div class="portfolio-thumb">
+              <img src="/assets/images/Visa Consutlanct in karachi.png" 
+                   alt="Euro Immigration Consultant website" />
+              <div class="portfolio-overlay">
+                <a href="/contact/index.html" class="btn btn-primary btn-sm">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="tag">Visa SEO</span>
+              <h3>Euro Immigration</h3>
+              <p>+120% client acquisition growth targeting high-value transactional visa search queries.</p>
+              <div class="portfolio-stats flex gap-md" 
+                   style="margin-top:16px; flex-wrap:wrap;">
+                <div>
+                  <strong style="color:var(--green);">+120%</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Leads Growth
+                  </span>
+                </div>
+                <div>
+                  <strong style="color:var(--green);">95/100</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Core Web Vitals
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 5 -->
+          <article class="portfolio-card card" data-category="wordpress">
+            <div class="portfolio-thumb">
+              <img src="/assets/images/Haya Collective.webp" 
+                   alt="Haya Collective Modest Fashion store" />
+              <div class="portfolio-overlay">
+                <a href="/contact/index.html" class="btn btn-primary btn-sm">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="tag">WordPress</span>
+              <h3>Haya Collective</h3>
+              <p>轻量 e-commerce storefront layout, loading compressed catalogs in under 0.6 seconds.</p>
+              <div class="portfolio-stats flex gap-md" 
+                   style="margin-top:16px; flex-wrap:wrap;">
+                <div>
+                  <strong style="color:var(--green);">+160%</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Sales Growth
+                  </span>
+                </div>
+                <div>
+                  <strong style="color:var(--green);">97/100</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Mobile Performance
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PROJECT 6 -->
+          <article class="portfolio-card card" data-category="wordpress">
+            <div class="portfolio-thumb">
+              <img src="/assets/images/AG bookkeeping services llc.webp" 
+                   alt="AG Bookkeeping website" />
+              <div class="portfolio-overlay">
+                <a href="/contact/index.html" class="btn btn-primary btn-sm">
+                  View Case Study →
+                </a>
+              </div>
+            </div>
+            <div class="portfolio-info">
+              <span class="tag">WordPress</span>
+              <h3>AG Bookkeeping</h3>
+              <p>Rebuilt custom WordPress agency site to maximize mobile UX conversion scores and response speed.</p>
+              <div class="portfolio-stats flex gap-md" 
+                   style="margin-top:16px; flex-wrap:wrap;">
+                <div>
+                  <strong style="color:var(--green);">+130%</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Conversion Score
+                  </span>
+                </div>
+                <div>
+                  <strong style="color:var(--green);">98/100</strong>
+                  <span style="font-size:12px; 
+                    color:var(--text-muted); display:block;">
+                    Core Web Vitals
+                  </span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER (same on every page) -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top grid-4">
+
+        <!-- Brand -->
+        <div class="footer-brand">
+          <a href="/index.html">
+            <img src="/assets/images/logo.png" alt="SEO with Ibrar" 
+                 style="height:44px; margin-bottom:16px;" />
+          </a>
+          <p>Premium SEO & websites designed for education and visa brands. Clarity, trust, measurable leads.</p>
+        </div>
+
+        <!-- Services -->
+        <div>
+          <h4 class="footer-heading">Services</h4>
+          <ul class="footer-links">
+            <li><a href="/services/seo/index.html">SEO Services</a></li>
+            <li><a href="/services/seo-education/index.html">Education SEO</a></li>
+            <li><a href="/services/seo-visa/index.html">Visa SEO</a></li>
+            <li><a href="/services/seo-wordpress/index.html">WordPress SEO</a></li>
+            <li><a href="/services/seo-wordpress-education/index.html">WP Education</a></li>
+            <li><a href="/services/seo-wordpress-visa/index.html">WP Visa</a></li>
+          </ul>
+        </div>
+
+        <!-- Locations/About -->
+        <div>
+          <h4 class="footer-heading">About</h4>
+          <ul class="footer-links">
+            <li><a href="/about/index.html">About Us</a></li>
+            <li><a href="/portfolio/index.html">Portfolio</a></li>
+            <li><a href="/blog/index.html">Blog</a></li>
+            <li><a href="/services/seo-lahore/index.html">SEO Lahore</a></li>
+            <li><a href="/services/seo-pakistan/index.html">SEO Pakistan</a></li>
+          </ul>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h4 class="footer-heading">Contact</h4>
+          <ul class="footer-links">
+            <li>ibrar@seowithIbrar.com</li>
+            <li>Lahore, Pakistan</li>
+          </ul>
+          <a href="/contact/index.html" 
+             class="btn btn-primary btn-sm" 
+             style="margin-top:20px;">
+            Get Free Consultation
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2025 SEO with Ibrar. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JS -->
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
