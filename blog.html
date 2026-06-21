@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- SEO Meta Tags -->
+  <title>Blog & Search Insights | SEO with Ibrar | High-Conversion Organic Growth</title>
+  <meta name="description" content="Read actionable search optimization guides and WordPress performance checklist by Ibrar. Learn how to drive and convert organic traffic.">
+  <meta name="keywords" content="SEO blog, Lahore SEO consultant, Local SEO guides, WordPress speed, conversion-focused design, organic growth">
+  <meta name="author" content="Ibrar Ahmad">
+  
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://seowithibrar.com/blog.html">
+  <meta property="og:title" content="Blog & Search Insights | SEO with Ibrar">
+  <meta property="og:description" content="Actionable guides and strategies on SEO and WordPress site conversion.">
+  <meta property="og:image" content="assets/headshot-results.png">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="saas.css">
+  
+  <!-- Lucide Icons CDN -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  
+  <!-- Interaction Script -->
+  <script src="script.js" defer></script>
+
+  <style>
+    /* Premium UX Styles for Blog Page */
+    .blog-hero {
+      padding: 6rem 0 3rem;
+      text-align: center;
+      position: relative;
+    }
+    
+    .blog-hero::before {
+      content: '';
+      position: absolute;
+      top: -10%;
+      left: 30%;
+      width: 400px;
+      height: 400px;
+      background: radial-gradient(circle, rgba(167, 226, 45, 0.08) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .blog-hero h1 {
+      font-size: clamp(2.8rem, 5vw, 4.2rem);
+      margin: 1rem 0 1.5rem;
+      font-family: var(--font-heading);
+      letter-spacing: -0.04em;
+      line-height: 1.1;
+    }
+
+    .blog-hero p {
+      font-size: 1.15rem;
+      color: var(--text-muted);
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.6;
+    }
+
+    /* Filter & Search Controls Wrapper */
+    .blog-controls-section {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+      background: rgba(4, 11, 20, 0.4);
+      position: sticky;
+      top: 84px;
+      z-index: 40;
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+    }
+
+    .blog-controls-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn-group {
+      display: flex;
+      gap: 0.75rem;
+      flex-wrap: wrap;
+    }
+
+    .filter-btn {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      color: var(--text-muted);
+      padding: 0.65rem 1.25rem;
+      border-radius: 99px;
+      font-size: 0.9rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .filter-btn:hover {
+      background: rgba(255, 255, 255, 0.08);
+      color: var(--text-default);
+      border-color: rgba(255, 255, 255, 0.15);
+    }
+
+    .filter-btn.active {
+      background: rgba(167, 226, 45, 0.15);
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+      box-shadow: 0 0 15px rgba(167, 226, 45, 0.15);
+    }
+
+    .search-input-wrapper {
+      position: relative;
+      width: 100%;
+      max-width: 360px;
+    }
+
+    .search-input-wrapper i {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      width: 18px;
+      height: 18px;
+      pointer-events: none;
+    }
+
+    .blog-search-control {
+      width: 100%;
+      height: 46px;
+      border-radius: 99px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      background: rgba(255, 255, 255, 0.04);
+      color: var(--text-default);
+      padding: 0.5rem 1rem 0.5rem 2.8rem;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .blog-search-control:focus {
+      outline: none;
+      border-color: var(--color-primary);
+      background: rgba(255, 255, 255, 0.07);
+      box-shadow: 0 0 15px rgba(167, 226, 45, 0.1);
+    }
+
+    /* Grid layout */
+    .blog-posts-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      margin: 4rem 0;
+    }
+
+    /* Premium Article Card Design */
+    .blog-card {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      position: relative;
+      overflow: hidden;
+      background: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.06);
+      transition: var(--transition);
+    }
+
+    .blog-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+      opacity: 0;
+      transition: var(--transition);
+    }
+
+    .blog-card:hover {
+      border-color: rgba(167, 226, 45, 0.25);
+      background: rgba(255, 255, 255, 0.04);
+      box-shadow: var(--shadow-soft);
+      transform: translateY(-6px);
+    }
+
+    .blog-card:hover::before {
+      opacity: 1;
+    }
+
+    .blog-card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-tag {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.4rem 0.85rem;
+      border-radius: 99px;
+    }
+
+    .tag-education {
+      background: rgba(167, 226, 45, 0.1);
+      color: var(--color-primary);
+    }
+
+    .tag-visa {
+      background: rgba(133, 216, 255, 0.1);
+      color: var(--color-secondary);
+    }
+
+    .tag-wordpress {
+      background: rgba(46, 195, 167, 0.1);
+      color: var(--color-accent);
+    }
+
+    .tag-modern {
+      background: rgba(245, 158, 11, 0.1);
+      color: #F59E0B;
+    }
+
+    .blog-read-time {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .blog-read-time i {
+      width: 14px;
+      height: 14px;
+    }
+
+    .blog-card h3 {
+      font-family: var(--font-heading);
+      font-size: 1.35rem;
+      line-height: 1.3;
+      margin: 0 0 1rem;
+      color: var(--text-default);
+      letter-spacing: -0.02em;
+      transition: var(--transition);
+    }
+
+    .blog-card:hover h3 {
+      color: var(--color-primary);
+    }
+
+    .blog-excerpt {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+      margin: 0 0 2rem;
+      flex-grow: 1;
+    }
+
+    .blog-card-footer {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding-top: 1.25rem;
+      margin-top: auto;
+    }
+
+    .blog-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .blog-read-more {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: var(--transition);
+    }
+
+    .blog-read-more i {
+      width: 16px;
+      height: 16px;
+      transition: transform 200ms ease;
+    }
+
+    .blog-card:hover .blog-read-more i {
+      transform: translateX(4px);
+    }
+
+    /* Newsletter Box style */
+    .newsletter-card {
+      background: linear-gradient(135deg, rgba(16, 28, 48, 0.8), rgba(9, 18, 33, 0.9));
+      border: 1px solid rgba(167, 226, 45, 0.15);
+      border-radius: 28px;
+      padding: 3.5rem;
+      text-align: center;
+      max-width: 800px;
+      margin: 6rem auto 2rem;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 24px 80px rgba(0, 0, 0, 0.4);
+    }
+
+    .newsletter-card::after {
+      content: '';
+      position: absolute;
+      bottom: -30%;
+      right: -20%;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(133, 216, 255, 0.08) 0%, transparent 70%);
+      z-index: -1;
+      pointer-events: none;
+    }
+
+    .newsletter-card h2 {
+      font-family: var(--font-heading);
+      font-size: 2.2rem;
+      margin: 0 0 0.85rem;
+      letter-spacing: -0.03em;
+    }
+
+    .newsletter-card p {
+      color: var(--text-muted);
+      max-width: 520px;
+      margin: 0 auto 2.2rem;
+      font-size: 1.05rem;
+      line-height: 1.6;
+    }
+
+    .newsletter-form {
+      display: flex;
+      gap: 0.75rem;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+
+    .newsletter-form .form-control {
+      min-height: 48px;
+      border-radius: 99px;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.5rem 1.5rem;
+      flex-grow: 1;
+    }
+
+    .newsletter-form .btn {
+      padding: 0 1.75rem;
+      height: 48px;
+      white-space: nowrap;
+    }
+
+    /* Animation on dynamic changes */
+    .fade-out {
+      opacity: 0;
+      transform: scale(0.96);
+      pointer-events: none;
+    }
+
+    /* Responsive Adjustments */
+    @media (max-width: 1024px) {
+      .blog-posts-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .blog-controls-container {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .search-input-wrapper {
+        max-width: 100%;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .blog-posts-grid {
+        grid-template-columns: 1fr;
+      }
+      .newsletter-card {
+        padding: 2rem;
+      }
+      .newsletter-form {
+        flex-direction: column;
+      }
+      .newsletter-form .btn {
+        width: 100%;
+      }
+      .blog-controls-section {
+        top: 84px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Announcement Bar -->
+  <div class="announcement-bar">
+    <div class="container announcement-inner">
+      <p><strong>New:</strong> Free SEO review for education and visa brands in Lahore — limited spots available.</p>
+      <a href="#contact" class="announcement-link">Book your audit</a>
+    </div>
+  </div>
+
+  <!-- Main Navigation Header -->
+  <header class="header" id="header" style="background: rgba(10, 15, 28, 0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); padding: 1.5rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.05); position: sticky; top: 0; z-index: 99999; font-family: 'Outfit', sans-serif;">
+    <div class="saas-container" style="display: flex; justify-content: space-between; align-items: center;">
+      <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+        <img src="assets/SEO With Ibrar Logo.png" alt="SEO with Ibrar" style="height: 38px; width: auto; object-fit: contain;">
+      </a>
+      <div style="display: flex; gap: 2rem; align-items: center;">
+        <a href="index.html" class="nav-link-item">HOME</a>
+        
+        <div class="nav-dropdown">
+          <a href="services.html" class="nav-link-item">SERVICE <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i></a>
+          <div class="nav-dropdown-content mega-menu glass-panel">
+            <div class="mega-menu-grid">
+              <!-- Column 1 -->
+              <div class="mega-column">
+                <div class="mega-column-title">
+                  <span>SEO SERVICES</span>
+                  <span class="mega-dot"></span>
+                </div>
+                <div class="mega-column-items">
+                  <a href="seo-services.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">SEO Expert Services</div>
+                      <div class="mega-item-desc">Our primary organic growth plans</div>
+                    </div>
+                  </a>
+                  <a href="seo-visa.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#0EA5E9"></div>
+                    <div>
+                      <div class="mega-item-title">Visa Consultancy SEO</div>
+                      <div class="mega-item-desc">Drive target candidate leads</div>
+                    </div>
+                  </a>
+                  <a href="seo-education.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">Education SEO</div>
+                      <div class="mega-item-desc">Optimize academic trust & signups</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+              <!-- Column 2 -->
+              <div class="mega-column">
+                <div class="mega-column-title">
+                  <span>WORDPRESS SOLUTIONS</span>
+                  <span class="mega-dot"></span>
+                </div>
+                <div class="mega-column-items">
+                  <a href="seo-wordpress.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">WordPress Solutions</div>
+                      <div class="mega-item-desc">High performance enterprise sites</div>
+                    </div>
+                  </a>
+                  <a href="seo-wordpress-visa.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#F59E0B"></div>
+                    <div>
+                      <div class="mega-item-title">WordPress Visa Services</div>
+                      <div class="mega-item-desc">Immigration consulting portals</div>
+                    </div>
+                  </a>
+                  <a href="seo-wordpress-education.html" class="mega-item">
+                    <div class="mega-item-icon" style="background:#00E599"></div>
+                    <div>
+                      <div class="mega-item-title">WordPress Education Services</div>
+                      <div class="mega-item-desc">Academies, colleges & platforms</div>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="nav-dropdown">
+          <a href="#" class="nav-link-item">LOCATIONS <i data-lucide="chevron-down" style="width: 14px; height: 14px;"></i></a>
+          <div class="nav-dropdown-content locations-mega-menu glass-panel">
+            <div class="mega-column-title">
+              <span>PAKISTAN LOCAL SEO</span>
+              <i data-lucide="map-pin" style="width: 14px; height: 14px; color: var(--green);"></i>
+            </div>
+            
+            <div class="mega-column-items">
+              <a href="seo-services-pakistan.html" class="mega-item">
+                <div class="mega-item-icon" style="background:#6B7280; margin-top: 8px;"></div>
+                <div style="flex-grow: 1;">
+                  <div class="mega-item-title">SEO Services in Pakistan</div>
+                  <div class="mega-item-desc">Our dedicated regional SEO strategy</div>
+                </div>
+              </a>
+              <a href="seo-services-lahore.html" class="mega-item">
+                <div class="mega-item-icon" style="background:#00E599; margin-top: 8px;"></div>
+                <div style="flex-grow: 1; display: flex; justify-content: space-between; align-items: center;">
+                  <div>
+                    <div class="mega-item-title">SEO Services in Lahore</div>
+                    <div class="mega-item-desc">Custom local optimization for Lahore brands</div>
+                  </div>
+                </div>
+              </a>
+            </div>
+
+            <div style="border-top: 1px solid rgba(255,255,255,0.05); margin: 1.5rem 0 1rem; padding-top: 1.5rem;">
+              <div style="color: #6B7280; font-size: 0.7rem; font-weight: 700; letter-spacing: 1px; margin-bottom: 0.75rem; text-transform: uppercase;">Quick City Anchors</div>
+              <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.25rem;">
+                <li><a href="seo-services-lahore.html" class="quick-city-link"><span class="quick-city-dot"></span> Lahore SEO Services</a></li>
+                <li><a href="#" class="quick-city-link"><span class="quick-city-dot"></span> Karachi SEO Services</a></li>
+                <li><a href="#" class="quick-city-link"><span class="quick-city-dot"></span> Islamabad SEO Services</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <a href="about.html" class="nav-link-item">ABOUT US</a>
+        <a href="contact.html" class="nav-link-item">CONTACT US</a>
+        <a href="portfolio.html" class="nav-link-item">PORTFOLIO</a>
+        <a href="blog.html" class="nav-link-item active" style="color: var(--green);">BLOG</a>
+      </div>
+      <a href="contact.html" class="btn-saas-green" style="text-decoration: none;">Get Free Consultation</a>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <main>
+    <section class="blog-hero">
+      <div class="container">
+        <span class="eyebrow">Insights & Strategy</span>
+        <h1>Our SEO & Web Growth Blog</h1>
+        <p>Direct, actionable search engine optimization guides and performance site optimization strategies designed specifically for growing education and visa consultancy brands.</p>
+      </div>
+    </section>
+
+    <!-- Controls Section: Filtering & Searching -->
+    <section class="blog-controls-section">
+      <div class="container blog-controls-container">
+        <!-- Filter Category Buttons -->
+        <div class="filter-btn-group">
+          <button class="filter-btn active" data-filter="all">All Articles</button>
+          <button class="filter-btn" data-filter="education-seo">Education SEO</button>
+          <button class="filter-btn" data-filter="visa-seo">Visa SEO</button>
+          <button class="filter-btn" data-filter="wordpress">WordPress</button>
+          <button class="filter-btn" data-filter="modern-seo">Modern SEO</button>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="search-input-wrapper">
+          <i data-lucide="search"></i>
+          <input type="text" id="blog-search" class="blog-search-control" placeholder="Search guides & strategies...">
+        </div>
+      </div>
+    </section>
+
+    <!-- Articles Grid Section -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="blog-posts-grid" id="blog-posts-grid">
+
+          <!-- Post 1 -->
+          <article class="card blog-card" data-category="education-seo">
+            <div class="blog-card-header">
+              <span class="blog-tag tag-education">Education SEO</span>
+              <span class="blog-read-time"><i data-lucide="clock"></i> 5 min read</span>
+            </div>
+            <h3>How to Double Student Inquiries Organically</h3>
+            <p class="blog-excerpt">Discover the specific schema setups and user-friendly landing page frameworks that drive student admissions and conversions for academic schools and coaching centers.</p>
+            <div class="blog-card-footer">
+              <span class="blog-date">June 18, 2026</span>
+              <a href="contact.html" class="blog-read-more">Get Strategy <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="card blog-card" data-category="visa-seo">
+            <div class="blog-card-header">
+              <span class="blog-tag tag-visa">Visa SEO</span>
+              <span class="blog-read-time"><i data-lucide="clock"></i> 6 min read</span>
+            </div>
+            <h3>Local SEO Strategies for Visa Consultancies</h3>
+            <p class="blog-excerpt">How to rank in the highly competitive local Map Packs off DHA and Gulberg Lahore, building organic authority and driving local immigration inquiries without paid ads.</p>
+            <div class="blog-card-footer">
+              <span class="blog-date">June 14, 2026</span>
+              <a href="contact.html" class="blog-read-more">Get Strategy <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="card blog-card" data-category="wordpress">
+            <div class="blog-card-header">
+              <span class="blog-tag tag-wordpress">WordPress</span>
+              <span class="blog-read-time"><i data-lucide="clock"></i> 7 min read</span>
+            </div>
+            <h3>Core Web Vitals Optimization Checklist</h3>
+            <p class="blog-excerpt">Website loading speed is a crucial ranking factor. Follow this optimization list to compress page weights, configure caching databases, and hit a 95+ score.</p>
+            <div class="blog-card-footer">
+              <span class="blog-date">June 10, 2026</span>
+              <a href="contact.html" class="blog-read-more">Get Checklist <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Post 4 -->
+          <article class="card blog-card" data-category="modern-seo">
+            <div class="blog-card-header">
+              <span class="blog-tag tag-modern">Modern SEO</span>
+              <span class="blog-read-time"><i data-lucide="clock"></i> 5 min read</span>
+            </div>
+            <h3>GEO & AEO: Preparing for AI-Driven Search</h3>
+            <p class="blog-excerpt">Search engines are transitioning from blue links to direct AI answers. Learn how to structure headers and semantic messaging to ensure your brand is cited in LLM search results.</p>
+            <div class="blog-card-footer">
+              <span class="blog-date">June 05, 2026</span>
+              <a href="contact.html" class="blog-read-more">Get Guide <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Post 5 -->
+          <article class="card blog-card" data-category="education-seo">
+            <div class="blog-card-header">
+              <span class="blog-tag tag-education">Education SEO</span>
+              <span class="blog-read-time"><i data-lucide="clock"></i> 4 min read</span>
+            </div>
+            <h3>Acquiring IELTS & Language Prep Candidates</h3>
+            <p class="blog-excerpt">Standardized prep is high-demand but highly competitive. Learn how to rank local service listings and run helpful hub content that converts queries into classroom seats.</p>
+            <div class="blog-card-footer">
+              <span class="blog-date">May 29, 2026</span>
+              <a href="contact.html" class="blog-read-more">Get Guide <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+
+          <!-- Post 6 -->
+          <article class="card blog-card" data-category="wordpress">
+            <div class="blog-card-header">
+              <span class="blog-tag tag-wordpress">WordPress</span>
+              <span class="blog-read-time"><i data-lucide="clock"></i> 8 min read</span>
+            </div>
+            <h3>Securing Lead Capture Forms Against Spam Bots</h3>
+            <p class="blog-excerpt">Spam submissions clog sales processes and risk site integrity. This guide details cloudflare settings, honey-pot structures, and accessible captcha implementations.</p>
+            <div class="blog-card-footer">
+              <span class="blog-date">May 22, 2026</span>
+              <a href="contact.html" class="blog-read-more">Get Checklist <i data-lucide="arrow-right"></i></a>
+            </div>
+          </article>
+
+        </div>
+
+        <!-- Empty State (When no search matches) -->
+        <div id="blog-empty-state" style="display: none; text-align: center; padding: 4rem 1rem; border: 1px dashed rgba(255,255,255,0.08); border-radius: 24px; background: rgba(255,255,255,0.01);">
+          <i data-lucide="search-code" style="width: 48px; height: 48px; color: var(--text-muted); margin-bottom: 1.5rem;"></i>
+          <h3 style="font-family: var(--font-heading); font-size: 1.5rem; margin-bottom: 0.5rem;">No matching guides found</h3>
+          <p style="color: var(--text-muted); max-width: 400px; margin: 0 auto;">Try refining your keywords or switching your category filter to explore other search strategies.</p>
+        </div>
+
+        <!-- Newsletter glassmorphic card -->
+        <div class="newsletter-card">
+          <h2>Get Weekly Search & Conversion Advice</h2>
+          <p>Join digital managers receiving direct, actionable guides on search rankings, mobile speed, and layout strategies. strictly metrics-focused content.</p>
+          <form class="newsletter-form" id="newsletter-form">
+            <input type="email" placeholder="Enter your business email" class="form-control" required aria-label="Email address for newsletter subscription">
+            <button type="submit" class="btn btn-primary">Subscribe Now</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer (aligned with services.html) -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="logo" style="text-decoration: none; color: inherit; display: flex; align-items: center; gap: 0.5rem; font-weight: 700;">
+            <i data-lucide="trending-up"></i>
+            <span>SEO with Ibrar</span>
+          </a>
+          <p>Ethical search engine optimization and website structural engineering built around solid growth metrics.</p>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Services</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li><a href="services.html#seo-packages" style="color: var(--text-muted); transition: var(--transition);">SEO Optimizations</a></li>
+            <li><a href="services.html#wordpress-packages" style="color: var(--text-muted); transition: var(--transition);">Website Development</a></li>
+            <li><a href="services.html#seo-packages" style="color: var(--text-muted); transition: var(--transition);">Keyword Analytics</a></li>
+            <li><a href="services.html#process" style="color: var(--text-muted); transition: var(--transition);">Strategy Consulting</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Quick Links</h3>
+          <ul style="list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 0.75rem;">
+            <li><a href="index.html#about" style="color: var(--text-muted); transition: var(--transition);">About Me</a></li>
+            <li><a href="index.html#why-choose" style="color: var(--text-muted); transition: var(--transition);">Why Choose Me</a></li>
+            <li><a href="index.html#projects" style="color: var(--text-muted); transition: var(--transition);">Recent Projects</a></li>
+            <li><a href="blog.html" style="color: var(--text-muted); transition: var(--transition);">Blog & Insights</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-col">
+          <h3>Connect</h3>
+          <p style="font-size: 0.95rem; margin-bottom: 1.5rem; color: var(--text-muted);">Have a project? Let's discuss today.</p>
+          <div class="social-links" style="display: flex; gap: 0.75rem;">
+            <a href="#" class="social-btn" aria-label="LinkedIn Profile" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); display: inline-flex; align-items: center; justify-content: center; color: var(--text-muted); transition: var(--transition);"><i data-lucide="linkedin"></i></a>
+            <a href="#" class="social-btn" aria-label="Twitter Profile" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); display: inline-flex; align-items: center; justify-content: center; color: var(--text-muted); transition: var(--transition);"><i data-lucide="twitter"></i></a>
+            <a href="#" class="social-btn" aria-label="GitHub Profile" style="width: 40px; height: 40px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); display: inline-flex; align-items: center; justify-content: center; color: var(--text-muted); transition: var(--transition);"><i data-lucide="github"></i></a>
+          </div>
+        </div>
+      </div>
+      
+      <div class="footer-bottom" style="display: flex; justify-content: space-between; gap: 1rem; border-top: 1px solid rgba(255,255,255,0.08); padding-top: 1.5rem; margin-top: 2rem; color: var(--text-muted); font-size: 0.9rem;">
+        <p>&copy; 2026 SEO with Ibrar. All rights reserved.</p>
+        <div class="footer-bottom-links" style="display: flex; gap: 1.5rem;">
+          <a href="#" style="color: var(--text-muted); transition: var(--transition);">Privacy Policy</a>
+          <a href="#" style="color: var(--text-muted); transition: var(--transition);">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Interactivity Script for dynamic filtering & searching -->
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // Initialize icons
+      if (typeof lucide !== "undefined") {
+        lucide.createIcons();
+      }
+
+      const searchInput = document.getElementById("blog-search");
+      const filterButtons = document.querySelectorAll(".filter-btn");
+      const postGrid = document.getElementById("blog-posts-grid");
+      const posts = document.querySelectorAll(".blog-card");
+      const emptyState = document.getElementById("blog-empty-state");
+
+      let currentCategory = "all";
+      let currentQuery = "";
+
+      // Filtering logic
+      function filterPosts() {
+        let matchCount = 0;
+
+        posts.forEach(post => {
+          const category = post.getAttribute("data-category");
+          const title = post.querySelector("h3").textContent.toLowerCase();
+          const excerpt = post.querySelector(".blog-excerpt").textContent.toLowerCase();
+          
+          const categoryMatches = (currentCategory === "all" || category === currentCategory);
+          const searchMatches = (currentQuery === "" || title.includes(currentQuery) || excerpt.includes(currentQuery));
+
+          if (categoryMatches && searchMatches) {
+            post.style.display = "flex";
+            post.classList.remove("fade-out");
+            matchCount++;
+          } else {
+            post.classList.add("fade-out");
+            // Wait for transition before hiding
+            setTimeout(() => {
+              if (post.classList.contains("fade-out")) {
+                post.style.display = "none";
+              }
+            }, 250);
+          }
+        });
+
+        // Toggle Empty State
+        setTimeout(() => {
+          if (matchCount === 0) {
+            postGrid.style.display = "none";
+            emptyState.style.display = "block";
+          } else {
+            postGrid.style.display = "grid";
+            emptyState.style.display = "none";
+          }
+        }, 260);
+      }
+
+      // Input Event
+      searchInput.addEventListener("input", (e) => {
+        currentQuery = e.target.value.toLowerCase().trim();
+        filterPosts();
+      });
+
+      // Filter Buttons Click
+      filterButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          // Remove active from all
+          filterButtons.forEach(b => b.classList.remove("active"));
+          // Set active on clicked
+          btn.classList.add("active");
+          currentCategory = btn.getAttribute("data-filter");
+          filterPosts();
+        });
+      });
+
+      // Newsletter form submission feedback
+      const newsletterForm = document.getElementById("newsletter-form");
+      if (newsletterForm) {
+        newsletterForm.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const emailInput = newsletterForm.querySelector("input[type='email']");
+          const submitBtn = newsletterForm.querySelector("button[type='submit']");
+          
+          if (emailInput.value) {
+            submitBtn.textContent = "Subscribed!";
+            submitBtn.style.background = "var(--color-success)";
+            submitBtn.disabled = true;
+            emailInput.disabled = true;
+          }
+        });
+      }
+    });
+  </script>
+</body>
+</html>
