@@ -1,0 +1,7 @@
+# WordPress theme and zips
+seo-ibrar-theme/
+seo-services.zip
+
+# OS files
+.DS_Store
+Thumbs.db
