@@ -169,6 +169,44 @@
       background: rgba(255, 255, 255, 0.02);
       border: 1px solid rgba(255, 255, 255, 0.06);
       transition: var(--transition);
+      padding: 0;
+    }
+
+    .blog-card-banner {
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+      position: relative;
+      display: block;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .blog-card-banner img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .blog-card:hover .blog-card-banner img {
+      transform: scale(1.05);
+    }
+
+    .blog-card-content {
+      padding: 1.75rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .blog-card h3 a {
+      color: inherit;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .blog-card h3 a:hover {
+      color: var(--color-primary);
     }
 
     .blog-card::before {
@@ -572,99 +610,134 @@
 
           <!-- Top SEO Experts Post -->
           <article class="card blog-card" data-category="modern-seo">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-modern">Modern SEO</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 10 min read</span>
-            </div>
-            <h3>Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!</h3>
-            <p class="blog-excerpt">Explore the profiles of the top SEO experts in Pakistan who are redefining search optimization, digital marketing, and web design for local and global markets.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">July 3, 2025</span>
-              <a href="top-seo-experts-in-pakistan.html" class="blog-read-more">Read Post <i data-lucide="arrow-right"></i></a>
+            <a href="top-seo-experts-in-pakistan.html" class="blog-card-banner">
+              <img src="assets/top-seo-experts-pakistan.webp" alt="Top 15+ SEO Experts in Pakistan">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-modern">Modern SEO</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 10 min read</span>
+              </div>
+              <h3><a href="top-seo-experts-in-pakistan.html">Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!</a></h3>
+              <p class="blog-excerpt">Explore the profiles of the top SEO experts in Pakistan who are redefining search optimization, digital marketing, and web design for local and global markets.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">July 3, 2025</span>
+                <a href="top-seo-experts-in-pakistan.html" class="blog-read-more">Read Post <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <!-- Post 1 -->
           <article class="card blog-card" data-category="education-seo">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-education">Education SEO</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 5 min read</span>
-            </div>
-            <h3>How to Double Student Inquiries Organically</h3>
-            <p class="blog-excerpt">Discover the specific schema setups and user-friendly landing page frameworks that drive student admissions and conversions for academic schools and coaching centers.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">June 18, 2026</span>
-              <a href="contact.html" class="blog-read-more">Get Strategy <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="blog-card-banner">
+              <img src="assets/project-education.png" alt="How to Double Student Inquiries Organically">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-education">Education SEO</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 5 min read</span>
+              </div>
+              <h3><a href="contact.html">How to Double Student Inquiries Organically</a></h3>
+              <p class="blog-excerpt">Discover the specific schema setups and user-friendly landing page frameworks that drive student admissions and conversions for academic schools and coaching centers.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">June 18, 2026</span>
+                <a href="contact.html" class="blog-read-more">Get Strategy <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <!-- Post 2 -->
           <article class="card blog-card" data-category="visa-seo">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-visa">Visa SEO</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 6 min read</span>
-            </div>
-            <h3>Local SEO Strategies for Visa Consultancies</h3>
-            <p class="blog-excerpt">How to rank in the highly competitive local Map Packs off DHA and Gulberg Lahore, building organic authority and driving local immigration inquiries without paid ads.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">June 14, 2026</span>
-              <a href="contact.html" class="blog-read-more">Get Strategy <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="blog-card-banner">
+              <img src="assets/project-visa.png" alt="Local SEO Strategies for Visa Consultancies">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-visa">Visa SEO</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 6 min read</span>
+              </div>
+              <h3><a href="contact.html">Local SEO Strategies for Visa Consultancies</a></h3>
+              <p class="blog-excerpt">How to rank in the highly competitive local Map Packs off DHA and Gulberg Lahore, building organic authority and driving local immigration inquiries without paid ads.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">June 14, 2026</span>
+                <a href="contact.html" class="blog-read-more">Get Strategy <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <!-- Post 3 -->
           <article class="card blog-card" data-category="wordpress">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-wordpress">WordPress</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 7 min read</span>
-            </div>
-            <h3>Core Web Vitals Optimization Checklist</h3>
-            <p class="blog-excerpt">Website loading speed is a crucial ranking factor. Follow this optimization list to compress page weights, configure caching databases, and hit a 95+ score.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">June 10, 2026</span>
-              <a href="contact.html" class="blog-read-more">Get Checklist <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="blog-card-banner">
+              <img src="assets/dashboard-mockup.png" alt="Core Web Vitals Optimization Checklist">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-wordpress">WordPress</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 7 min read</span>
+              </div>
+              <h3><a href="contact.html">Core Web Vitals Optimization Checklist</a></h3>
+              <p class="blog-excerpt">Website loading speed is a crucial ranking factor. Follow this optimization list to compress page weights, configure caching databases, and hit a 95+ score.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">June 10, 2026</span>
+                <a href="contact.html" class="blog-read-more">Get Checklist <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <!-- Post 4 -->
           <article class="card blog-card" data-category="modern-seo">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-modern">Modern SEO</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 5 min read</span>
-            </div>
-            <h3>GEO & AEO: Preparing for AI-Driven Search</h3>
-            <p class="blog-excerpt">Search engines are transitioning from blue links to direct AI answers. Learn how to structure headers and semantic messaging to ensure your brand is cited in LLM search results.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">June 05, 2026</span>
-              <a href="contact.html" class="blog-read-more">Get Guide <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="blog-card-banner">
+              <img src="assets/hero-analytics.png" alt="GEO & AEO: Preparing for AI-Driven Search">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-modern">Modern SEO</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 5 min read</span>
+              </div>
+              <h3><a href="contact.html">GEO & AEO: Preparing for AI-Driven Search</a></h3>
+              <p class="blog-excerpt">Search engines are transitioning from blue links to direct AI answers. Learn how to structure headers and semantic messaging to ensure your brand is cited in LLM search results.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">June 05, 2026</span>
+                <a href="contact.html" class="blog-read-more">Get Guide <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <!-- Post 5 -->
           <article class="card blog-card" data-category="education-seo">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-education">Education SEO</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 4 min read</span>
-            </div>
-            <h3>Acquiring IELTS & Language Prep Candidates</h3>
-            <p class="blog-excerpt">Standardized prep is high-demand but highly competitive. Learn how to rank local service listings and run helpful hub content that converts queries into classroom seats.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">May 29, 2026</span>
-              <a href="contact.html" class="blog-read-more">Get Guide <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="blog-card-banner">
+              <img src="assets/School%20webiste.png" alt="Acquiring IELTS & Language Prep Candidates">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-education">Education SEO</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 4 min read</span>
+              </div>
+              <h3><a href="contact.html">Acquiring IELTS & Language Prep Candidates</a></h3>
+              <p class="blog-excerpt">Standardized prep is high-demand but highly competitive. Learn how to rank local service listings and run helpful hub content that converts queries into classroom seats.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">May 29, 2026</span>
+                <a href="contact.html" class="blog-read-more">Get Guide <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
           <!-- Post 6 -->
           <article class="card blog-card" data-category="wordpress">
-            <div class="blog-card-header">
-              <span class="blog-tag tag-wordpress">WordPress</span>
-              <span class="blog-read-time"><i data-lucide="clock"></i> 8 min read</span>
-            </div>
-            <h3>Securing Lead Capture Forms Against Spam Bots</h3>
-            <p class="blog-excerpt">Spam submissions clog sales processes and risk site integrity. This guide details cloudflare settings, honey-pot structures, and accessible captcha implementations.</p>
-            <div class="blog-card-footer">
-              <span class="blog-date">May 22, 2026</span>
-              <a href="contact.html" class="blog-read-more">Get Checklist <i data-lucide="arrow-right"></i></a>
+            <a href="contact.html" class="blog-card-banner">
+              <img src="assets/mockup-webdev.png" alt="Securing Lead Capture Forms Against Spam Bots">
+            </a>
+            <div class="blog-card-content">
+              <div class="blog-card-header">
+                <span class="blog-tag tag-wordpress">WordPress</span>
+                <span class="blog-read-time"><i data-lucide="clock"></i> 8 min read</span>
+              </div>
+              <h3><a href="contact.html">Securing Lead Capture Forms Against Spam Bots</a></h3>
+              <p class="blog-excerpt">Spam submissions clog sales processes and risk site integrity. This guide details cloudflare settings, honey-pot structures, and accessible captcha implementations.</p>
+              <div class="blog-card-footer">
+                <span class="blog-date">May 22, 2026</span>
+                <a href="contact.html" class="blog-read-more">Get Checklist <i data-lucide="arrow-right"></i></a>
+              </div>
             </div>
           </article>
 
