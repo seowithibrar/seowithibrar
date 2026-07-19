@@ -3,31 +3,6 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
-
-        {/**/}
-        <section className="hero" id="home">
-            <div className="container hero-container">
-                <div className="hero-content">
-                    <span className="pill-badge">SEO with Ibrar – SEO & Website Services That Drive Growth</span>
-                    <h1 className="hero-title">
-                        Your Online Presence <br />
-                        Should Bring <span className="text-green">Results</span>
-                    </h1>
-                    <p className="hero-description">
-                        More visibility. More trust. More leads. Smart SEO and website solutions that help your business grow steadily online.
-                    </p>
-                    <div className="hero-actions">
-                        <a href="http://127.0.0.1:5500/contact.html" className="btn btn-primary">
-                            Start With a Free Consultation
-                            <svg className="icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                    <div className="client-rating">
-                        <div className="client-faces">
-                            <img src="images/ibrar.png" alt="Client 1" />
-                            <img src="images/ibrar.png" alt="Client 2" />
-                            <img src="images/ibrar.png" alt="Client 3" />
-                            <img src="images/ibrar.png" alt="Client 4" />
                         </div>
                         <div className="rating-details">
                             <div className="stars">
