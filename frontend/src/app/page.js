@@ -5,72 +5,38 @@ export default function Home() {
     <>
 
         {/**/}
-        <section className="hero" id="home">
-            <div className="container hero-container">
-                <div className="hero-content animate-slide-up">
-                    <span className="pill-badge">SEO with Ibrar – SEO & Website Services That Drive Growth</span>
-                    <h1 className="hero-title">
-                        Your Online Presence <br />
-                        Should Bring <span className="text-gradient">Results</span>
-                    </h1>
-                    <p className="hero-description">
-                        More visibility. More trust. More leads. Smart SEO and website solutions that help your business grow steadily online.
-                    </p>
-                    <div className="hero-actions">
-                        <a href="http://127.0.0.1:5500/contact.html" className="btn btn-primary">
-                            Start With a Free Consultation
-                            <svg className="icon-arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                    </div>
-                    <div className="client-rating">
-                        <div className="client-faces">
-                            <img src="images/ibrar.png" alt="Client 1" />
-                            <img src="images/ibrar.png" alt="Client 2" />
-                            <img src="images/ibrar.png" alt="Client 3" />
-                            <img src="images/ibrar.png" alt="Client 4" />
-                        </div>
-                        <div className="rating-details">
-                            <div className="stars">
-                                ★★★★★
-                            </div>
-                            <span className="rating-text"><strong>150+</strong> Happy Clients</span>
-                        </div>
-                    </div>
-                </div>
-                <div className="hero-visual">
-                    <div className="hero-image-wrapper">
-                        {/**/}
-                        <div className="bg-shape-green"></div>
-                        {/**/}
-                        <img src="images/ibrar.png" alt="Ibrar Ahmad - SEO Expert" className="main-portrait" />
-                    </div>
-                    {/**/}
-                    <div className="floating-card card-projects animate-float glass-panel">
-                        <span className="card-number">250+</span>
-                        <span className="card-label">Projects<br />Completed</span>
-                    </div>
-                    <div className="floating-card card-satisfaction animate-float glass-panel" style={{animationDelay: "0.5s"}}>
-                        <span className="card-number">98%</span>
-                        <span className="card-label">Client<br />Satisfaction</span>
-                    </div>
-                    <div className="floating-card card-experience animate-float glass-panel" style={{animationDelay: "1s"}}>
-                        <span className="card-number text-green">6+</span>
-                        <span className="card-label">Years of<br />Experience</span>
-                    </div>
-                    <div className="floating-card card-chart animate-float glass-panel" style={{animationDelay: "1.5s"}}>
-                        <div className="chart-header">
-                            <span className="chart-title">Organic Traffic</span>
-                            <span className="chart-value text-green">+215%</span>
-                        </div>
-                        <svg className="chart-line" viewBox="0 0 100 40">
-                            <path d="M0 30 Q 15 35, 30 20 T 60 15 T 100 5" fill="none" stroke="#8cc63f" strokeWidth="3" strokeLinecap="round"/>
-                            <path d="M0 30 Q 15 35, 30 20 T 60 15 T 100 5 L 100 40 L 0 40 Z" fill="rgba(140, 198, 63, 0.1)" stroke="none"/>
-                            <circle cx="100" cy="5" r="3" fill="#8cc63f"/>
-                        </svg>
-                    </div>
-                </div>
+        <section className="hero-redesign bg-grid" id="home">
+    <div className="container hero-redesign-container">
+        {/* Left Side: Typography & CTA */}
+        <div className="hero-redesign-content animate-slide-up">
+            <h1 className="hero-title">
+                Welcome to my new <br />
+                <span className="text-gradient">Portfolio Website</span>
+            </h1>
+            <p className="hero-description">
+                Hello I am Ibrar, Professional SEO Expert & Full-stack Developer. This is my portfolio site here I am presenting my projects and services. Let's Explore.
+            </p>
+            <div className="hero-actions" style={{display: 'flex', gap: '1rem', alignItems: 'center'}}>
+                <a href="/contact" className="btn btn-primary" style={{borderRadius: '8px'}}>
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+                    Download CV
+                </a>
             </div>
-        </section>
+        </div>
+
+        {/* Right Side: Portrait Mask */}
+        <div className="portrait-container animate-float">
+            {/* Sparkles */}
+            <svg className="sparkle sparkle-1" width="40" height="40" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            <svg className="sparkle sparkle-2" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            <svg className="sparkle sparkle-3" width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2L15 9L22 12L15 15L12 22L9 15L2 12L9 9L12 2Z"/></svg>
+            
+            <div className="portrait-mask">
+                <img src="/images/ibrar.png" alt="Ibrar SEO Expert" className="portrait-img" />
+            </div>
+        </div>
+    </div>
+</section>
         {/**/}
         <section className="trusted-by">
             <div className="container text-center">
