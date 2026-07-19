@@ -7,11 +7,11 @@ export default function Home() {
         {/**/}
         <section className="hero" id="home">
             <div className="container hero-container">
-                <div className="hero-content">
+                <div className="hero-content animate-slide-up">
                     <span className="pill-badge">SEO with Ibrar – SEO & Website Services That Drive Growth</span>
                     <h1 className="hero-title">
                         Your Online Presence <br />
-                        Should Bring <span className="text-green">Results</span>
+                        Should Bring <span className="text-gradient">Results</span>
                     </h1>
                     <p className="hero-description">
                         More visibility. More trust. More leads. Smart SEO and website solutions that help your business grow steadily online.
@@ -45,19 +45,19 @@ export default function Home() {
                         <img src="images/ibrar.png" alt="Ibrar Ahmad - SEO Expert" className="main-portrait" />
                     </div>
                     {/**/}
-                    <div className="floating-card card-projects">
+                    <div className="floating-card card-projects animate-float glass-panel">
                         <span className="card-number">250+</span>
                         <span className="card-label">Projects<br />Completed</span>
                     </div>
-                    <div className="floating-card card-satisfaction">
+                    <div className="floating-card card-satisfaction animate-float glass-panel" style={{animationDelay: "0.5s"}}>
                         <span className="card-number">98%</span>
                         <span className="card-label">Client<br />Satisfaction</span>
                     </div>
-                    <div className="floating-card card-experience">
+                    <div className="floating-card card-experience animate-float glass-panel" style={{animationDelay: "1s"}}>
                         <span className="card-number text-green">6+</span>
                         <span className="card-label">Years of<br />Experience</span>
                     </div>
-                    <div className="floating-card card-chart">
+                    <div className="floating-card card-chart animate-float glass-panel" style={{animationDelay: "1.5s"}}>
                         <div className="chart-header">
                             <span className="chart-title">Organic Traffic</span>
                             <span className="chart-value text-green">+215%</span>
