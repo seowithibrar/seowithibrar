@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGLHCFG9');</script>
-<!-- End Google Tag Manager -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ibrar.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert seo services visa consultancy providing data-driven organic growth and high-performance strategies for your business.">
-    <title>Seo Services Visa Consultancy | SEO With Ibrar</title>
+    <meta name="description" content="Get more study, work and immigration client inquiries with SEO built specifically for visa consultancies. Rank higher, build trust, and grow leads.">
+    <title>SEO Services for Visa Consultancy | SEO With Ibrar</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,6 +37,80 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
         }
+        /* Testimonial Slider Styles */
+        .testimonial-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 3rem;
+        }
+        @media (max-width: 768px) {
+            .testimonial-header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 1.5rem;
+            }
+        }
+        .testimonial-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+            -webkit-overflow-scrolling: touch;
+            background: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 8px;
+        }
+        .testimonial-slider::-webkit-scrollbar {
+            display: none;
+        }
+        .testimonial-card {
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 400px;
+            max-width: 85vw;
+            padding: 3.5rem 3rem;
+            border-right: 1px solid var(--color-border);
+            background: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            min-height: 400px;
+        }
+        .testimonial-card:last-child {
+            border-right: none;
+        }
+        .testimonial-green-card {
+            background-color: #b7ff00;
+            color: var(--color-dark);
+            border-right: 1px solid var(--color-border);
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 3.5rem 3rem;
+            scroll-snap-align: start;
+            flex: 0 0 auto;
+            width: 320px;
+            max-width: 80vw;
+        }
+        .nav-btn-circle {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            border: 1px solid var(--color-border);
+            background: transparent;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            margin-left: 0.5rem;
+            color: var(--color-text-muted);
+        }
+        .nav-btn-circle:hover {
+            border-color: var(--color-dark);
+            color: var(--color-dark);
+        }
         .process-step {
             background: var(--color-bg-light);
             border-radius: 12px;
@@ -56,17 +126,292 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             top: 1rem;
             right: 1.5rem;
         }
-</style>
+
+        /* Modern Visual UI Redesign Styles */
+        .lahore-hero-dark {
+            background-color: var(--color-bg-alt);
+            color: var(--color-gray-900);
+            padding: 5rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .lahore-hero-dark::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(140, 198, 63, 0.12) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+        }
+        .lahore-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(140, 198, 63, 0.15);
+            border: 1px solid rgba(140, 198, 63, 0.35);
+            color: var(--color-gray-900);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+        .lahore-area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .lahore-tag {
+            background: #ffffff;
+            border: 1px solid var(--color-gray-200);
+            color: var(--color-gray-700);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .lahore-tag:hover {
+            background: rgba(140, 198, 63, 0.15);
+            border-color: rgba(140, 198, 63, 0.4);
+            color: var(--color-gray-900);
+            transform: translateY(-2px);
+        }
+        .feature-card-enhanced {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid var(--color-primary);
+            border-radius: 16px;
+            padding: 2.25rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .feature-card-enhanced:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px -10px rgba(140, 198, 63, 0.22);
+            border-color: var(--color-primary);
+        }
+        .feature-icon-badge {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            background: rgba(140, 198, 63, 0.12);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Modern Keyframe Animations & Floating WhatsApp Button */
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-visual-animated {
+            animation: floatAnimation 4.5s ease-in-out infinite;
+        }
+        .card-animated {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .card-animated:hover {
+            transform: translateY(-6px) scale(1.01) !important;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12) !important;
+        }
+        .whatsapp-float-widget {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #25D366;
+            color: #ffffff !important;
+            padding: 0.75rem 1.25rem;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            animation: pulseGlow 2.5s infinite;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float-widget:hover {
+            transform: scale(1.06) translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+        }
+        .whatsapp-float-label {
+            font-size: 0.88rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float-label {
+                display: none;
+            }
+            .whatsapp-float-widget {
+                padding: 0.8rem;
+                border-radius: 50%;
+            }
+        }
+
+        .process-step-enhanced {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2rem;
+            position: relative;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .process-step-enhanced:hover {
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 30px rgba(140, 198, 63, 0.15);
+            transform: translateY(-5px);
+        }
+        .about-modern {
+            padding: 7rem 0;
+            background: #ffffff;
+        }
+        .about-modern-grid {
+            display: grid;
+            grid-template-columns: 0.9fr 1.1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        @media (max-width: 991px) {
+            .lahore-hero-dark .hero-container {
+                grid-template-columns: 1fr !important;
+            }
+            .about-modern-grid {
+                grid-template-columns: 1fr;
+                gap: 3rem;
+            }
+        }
+
+        /* Portfolio Proof Slider Styles */
+        .portfolio-proof-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            transition: all 0.35s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+        .portfolio-proof-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(140, 198, 63, 0.2);
+            border-color: var(--color-primary);
+        }
+        .portfolio-proof-img-container {
+            width: 100%;
+            background: #0f172a;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 1rem;
+        }
+        .portfolio-proof-img {
+            width: 100%;
+            height: auto;
+            max-height: 280px;
+            object-fit: contain;
+            display: block;
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+        .portfolio-proof-card:hover .portfolio-proof-img {
+            transform: scale(1.03);
+        }
+
+        /* FAQ Accordion Styling */
+        .faq-accordion details {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 12px;
+            margin-bottom: 1rem;
+            padding: 1.25rem 1.5rem;
+            transition: all 0.3s ease;
+        }
+        .faq-accordion details[open] {
+            border-color: var(--color-primary);
+            box-shadow: 0 8px 20px rgba(140, 198, 63, 0.12);
+        }
+        .faq-accordion summary {
+            font-weight: 700;
+            font-size: 1.05rem;
+            color: var(--color-gray-900);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .faq-accordion summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-accordion summary::after {
+            content: '+';
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: var(--color-primary);
+            transition: transform 0.3s ease;
+        }
+        .faq-accordion details[open] summary::after {
+            content: '−';
+            transform: rotate(180deg);
+        }
+        .faq-content {
+            margin-top: 1rem;
+            color: var(--color-gray-600);
+            line-height: 1.7;
+            font-size: 0.98rem;
+            border-top: 1px dashed #e2e8f0;
+            padding-top: 1rem;
+        }
+    </style>
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Seo Services Visa Consultancy | SEO With Ibrar">
-    <meta property="og:description" content="Expert seo services visa consultancy providing data-driven organic growth and high-performance strategies for your business.">
+    <meta property="og:title" content="SEO Services for Visa Consultancy | SEO With Ibrar">
+    <meta property="og:description" content="Get more study, work and immigration client inquiries with SEO built specifically for visa consultancies. Rank higher, build trust, and grow leads.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://seowithibrar.com/seo-services-visa-consultancy">
     <meta property="og:image" content="https://seowithibrar.com/images/logo-full.png">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Seo Services Visa Consultancy | SEO With Ibrar">
-    <meta name="twitter:description" content="Expert seo services visa consultancy providing data-driven organic growth and high-performance strategies for your business.">
+    <meta name="twitter:title" content="SEO Services for Visa Consultancy | SEO With Ibrar">
+    <meta name="twitter:description" content="Get more study, work and immigration client inquiries with SEO built specifically for visa consultancies. Rank higher, build trust, and grow leads.">
     <meta name="twitter:image" content="https://seowithibrar.com/images/logo-full.png">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://seowithibrar.com/seo-services-visa-consultancy">
@@ -75,26 +420,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 {
   "@context": "https://schema.org",
   "@type": "Service",
-  "name": "Seo Services Visa Consultancy | SEO With Ibrar",
-  "description": "Expert seo services visa consultancy providing data-driven organic growth and high-performance strategies for your business.",
+  "serviceType": "SEO Services for Visa Consultancy",
+  "provider": {
+    "@type": "Person",
+    "name": "Ibrar Ahmad"
+  },
+  "areaServed": "Pakistan",
   "url": "https://seowithibrar.com/seo-services-visa-consultancy"
+}
+    </script>
+    <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is SEO for visa consultancy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "SEO for visa consultancy helps your business appear on Google when people search for visa services, connecting you with clients seeking study, work, or immigration assistance."
+      }
+    }
+  ]
 }
     </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGLHCFG9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-                        <a href="index" class="logo">
+            <a href="/" class="logo">
                 <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
             </a>
             <!-- Desktop Menu -->
-                        <nav class="nav-menu">
-                <a href="index" class="nav-link">HOME</a>
+            <nav class="nav-menu">
+                <a href="/" class="nav-link">HOME</a>
                 <div class="nav-item-dropdown">
                     <a href="#" class="nav-link">SERVICE <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 2px;"><path d="M6 9l6 6 6-6"/></svg></a>
                     <div class="mega-menu">
@@ -134,7 +495,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="mega-item-desc">High performance enterprise sites</div>
                                     </div>
                                 </a>
-                                <a href="Wordpress-design-services-for-visa-consultancy" class="mega-item">
+                                <a href="wordpress-design-services-for-visa-consultancy" class="mega-item">
                                     <div class="mega-item-dot"></div>
                                     <div class="mega-item-content">
                                         <div class="mega-item-title">WordPress Visa Services</div>
@@ -179,419 +540,854 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
         </div>
     </header>
-<main>
-    <!-- Hero Section -->
-    <section class="service-hero">
-        <div class="container hero-container" style="align-items: center;">
-            <div class="hero-content" style="text-align: left;">
-                <span class="pill-badge" style="background: rgba(140, 198, 63, 0.2); color: var(--color-primary);">VISA CONSULTANCY SEO</span>
-                <h1 class="hero-title" style="color: var(--color-white); margin-bottom: 1.5rem;">
-                    SEO Services for <span class="text-green">Visa Consultancy</span>
-                </h1>
-                <p class="hero-description" style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
-                    Your potential clients search online before they contact a visa consultant. They compare options, assess credibility, and make careful choices. If your visa consultancy does not appear clearly in search results, you lose serious client inquiries.
-                </p>
-                <p class="hero-description" style="color: rgba(255,255,255,0.8); margin-bottom: 1rem;">
-                    This SEO for visa consultancy service helps your business show up when people actively search for visa support. Whether someone needs help with a study visa, work visa, visit visa, or immigration process, the right search visibility connects them directly to your consultancy.
-                </p>
-                <p class="hero-description" style="color: var(--color-white); font-weight: 600; margin-bottom: 2rem;">
-                    With a clear SEO setup for visa consultants, your consultancy becomes easier to find, more credible, and more competitive in online search results.
-                </p>
-                <a href="contact" class="btn btn-primary">Get a Free SEO Consultation</a>
-            </div>
-            <div class="hero-visual">
-                <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem;">
-                    <img src="images/ibrar.png" alt="Visa Consultancy SEO" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- About Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-white);">
-        <div class="container" style="max-width: 800px; text-align: center;">
-            <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1.5rem;">About SEO for Visa Consultancy</h2>
-            <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                SEO for visa consultancy focuses on improving your online visibility so potential clients can find your services when they search on Google. Most visa seekers search before contacting anyone. Your consultancy loses leads if it doesn't appear.
-            </p>
-            <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                This type of SEO is designed for visa consultants seeking high-quality inquiries, not random traffic. It helps your website rank for searches related to study visas, work visas, visit visas, and immigration services. Your consultancy should connect with people who need help and are ready to move forward.
-            </p>
-            <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                SEO for visa consultancy also helps build trust. A strong online presence makes your business look more credible and reliable. Customers feel more comfortable contacting you when your website appears clearly in search results.
-            </p>
-            <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; font-weight: 600;">
-                Your visa consultancy can generate consistent leads, reduce paid ads, and grow organically with the right SEO strategy.
-            </p>
-        </div>
-    </section>
-    <!-- Who Can Benefit Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-bg-light);">
-        <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
-                <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1.5rem;">Who Can Benefit from Visa Consultancy SEO</h2>
-                <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7;">
-                    Visa professionals seeking to attract serious clients through search engines can benefit from this SEO service. It works best for consultancies that need trust, credibility, and regular enquiries. This SEO service provides a long-term solution for visa consultancy visibility, trust, and qualified search engine leads.
-                </p>
-            </div>
-            <div class="service-grid-3">
-                <div class="feature-card">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem;">Student Visa Consultants</h3>
-                    <p style="color: var(--color-text-muted);">Reach students and parents searching for study abroad guidance. Appear for course, country, and admission-related visa searches.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem;">Immigration & PR Consultants</h3>
-                    <p style="color: var(--color-text-muted);">Get visibility for long-term immigration and residency services. Attract clients who conduct thorough research before choosing a consultant.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem;">Travel & Visit Visa Agencies</h3>
-                    <p style="color: var(--color-text-muted);">Connect with users searching for short-term travel or a visit visa support. Capture demand during peak travel planning periods.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem;">Work Visa Consultants</h3>
-                    <p style="color: var(--color-text-muted);">Reach professionals looking for overseas jobs and work visa options. Appear in searches with strong intent and higher lead value.</p>
-                </div>
-                <div class="feature-card">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem;">Legal & Corporate Visas</h3>
-                    <p style="color: var(--color-text-muted);">Build authority in complex, high-value visa cases. Improve trust through consistent search visibility.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Why SEO Matters Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-white);">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
-                <div>
-                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1.5rem;">Why SEO Matters for Visa Consultants</h2>
-                    <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        People searching for visa services rarely make quick decisions. They search online, compare multiple consultants, and choose the one that looks trustworthy and visible. If your consultancy does not appear in search results, potential clients will never reach you.
+
+    <main>
+        <!-- 1. Hero Section -->
+        <section class="lahore-hero-dark">
+            <div class="container hero-container" style="align-items: center; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem;">
+                <div class="hero-content" style="text-align: left;">
+                    <span class="lahore-pill">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        STUDY ABROAD & VISA CONSULTANCY SEO • SPECIALIZATION NICHE
+                    </span>
+                    <h1 class="hero-title" style="color: var(--color-gray-900); font-size: 3.1rem; line-height: 1.15; font-weight: 800; margin-bottom: 1.5rem;">
+                        SEO Services for <span style="color: var(--color-primary);">Visa Consultancy</span>
+                    </h1>
+                    <p class="hero-description" style="color: var(--color-gray-600); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+                        Your potential clients search online before they contact a visa consultant. They compare options, assess credibility, and make careful choices. If your visa consultancy does not appear clearly in search results, you lose serious client inquiries.
                     </p>
-                    <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        SEO helps your visa consultancy show up when people are actively looking for help. It puts your services in front of users with intent. These are not casual browsers. These are people who want answers and are ready to contact a consultant.
+                    <p class="hero-description" style="color: var(--color-gray-500); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        This specialized SEO service helps your business show up when people actively search for study visas, work visas, visit visas, or immigration support.
                     </p>
-                    <p style="color: var(--color-dark); font-size: 1.1rem; font-weight: 600; line-height: 1.7; margin-bottom: 2rem;">
-                        For visa consultants, SEO is not just marketing. It is a reliable way to attract better clients and grow steadily through search.
-                    </p>
-                    <a href="contact" class="btn btn-primary">Start Getting Serious Clients</a>
+
+                    <!-- Key Niche Tag Pills -->
+                    <div class="lahore-area-tags">
+                        <span class="lahore-tag">📍 Study Visas</span>
+                        <span class="lahore-tag">📍 Student Enrollment</span>
+                        <span class="lahore-tag">📍 Immigration Leads</span>
+                        <span class="lahore-tag">📍 UK & Canada Visas</span>
+                        <span class="lahore-tag">📍 Australia Visas</span>
+                        <span class="lahore-tag">📍 Schengen Visas</span>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                        <a href="contact" class="btn btn-primary" style="padding: 0.9rem 1.8rem; font-weight: 700; box-shadow: 0 10px 25px rgba(140, 198, 63, 0.3);">
+                            Get Free SEO Consultation
+                        </a>
+                        <a href="#services-grid" class="btn" style="background: #ffffff; color: var(--color-gray-900); border: 1px solid var(--color-gray-300); padding: 0.9rem 1.5rem; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">Explore Services ↓</a>
+                    </div>
                 </div>
-                <div>
-                    <div style="background: var(--color-bg-light); border-radius: 16px; padding: 2.5rem;">
-                        <ul style="list-style: none; padding: 0; margin: 0;">
-                            <li style="margin-bottom: 1.5rem;">
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem;"><span class="text-green">✓</span> People search online first</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Most clients begin their visa journey on Google. SEO helps you appear at that first and most important step.</p>
+
+                <!-- Live Search Console Dashboard Visual -->
+                <div class="hero-visual hero-visual-animated">
+                    <div style="background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); position: relative;">
+                        <!-- Live Dashboard Top Bar -->
+                        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.85rem; margin-bottom: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+                                <span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; margin-left: 0.4rem; letter-spacing: 0.5px;">LIVE VISA SEO DASHBOARD</span>
+                            </div>
+                            <span style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; border: 1px solid rgba(140, 198, 63, 0.3); font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                        </div>
+
+                        <!-- 2x2 Performance Metrics Grid -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1.25rem;">
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #8cc63f; line-height: 1;">+340%</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Visa Lead Growth</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 0.1rem;">Search Console Verified</div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #60a5fa; line-height: 1;">100+</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Top Ranks</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 0.1rem;">Commercial Queries</div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #8cc63f; line-height: 1;">98%</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Core Web Vitals</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 0.1rem;">PageSpeed Optimized</div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #fbbf24; line-height: 1;">100%</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">White-Hat</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8; margin-top: 0.1rem;">Google Guidelines</div>
+                            </div>
+                        </div>
+
+                        <!-- GSC Growth Graph Card -->
+                        <div style="background: rgba(15, 23, 42, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1rem; overflow: hidden;">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.75rem;">
+                                <span style="font-size: 0.78rem; font-weight: 700; color: #e2e8f0; display: flex; align-items: center; gap: 0.4rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#8cc63f" stroke-width="2.5"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                                    Search Console Visa Growth Curve
+                                </span>
+                                <span style="font-size: 0.7rem; color: #8cc63f; font-weight: 700; background: rgba(140, 198, 63, 0.1); padding: 0.15rem 0.5rem; border-radius: 10px;">+340% UP</span>
+                            </div>
+                            <img src="images/Visa Consutlacny in Karachi.png" alt="Visa Consultancy SEO Organic Growth Chart" style="width: 100%; height: auto; max-height: 140px; object-fit: contain; border-radius: 8px; display: block;">
+                        </div>
+
+                        <!-- Verified Floating Badge -->
+                        <div style="position: absolute; bottom: -12px; right: 20px; background: #8cc63f; color: #090d16; font-size: 0.72rem; font-weight: 800; padding: 0.4rem 1rem; border-radius: 20px; box-shadow: 0 8px 20px rgba(140, 198, 63, 0.4); display: flex; align-items: center; gap: 0.35rem;">
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            VERIFIED VISA LEADS STRATEGY
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. Post-Hero Performance Stats Section -->
+        <section style="background: #0b1329; padding: 2.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); position: relative;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+                    <!-- Card 1 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">+340%</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Avg Traffic Growth</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">Search Console Verified</div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">120+</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Projects Delivered</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">SEO & Web Development</div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">98%</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Core Web Vitals</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">WordPress Speed Score</div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">100%</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">White-Hat Certified</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">Google Guidelines</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. About Section -->
+        <section class="about-modern" id="about">
+            <div class="container">
+                <div class="about-modern-grid">
+                    <!-- Left Column: Image, Social Connect Bar & Stats -->
+                    <div>
+                        <!-- Image Wrapper -->
+                        <div style="position: relative; border-radius: 24px; padding: 1.5rem; background: linear-gradient(135deg, rgba(140, 198, 63, 0.25), rgba(140, 198, 63, 0.05)); margin-bottom: 1.25rem;">
+                            <img src="images/ibrar.png" alt="Ibrar Ahmad Visa Consultancy SEO Specialist" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 15px 35px rgba(0,0,0,0.1);">
+                            <!-- Pill on image -->
+                            <div style="position: absolute; bottom: -10px; left: 50%; transform: translateX(-50%); background: var(--color-gray-900); color: #ffffff; padding: 0.5rem 1.5rem; border-radius: 30px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; border: 3px solid #ffffff; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                                <span style="color: var(--color-primary);">●</span> IBRAR AHMAD • LEAD VISA SEO CONSULTANT
+                            </div>
+                        </div>
+
+                        <!-- Social Media Buttons directly under Profile Image -->
+                        <div style="display: flex; gap: 0.75rem; justify-content: center; margin-bottom: 2rem; flex-wrap: wrap;">
+                            <a href="https://pk.linkedin.com/in/seowithibrar" target="_blank" rel="noopener noreferrer" style="background: #0077b5; color: #ffffff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; box-shadow: 0 4px 10px rgba(0,119,181,0.3);" title="LinkedIn Profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.49 1.49 0 1 0 0 2.98 1.49 1.49 0 0 0 0-2.98z"/></svg>
+                            </a>
+                            <a href="https://www.youtube.com/@seowithibrar/videos" target="_blank" rel="noopener noreferrer" style="background: #ff0000; color: #ffffff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; box-shadow: 0 4px 10px rgba(255,0,0,0.3);" title="YouTube Channel">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                            </a>
+                            <a href="https://www.instagram.com/seowithibrar/" target="_blank" rel="noopener noreferrer" style="background: linear-gradient(45deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888); color: #ffffff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; box-shadow: 0 4px 10px rgba(220,39,67,0.3);" title="Instagram Profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                            </a>
+                            <a href="https://www.pinterest.com/SEOWithIbrar/" target="_blank" rel="noopener noreferrer" style="background: #bd081c; color: #ffffff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease; box-shadow: 0 4px 10px rgba(189,8,28,0.3);" title="Pinterest Profile">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.367 18.62 0 12.017 0z"/></svg>
+                            </a>
+                        </div>
+
+                        <!-- Stats Card -->
+                        <div style="border: 1px solid #e2e8f0; border-radius: 16px; padding: 2rem; background: #ffffff; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                <span style="font-size: 0.75rem; font-weight: 700; color: #64748b; letter-spacing: 1px; text-transform: uppercase;">Verified Performance Metrics</span>
+                                <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Visa Niche Specialization</span>
+                            </div>
+                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 0.25rem;">7+ Years</div>
+                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">SEO Expertise</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Client Deliveries</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 0.25rem;">120+</div>
+                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">Projects Completed</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Brands Ranked</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 0.25rem;">98%</div>
+                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">Core Web Vitals</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">WordPress Page Speed</div>
+                                </div>
+                                <div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 0.25rem;">+340%</div>
+                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">Avg. Traffic Growth</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Organic Strategy</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Content -->
+                    <div>
+                        <span class="lahore-pill" style="margin-bottom: 1.25rem;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                            ABOUT SEO FOR VISA CONSULTANCY
+                        </span>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900); line-height: 1.2; margin-bottom: 1.5rem;">
+                            High-Converting Lead Generation for Visa Consultants
+                        </h2>
+                        
+                        <div style="color: var(--color-gray-600); font-size: 1.05rem; line-height: 1.7; margin-bottom: 2rem;">
+                            <p style="margin-bottom: 1rem;">SEO for visa consultancy focuses on improving your online visibility so potential clients can find your services when they search on Google. Most visa seekers search before contacting anyone. Your consultancy loses leads if it doesn't appear.</p>
+                            <p style="margin-bottom: 1rem;">This specialized SEO service is designed for visa consultants seeking high-quality inquiries, not random traffic. It helps your website rank for searches related to study visas, work visas, visit visas, and immigration services. Your consultancy should connect with people who need help and are ready to move forward.</p>
+                            <p style="margin-bottom: 1rem;">SEO for visa consultancy also helps build trust. A strong online presence makes your business look more credible and reliable. Customers feel more comfortable contacting you when your website appears clearly in search results.</p>
+                            <p style="font-weight: 600;">Your visa consultancy can generate consistent leads, reduce paid ads, and grow organically with the right SEO strategy.</p>
+                        </div>
+
+                        <!-- Modern SEO Approach Card -->
+                        <div style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); border-radius: 16px; padding: 1.75rem; color: #ffffff; margin-top: 2rem; box-shadow: 0 15px 30px rgba(0,0,0,0.15);">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 0.75rem;">
+                                <span style="font-size: 0.75rem; font-weight: 800; color: #8cc63f; text-transform: uppercase; letter-spacing: 1px;">MODERN VISA SEO APPROACH</span>
+                                <span style="background: rgba(140,198,63,0.2); color: #8cc63f; font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.6rem; border-radius: 12px;">2026 AI-READY</span>
+                            </div>
+                            <h4 style="font-size: 1.25rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">
+                                Entity Search & AI Overview Optimization
+                            </h4>
+                            <p style="color: #cbd5e1; font-size: 0.92rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                                We optimize your visa services for ChatGPT recommendations, Google AI Overviews, and GEO so students searching for visa consultants find your agency first.
+                            </p>
+                            <a href="contact" class="btn btn-primary" style="padding: 0.75rem 1.4rem; font-size: 0.88rem; font-weight: 800;">
+                                Get Modern AI Visa Strategy →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Who Can Benefit Section -->
+        <section id="services-grid" style="padding: 6rem 0; background-color: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+                    <span class="lahore-pill">HIGH INTENT TARGETING</span>
+                    <h2 class="section-title" style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900);">
+                        Who Can Benefit from Visa Consultancy SEO
+                    </h2>
+                    <p style="color: var(--color-gray-600); font-size: 1.05rem;">
+                        Visa professionals seeking to attract serious clients through search engines can benefit from this specialized SEO service.
+                    </p>
+                </div>
+                <div class="service-grid-3">
+                    <div class="feature-card-enhanced card-animated">
+                        <div class="feature-icon-badge">🎓</div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Student Visa Consultants</h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Reach students and parents searching for study abroad guidance. Appear for course, country, and admission-related visa searches.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <div class="feature-icon-badge">🛂</div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Immigration & PR Consultants</h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Get visibility for long-term immigration and residency services. Attract clients who conduct thorough research before choosing a consultant.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <div class="feature-icon-badge">✈️</div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Travel & Visit Visa Agencies</h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Connect with users searching for short-term travel or visit visa support during peak travel planning periods.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <div class="feature-icon-badge">💼</div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Work Visa Consultants</h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Reach professionals looking for overseas jobs and work visa options. Appear in searches with strong intent and higher lead value.</p>
+                        </div>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <div class="feature-icon-badge">⚖️</div>
+                        <div>
+                            <h3 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Legal & Corporate Visas</h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Build authority in complex, high-value visa cases and improve trust through consistent search visibility.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. Why SEO Matters Section -->
+        <section style="padding: 6rem 0; background-color: #ffffff;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 1.5rem;">Why SEO Matters for Visa Consultants</h2>
+                        <p style="color: var(--color-gray-600); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            People searching for visa services rarely make quick decisions. They search online, compare multiple consultants, and choose the one that looks trustworthy and visible. If your consultancy does not appear in search results, potential clients will never reach you.
+                        </p>
+                        <p style="color: var(--color-gray-600); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            SEO helps your visa consultancy show up when people are actively looking for help. It puts your services in front of users with intent. These are not casual browsers. These are people who want answers and are ready to contact a consultant.
+                        </p>
+                        <p style="color: var(--color-gray-900); font-size: 1.1rem; font-weight: 700; line-height: 1.7; margin-bottom: 2rem;">
+                            For visa consultants, SEO is not just marketing. It is a reliable way to attract better clients and grow steadily through search.
+                        </p>
+                        <a href="contact" class="btn btn-primary" style="padding: 0.9rem 1.8rem; font-weight: 700;">Start Getting Serious Clients</a>
+                    </div>
+                    <div>
+                        <div style="background: var(--color-bg-alt); border-radius: 16px; padding: 2.5rem; border: 1px solid var(--color-border);">
+                            <ul style="list-style: none; padding: 0; margin: 0;">
+                                <li style="margin-bottom: 1.5rem;">
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.5rem;"><span style="color: #8cc63f;">✓</span> People search online first</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">Most clients begin their visa journey on Google. SEO helps you appear at that first and most important step.</p>
+                                </li>
+                                <li style="margin-bottom: 1.5rem;">
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.5rem;"><span style="color: #8cc63f;">✓</span> Visa services are highly competitive</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">Many consultancies offer similar services. SEO helps you stand out rather than get lost in search results.</p>
+                                </li>
+                                <li style="margin-bottom: 1.5rem;">
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.5rem;"><span style="color: #8cc63f;">✓</span> Trust and credibility are critical</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">Strong search visibility makes your consultancy look established and reliable. Clients feel safer reaching out.</p>
+                                </li>
+                                <li style="margin-bottom: 1.5rem;">
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.5rem;"><span style="color: #8cc63f;">✓</span> Lead quality matters more than traffic</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">SEO targets users who are already searching for visa help. This brings fewer but more serious inquiries.</p>
+                                </li>
+                                <li>
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.5rem;"><span style="color: #8cc63f;">✓</span> SEO supports long-term growth</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">Unlike ads, SEO continues working even when you stop spending. It builds consistent visibility over time.</p>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Our SEO Services Section -->
+        <section style="padding: 6rem 0; background-color: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+                    <span class="lahore-pill">OUR METHODOLOGY</span>
+                    <h2 class="section-title" style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900);">
+                        Our SEO Services for Visa Consultancy
+                    </h2>
+                    <p style="color: var(--color-gray-600); font-size: 1.05rem;">
+                        SEO for visa consultancy needs a focused strategy. People trust consultants who appear clear, professional, and visible online.
+                    </p>
+                </div>
+                <div class="service-grid-3">
+                    <div class="feature-card-enhanced card-animated">
+                        <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-gray-900);">Visa Service Keyword Targeting</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">Keyword targeting focuses on understanding how real clients search for visa services. Instead of targeting general terms, the focus stays on keywords that show strong intent.</p>
+                        <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: var(--color-gray-600);">
+                            <li style="margin-bottom: 0.5rem;">• Study visa–related searches</li>
+                            <li style="margin-bottom: 0.5rem;">• Work, visit, and immigration keywords</li>
+                            <li>• Location and service-based terms</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-gray-900);">Local SEO for Visa Consultants</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">Many visa clients prefer consultants near their location. Local SEO helps your consultancy appear in city-based and nearby searches.</p>
+                        <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: var(--color-gray-600);">
+                            <li style="margin-bottom: 0.5rem;">• Google Maps & profile optimization</li>
+                            <li style="margin-bottom: 0.5rem;">• City and office location targeting</li>
+                            <li>• Local search visibility improvements</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-gray-900);">Website SEO Optimization</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">Your website plays a major role in converting visitors into leads. Website SEO optimization improves search performance and user experience.</p>
+                        <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: var(--color-gray-600);">
+                            <li style="margin-bottom: 0.5rem;">• On-page SEO improvements</li>
+                            <li style="margin-bottom: 0.5rem;">• Visa service page structure</li>
+                            <li>• Internal linking for better navigation</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-gray-900);">Content Strategy</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">Content builds trust and answers client questions before they contact you. A strong content strategy positions your consultancy as a helpful source.</p>
+                        <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: var(--color-gray-600);">
+                            <li style="margin-bottom: 0.5rem;">• Visa guides and information</li>
+                            <li style="margin-bottom: 0.5rem;">• FAQs and eligibility content</li>
+                            <li>• Trust-building decision support</li>
+                        </ul>
+                    </div>
+                    <div class="feature-card-enhanced card-animated">
+                        <h4 style="font-size: 1.25rem; font-weight: 800; margin-bottom: 1rem; color: var(--color-gray-900);">Technical SEO</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; margin-bottom: 1rem; line-height: 1.6;">Technical SEO ensures your website performs well and remains visible in search results over time.</p>
+                        <ul style="list-style-type: none; padding: 0; font-size: 0.9rem; color: var(--color-gray-600);">
+                            <li style="margin-bottom: 0.5rem;">• Website speed improvements</li>
+                            <li style="margin-bottom: 0.5rem;">• Mobile optimization</li>
+                            <li>• Indexing and crawl issue fixes</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. How it Works Section -->
+        <section style="padding: 6rem 0; background-color: #ffffff;">
+            <div class="container">
+                <div style="text-align: center; max-width: 700px; margin: 0 auto 3.5rem auto;">
+                    <span class="lahore-pill">STEP-BY-STEP ROADMAP</span>
+                    <h2 class="section-title" style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900);">
+                        How Our SEO for Visa Consultancy Works
+                    </h2>
+                    <p style="color: var(--color-gray-600); font-size: 1.05rem;">
+                        Each step focuses on attracting the right audience, building trust, and turning search traffic into real client inquiries.
+                    </p>
+                </div>
+                <div class="process-grid">
+                    <div class="process-step-enhanced card-animated">
+                        <div class="step-number">1</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Business Analysis</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Reviewing your services, target countries, office location, and existing website performance to align SEO with your business goals.</p>
+                    </div>
+                    <div class="process-step-enhanced card-animated">
+                        <div class="step-number">2</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Keyword Research</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Analyzing how potential clients search for visa services, focusing on keywords that attract serious inquiries, not just traffic.</p>
+                    </div>
+                    <div class="process-step-enhanced card-animated">
+                        <div class="step-number">3</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Strategy Creation</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Creating a customized SEO plan that prioritizes high-value visa services, locations, and pages, keeping growth steady.</p>
+                    </div>
+                    <div class="process-step-enhanced card-animated">
+                        <div class="step-number">4</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Implementation</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Applying SEO improvements across your website, including on-page optimization, content updates, and technical fixes.</p>
+                    </div>
+                    <div class="process-step-enhanced card-animated">
+                        <div class="step-number">5</div>
+                        <h4 style="font-size: 1.1rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Continuous Tracking</h4>
+                        <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6;">Monitoring performance using data from rankings, traffic, and enquiries to make informed strategy adjustments.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. Why Choose Us Section -->
+        <section style="padding: 6rem 0; background-color: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
+                    <div>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 1.5rem;">Why Choose SEO with Ibrar for Visa SEO</h2>
+                        <p style="color: var(--color-gray-600); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            Visa services rely heavily on trust and visibility. People only contact consultants who appear credible and professional online. SEO with Ibrar knows how people who need a visa search, compare options, and choose who to contact.
+                        </p>
+                        <p style="color: var(--color-gray-600); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            Visa SEO is not generic SEO. It requires understanding visa categories, client intent, and local competition. That is why the strategy focuses on quality inquiries, not just website traffic.
+                        </p>
+                        <a href="contact" class="btn btn-primary" style="padding: 0.85rem 1.8rem; font-weight: 700; margin-top: 0.5rem;">Get Your Free SEO Audit</a>
+                    </div>
+                    <div>
+                        <ul style="list-style: none; padding: 0;">
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="color: #8cc63f; font-size: 1.5rem; font-weight: bold;">✔</span>
+                                <div>
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.25rem;">Experience with Visa SEO</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">Experience with visa-related search behaviour helps target the right audience and generate serious inquiries.</p>
+                                </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem;">
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem;"><span class="text-green">✓</span> Visa services are highly competitive</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Many consultancies offer similar services. SEO helps you stand out rather than get lost in search results.</p>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="color: #8cc63f; font-size: 1.5rem; font-weight: bold;">✔</span>
+                                <div>
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.25rem;">Lead-Focused Strategies</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">The focus stays on attracting users who are actively searching for visa services, resulting in better lead quality.</p>
+                                </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem;">
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem;"><span class="text-green">✓</span> Trust and credibility are critical</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Strong search visibility makes your consultancy look established and reliable. Clients feel safer reaching out.</p>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="color: #8cc63f; font-size: 1.5rem; font-weight: bold;">✔</span>
+                                <div>
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.25rem;">Strong Local Understanding</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">Optimized for city-based and service-specific searches to connect your consultancy with nearby clients.</p>
+                                </div>
                             </li>
-                            <li style="margin-bottom: 1.5rem;">
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem;"><span class="text-green">✓</span> Lead quality matters more than traffic</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">SEO targets users who are already searching for visa help. This brings fewer but more serious inquiries.</p>
-                            </li>
-                            <li>
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.5rem;"><span class="text-green">✓</span> SEO supports long-term growth</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Unlike ads, SEO continues working even when you stop spending. It builds consistent visibility over time.</p>
+                            <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
+                                <span style="color: #8cc63f; font-size: 1.5rem; font-weight: bold;">✔</span>
+                                <div>
+                                    <h4 style="font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.25rem;">Transparent Communication</h4>
+                                    <p style="color: var(--color-gray-600); font-size: 0.95rem;">I share clear updates throughout the process so you are always aware of the work in progress.</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Services Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-dark); color: var(--color-white);">
-        <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
-                <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1.5rem;">Our SEO Services for Visa Consultancy</h2>
-                <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.7;">
-                    SEO for visa consultancy needs a focused and careful strategy. People trust visa consultants who appear clear, professional, and visible online. That is why SEO with Ibrar provides visa-specific SEO services designed to attract serious inquiries, not random website traffic.
-                </p>
-            </div>
-            <div class="service-grid-3">
-                <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--color-white);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Visa Service Keyword Targeting</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1rem;">Keyword targeting focuses on understanding how real clients search for visa services. Instead of targeting general terms, the focus stays on keywords that show strong intent.</p>
-                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;">• Study visa–related searches</li>
-                        <li style="margin-bottom: 0.5rem;">• Work, visit, and immigration keywords</li>
-                        <li>• Location and service-based terms</li>
-                    </ul>
-                </div>
-                <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--color-white);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Local SEO for Visa Consultants</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1rem;">Many visa clients prefer consultants near their location. Local SEO helps your consultancy appear in city-based and nearby searches where trust and convenience matter.</p>
-                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;">• Google Maps & profile optimization</li>
-                        <li style="margin-bottom: 0.5rem;">• City and office location targeting</li>
-                        <li>• Local search visibility improvements</li>
-                    </ul>
-                </div>
-                <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--color-white);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Website SEO Optimization</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1rem;">Your website plays a major role in converting visitors into leads. Website SEO optimization improves both search performance and user experience.</p>
-                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;">• On-page SEO improvements</li>
-                        <li style="margin-bottom: 0.5rem;">• Visa service page structure</li>
-                        <li>• Internal linking for better navigation</li>
-                    </ul>
-                </div>
-                <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--color-white);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Content Strategy</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1rem;">Content builds trust and answers client questions before they contact you. A strong content strategy positions your consultancy as a helpful and reliable source.</p>
-                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;">• Visa guides and information</li>
-                        <li style="margin-bottom: 0.5rem;">• FAQs and eligibility content</li>
-                        <li>• Trust-building decision support</li>
-                    </ul>
-                </div>
-                <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); color: var(--color-white);">
-                    <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem;">Technical SEO</h3>
-                    <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; margin-bottom: 1rem;">Technical SEO ensures your website performs well and remains visible in search results over time. A technically strong website supports stable rankings.</p>
-                    <ul style="list-style: none; padding: 0; color: rgba(255,255,255,0.9); font-size: 0.9rem;">
-                        <li style="margin-bottom: 0.5rem;">• Website speed improvements</li>
-                        <li style="margin-bottom: 0.5rem;">• Mobile optimization</li>
-                        <li>• Indexing and crawl issue fixes</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- How it Works Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-bg-light);">
-        <div class="container">
-            <div style="text-align: center; max-width: 800px; margin: 0 auto 4rem;">
-                <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1.5rem;">How Our SEO for Visa Consultancy Works</h2>
-                <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7;">
-                    SEO for visa consultancy follows a clear and practical process. Each step focuses on attracting the right audience, building trust, and turning search traffic into real client inquiries.
-                </p>
-            </div>
-            <div class="process-grid">
-                <div class="process-step">
-                    <span class="step-number">01</span>
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; margin-top: 1rem;">Business Analysis</h4>
-                    <p style="color: var(--color-text-muted); font-size: 0.95rem;">Reviewing your services, target countries, office location, and existing website performance to align SEO with your business goals.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">02</span>
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; margin-top: 1rem;">Keyword Research</h4>
-                    <p style="color: var(--color-text-muted); font-size: 0.95rem;">Analyzing how potential clients search for visa services, focusing on keywords that attract serious inquiries, not just traffic.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">03</span>
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; margin-top: 1rem;">Strategy Creation</h4>
-                    <p style="color: var(--color-text-muted); font-size: 0.95rem;">Creating a customized SEO plan that prioritizes high-value visa services, locations, and pages, keeping growth steady.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">04</span>
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; margin-top: 1rem;">Implementation</h4>
-                    <p style="color: var(--color-text-muted); font-size: 0.95rem;">Applying SEO improvements across your website, including on-page optimization, content updates, and technical fixes.</p>
-                </div>
-                <div class="process-step">
-                    <span class="step-number">05</span>
-                    <h4 style="font-size: 1.25rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; margin-top: 1rem;">Continuous Tracking</h4>
-                    <p style="color: var(--color-text-muted); font-size: 0.95rem;">Monitoring performance using data from rankings, traffic, and enquiries to make informed strategy adjustments.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Why Choose Us Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-white);">
-        <div class="container">
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 4rem; align-items: center;">
-                <div>
-                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 1.5rem;">Why Choose SEO with Ibrar for Visa SEO</h2>
-                    <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        Visa services rely heavily on trust and visibility. People only contact consultants who appear credible and professional online. SEO with Ibrar knows how people who need a visa search, compare options, and choose who to contact.
-                    </p>
-                    <p style="color: var(--color-text-muted); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.5rem;">
-                        Visa SEO is not generic SEO. It requires understanding visa categories, client intent, and local competition. That is why the strategy focuses on quality inquiries, not just website traffic.
-                    </p>
-                    <a href="contact" class="btn btn-outline" style="margin-top: 1rem;">Get Your Free SEO Audit</a>
-                </div>
-                <div>
-                    <ul style="list-style: none; padding: 0;">
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.5rem;">✔</span>
-                            <div>
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Experience with Visa SEO</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Experience with visa-related search behaviour helps target the right audience and generate serious inquiries.</p>
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.5rem;">✔</span>
-                            <div>
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Lead-Focused Strategies</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">The focus stays on attracting users who are actively searching for visa services, resulting in better lead quality.</p>
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.5rem;">✔</span>
-                            <div>
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Strong Local Understanding</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">Optimized for city-based and service-specific searches to connect your consultancy with nearby clients.</p>
-                            </div>
-                        </li>
-                        <li style="margin-bottom: 1.5rem; display: flex; align-items: flex-start; gap: 1rem;">
-                            <span style="color: var(--color-primary); font-size: 1.5rem;">✔</span>
-                            <div>
-                                <h4 style="font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Transparent Communication</h4>
-                                <p style="color: var(--color-text-muted); font-size: 0.95rem;">I share clear updates throughout the process so you are always aware of the work in progress.</p>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FAQs Section -->
-    <section style="padding: 6rem 0; background-color: var(--color-bg-light);">
-        <div class="container" style="max-width: 800px;">
-            <div style="text-align: center; margin-bottom: 3rem;">
-                <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark);">Frequently Asked Questions</h2>
-            </div>
-            <div class="faq-accordion">
-            <details>
-                <summary>What is SEO for visa consultancy?</summary>
-                <div class="faq-content">SEO for visa consultancy helps your business appear on Google when people search for visa services. It improves online visibility and attracts clients who are actively looking for visa guidance.</div>
-            </details>
-            <details>
-                <summary>How long does SEO take to show results for visa services?</summary>
-                <div class="faq-content">SEO is a gradual process. Most visa consultancies start seeing improvements within three to six months, depending on competition and website conditions.</div>
-            </details>
-            <details>
-                <summary>Can SEO really bring visa clients, not just traffic?</summary>
-                <div class="faq-content">Yes. Visa-focused SEO targets searches with strong intent. This means the traffic coming to your website is more likely to convert into real inquiries.</div>
-            </details>
-            <details>
-                <summary>Do you provide local SEO for visa consultants?</summary>
-                <div class="faq-content">Yes. Local SEO helps your consultancy appear in city-based searches and Google Maps results, making it easier for nearby clients to find and contact you.</div>
-            </details>
-            <details>
-                <summary>Is SEO better than paid ads for visa consultancy?</summary>
-                <div class="faq-content">SEO supports long-term growth and consistent leads. Paid ads stop working once the budget ends, while SEO continues to bring visibility over time.</div>
-            </details>
-            <details>
-                <summary>Will my website need changes for SEO to work?</summary>
-                <div class="faq-content">In most cases, yes. Some on-page and technical improvements help your website perform better in search results and enhance the user experience.</div>
-            </details>
-            </div>
-        </div>
-    </section>
-    <!-- Testimonials -->
-    <section style="padding: 8rem 0; background-color: #f8f9fa;">
-        <div class="container">
-            <div class="testimonial-header">
-                <div style="max-width: 700px;">
-                    <span style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 700; color: var(--color-dark); display: block; margin-bottom: 1.5rem;">T E S T I M O N I A L S</span>
-                    <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; line-height: 1.2;">
-                        What Clients Share About Their <span style="color: #999;">Experience</span>
+        </section>
+
+        <!-- 9. Portfolio Proof Showcase Section -->
+        <section style="padding: 6rem 0; background: #0f172a; color: #ffffff;">
+            <div class="container">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+                    <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: #8cc63f; padding: 0.4rem 1.1rem; border-radius: 30px; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 1rem;">
+                        VERIFIED SEARCH CONSOLE RESULTS
+                    </span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; margin-bottom: 1rem; line-height: 1.2;">
+                        Real Search Rankings & Organic Growth Proof
                     </h2>
-                    <p style="color: var(--color-text-muted); font-size: 1.1rem;">Our clients share their experience of working with us, highlighting clear communication, consistent progress, and practical SEO support.</p>
+                    <p style="color: #cbd5e1; font-size: 1.05rem;">
+                        Explore verified Google Search Console click graphs from our visa consultancy client campaigns.
+                    </p>
                 </div>
-                <div>
-                    <button class="nav-btn-circle" aria-label="Previous" onclick="document.querySelector('.testimonial-slider').scrollBy({left: -400, behavior: 'smooth'})">←</button>
-                    <button class="nav-btn-circle" aria-label="Next" onclick="document.querySelector('.testimonial-slider').scrollBy({left: 400, behavior: 'smooth'})">→</button>
-                </div>
-            </div>
-            <div class="testimonial-slider">
-                <div class="testimonial-green-card">
-                    <div style="font-size: 4rem; font-weight: 300; line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px;">50+</div>
-                    <div style="font-size: 0.9rem; font-weight: 600;">Successfully delivered projects</div>
-                </div>
-                <div class="testimonial-card">
-                    <div>
-                        <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Our website traffic improved gradually, and more relevant inquiries started coming in. The SEO process was explained clearly, and the results were consistent.</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">AR</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Ahmed Raza</h4>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">MD, Local Services</span>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(270px, 1fr)); gap: 2rem;">
+                    <!-- Case Study 1 -->
+                    <div class="portfolio-proof-card card-animated">
+                        <div class="portfolio-proof-img-container">
+                            <img src="images/Visa Consutlacny in Karachi.png" alt="Visa Consultancy SEO Growth Chart Karachi" class="portfolio-proof-img">
+                        </div>
+                        <div style="padding: 1.5rem; background: #ffffff; color: var(--color-gray-900); flex-grow: 1;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); text-transform: uppercase; margin-bottom: 0.3rem;">STUDY & WORK VISAS</div>
+                            <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Visa Consultancy SEO Karachi</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-gray-600); line-height: 1.5; margin-bottom: 1rem;">Achieved 3x increase in monthly candidate leads via targeted study visa search queries.</p>
+                            <a href="portfolio" style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-900); text-decoration: none;">View Verified Proof →</a>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div>
-                        <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">They communicated everything in simple terms and focused on long-term improvement instead of quick promises. We saw steady growth in visibility.</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">SK</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Sarah Khan</h4>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Founder, Online Store</span>
+
+                    <!-- Case Study 2 -->
+                    <div class="portfolio-proof-card card-animated">
+                        <div class="portfolio-proof-img-container">
+                            <img src="images/Education platfrom in lahore.png" alt="Education Platform SEO Lahore" class="portfolio-proof-img">
+                        </div>
+                        <div style="padding: 1.5rem; background: #ffffff; color: var(--color-gray-900); flex-grow: 1;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); text-transform: uppercase; margin-bottom: 0.3rem;">ACADEMIC TRUST</div>
+                            <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Education Platform SEO Lahore</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-gray-600); line-height: 1.5; margin-bottom: 1rem;">Scaled organic traffic for competitive course enrollment terms with structured data.</p>
+                            <a href="portfolio" style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-900); text-decoration: none;">View Verified Proof →</a>
                         </div>
                     </div>
-                </div>
-                <div class="testimonial-card">
-                    <div>
-                        <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">The team worked professionally and shared clear reports. Our search visibility improved, and the quality of leads also became better.</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">UA</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Usman Ali</h4>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Marketing Manager</span>
+
+                    <!-- Case Study 3 -->
+                    <div class="portfolio-proof-card card-animated">
+                        <div class="portfolio-proof-img-container">
+                            <img src="images/Local ecommeces.png" alt="Local eCommerce SEO Pakistan" class="portfolio-proof-img">
                         </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div>
-                        <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">What I appreciated most was the honest guidance. They focused on what was best for our business, not unnecessary SEO work.</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">AM</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Ayesha Malik</h4>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Business Owner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div>
-                        <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Reliable SEO support with transparent reporting. Our online presence improved, and we gained more confidence in our website’s performance.</p>
-                    </div>
-                    <div style="display: flex; align-items: center; gap: 1rem;">
-                        <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">BH</div>
-                        <div>
-                            <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Bilal Hussain</h4>
-                            <span style="font-size: 0.8rem; color: var(--color-text-muted);">Operations Head</span>
+                        <div style="padding: 1.5rem; background: #ffffff; color: var(--color-gray-900); flex-grow: 1;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); text-transform: uppercase; margin-bottom: 0.3rem;">ECOMMERCE & SERVICES</div>
+                            <h3 style="font-size: 1.15rem; font-weight: 800; margin-bottom: 0.5rem; color: var(--color-gray-900);">Local eCommerce SEO Store</h3>
+                            <p style="font-size: 0.85rem; color: var(--color-gray-600); line-height: 1.5; margin-bottom: 1rem;">Dominating category commercial keywords without relying on high-cost paid ads.</p>
+                            <a href="portfolio" style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-900); text-decoration: none;">View Verified Proof →</a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <!-- Final CTA -->
-    <section class="cta-banner" style="background-color: var(--color-primary); padding: 5rem 0;">
-        <div class="container text-center" style="max-width: 800px;">
-            <h2 class="cta-title" style="color: var(--color-white); margin-bottom: 1.5rem;">Are you ready to Get More Visa Clients Through SEO?</h2>
-            <p class="cta-desc" style="color: var(--color-white); margin-bottom: 1rem; font-size: 1.1rem; opacity: 0.9;">
-                People are already searching online for visa services. The question is whether they are finding your consultancy or someone else. By using the right SEO strategy, you can show up at the right time, earn people's trust, and get ready-to-act clients.
-            </p>
-            <p class="cta-desc" style="color: var(--color-white); margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9; font-weight: 600;">
-                SEO with Ibrar helps visa consultancies improve visibility, generate qualified inquiries, and grow consistently through search. No shortcuts. No random traffic. Just focused SEO that supports real business growth.
-            </p>
-            <a href="contact" class="btn btn-dark">Get a Free SEO Consultation</a>
-        </div>
-    </section>
-</main>
-</main>
+        </section>
+
+        <!-- 10. Testimonials Slider Section -->
+        <section style="padding: 8rem 0; background-color: #f8fafc;">
+            <div class="container">
+                <div class="testimonial-header">
+                    <div style="max-width: 700px;">
+                        <span style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 700; color: var(--color-gray-900); display: block; margin-bottom: 1.5rem;">T E S T I M O N I A L S</span>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 1rem; line-height: 1.2;">
+                            What Clients Share About Their <span style="color: #64748b;">Experience</span>
+                        </h2>
+                        <p style="color: var(--color-gray-600); font-size: 1.1rem; margin-bottom: 1.25rem;">Our clients share their experience of working with us, highlighting clear communication, consistent progress, and practical SEO support.</p>
+                        <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; color: #4285F4; transition: color 0.2s ease;" onmouseover="this.style.color='#1a73e8'" onmouseout="this.style.color='#4285F4'">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                            </svg>
+                            View Google Business Profile (5.0 ★ Rating) →
+                        </a>
+                    </div>
+                    <div>
+                        <button class="nav-btn-circle" aria-label="Previous" onclick="document.querySelector('.testimonial-slider').scrollBy({left: -400, behavior: 'smooth'})">←</button>
+                        <button class="nav-btn-circle" aria-label="Next" onclick="document.querySelector('.testimonial-slider').scrollBy({left: 400, behavior: 'smooth'})">→</button>
+                    </div>
+                </div>
+                <div class="testimonial-slider">
+                    <a href="portfolio" class="testimonial-green-card" style="text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer;">
+                        <div style="font-size: 4rem; font-weight: 300; line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px; color: var(--color-dark);">50+</div>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--color-dark);">Successfully delivered projects</div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
+                            </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Our website traffic improved gradually, and more relevant inquiries started coming in. The SEO process was explained clearly, and the results were consistent.</p>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">AR</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Ahmed Raza</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">MD, Local Services</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
+                            </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">They communicated everything in simple terms and focused on long-term improvement instead of quick promises. We saw steady growth in visibility.</p>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">SK</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Sarah Khan</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Founder, Online Store</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
+                            </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">The team worked professionally and shared clear reports. Our search visibility improved, and the quality of leads also became better.</p>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">UA</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Usman Ali</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Marketing Manager</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
+                            </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">What I appreciated most was the honest guidance. They focused on what was best for our business, not unnecessary SEO work.</p>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">AM</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Ayesha Malik</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Business Owner</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
+                        <div>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
+                            </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Reliable SEO support with transparent reporting. Our online presence improved, and we gained more confidence in our website’s performance.</p>
+                        </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">BH</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Bilal Hussain</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Operations Head</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom WordPress & Web Development Promotion CTA Section -->
+        <section style="padding: 5.5rem 0; background: linear-gradient(135deg, #090d16 0%, #172033 100%); color: #ffffff; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); position: relative; overflow: hidden;">
+            <!-- Background Glow Overlay -->
+            <div style="position: absolute; top: -30%; right: -10%; width: 450px; height: 450px; background: radial-gradient(circle, rgba(140, 198, 63, 0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none;"></div>
+            
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center;">
+                    <div>
+                        <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: #8cc63f; padding: 0.45rem 1.15rem; border-radius: 30px; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 1.25rem;">
+                            💻 CUSTOM WORDPRESS & WEB DEVELOPMENT
+                        </span>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 1.25rem;">
+                            Need a Fast, High-Converting Website Built for SEO Success?
+                        </h2>
+                        <p style="color: #cbd5e1; font-size: 1.08rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                            A slow or poorly built website hurts your Google rankings and loses prospective clients. We build custom, clean-coded, lightning-fast WordPress websites optimized for 98%+ Core Web Vitals and max lead conversion.
+                        </p>
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+                            Whether you need a full website redesign, an immigration portal, or an academy enrollment system, our web development delivers instant speed and pristine search architecture.
+                        </p>
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                            <a href="wordpress-design-services" class="btn btn-primary" style="padding: 0.95rem 1.8rem; font-weight: 800; box-shadow: 0 10px 25px rgba(140, 198, 63, 0.3);">
+                                Explore WordPress Development →
+                            </a>
+                            <a href="portfolio" class="btn" style="background: rgba(255, 255, 255, 0.06); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2); padding: 0.95rem 1.6rem; font-weight: 700; backdrop-filter: blur(10px);">
+                                View Development Case Studies 📊
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Feature Grid -->
+                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 2rem; backdrop-filter: blur(12px); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                        <div style="font-size: 0.8rem; font-weight: 800; color: #8cc63f; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            WHY OUR WORDPRESS DEVELOPMENT LEADS PAKISTAN
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">⚡</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">98%+ Google PageSpeed Score</h4>
+                                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Clean php architecture without plugin bloat for instant sub-second load times.</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">📱</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">100% Pixel-Perfect Mobile Layouts</h4>
+                                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Fluid, responsive designs engineered for smartphones, tablets, and desktops.</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">🎯</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Pre-Optimized Search Engine Architecture</h4>
+                                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Built-in JSON-LD Schema markup, clean canonicals, and SEO-friendly URLs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 11. FAQs Section -->
+        <section style="padding: 6rem 0; background-color: #ffffff;">
+            <div class="container" style="max-width: 900px;">
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <span class="lahore-pill">CLEAR ANSWERS</span>
+                    <h2 class="section-title" style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900);">
+                        Frequently Asked Questions (FAQ)
+                    </h2>
+                </div>
+                <div class="faq-accordion">
+                    <details open>
+                        <summary>What is SEO for visa consultancy?</summary>
+                        <div class="faq-content">SEO for visa consultancy helps your business appear on Google when people search for visa services. It improves online visibility and attracts clients who are actively looking for visa guidance.</div>
+                    </details>
+                    <details>
+                        <summary>How long does SEO take to show results for visa services?</summary>
+                        <div class="faq-content">SEO is a gradual process. Most visa consultancies start seeing improvements within three to six months, depending on competition and website conditions.</div>
+                    </details>
+                    <details>
+                        <summary>Can SEO really bring visa clients, not just traffic?</summary>
+                        <div class="faq-content">Yes. Visa-focused SEO targets searches with strong intent. This means the traffic coming to your website is more likely to convert into real inquiries.</div>
+                    </details>
+                    <details>
+                        <summary>Do you provide local SEO for visa consultants?</summary>
+                        <div class="faq-content">Yes. Local SEO helps your consultancy appear in city-based searches and Google Maps results, making it easier for nearby clients to find and contact you.</div>
+                    </details>
+                    <details>
+                        <summary>Is SEO better than paid ads for visa consultancy?</summary>
+                        <div class="faq-content">SEO supports long-term growth and consistent leads. Paid ads stop working once the budget ends, while SEO continues to bring visibility over time.</div>
+                    </details>
+                    <details>
+                        <summary>Will my website need changes for SEO to work?</summary>
+                        <div class="faq-content">In most cases, yes. Some on-page and technical improvements help your website perform better in search results and enhance the user experience.</div>
+                    </details>
+                </div>
+            </div>
+        </section>
+
+        <!-- 12. Final CTA Banner -->
+        <section class="cta-banner" style="background: linear-gradient(145deg, #0b1222 0%, #151f36 100%); padding: 6rem 0; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08);">
+            <div class="container text-center" style="max-width: 850px; position: relative; z-index: 10;">
+                <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: #8cc63f; padding: 0.5rem 1.25rem; border-radius: 30px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem; letter-spacing: 0.5px;">
+                    ✈️ DOMINATE STUDY ABROAD & VISA SEARCH INQUIRIES
+                </span>
+                <h2 class="cta-title" style="color: #ffffff; font-size: 2.75rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem;">
+                    Ready to Get More Qualified Visa Clients Through SEO?
+                </h2>
+                <p class="cta-desc" style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                    Students and applicants are actively searching online for visa guidance and study abroad advice. Capture high-intent leads with <strong>SEO with Ibrar</strong>.
+                </p>
+                <p class="cta-desc" style="color: #94a3b8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 600;">
+                    Book your free consultation today. We will evaluate your consultancy website, unlock local Google Map Pack rankings, and deliver steady client inquiries.
+                </p>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <a href="contact" class="btn btn-primary" style="padding: 1rem 2.25rem; font-size: 1.05rem; font-weight: 800; box-shadow: 0 10px 25px rgba(140,198,63,0.3);">
+                        Get Free SEO Consultation
+                    </a>
+                    <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; color: #ffffff; padding: 1rem 2rem; font-size: 1.05rem; font-weight: 700; border: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 25px rgba(37,211,102,0.25);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        WhatsApp Instant Chat
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <!-- Footer -->
-        <!-- Footer -->
     <footer class="footer new-mega-footer">
         <div class="container footer-container-new">
             <div class="footer-col-main">
-                                <a href="index" class="logo footer-logo" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+                <a href="/" class="logo footer-logo" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
                     <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
                 </a>
                 <p class="footer-desc" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6; margin-bottom: 2rem;">
@@ -603,58 +1399,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
             <div class="footer-col">
+                <div class="mega-column-header" style="margin-bottom: 2rem;">QUICK LINKS</div>
+                <div class="footer-links-list" style="display: flex; flex-direction: column; gap: 0.85rem;">
+                    <a href="/" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">Home</a>
+                    <a href="about" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">About Ibrar</a>
+                    <a href="portfolio" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">GSC Case Studies</a>
+                    <a href="blog" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">SEO Blog</a>
+                    <a href="contact" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">Contact Support</a>
+                </div>
+            </div>
+            <div class="footer-col">
                 <div class="mega-column-header" style="margin-bottom: 2rem;">OUR SERVICES</div>
-                <ul class="footer-links" style="list-style: none; padding: 0;">
-                    <li><a href="seo-services-pakistan">SEO Expert Services</a></li>
-                    <li><a href="seo-services-visa-consultancy">Visa Consultancy SEO</a></li>
-                    <li><a href="seo-services-education">Education SEO</a></li>
-                    <li><a href="wordpress-design-services">WordPress Solutions</a></li>
-                    <li><a href="Wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
-                    <li><a href="wordpress-design-services-for-education">WordPress Education Services</a></li>
-                </ul>
+                <div class="footer-links-list" style="display: flex; flex-direction: column; gap: 0.85rem;">
+                    <a href="seo-services-pakistan" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">SEO Expert Services</a>
+                    <a href="seo-services-lahore" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">SEO Services Lahore</a>
+                    <a href="seo-services-visa-consultancy" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">Visa Consultancy SEO</a>
+                    <a href="seo-services-education" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">Education Institutes SEO</a>
+                    <a href="wordpress-design-services" style="color: rgba(255,255,255,0.7); text-decoration: none; font-size: 0.9rem;">WordPress Development</a>
+                </div>
             </div>
             <div class="footer-col">
-                <div class="mega-column-header" style="margin-bottom: 2rem; color: #3b82f6;">LOCALIZED SEO HUBS</div>
-                <ul class="footer-links" style="list-style: none; padding: 0;">
-                    <li><a href="seo-services-pakistan">SEO Services in Pakistan</a></li>
-                    <li><a href="seo-services-lahore">SEO Services in Lahore</a></li>
-                    <li><a href="#">Karachi SEO Solutions</a></li>
-                    <li><a href="#">Islamabad SEO Solutions</a></li>
-                    <li><a href="#">Faisalabad SEO Solutions</a></li>
-                    <li><a href="#">Rawalpindi SEO Solutions</a></li>
-                </ul>
-            </div>
-            <div class="footer-col">
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 2rem;">
-                    <div>
-                        <div class="mega-column-header" style="margin-bottom: 2rem;">INSIGHTS HUB</div>
-                        <a href="#" style="color: var(--color-primary); font-size: 0.8rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; text-transform: uppercase;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" stroke="none"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                            CLIENT PORTFOLIO STUDIES
-                        </a>
-                        <a href="#" style="color: var(--color-primary); font-size: 0.8rem; font-weight: 700; display: block; margin-bottom: 1.5rem; text-transform: uppercase;">
-                            VIEW ALL ARTICLES
-                        </a>
-                        <ul class="footer-links" style="list-style: none; padding: 0;">
-                            <li><a href="#">How to Rank Your Visa Agency #1...</a></li>
-                            <li><a href="#">WordPress Speed Optimization</a></li>
-                            <li><a href="#">GEO</a></li>
-                        </ul>
+                <div class="mega-column-header" style="margin-bottom: 2rem;">QUALITY & SUPPORT</div>
+                <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1.5rem;">
+                    <div style="color: var(--color-primary); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; text-transform: uppercase;">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                        WHITEHAT CERTIFIED
                     </div>
-                    <div>
-                        <div class="mega-column-header" style="margin-bottom: 2rem;">QUALITY & SUPPORT</div>
-                        <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 12px; padding: 1.5rem;">
-                            <div style="color: var(--color-primary); font-size: 0.85rem; font-weight: 700; display: flex; align-items: center; gap: 0.5rem; margin-bottom: 1rem; text-transform: uppercase;">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                WHITEHAT CERTIFIED
-                            </div>
-                            <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.75rem; line-height: 1.5; margin-bottom: 1.5rem;">
-                                Every tactic strictly adheres to webmaster rules. We never employ spam comments, hidden redirects, or low-quality backlink layers.
-                            </p>
-                            <div style="color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">DIRECT CHANNEL</div>
-                            <a href="mailto:ibrar@seowithibrar.com" style="color: white; font-size: 0.85rem; font-weight: 600;">ibrar@seowithibrar.com</a>
-                        </div>
-                    </div>
+                    <p style="color: rgba(255, 255, 255, 0.5); font-size: 0.75rem; line-height: 1.5; margin-bottom: 1.5rem;">
+                        Every tactic strictly adheres to webmaster rules. We never employ spam comments, hidden redirects, or low-quality backlink layers.
+                    </p>
+                    <div style="color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">DIRECT CHANNEL</div>
+                    <a href="mailto:seowithibrar@gmail.com" style="color: white; font-size: 0.85rem; font-weight: 600;">seowithibrar@gmail.com</a>
                 </div>
             </div>
         </div>
@@ -662,7 +1437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             <div class="container" style="display: flex; justify-content: space-between; align-items: center; font-size: 0.75rem; color: rgba(255, 255, 255, 0.4); flex-wrap: wrap; gap: 1rem;">
                 <div style="display: flex; align-items: center; gap: 1.5rem;">
                     <span>&copy; 2026 SEO with Ibrar. All rights reserved. Registered Lahore SEO Agency.</span>
-                    <a href="#" style="color: rgba(255, 255, 255, 0.6); display: flex; align-items: center; gap: 0.25rem; font-weight: 600; letter-spacing: 1px; transition: var(--transition);">
+                    <a href="https://pk.linkedin.com/in/seowithibrar" target="_blank" rel="noopener noreferrer" style="color: rgba(255, 255, 255, 0.6); display: flex; align-items: center; gap: 0.25rem; font-weight: 600; letter-spacing: 1px; transition: var(--transition);">
                         LINKEDIN PROFILE <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
                     </a>
                 </div>
@@ -673,5 +1448,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </footer>
+
+    <!-- Floating Animated Clickable WhatsApp Button Widget -->
+    <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" class="whatsapp-float-widget" title="Chat with Ibrar Ahmad on WhatsApp (+92 317 4835008)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="whatsapp-float-label">WhatsApp +92 317 4835008</span>
+    </a>
 </body>
 </html>

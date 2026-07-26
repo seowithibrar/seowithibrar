@@ -1,17 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGLHCFG9');</script>
-<!-- End Google Tag Manager -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ibrar.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Ibrar Ahmad - SEO Expert with 6+ years of experience helping businesses grow through data-driven SEO strategies.">
+    <meta name="description" content="Explore real SEO case studies and Google Search Console data from Ibrar Ahmad's clients, showing organic traffic growth, rankings and revenue results.">
     <title>SEO Portfolio & Case Studies | SEO With Ibrar</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -21,42 +16,431 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link rel="stylesheet" href="css/styles.css">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="SEO Portfolio & Case Studies | SEO With Ibrar">
-    <meta property="og:description" content="Explore our SEO portfolio featuring real Google Search Console data. See how we drive massive organic traffic and revenue.">
+    <meta property="og:description" content="Explore real SEO case studies and Google Search Console data from Ibrar Ahmad's clients, showing organic traffic growth, rankings and revenue results.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://seowithibrar.com/portfolio">
     <meta property="og:image" content="https://seowithibrar.com/images/logo-full.png">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="SEO Portfolio & Case Studies | SEO With Ibrar">
-    <meta name="twitter:description" content="Explore our SEO portfolio featuring real Google Search Console data. See how we drive massive organic traffic and revenue.">
+    <meta name="twitter:description" content="Explore real SEO case studies and Google Search Console data from Ibrar Ahmad's clients, showing organic traffic growth, rankings and revenue results.">
     <meta name="twitter:image" content="https://seowithibrar.com/images/logo-full.png">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://seowithibrar.com/portfolio">
-    <!-- JSON-LD Schema -->
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CollectionPage",
-  "name": "SEO Portfolio & Case Studies | SEO With Ibrar",
-  "description": "Explore our SEO portfolio featuring real Google Search Console data. See how we drive massive organic traffic and revenue.",
-  "url": "https://seowithibrar.com/portfolio"
-}
-    </script>
+    <!-- FunnelPandit Inspired SEO Portfolio Styling -->
+    <style>
+        .portfolio-hero-dark {
+            background: linear-gradient(135deg, #0b1329 0%, #1e293b 100%);
+            color: #ffffff;
+            padding: 5.5rem 0 4rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .portfolio-hero-dark::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(140, 198, 63, 0.2) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+        }
+        .portfolio-pill-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(140, 198, 63, 0.15);
+            border: 1px solid rgba(140, 198, 63, 0.35);
+            color: var(--color-primary);
+            padding: 0.4rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Stats Bar Banner */
+        .stats-banner-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 1.5rem;
+            margin-top: 3.5rem;
+        }
+        .stat-card-fp {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 1.5rem;
+            backdrop-filter: blur(10px);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+        }
+        .stat-card-fp:hover {
+            transform: translateY(-4px);
+            border-color: var(--color-primary);
+        }
+        .stat-number-fp {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            line-height: 1;
+            margin-bottom: 0.35rem;
+        }
+        .stat-title-fp {
+            font-size: 0.95rem;
+            font-weight: 700;
+            color: #ffffff;
+            margin-bottom: 0.2rem;
+        }
+        .stat-sub-fp {
+            font-size: 0.78rem;
+            color: #94a3b8;
+        }
+
+        /* Filter Tabs */
+        .filter-tabs-wrapper {
+            display: flex;
+            gap: 0.75rem;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 3.5rem 0 3rem;
+        }
+        .filter-btn-fp {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            color: #475569;
+            padding: 0.65rem 1.4rem;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+        }
+        .filter-btn-fp:hover, .filter-btn-fp.active {
+            background: #0f172a;
+            color: #ffffff;
+            border-color: #0f172a;
+            box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+        }
+        .filter-btn-fp.active {
+            border-color: var(--color-primary);
+        }
+
+        /* Case Studies Cards (FunnelPandit Style) */
+        .portfolio-grid-fp {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+        .card-fp {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-fp:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--color-primary);
+        }
+        .card-img-wrapper-fp {
+            height: 220px;
+            position: relative;
+            background: #0f172a;
+            overflow: hidden;
+        }
+        .card-img-fp {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .card-fp:hover .card-img-fp {
+            transform: scale(1.05);
+        }
+        .card-category-badge-fp {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            background: #0f172a;
+            color: var(--color-primary);
+            border: 1px solid rgba(140, 198, 63, 0.4);
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 0.35rem 0.85rem;
+            border-radius: 20px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            backdrop-filter: blur(8px);
+        }
+        .card-body-fp {
+            padding: 1.75rem;
+        }
+        .card-title-fp {
+            font-size: 1.3rem;
+            font-weight: 800;
+            color: var(--color-dark);
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+        .card-client-fp {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: var(--color-primary);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+        .card-result-box-fp {
+            background: #f8fafc;
+            border: 1px solid #f1f5f9;
+            border-radius: 12px;
+            padding: 1rem;
+            margin-bottom: 1.25rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 0.75rem;
+        }
+        .metric-item-fp .val {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: var(--color-dark);
+        }
+        .metric-item-fp .lbl {
+            font-size: 0.75rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+        .tag-pill-fp {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #475569;
+            font-size: 0.75rem;
+            font-weight: 600;
+            padding: 0.25rem 0.65rem;
+            border-radius: 6px;
+            margin-right: 0.35rem;
+            margin-bottom: 0.35rem;
+        }
+        .card-footer-fp {
+            padding: 1.25rem 1.75rem;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #fafafa;
+        }
+        .btn-card-fp {
+            color: var(--color-dark);
+            font-weight: 700;
+            font-size: 0.88rem;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+            transition: color 0.2s ease;
+        }
+        .card-fp:hover .btn-card-fp {
+            color: var(--color-primary);
+        }
+
+        /* SEO GSC Case Studies - Full Image Display */
+        .seo-grid-full {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
+            gap: 2.5rem;
+        }
+        @media (max-width: 600px) {
+            .seo-grid-full {
+                grid-template-columns: 1fr;
+            }
+        }
+        .card-gsc-fp {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 12px 35px rgba(0,0,0,0.04);
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .card-gsc-fp:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+            border-color: var(--color-primary);
+        }
+        .gsc-frame-container {
+            background: #090d16;
+            padding: 1.25rem;
+            position: relative;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+        }
+        .gsc-window-header {
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            margin-bottom: 0.85rem;
+            padding-bottom: 0.6rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .gsc-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        .gsc-dot.red { background: #ff5f56; }
+        .gsc-dot.yellow { background: #ffbd2e; }
+        .gsc-dot.green { background: #27c93f; }
+        .gsc-window-title {
+            font-size: 0.72rem;
+            font-weight: 700;
+            color: #94a3b8;
+            margin-left: 0.5rem;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+        .card-gsc-full-img {
+            width: 100%;
+            height: auto;
+            max-height: 440px;
+            display: block;
+            object-fit: contain;
+            border-radius: 8px;
+            background: #000000;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+            transition: transform 0.3s ease;
+        }
+        .card-gsc-fp:hover .card-gsc-full-img {
+            transform: scale(1.015);
+        }
+
+        /* Web Development Dual-Device Mockup Styling (Desktop + Mobile) */
+        .webdev-device-container {
+            position: relative;
+            background: linear-gradient(145deg, #0b1222 0%, #151f36 100%);
+            padding: 1.5rem 1.25rem 3.25rem 1.25rem;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            overflow: visible;
+        }
+        .desktop-browser-frame {
+            background: #1e293b;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 12px 32px rgba(0,0,0,0.55);
+            border: 1px solid rgba(255,255,255,0.12);
+        }
+        .browser-top-bar {
+            display: flex;
+            align-items: center;
+            padding: 0.5rem 0.85rem;
+            background: #0f172a;
+            gap: 0.4rem;
+            border-bottom: 1px solid rgba(255,255,255,0.06);
+        }
+        .browser-address-bar {
+            margin-left: auto;
+            background: rgba(255,255,255,0.08);
+            color: #94a3b8;
+            font-size: 0.72rem;
+            font-family: monospace;
+            padding: 0.2rem 0.85rem;
+            border-radius: 12px;
+            width: 55%;
+            text-align: center;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+        }
+        .desktop-screen-img {
+            width: 100%;
+            height: 210px;
+            object-fit: cover;
+            object-position: top;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .card-fp:hover .desktop-screen-img {
+            transform: scale(1.03);
+        }
+        
+        /* Floating Mobile Phone Mockup Overlay - Properly Styled */
+        .mobile-phone-overlay {
+            position: absolute;
+            bottom: 12px;
+            right: 18px;
+            width: 100px;
+            height: 175px;
+            background: #090d16;
+            border: 3.5px solid #334155;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.7);
+            z-index: 10;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .card-fp:hover .mobile-phone-overlay {
+            transform: translateY(-6px) scale(1.04);
+            box-shadow: 0 20px 42px rgba(0,0,0,0.85);
+            border-color: var(--color-primary);
+        }
+        .phone-speaker-notch {
+            width: 30px;
+            height: 4px;
+            background: #334155;
+            border-radius: 2px;
+            margin: 4px auto 3px auto;
+        }
+        .mobile-screen-img {
+            width: 100%;
+            height: calc(100% - 11px);
+            object-fit: cover;
+            object-position: top;
+            display: block;
+        }
+        .device-label-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background: rgba(15, 23, 42, 0.85);
+            color: #ffffff;
+            font-size: 0.68rem;
+            font-weight: 800;
+            padding: 0.25rem 0.65rem;
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.2);
+            backdrop-filter: blur(6px);
+            z-index: 5;
+            display: flex;
+            align-items: center;
+            gap: 0.35rem;
+        }
+    </style>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGLHCFG9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-            <a href="index" class="logo">
+            <a href="/" class="logo">
                 <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
             </a>
             <!-- Desktop Menu -->
             <nav class="nav-menu">
-                <a href="index" class="nav-link">HOME</a>
+                <a href="/" class="nav-link">HOME</a>
                 <div class="nav-item-dropdown">
                     <a href="#" class="nav-link">SERVICE <svg width="12" height="12" viewBox="0 0 24 24" fill="none"
                             stroke="currentColor" stroke-width="2" style="margin-left: 2px;">
@@ -99,7 +483,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="mega-item-desc">High performance enterprise sites</div>
                                     </div>
                                 </a>
-                                <a href="Wordpress-design-services-for-visa-consultancy" class="mega-item">
+                                <a href="wordpress-design-services-for-visa-consultancy" class="mega-item">
                                     <div class="mega-item-dot"></div>
                                     <div class="mega-item-content">
                                         <div class="mega-item-title">WordPress Visa Services</div>
@@ -147,379 +531,819 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
         </div>
     </header>
-    <main class="dark-archive-main hero" style="min-height: 80vh; padding: 6rem 0;">
-        <div class="container" style="position: relative; z-index: 2;">
-            <header class="dark-archive-header" style="text-align: center; margin-bottom: 4rem;">
-                <h1 class="dark-archive-title hero-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">Our Client Success
-                    Stories</h1>
-                <p class="dark-archive-subtitle hero-description" style="margin: 0 auto 4rem auto; max-width: 800px; line-height: 1.6;">
-                    Discover how we have helped education brands, visa consultancies, and e-commerce stores scale their
-                    organic traffic and skyrocket revenue through data-driven SEO strategies.
+    <main style="background: #f8fafc; padding-bottom: 6rem;">
+        <!-- Hero Section FunnelPandit style -->
+        <section class="portfolio-hero-dark">
+            <div class="container" style="max-width: 1200px; text-align: center; position: relative; z-index: 2;">
+                <span class="portfolio-pill-badge">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    VERIFIED CLIENT RESULTS & DIGITAL PORTFOLIO
+                </span>
+                <h1 style="font-size: 3.4rem; font-weight: 800; line-height: 1.15; color: #ffffff; max-width: 900px; margin: 0 auto 1.5rem auto;">
+                    SEO & Web Development Portfolio
+                </h1>
+                <p style="color: #cbd5e1; font-size: 1.15rem; max-width: 800px; margin: 0 auto; line-height: 1.7;">
+                    Explore real Google Search Console traffic proof alongside our high-speed, custom WordPress web development projects delivered across Lahore, Pakistan, and global markets.
                 </p>
-                <h2 style="font-size: 2.2rem; font-weight: 700; margin-bottom: 1rem;">Proven SEO Results</h2>
-                <p style="color: rgba(255,255,255,0.7); max-width: 800px; margin: 0 auto;">
-                    Real data from Google Search Console showcasing massive organic traffic growth, improved CTR, and
-                    top keyword rankings.
-                </p>
-            </header>
-            <section class="seo-results-section" style="padding-top: 1rem;">
-                <div class="slider-container">
-                    <div class="slider-track" id="sliderTrack">
-                        <div class="slide">
-                            <img src="images/Local ecommeces.png" alt="Local Ecommerce SEO Graph" loading="lazy">
-                            <div class="slide-caption">Local E-commerce Scale</div>
-                            <div class="slide-stats glass-card" style="padding: 1rem 1.5rem;">
-                                <div class="stat-item">
-                                    <span class="stat-value">+240%</span>
-                                    <span class="stat-label">Organic Revenue</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">50+</span>
-                                    <span class="stat-label">Page 1 Keywords</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/School Website.png" alt="School Website SEO Graph" loading="lazy">
-                            <div class="slide-caption">School Website Growth</div>
-                            <div class="slide-stats glass-card" style="padding: 1rem 1.5rem;">
-                                <div class="stat-item">
-                                    <span class="stat-value">+180%</span>
-                                    <span class="stat-label">Student Inquiries</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">85%</span>
-                                    <span class="stat-label">Lower Cost/Lead</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/Visa Consutlacny in Karachi.png" alt="Visa Consultancy SEO Graph" loading="lazy">
-                            <div class="slide-caption">Visa Consultancy in Karachi</div>
-                            <div class="slide-stats glass-card" style="padding: 1rem 1.5rem;">
-                                <div class="stat-item">
-                                    <span class="stat-value">+315%</span>
-                                    <span class="stat-label">Organic Traffic</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">#1</span>
-                                    <span class="stat-label">Local Map Pack</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="slide">
-                            <img src="images/Education platfrom in lahore.png" alt="Education Platform SEO Graph" loading="lazy">
-                            <div class="slide-caption">Education Platform in Lahore</div>
-                            <div class="slide-stats glass-card" style="padding: 1rem 1.5rem;">
-                                <div class="stat-item">
-                                    <span class="stat-value">+210%</span>
-                                    <span class="stat-label">Traffic Growth</span>
-                                </div>
-                                <div class="stat-item">
-                                    <span class="stat-value">100+</span>
-                                    <span class="stat-label">Top 3 Rankings</span>
-                                </div>
-                            </div>
-                        </div>
+
+                <!-- Performance Banner Grid -->
+                <div class="stats-banner-grid">
+                    <div class="stat-card-fp">
+                        <div class="stat-number-fp">+340%</div>
+                        <div class="stat-title-fp">Avg Traffic Growth</div>
+                        <div class="stat-sub-fp">Search Console Verified</div>
                     </div>
-                    <button class="slider-btn prev" id="sliderPrev" aria-label="Previous Slide">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="15 18 9 12 15 6"></polyline>
-                                </svg>
-                            </button>
-                            <button class="slider-btn next" id="sliderNext" aria-label="Next Slide">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                    stroke-width="2">
-                                    <polyline points="9 18 15 12 9 6"></polyline>
-                                </svg>
-                            </button>
-                        </div>
-                        <div class="slider-dots" id="sliderDots" style="margin-bottom: 2rem;">
-                            <div class="dot active" data-index="0"></div>
-                            <div class="dot" data-index="1"></div>
-                            <div class="dot" data-index="2"></div>
-                            <div class="dot" data-index="3"></div>
-                        </div>
-            </section>
-            <section class="wp-portfolio-section dark-band" style="padding: 6rem 0; margin-top: 2rem;">
-                <header class="dark-archive-header" style="text-align: center; margin-bottom: 4rem;">
-                    <h2 style="font-size: 2.5rem; font-weight: 800; margin-bottom: 1rem; color: white;" class="reveal">Premium WordPress Development</h2>
-                    <p style="color: rgba(255,255,255,0.7); max-width: 800px; margin: 0 auto; font-size: 1.1rem;" class="reveal">
-                        High-performance, enterprise-grade WordPress websites built for speed, conversion, and perfect responsiveness across all devices.
+                    <div class="stat-card-fp">
+                        <div class="stat-number-fp">120+</div>
+                        <div class="stat-title-fp">Projects Delivered</div>
+                        <div class="stat-sub-fp">SEO & Web Development</div>
+                    </div>
+                    <div class="stat-card-fp">
+                        <div class="stat-number-fp">98%</div>
+                        <div class="stat-title-fp">Core Web Vitals</div>
+                        <div class="stat-sub-fp">WordPress Speed Score</div>
+                    </div>
+                    <div class="stat-card-fp">
+                        <div class="stat-number-fp">100%</div>
+                        <div class="stat-title-fp">White-Hat Certified</div>
+                        <div class="stat-sub-fp">Google Guidelines</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content Area -->
+        <div class="container" style="max-width: 1200px; padding-top: 4rem;">
+            
+            <!-- SECTION 1: SEO CASE STUDIES & SEARCH CONSOLE PROOF -->
+            <section id="seo-section" style="margin-bottom: 6rem;">
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
+                    <span style="color: var(--color-primary); font-weight: 800; font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase;">SECTION 1 • ORGANIC SEARCH ENGINE OPTIMIZATION</span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-top: 0.25rem; margin-bottom: 0.75rem;">
+                        SEO Case Studies & Search Console Proof
+                    </h2>
+                    <p style="color: #64748b; font-size: 1.05rem;">
+                        Verified Google Search Console data showcasing real traffic spikes, keyword ranking surges, and organic lead generation.
                     </p>
-                </header>
-                <div class="wp-slider-container">
-                    <div class="wp-slider-track" id="wpSliderTrack">
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
+                </div>
+
+                <div class="seo-grid-full">
+                    <!-- GSC SEO Card 1 -->
+                    <div class="card-gsc-fp">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
                                 </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/AG bookkeeping services llc.webp" alt="AG bookkeeping services llc Desktop View" loading="lazy">
+                                <img src="images/Visa Consutlacny in Karachi.png" alt="Visa Consultancy Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">📍 VISA CONSULTANCY • KARACHI</div>
+                                <h3 class="card-title-fp">+315% Organic Search Traffic Growth in Competitive Niche</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">+315%</div>
+                                        <div class="lbl">Organic Traffic</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">#1 Rank</div>
+                                        <div class="lbl">Local Map Pack</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Search Console Proof</span>
+                                    <span class="tag-pill-fp">Technical SEO</span>
+                                    <span class="tag-pill-fp">Local Map Pack</span>
+                                    <span class="tag-pill-fp">Content Silos</span>
                                 </div>
                             </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/AG bookkeeping services llc.webp" alt="AG bookkeeping services llc Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">AG bookkeeping services llc</div>
                         </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Blexry.webp" alt="Blexry Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Blexry.webp" alt="Blexry Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Blexry</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Cheese Club.webp" alt="Cheese Club Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Cheese Club.webp" alt="Cheese Club Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Cheese Club</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Edvanture Consultancy.webp" alt="Edvanture Consultancy Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Edvanture Consultancy.webp" alt="Edvanture Consultancy Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Edvanture Consultancy</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Euro immigration Consultancy.webp" alt="Euro immigration Consultancy Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Euro immigration Consultancy.webp" alt="Euro immigration Consultancy Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Euro immigration Consultancy</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Consutlancy Pakistan Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Consutlancy Pakistan Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Euro Immigration Consutlancy Pakistan</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Haya Collective.webp" alt="Haya Collective Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Haya Collective.webp" alt="Haya Collective Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Haya Collective</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/KIMS.webp" alt="KIMS Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/KIMS.webp" alt="KIMS Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">KIMS</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/knowledge kastle.webp" alt="knowledge kastle Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/knowledge kastle.webp" alt="knowledge kastle Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">knowledge kastle</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Navid saqib.webp" alt="Navid saqib Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Navid saqib.webp" alt="Navid saqib Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Navid saqib</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Spark Vis Consutlancy.webp" alt="Spark Vis Consutlancy Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Spark Vis Consutlancy.webp" alt="Spark Vis Consutlancy Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Spark Vis Consutlancy</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Vip Group.webp" alt="Vip Group Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Vip Group.webp" alt="Vip Group Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Vip Group</div>
-                        </div>
-                        <div class="wp-slide">
-                            <div class="device-desktop">
-                                <div class="device-desktop-header">
-                                    <div class="device-dot red"></div>
-                                    <div class="device-dot yellow"></div>
-                                    <div class="device-dot green"></div>
-                                </div>
-                                <div class="device-desktop-screen">
-                                    <img src="images/Zaka Foods.webp" alt="Zaka Foods Desktop View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="device-mobile">
-                                <div class="device-mobile-notch"></div>
-                                <div class="device-mobile-screen">
-                                    <img src="images/Zaka Foods.webp" alt="Zaka Foods Mobile View" loading="lazy">
-                                </div>
-                            </div>
-                            <div class="wp-slide-caption">Zaka Foods</div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">TIMEFRAME: 5 MONTHS</span>
+                            <a href="contact" class="btn-card-fp">Book Audit Call →</a>
                         </div>
                     </div>
-                    <button class="wp-slider-btn prev" id="wpSliderPrev" aria-label="Previous WP Slide">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="15 18 9 12 15 6"></polyline></svg>
-                    </button>
-                    <button class="wp-slider-btn next" id="wpSliderNext" aria-label="Next WP Slide">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="9 18 15 12 9 6"></polyline></svg>
-                    </button>
+
+                    <!-- GSC SEO Card 2 -->
+                    <div class="card-gsc-fp">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/Education platfrom in lahore.png" alt="Education Platform Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">📍 EDUCATION PLATFORM • LAHORE</div>
+                                <h3 class="card-title-fp">+210% Organic Traffic & 100+ Top 3 Search Positions</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">+210%</div>
+                                        <div class="lbl">Organic Visitors</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">100+</div>
+                                        <div class="lbl">Top 3 Rankings</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Search Console Proof</span>
+                                    <span class="tag-pill-fp">Course Hubs</span>
+                                    <span class="tag-pill-fp">AEO / GEO SEO</span>
+                                    <span class="tag-pill-fp">Core Web Vitals</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">TIMEFRAME: 6 MONTHS</span>
+                            <a href="contact" class="btn-card-fp">Book Audit Call →</a>
+                        </div>
+                    </div>
+
+                    <!-- GSC SEO Card 3 -->
+                    <div class="card-gsc-fp">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/Local ecommeces.png" alt="Local eCommerce Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">📍 ECOMMERCE BRAND • PAKISTAN</div>
+                                <h3 class="card-title-fp">+240% Organic Store Revenue & 50+ Commercial Keywords</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">+240%</div>
+                                        <div class="lbl">Organic Revenue</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">50+</div>
+                                        <div class="lbl">Page 1 Keywords</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Search Console Proof</span>
+                                    <span class="tag-pill-fp">Product Schema</span>
+                                    <span class="tag-pill-fp">Category SEO</span>
+                                    <span class="tag-pill-fp">Shopping Graph</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">TIMEFRAME: 6 MONTHS</span>
+                            <a href="contact" class="btn-card-fp">Book Audit Call →</a>
+                        </div>
+                    </div>
+
+                    <!-- GSC SEO Card 4 -->
+                    <div class="card-gsc-fp">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.7rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/School Website.png" alt="School Website Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">📍 SCHOOL & INSTITUTE • LAHORE</div>
+                                <h3 class="card-title-fp">+180% Student Inquiry Growth & 85% Lower Cost Per Lead</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">+180%</div>
+                                        <div class="lbl">Student Leads</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">85%</div>
+                                        <div class="lbl">Lower Cost/Lead</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Search Console Proof</span>
+                                    <span class="tag-pill-fp">Local SEO</span>
+                                    <span class="tag-pill-fp">Lead Funnels</span>
+                                    <span class="tag-pill-fp">Schema Markup</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">TIMEFRAME: 4 MONTHS</span>
+                            <a href="contact" class="btn-card-fp">Book Audit Call →</a>
+                        </div>
+                    </div>
                 </div>
             </section>
-            <div class="cta-box" style="margin: 5rem auto 2rem; max-width: 1000px; text-align: left;">
-                <div>
-                    <h2 class="cta-title">Ready to be our next success story?</h2>
-                    <p class="cta-desc" style="max-width: 600px;">Let's discuss how data-driven SEO can transform your business growth.</p>
+
+            <!-- SECTION 2: WEB DEVELOPMENT & CUSTOM WORDPRESS SHOWCASE -->
+            <section id="webdev-section" style="margin-bottom: 4rem; padding-top: 2rem; border-top: 1px solid #e2e8f0;">
+                <div style="text-align: center; max-width: 800px; margin: 3rem auto 3rem auto;">
+                    <span style="color: var(--color-primary); font-weight: 800; font-size: 0.82rem; letter-spacing: 2px; text-transform: uppercase;">SECTION 2 • HIGH PERFORMANCE WEB ENGINEERING</span>
+                    <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-dark); margin-top: 0.25rem; margin-bottom: 0.75rem;">
+                        Web Development & Custom WordPress Showcase
+                    </h2>
+                    <p style="color: #64748b; font-size: 1.05rem;">
+                        High-performance WordPress websites built for sub-second speeds, zero plugin bloat, 98%+ Core Web Vitals scores, and pixel-perfect responsiveness.
+                    </p>
                 </div>
-                <a href="contact" class="btn btn-dark" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Book a Strategy Call</a>
+
+                <div class="portfolio-grid-fp">
+                    <!-- Web Dev Card 1 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://euroimmigration.com</div>
+                                    </div>
+                                    <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 EURO IMMIGRATION CONSULTANCY</div>
+                                <h3 class="card-title-fp">Custom Visa Portal & Student Lead Conversion Architecture</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">98%</div>
+                                        <div class="lbl">Core Web Vitals</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.6s</div>
+                                        <div class="lbl">Page Load Time</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Custom WP Theme</span>
+                                    <span class="tag-pill-fp">Lead Funnels</span>
+                                    <span class="tag-pill-fp">Mobile First</span>
+                                    <span class="tag-pill-fp">Zero Bloat</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS & SASS</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 2 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://edvantureconsultancy.com</div>
+                                    </div>
+                                    <img src="images/Edvanture Consultancy.webp" alt="Edvanture Consultancy Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Edvanture Consultancy.webp" alt="Edvanture Consultancy Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 EDVANTURE CONSULTANCY</div>
+                                <h3 class="card-title-fp">Education & Study Abroad Portal with Instant Inquiry Form</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">99%</div>
+                                        <div class="lbl">Mobile Speed</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">100/100</div>
+                                        <div class="lbl">SEO Score</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Fast Architecture</span>
+                                    <span class="tag-pill-fp">Course Search</span>
+                                    <span class="tag-pill-fp">Responsive</span>
+                                    <span class="tag-pill-fp">SEO Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS & PHP</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 3 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://agbookkeeping.com</div>
+                                    </div>
+                                    <img src="images/AG bookkeeping services llc.webp" alt="AG Bookkeeping Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/AG bookkeeping services llc.webp" alt="AG Bookkeeping Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 AG BOOKKEEPING SERVICES LLC</div>
+                                <h3 class="card-title-fp">Enterprise Financial & Accounting Services Portal</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">100%</div>
+                                        <div class="lbl">Responsive</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.7s</div>
+                                        <div class="lbl">First Contentful Paint</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">B2B Design</span>
+                                    <span class="tag-pill-fp">Fast Loading</span>
+                                    <span class="tag-pill-fp">Clean Code</span>
+                                    <span class="tag-pill-fp">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 4 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://blexry.com</div>
+                                    </div>
+                                    <img src="images/Blexry.webp" alt="Blexry Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Blexry.webp" alt="Blexry Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 BLEXRY DIGITAL PLATFORM</div>
+                                <h3 class="card-title-fp">Lightweight Modern Agency Website & Ultra-Fast Load</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">99/100</div>
+                                        <div class="lbl">PageSpeed Insights</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.5s</div>
+                                        <div class="lbl">LCP Score</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Modern Design</span>
+                                    <span class="tag-pill-fp">Sub-Second Speed</span>
+                                    <span class="tag-pill-fp">Zero Bloat</span>
+                                    <span class="tag-pill-fp">Clean HTML5</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: CUSTOM HTML5 & CSS3</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 5 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://cheeseclub.pk</div>
+                                    </div>
+                                    <img src="images/Cheese Club.webp" alt="Cheese Club Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Cheese Club.webp" alt="Cheese Club Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 CHEESE CLUB ECOMMERCE</div>
+                                <h3 class="card-title-fp">Custom WooCommerce Store Engine with Fast Checkout</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">+350%</div>
+                                        <div class="lbl">Direct Orders</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.9s</div>
+                                        <div class="lbl">Cart Load Speed</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">WooCommerce</span>
+                                    <span class="tag-pill-fp">Fast Checkout</span>
+                                    <span class="tag-pill-fp">Product Schema</span>
+                                    <span class="tag-pill-fp">Mobile Cart</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WOOCOMMERCE & PHP</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 6 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://hayacollective.com</div>
+                                    </div>
+                                    <img src="images/Haya Collective.webp" alt="Haya Collective Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Haya Collective.webp" alt="Haya Collective Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 HAYA COLLECTIVE BRAND</div>
+                                <h3 class="card-title-fp">Minimalist Lifestyle & Retail Brand Platform</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">100%</div>
+                                        <div class="lbl">Pixel-Perfect</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.7s</div>
+                                        <div class="lbl">Speed Score</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Minimalist UI</span>
+                                    <span class="tag-pill-fp">Typography</span>
+                                    <span class="tag-pill-fp">Lazy Loading</span>
+                                    <span class="tag-pill-fp">Mobile First</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS & CSS3</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 7 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://knowledgekastle.com</div>
+                                    </div>
+                                    <img src="images/knowledge kastle.webp" alt="Knowledge Kastle Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/knowledge kastle.webp" alt="Knowledge Kastle Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 KNOWLEDGE KASTLE INSTITUTE</div>
+                                <h3 class="card-title-fp">Academic E-Learning & Course Portal Engine</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">97%</div>
+                                        <div class="lbl">Performance</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.8s</div>
+                                        <div class="lbl">Page Speed</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Course Management</span>
+                                    <span class="tag-pill-fp">Student UI</span>
+                                    <span class="tag-pill-fp">Schema Markup</span>
+                                    <span class="tag-pill-fp">Fast Database</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS & MYSQL</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 8 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://zakafoods.com</div>
+                                    </div>
+                                    <img src="images/Zaka Foods.webp" alt="Zaka Foods Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Zaka Foods.webp" alt="Zaka Foods Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 ZAKA FOODS ONLINE STORE</div>
+                                <h3 class="card-title-fp">High-Traffic Food & Grocery eCommerce Platform</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">98%</div>
+                                        <div class="lbl">Core Web Vitals</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.8s</div>
+                                        <div class="lbl">Load Time</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Fast Checkout</span>
+                                    <span class="tag-pill-fp">Product Schema</span>
+                                    <span class="tag-pill-fp">Optimized Images</span>
+                                    <span class="tag-pill-fp">WooCommerce</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WOOCOMMERCE & PHP</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 9 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://kims.edu.pk</div>
+                                    </div>
+                                    <img src="images/KIMS.webp" alt="KIMS Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/KIMS.webp" alt="KIMS Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 KIMS ACADEMIC INSTITUTE</div>
+                                <h3 class="card-title-fp">Educational Institute & Student Information Portal</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">100%</div>
+                                        <div class="lbl">Mobile Friendly</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.7s</div>
+                                        <div class="lbl">Load Speed</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Academic Portal</span>
+                                    <span class="tag-pill-fp">Structured Code</span>
+                                    <span class="tag-pill-fp">Fast Load</span>
+                                    <span class="tag-pill-fp">SEO Ready</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 10 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://sparkvisa.com</div>
+                                    </div>
+                                    <img src="images/Spark Vis Consutlancy.webp" alt="Spark Visa Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Spark Vis Consutlancy.webp" alt="Spark Visa Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 SPARK VISA CONSULTANCY</div>
+                                <h3 class="card-title-fp">Global Study Visa & Immigration Consultancy Platform</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">98%</div>
+                                        <div class="lbl">Performance</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.6s</div>
+                                        <div class="lbl">Load Time</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Visa Funnel</span>
+                                    <span class="tag-pill-fp">Lead Capture</span>
+                                    <span class="tag-pill-fp">Responsive</span>
+                                    <span class="tag-pill-fp">Sub-Second</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS & JS</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+
+                    <!-- Web Dev Card 11 -->
+                    <div class="card-fp">
+                        <div>
+                            <div class="webdev-device-container">
+                                <span class="device-label-badge">
+                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                                    DESKTOP + MOBILE RESPONSIVE
+                                </span>
+                                <div class="desktop-browser-frame">
+                                    <div class="browser-top-bar">
+                                        <span class="gsc-dot red"></span>
+                                        <span class="gsc-dot yellow"></span>
+                                        <span class="gsc-dot green"></span>
+                                        <div class="browser-address-bar">https://vipgroup.pk</div>
+                                    </div>
+                                    <img src="images/Vip Group.webp" alt="Vip Group Desktop View" class="desktop-screen-img" loading="lazy">
+                                </div>
+                                <div class="mobile-phone-overlay">
+                                    <div class="phone-speaker-notch"></div>
+                                    <img src="images/Vip Group.webp" alt="Vip Group Mobile View" class="mobile-screen-img" loading="lazy">
+                                </div>
+                            </div>
+                            <div class="card-body-fp">
+                                <div class="card-client-fp">💻 VIP GROUP ENTERPRISE</div>
+                                <h3 class="card-title-fp">Corporate Business Holdings & Group Website</h3>
+                                <div class="card-result-box-fp">
+                                    <div class="metric-item-fp">
+                                        <div class="val" style="color: var(--color-primary);">99%</div>
+                                        <div class="lbl">Desktop Score</div>
+                                    </div>
+                                    <div class="metric-item-fp">
+                                        <div class="val">0.7s</div>
+                                        <div class="lbl">Page Speed</div>
+                                    </div>
+                                </div>
+                                <div>
+                                    <span class="tag-pill-fp">Corporate UI</span>
+                                    <span class="tag-pill-fp">Clean Code</span>
+                                    <span class="tag-pill-fp">Security</span>
+                                    <span class="tag-pill-fp">Responsive</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card-footer-fp">
+                            <span style="font-size: 0.8rem; color: #64748b; font-weight: 600;">STACK: WORDPRESS</span>
+                            <a href="contact" class="btn-card-fp">Discuss Project →</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- FunnelPandit Style Verified GSC Banner -->
+            <div style="margin-top: 4rem; background: #0f172a; border-radius: 24px; padding: 4rem 3rem; color: #ffffff; position: relative; overflow: hidden;">
+                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+                    <div>
+                        <span style="color: var(--color-primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">100% VERIFIED DATA</span>
+                        <h2 style="font-size: 2.2rem; font-weight: 800; color: #ffffff; margin-top: 0.5rem; margin-bottom: 1.25rem;">
+                            Ready to transform your search traffic and website speed?
+                        </h2>
+                        <p style="color: #94a3b8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 1.5rem;">
+                            Whether you need white-hat SEO dominance or custom lightweight WordPress development, we deliver real-world business results.
+                        </p>
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
+                            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; color: #cbd5e1;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Zero Black-Hat Tactics
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; color: #cbd5e1;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Weekly GSC Reports
+                            </div>
+                            <div style="display: flex; align-items: center; gap: 0.5rem; font-size: 0.9rem; font-weight: 600; color: #cbd5e1;">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Direct 1-on-1 Support
+                            </div>
+                        </div>
+                    </div>
+                    <div style="background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; padding: 2rem; text-align: center;">
+                        <h3 style="font-size: 1.8rem; font-weight: 800; color: #ffffff; margin-bottom: 0.5rem;">Ready to be our next success story?</h3>
+                        <p style="color: #cbd5e1; font-size: 0.95rem; margin-bottom: 2rem;">Let us analyze your website and provide a free 15-minute growth strategy plan.</p>
+                        <a href="contact" class="btn btn-primary" style="padding: 1rem 2.2rem; font-weight: 700; font-size: 1rem;">
+                            BOOK FREE CONSULTATION CALL
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </main>
+
+    <!-- Footer -->
     <footer class="footer new-mega-footer">
         <div class="container footer-container-new">
             <div class="footer-col-main">
-                <a href="index" class="logo footer-logo"
+                <a href="/" class="logo footer-logo"
                     style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
                     <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
                 </a>
@@ -546,7 +1370,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="seo-services-visa-consultancy">Visa Consultancy SEO</a></li>
                     <li><a href="seo-services-education">Education SEO</a></li>
                     <li><a href="wordpress-design-services">WordPress Solutions</a></li>
-                    <li><a href="Wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
+                    <li><a href="wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
                     <li><a href="wordpress-design-services-for-education">WordPress Education Services</a></li>
                 </ul>
             </div>
@@ -604,8 +1428,8 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                             <div
                                 style="color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">
                                 DIRECT CHANNEL</div>
-                            <a href="mailto:ibrar@seowithibrar.com"
-                                style="color: white; font-size: 0.85rem; font-weight: 600;">ibrar@seowithibrar.com</a>
+                            <a href="mailto:seowithibrar@gmail.com"
+                                style="color: white; font-size: 0.85rem; font-weight: 600;">seowithibrar@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -634,55 +1458,30 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </div>
     </footer>
+
+    <!-- Interactive Category Filter Script -->
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const track = document.getElementById('sliderTrack');
-            const prevBtn = document.getElementById('sliderPrev');
-            const nextBtn = document.getElementById('sliderNext');
-            const dots = document.querySelectorAll('.dot');
-            let currentIndex = 0;
-            const totalSlides = 4;
-        // WP Slider Logic
-        const wpTrack = document.getElementById('wpSliderTrack');
-        const wpPrevBtn = document.getElementById('wpSliderPrev');
-        const wpNextBtn = document.getElementById('wpSliderNext');
-        let wpCurrentIndex = 0;
-        const wpTotalSlides = 13;
-        function updateWpSlider() {
-            wpTrack.style.transform = `translateX(-${wpCurrentIndex * 100}%)`;
-        }
-        if(wpNextBtn && wpPrevBtn && wpTrack) {
-            wpNextBtn.addEventListener('click', () => {
-                wpCurrentIndex = (wpCurrentIndex + 1) % wpTotalSlides;
-                updateWpSlider();
-            });
-            wpPrevBtn.addEventListener('click', () => {
-                wpCurrentIndex = (wpCurrentIndex - 1 + wpTotalSlides) % wpTotalSlides;
-                updateWpSlider();
-            });
-        }
-            function updateSlider() {
-                track.style.transform = `translateX(-${currentIndex * 100}%)`;
-                dots.forEach((dot, index) => {
-                    dot.classList.toggle('active', index === currentIndex);
-                });
-            }
-            if (nextBtn && prevBtn && track) {
-                nextBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex + 1) % totalSlides;
-                    updateSlider();
-                });
-                prevBtn.addEventListener('click', () => {
-                    currentIndex = (currentIndex - 1 + totalSlides) % totalSlides;
-                    updateSlider();
-                });
-                dots.forEach(dot => {
-                    dot.addEventListener('click', (e) => {
-                        currentIndex = parseInt(e.target.getAttribute('data-index'));
-                        updateSlider();
+            const filterBtns = document.querySelectorAll('.filter-btn-fp');
+            const cards = document.querySelectorAll('.card-fp');
+
+            filterBtns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    filterBtns.forEach(b => b.classList.remove('active'));
+                    btn.classList.add('active');
+
+                    const filterValue = btn.getAttribute('data-filter');
+
+                    cards.forEach(card => {
+                        const cardCat = card.getAttribute('data-category');
+                        if (filterValue === 'all' || filterValue === cardCat) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
                     });
                 });
-            }
+            });
         });
     </script>
 </body>

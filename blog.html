@@ -1,13 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGLHCFG9');</script>
-<!-- End Google Tag Manager -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ibrar.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Read our latest SEO insights, technical guides, and proven strategies to skyrocket your organic traffic and dominate Google rankings.">
@@ -18,6 +14,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/blog-post.css">
     <!-- Open Graph Tags -->
     <meta property="og:title" content="SEO Blog & Insights | Technical SEO Guides">
     <meta property="og:description" content="Read our latest SEO insights, technical guides, and proven strategies to skyrocket your organic traffic and dominate Google rankings.">
@@ -43,19 +40,15 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGLHCFG9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-                        <a href="index" class="logo">
+                        <a href="/" class="logo">
                 <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
             </a>
             <!-- Desktop Menu -->
                         <nav class="nav-menu">
-                <a href="index" class="nav-link">HOME</a>
+                <a href="/" class="nav-link">HOME</a>
                 <div class="nav-item-dropdown">
                     <a href="#" class="nav-link">SERVICE <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 2px;"><path d="M6 9l6 6 6-6"/></svg></a>
                     <div class="mega-menu">
@@ -95,7 +88,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="mega-item-desc">High performance enterprise sites</div>
                                     </div>
                                 </a>
-                                <a href="Wordpress-design-services-for-visa-consultancy" class="mega-item">
+                                <a href="wordpress-design-services-for-visa-consultancy" class="mega-item">
                                     <div class="mega-item-dot"></div>
                                     <div class="mega-item-content">
                                         <div class="mega-item-title">WordPress Visa Services</div>
@@ -140,103 +133,85 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </button>
         </div>
     </header>
-    <main class="dark-archive-main">
-        <div class="container">
-            <header class="dark-archive-header">
-                <h1 class="dark-archive-title">Our SEO & Web Growth Blog</h1>
-                <p class="dark-archive-subtitle">
+    <main class="bp-archive-main">
+        <!-- Archive Hero -->
+        <section class="bp-archive-hero">
+            <div class="container bp-archive-hero-content">
+                <div class="breadcrumbs" style="justify-content: center; margin-bottom: 1.5rem; font-size: 0.9rem;">
+                    <a href="/" style="color: #64748b; text-decoration: none;">Home</a>
+                    <span class="separator" style="color: #cbd5e1; margin: 0 8px;">/</span>
+                    <span style="color: var(--color-primary); font-weight: 600;">Blog</span>
+                </div>
+                <h1 class="bp-hero-title">Our SEO & Web Growth Blog</h1>
+                <p class="bp-hero-intro" style="max-width: 800px; margin: 0 auto; color: #cbd5e1; font-size: 1.1rem; line-height: 1.6;">
                     Direct, actionable search engine optimization guides and performance site optimization strategies designed specifically for growing education and visa consultancy brands.
                 </p>
-            </header>
-            <div class="dark-archive-controls">
-                <div class="dark-filter-group" id="blog-filters">
-                    <button class="dark-filter-btn active" data-filter="all">All Articles</button>
-                    <button class="dark-filter-btn" data-filter="Future of Search">Future of Search</button>
-                    <button class="dark-filter-btn" data-filter="MODERN SEO">MODERN SEO</button>
-                    <button class="dark-filter-btn" data-filter="VISA SEO">VISA SEO</button>
-                    <button class="dark-filter-btn" data-filter="WordPress">WordPress</button>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- Controls -->
+            <div class="bp-archive-controls">
+                <div class="bp-filter-group" id="blog-filters">
+                    <button class="bp-filter-btn active" data-filter="all">All Articles</button>
+                    <button class="bp-filter-btn" data-filter="Future of Search">Future of Search</button>
+                    <button class="bp-filter-btn" data-filter="MODERN SEO">MODERN SEO</button>
+                    <button class="bp-filter-btn" data-filter="VISA SEO">VISA SEO</button>
+                    <button class="bp-filter-btn" data-filter="WordPress">WordPress</button>
                 </div>
-                <div class="dark-search-container">
+                <div class="bp-search-container">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <circle cx="11" cy="11" r="8"></circle>
                         <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
                     </svg>
-                    <input type="text" id="blog-search" class="dark-search-input" placeholder="Search guides & strategies...">
+                    <input type="text" id="blog-search" class="bp-search-input" placeholder="Search guides & strategies...">
                 </div>
             </div>
-            <div class="dark-blog-grid" id="blog-grid">
-                <div class="dark-blog-card" data-category="WordPress">
-                    <div class="dark-blog-image">
-                        <img src="images/ultimate-guide-to-wordpress-speed-optimization.webp" alt="Ultimate Guide to WordPress Speed Optimization" loading="lazy">
-                    </div>
-                    <div class="dark-blog-content">
-                        <div class="dark-blog-meta">
-                            <span class="dark-blog-category">WordPress</span>
-                        </div>
-                        <h3 class="dark-blog-title"><a href="ultimate-guide-to-wordpress-speed-optimization">Ultimate Guide to WordPress Speed Optimization</a></h3>
-                        <p class="dark-blog-excerpt">Welcome to our comprehensive guide on Ultimate Guide to WordPress Speed Optimization. In this post, we will explore the key strategies, actionable tips, and foundational concepts you need to succeed in this area.</p>
-                    </div>
-                </div>
-                <div class="dark-blog-card" data-category="Future of Search">
-                    <div class="dark-blog-image">
-                        <img src="images/geo-generative-engine-optimization-vs-traditional-seo.webp" alt="GEO (Generative Engine Optimization) vs Traditional SEO" loading="lazy">
-                    </div>
-                    <div class="dark-blog-content">
-                        <div class="dark-blog-meta">
-                            <span class="dark-blog-category">Future of Search</span>
-                        </div>
-                        <h3 class="dark-blog-title"><a href="geo-generative-engine-optimization-vs-traditional-seo">GEO (Generative Engine Optimization) vs Traditional SEO</a></h3>
-                        <p class="dark-blog-excerpt">Welcome to our comprehensive guide on GEO (Generative Engine Optimization) vs Traditional SEO. In this post, we will explore the key strategies, actionable tips, and foundational concepts you need to succeed in this area.</p>
-                    </div>
-                </div>
-                <div class="dark-blog-card" data-category="VISA SEO">
-                    <div class="dark-blog-image">
-                        <img src="images/seo-services-for-visa-consultancy.webp" alt="SEO Services for Visa Consultancy" loading="lazy">
-                    </div>
-                    <div class="dark-blog-content">
-                        <div class="dark-blog-meta">
-                            <span class="dark-blog-category">VISA SEO</span>
-                        </div>
-                        <h3 class="dark-blog-title"><a href="seo-services-for-visa-consultancy">SEO Services for Visa Consultancy</a></h3>
-                        <p class="dark-blog-excerpt">Your potential clients search online before they contact a visa consultant. They compare options, assess credibility, and make careful choices. If your visa consultancy does not appear clearly in search results, you lose serious client inquiries.</p>
-                    </div>
-                </div>
-                <div class="dark-blog-card" data-category="MODERN SEO">
-                    <div class="dark-blog-image">
+
+            <!-- Grid -->
+            <div class="bp-related-grid" id="blog-grid" style="margin-bottom: 5rem;">
+                
+                <a href="top-seo-experts-in-pakistan" class="bp-related-card" data-category="MODERN SEO">
+                    <div class="bp-related-img-wrapper">
                         <img src="images/top-seo-experts-pakistan.webp" alt="Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!" loading="lazy">
+                        <span class="bp-related-category">MODERN SEO</span>
                     </div>
-                    <div class="dark-blog-content">
-                        <div class="dark-blog-meta">
-                            <span class="dark-blog-category">MODERN SEO</span>
-                        </div>
-                        <h3 class="dark-blog-title"><a href="top-seo-experts-in-pakistan">Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!</a></h3>
-                        <p class="dark-blog-excerpt">Read our latest blog post on SEO With Ibrar.</p>
+                    <div class="bp-related-content">
+                        <h3 class="bp-related-title">Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!</h3>
+                        <p class="bp-related-excerpt">Read our latest blog post on SEO With Ibrar.</p>
+                        <div class="bp-related-meta">Read Article <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></div>
                     </div>
-                </div>
+                </a>
             </div>
         </div>
     </main>
+    <script src="js/blog-post.js"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
-            const filterBtns = document.querySelectorAll('.dark-filter-btn');
+            const filterBtns = document.querySelectorAll('.bp-filter-btn');
             const searchInput = document.getElementById('blog-search');
-            const cards = document.querySelectorAll('.dark-blog-card');
+            const cards = document.querySelectorAll('.bp-related-card');
+            
             function filterPosts() {
-                const activeFilter = document.querySelector('.dark-filter-btn.active').getAttribute('data-filter');
+                const activeFilter = document.querySelector('.bp-filter-btn.active').getAttribute('data-filter');
                 const searchQuery = searchInput.value.toLowerCase();
+                
                 cards.forEach(card => {
                     const category = card.getAttribute('data-category');
-                    const title = card.querySelector('.dark-blog-title').textContent.toLowerCase();
-                    const excerpt = card.querySelector('.dark-blog-excerpt').textContent.toLowerCase();
+                    const title = card.querySelector('.bp-related-title').textContent.toLowerCase();
+                    const excerpt = card.querySelector('.bp-related-excerpt').textContent.toLowerCase();
+                    
                     const matchesCategory = (activeFilter === 'all' || category === activeFilter);
                     const matchesSearch = (title.includes(searchQuery) || excerpt.includes(searchQuery));
+                    
                     if (matchesCategory && matchesSearch) {
-                        card.classList.remove('hidden');
+                        card.style.display = 'flex';
                     } else {
-                        card.classList.add('hidden');
+                        card.style.display = 'none';
                     }
                 });
             }
+            
             filterBtns.forEach(btn => {
                 btn.addEventListener('click', () => {
                     filterBtns.forEach(b => b.classList.remove('active'));
@@ -244,6 +219,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     filterPosts();
                 });
             });
+            
             searchInput.addEventListener('input', filterPosts);
         });
     </script>
@@ -252,7 +228,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer class="footer new-mega-footer">
         <div class="container footer-container-new">
             <div class="footer-col-main">
-                                <a href="index" class="logo footer-logo" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+                                <a href="/" class="logo footer-logo" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
                     <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
                 </a>
                 <p class="footer-desc" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6; margin-bottom: 2rem;">
@@ -270,7 +246,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="seo-services-visa-consultancy">Visa Consultancy SEO</a></li>
                     <li><a href="seo-services-education">Education SEO</a></li>
                     <li><a href="wordpress-design-services">WordPress Solutions</a></li>
-                    <li><a href="Wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
+                    <li><a href="wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
                     <li><a href="wordpress-design-services-for-education">WordPress Education Services</a></li>
                 </ul>
             </div>
@@ -313,7 +289,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Every tactic strictly adheres to webmaster rules. We never employ spam comments, hidden redirects, or low-quality backlink layers.
                             </p>
                             <div style="color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">DIRECT CHANNEL</div>
-                            <a href="mailto:ibrar@seowithibrar.com" style="color: white; font-size: 0.85rem; font-weight: 600;">ibrar@seowithibrar.com</a>
+                            <a href="mailto:seowithibrar@gmail.com" style="color: white; font-size: 0.85rem; font-weight: 600;">seowithibrar@gmail.com</a>
                         </div>
                     </div>
                 </div>

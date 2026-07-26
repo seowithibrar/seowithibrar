@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-KGLHCFG9');</script>
-<!-- End Google Tag Manager -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/ibrar.png">
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Expert seo services lahore providing data-driven organic growth and high-performance strategies for your business.">
-    <title>Seo Services Lahore | SEO With Ibrar</title>
+    <meta name="description" content="Grow your Lahore business with local SEO from Ibrar Ahmad. Rank higher in DHA, Gulberg and Johar Town searches and turn visibility into real inquiries.">
+    <title>SEO Services in Lahore, Pakistan | SEO With Ibrar</title>
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -130,24 +126,291 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
             top: 1rem;
             right: 1.5rem;
         }
-.testimonial-card {
-            background: var(--color-white);
-            border: 1px solid var(--color-border);
+
+        /* Modern Visual UI Redesign Styles */
+        /* Modern Hero Section Alignment (Matching Home Page Background) */
+        .lahore-hero-dark {
+            background-color: var(--color-bg-alt);
+            color: var(--color-gray-900);
+            padding: 5rem 0 6rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 1px solid var(--color-border);
+        }
+        .lahore-hero-dark::before {
+            content: '';
+            position: absolute;
+            top: -20%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(140, 198, 63, 0.12) 0%, rgba(0,0,0,0) 70%);
+            pointer-events: none;
+        }
+        .lahore-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            background: rgba(140, 198, 63, 0.15);
+            border: 1px solid rgba(140, 198, 63, 0.35);
+            color: var(--color-gray-900);
+            padding: 0.5rem 1.25rem;
+            border-radius: 30px;
+            font-size: 0.85rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            margin-bottom: 1.5rem;
+        }
+        .lahore-area-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.6rem;
+            margin: 1.5rem 0 2rem;
+        }
+        .lahore-tag {
+            background: #ffffff;
+            border: 1px solid var(--color-gray-200);
+            color: var(--color-gray-700);
+            font-size: 0.8rem;
+            font-weight: 600;
+            padding: 0.4rem 0.9rem;
+            border-radius: 20px;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: all 0.2s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.03);
+        }
+        .lahore-tag:hover {
+            background: rgba(140, 198, 63, 0.15);
+            border-color: rgba(140, 198, 63, 0.4);
+            color: var(--color-gray-900);
+            transform: translateY(-2px);
+        }
+        .feature-card-enhanced {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-top: 4px solid var(--color-primary);
+            border-radius: 16px;
+            padding: 2.25rem;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+        .feature-card-enhanced:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px -10px rgba(140, 198, 63, 0.22);
+            border-color: var(--color-primary);
+        }
+        .feature-icon-badge {
+            width: 48px;
+            height: 48px;
             border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+            background: rgba(140, 198, 63, 0.12);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        /* Modern Keyframe Animations & Floating WhatsApp Button */
+        @keyframes floatAnimation {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-8px); }
+            100% { transform: translateY(0px); }
+        }
+        @keyframes pulseGlow {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .hero-visual-animated {
+            animation: floatAnimation 4.5s ease-in-out infinite;
+        }
+        .card-animated {
+            transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1) !important;
+        }
+        .card-animated:hover {
+            transform: translateY(-6px) scale(1.01) !important;
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12) !important;
+        }
+        .whatsapp-float-widget {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+            background: #25D366;
+            color: #ffffff !important;
+            padding: 0.75rem 1.25rem;
+            border-radius: 40px;
+            text-decoration: none;
+            box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+            animation: pulseGlow 2.5s infinite;
+            transition: all 0.3s ease;
+        }
+        .whatsapp-float-widget:hover {
+            transform: scale(1.06) translateY(-3px);
+            box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+        }
+        .whatsapp-float-label {
+            font-size: 0.88rem;
+            font-weight: 800;
+            letter-spacing: 0.3px;
+        }
+        @media (max-width: 600px) {
+            .whatsapp-float-label {
+                display: none;
+            }
+            .whatsapp-float-widget {
+                padding: 0.8rem;
+                border-radius: 50%;
+            }
+        }
+        
+        .process-step-enhanced {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 16px;
+            padding: 2.25rem;
+            position: relative;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+        .process-step-enhanced:hover {
+            transform: translateY(-5px);
+            border-color: var(--color-primary);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.06);
+        }
+        .step-badge {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 42px;
+            height: 42px;
+            background: var(--color-primary);
+            color: var(--color-dark);
+            font-size: 1.1rem;
+            font-weight: 800;
+            border-radius: 12px;
+            margin-bottom: 1.25rem;
+        }
+        .hub-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.25rem;
+            margin-top: 2rem;
+        }
+        .hub-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            padding: 1.25rem 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.25s ease;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+        .hub-card:hover {
+            border-color: var(--color-primary);
+            background: #f8fafc;
+            transform: translateX(4px);
+        }
+        .hub-icon {
+            width: 42px;
+            height: 42px;
+            border-radius: 10px;
+            background: rgba(140, 198, 63, 0.15);
+            color: var(--color-primary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* FAQ Accordion Modern Styling */
+        .faq-accordion-modern details {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            margin-bottom: 1.25rem;
+            padding: 1.25rem 1.75rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+            transition: all 0.25s ease;
+        }
+        .faq-accordion-modern details[open] {
+            border-color: var(--color-primary);
+            box-shadow: 0 10px 25px rgba(140, 198, 63, 0.12);
+        }
+        .faq-accordion-modern summary {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--color-dark);
+            cursor: pointer;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-accordion-modern summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-accordion-modern summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--color-primary);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: rgba(140, 198, 63, 0.15);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: transform 0.25s ease;
+        }
+        .faq-accordion-modern details[open] summary::after {
+            content: '−';
+            background: var(--color-primary);
+            color: var(--color-dark);
+        }
+        .faq-accordion-modern .faq-content {
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #f1f5f9;
+            color: var(--color-text-muted);
+            font-size: 0.98rem;
+            line-height: 1.7;
         }
     </style>
     <!-- Open Graph Tags -->
-    <meta property="og:title" content="Seo Services Lahore | SEO With Ibrar">
-    <meta property="og:description" content="Expert seo services lahore providing data-driven organic growth and high-performance strategies for your business.">
+    <meta property="og:title" content="SEO Services in Lahore, Pakistan | SEO With Ibrar">
+    <meta property="og:description" content="Grow your Lahore business with local SEO from Ibrar Ahmad. Rank higher in DHA, Gulberg and Johar Town searches and turn visibility into real inquiries.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://seowithibrar.com/seo-services-lahore">
     <meta property="og:image" content="https://seowithibrar.com/images/logo-full.png">
     <!-- Twitter Card Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Seo Services Lahore | SEO With Ibrar">
-    <meta name="twitter:description" content="Expert seo services lahore providing data-driven organic growth and high-performance strategies for your business.">
+    <meta name="twitter:title" content="SEO Services in Lahore, Pakistan | SEO With Ibrar">
+    <meta name="twitter:description" content="Grow your Lahore business with local SEO from Ibrar Ahmad. Rank higher in DHA, Gulberg and Johar Town searches and turn visibility into real inquiries.">
     <meta name="twitter:image" content="https://seowithibrar.com/images/logo-full.png">
     <!-- Canonical URL -->
     <link rel="canonical" href="https://seowithibrar.com/seo-services-lahore">
@@ -155,27 +418,134 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "Service",
-  "name": "Seo Services Lahore | SEO With Ibrar",
-  "description": "Expert seo services lahore providing data-driven organic growth and high-performance strategies for your business.",
-  "url": "https://seowithibrar.com/seo-services-lahore"
+  "@graph": [
+    {
+      "@type": "LocalBusiness",
+      "@id": "https://seowithibrar.com/#organization",
+      "name": "SEO With Ibrar",
+      "url": "https://seowithibrar.com/",
+      "logo": "https://seowithibrar.com/images/logo-full.png",
+      "image": "https://seowithibrar.com/images/ibrar.png",
+      "email": "seowithibrar@gmail.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Lahore",
+        "addressRegion": "Punjab",
+        "addressCountry": "PK"
+      },
+      "areaServed": ["Lahore", "DHA Lahore", "Gulberg Lahore", "Johar Town Lahore", "Model Town Lahore", "Bahria Town Lahore"],
+      "priceRange": "$$"
+    },
+    {
+      "@type": "Service",
+      "name": "SEO Services in Lahore",
+      "provider": {
+        "@type": "LocalBusiness",
+        "@id": "https://seowithibrar.com/#organization"
+      },
+      "areaServed": "Lahore, Pakistan",
+      "description": "Grow your Lahore business with local SEO from Ibrar Ahmad. Rank higher in DHA, Gulberg and Johar Town searches and turn visibility into real inquiries.",
+      "url": "https://seowithibrar.com/seo-services-lahore"
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What is SEO, and why is it important for my business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO helps your website appear in Google search results when people search for your services. Better visibility brings more visitors and increases the chances of inquiries and sales."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does SEO take to show results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO works gradually. Most websites start seeing improvement within 3 to 6 months, depending on the competition and the website's condition."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide SEO services in specific areas of Lahore?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide SEO services for businesses located across different areas of Lahore including DHA, Gulberg, Johar Town, Model Town, and surrounding locations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is SEO suitable for small businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SEO works very well for small businesses. It attracts targeted traffic without ongoing ad costs and supports steady growth."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will SEO work for my industry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO works for most industries, including services, local businesses, and online stores."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you follow Google guidelines?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, all our SEO practices follow Google and search engine guidelines to ensure safe and long-term performance."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Will I get SEO reports and updates?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, we provide regular reports that clearly show progress and improvements."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is modern AI-based SEO important now?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, modern SEO includes AI-driven search, direct answers, and generated summaries. We optimize websites to stay visible in these evolving search systems."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why should I choose SEO with Ibrar over other agencies?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO with Ibrar focuses on honest communication, tailored strategies, and long-term growth, focusing on real business outcomes."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you provide eCommerce SEO services?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, SEO with Ibrar provides SEO services for eCommerce websites, optimizing product pages, category pages, and site structure."
+          }
+        }
+      ]
+    }
+  ]
 }
     </script>
 </head>
 <body>
-<!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KGLHCFG9"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
     <!-- Header Navigation -->
     <header class="navbar">
         <div class="container nav-container">
-                        <a href="index" class="logo">
+                        <a href="/" class="logo">
                 <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
             </a>
             <!-- Desktop Menu -->
                         <nav class="nav-menu">
-                <a href="index" class="nav-link">HOME</a>
+                <a href="/" class="nav-link">HOME</a>
                 <div class="nav-item-dropdown">
                     <a href="#" class="nav-link">SERVICE <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-left: 2px;"><path d="M6 9l6 6 6-6"/></svg></a>
                     <div class="mega-menu">
@@ -215,7 +585,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                         <div class="mega-item-desc">High performance enterprise sites</div>
                                     </div>
                                 </a>
-                                <a href="Wordpress-design-services-for-visa-consultancy" class="mega-item">
+                                <a href="wordpress-design-services-for-visa-consultancy" class="mega-item">
                                     <div class="mega-item-dot"></div>
                                     <div class="mega-item-content">
                                         <div class="mega-item-title">WordPress Visa Services</div>
@@ -262,27 +632,114 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </header>
     <main>
         <!-- Hero Section -->
-        <section class="hero">
-            <div class="container hero-container" style="align-items: center;">
+        <section class="lahore-hero-dark">
+            <div class="container hero-container" style="align-items: center; display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 3rem;">
                 <div class="hero-content" style="text-align: left;">
-                    <span class="pill-badge" style="background: rgba(140, 198, 63, 0.2); color: var(--color-primary);">LOCAL SEO LAHORE</span>
-                    <h1 class="hero-title" style="color: var(--color-dark); margin-bottom: 1.5rem;">
-                        <span class="text-green">SEO Service in Lahore</span> That Actually Helps Your Business Grow
+                    <span class="lahore-pill">
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                        LOCAL SEO LAHORE • TOP RANKED CONSULTANT
+                    </span>
+                    <h1 class="hero-title" style="color: var(--color-gray-900); font-size: 3.1rem; line-height: 1.15; font-weight: 800; margin-bottom: 1.5rem;">
+                        <span style="color: var(--color-primary);">SEO Service in Lahore</span> That Actually Helps Your Business Grow
                     </h1>
-                    <p class="hero-description" style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        I help businesses improve their Google visibility and turn website traffic into real inquiries and sales.
+                    <p class="hero-description" style="color: var(--color-gray-600); font-size: 1.1rem; line-height: 1.7; margin-bottom: 1rem;">
+                        I help Lahore businesses dominate local Google searches and turn organic website traffic into real client inquiries, calls, and physical store visits.
                     </p>
-                    <p class="hero-description" style="color: var(--color-text-muted); margin-bottom: 1rem;">
-                        At SEO with Ibrar, I provide professional SEO services in Lahore for local businesses, service providers, and online brands. Our approach is practical and transparent, focused on long-term results rather than short-term ranking tricks.
+                    <p class="hero-description" style="color: var(--color-gray-500); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.5rem;">
+                        At <strong>SEO with Ibrar</strong>, we provide practical, transparent, white-hat search engine optimization tailored specifically for brands across Lahore's prime commercial & residential hubs.
                     </p>
-                    <p class="hero-description" style="color: var(--color-dark); font-weight: 600; margin-bottom: 2rem;">
-                        Whether you want to attract local customers or grow your online presence, our Lahore-based SEO experts work closely with you to build a strong and reliable presence on Google.
-                    </p>
-                    <a href="contact" class="btn btn-primary">Get a Free SEO Consultation</a>
+
+                    <!-- Lahore Hub Badges -->
+                    <div class="lahore-area-tags">
+                        <span class="lahore-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> DHA Lahore</span>
+                        <span class="lahore-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Gulberg</span>
+                        <span class="lahore-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Johar Town</span>
+                        <span class="lahore-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Model Town</span>
+                        <span class="lahore-tag"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg> Bahria Town</span>
+                    </div>
+
+                    <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+                        <a href="contact" class="btn btn-primary" style="padding: 0.9rem 2rem; font-weight: 700; font-size: 1rem;">Get Free SEO Audit & Call</a>
+                        <a href="#services-grid" class="btn" style="background: #ffffff; color: var(--color-gray-900); border: 1px solid var(--color-gray-300); padding: 0.9rem 1.5rem; font-weight: 600; box-shadow: 0 1px 3px rgba(0,0,0,0.05);">Explore Services ↓</a>
+                    </div>
                 </div>
-                <div class="hero-visual">
-                    <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 2rem;">
-                        <img src="images/ibrar.png" alt="SEO Expert in Lahore" style="width: 100%; border-radius: 8px; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+                <div class="hero-visual hero-visual-animated">
+                    <div style="background: linear-gradient(145deg, rgba(15, 23, 42, 0.95), rgba(30, 41, 59, 0.9)); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 24px; padding: 1.5rem; backdrop-filter: blur(16px); box-shadow: 0 25px 50px -12px rgba(0,0,0,0.6); position: relative;">
+                        <!-- Live Dashboard Top Bar -->
+                        <div style="display: flex; align-items: center; justify-content: space-between; border-bottom: 1px solid rgba(255,255,255,0.08); padding-bottom: 0.85rem; margin-bottom: 1.25rem;">
+                            <div style="display: flex; align-items: center; gap: 0.4rem;">
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #ff5f56; display: inline-block;"></span>
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #ffbd2e; display: inline-block;"></span>
+                                <span style="width: 10px; height: 10px; border-radius: 50%; background: #27c93f; display: inline-block;"></span>
+                                <span style="font-size: 0.75rem; font-weight: 700; color: #94a3b8; margin-left: 0.4rem; letter-spacing: 0.5px;">LIVE SEO RANKING DASHBOARD</span>
+                            </div>
+                            <span style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; border: 1px solid rgba(140, 198, 63, 0.3); font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                        </div>
+
+                        <!-- 2x2 Performance Metrics Grid -->
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 0.85rem; margin-bottom: 1.25rem;">
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #8cc63f; line-height: 1;">+340%</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Organic Growth</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8;">GSC Traffic Proof</div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #8cc63f; line-height: 1;">100+</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Top 3 Ranks</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8;">Lahore Keywords</div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #8cc63f; line-height: 1;">98%</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">Core Web Vitals</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8;">PageSpeed Score</div>
+                            </div>
+                            <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 14px; padding: 0.85rem 1rem;">
+                                <div style="font-size: 1.5rem; font-weight: 800; color: #8cc63f; line-height: 1;">100%</div>
+                                <div style="font-size: 0.78rem; font-weight: 700; color: #ffffff; margin-top: 0.2rem;">White-Hat SEO</div>
+                                <div style="font-size: 0.68rem; color: #94a3b8;">Google Guidelines</div>
+                            </div>
+                        </div>
+
+                        <!-- Search Console Graph Visualization -->
+                        <div style="border-radius: 12px; overflow: hidden; border: 1px solid rgba(255,255,255,0.1); background: #000000; box-shadow: inset 0 0 20px rgba(0,0,0,0.5);">
+                            <img src="images/Education platfrom in lahore.png" alt="Google Search Console Lahore Performance Graph" style="width: 100%; height: auto; max-height: 230px; object-fit: contain; display: block;" loading="lazy">
+                        </div>
+
+                        <!-- Floating High Impact Badge -->
+                        <div style="position: absolute; bottom: -16px; right: 20px; background: #8cc63f; color: #0f172a; padding: 0.6rem 1.25rem; border-radius: 12px; font-weight: 800; font-size: 0.82rem; box-shadow: 0 10px 25px rgba(0,0,0,0.4); display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
+                            LAHORE ORGANIC GROWTH SPECIALIST
+                        </div>
+                    </div>
+        </section>
+
+        <!-- Post-Hero Performance Stats Section (Reduced Height matching Design Mockup) -->
+        <section style="background: #0b1329; padding: 2.25rem 0; border-bottom: 1px solid rgba(255,255,255,0.08); position: relative;">
+            <div class="container">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 1.25rem;">
+                    <!-- Card 1 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">+340%</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Avg Traffic Growth</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">Search Console Verified</div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">120+</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Projects Delivered</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">SEO & Web Development</div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">98%</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Core Web Vitals</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">WordPress Speed Score</div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div style="background: #172033; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 1.35rem 1rem; text-align: center; transition: transform 0.2s ease;">
+                        <div style="font-size: 2.3rem; font-weight: 800; color: #8cc63f; line-height: 1; margin-bottom: 0.4rem;">100%</div>
+                        <div style="font-size: 0.95rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">White-Hat Certified</div>
+                        <div style="font-size: 0.75rem; color: #94a3b8;">Google Guidelines</div>
                     </div>
                 </div>
             </div>
@@ -318,102 +775,241 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </div>
         </section>
         <!-- Our SEO Services Grid -->
-        <section style="padding: 6rem 0; background-color: var(--color-bg-light);">
+        <section id="services-grid" style="padding: 6rem 0; background-color: #f8fafc;">
             <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
-                    <h2 class="section-title">Comprehensive SEO Services</h2>
-                    <p style="color: var(--color-text-muted);">We cover every aspect of SEO to ensure your website dominates the local Lahore market and beyond.</p>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+                    <span style="color: var(--color-primary); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; display: block; margin-bottom: 0.5rem;">OUR EXPERTISE</span>
+                    <h2 class="section-title" style="font-size: 2.4rem; font-weight: 800; color: var(--color-dark);">Comprehensive Local & National SEO Services</h2>
+                    <p style="color: var(--color-text-muted); font-size: 1.05rem;">We cover every critical ranking pillar to ensure your business dominates Google search results across Lahore.</p>
                 </div>
                 <div class="service-grid-3">
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">SEO Strategy and Planning</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Good SEO starts with understanding your business goals and market. As a provider of SEO services in Lahore, we carefully analyze your services, competitors, and website performance to create a clear plan with achievable goals.</p>
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">SEO Strategy & Planning</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">We carefully analyze your services, local competitors in Lahore, and technical site state to create a realistic roadmap with clear targets.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            STRATEGIC ROADMAP →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">Keyword Research</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-bottom: 1rem;">Our research identifies terms with strong intent (Information, Commercial, Buying). We naturally integrate these keywords to enhance visibility while maintaining a readable user experience.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">Laser Keyword Research</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Identifying high-intent search terms used by local buyers in Lahore (Informational, Commercial, & High Conversion intent).</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            INTENT TARGETING →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">On-Page SEO</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">On-page SEO helps users and search engines understand your website clearly. We optimize content structure, headings, meta tags, and internal links for better engagement and rankings.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">On-Page SEO Optimization</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Optimizing heading hierarchy, internal linking architecture, metadata, and body copy for search clarity & user retention.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            CONTENT ARCHITECTURE →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">Technical SEO</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">A visually strong website can still face technical issues. We improve website speed, mobile performance, crawlability, and indexing to ensure smooth operations.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">Technical SEO & Speed</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Fixing Core Web Vitals, page loading speeds, mobile usability, site crawlability, and Google Search Console indexing errors.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            SPEED OPTIMIZATION →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">Off-Page & Link Building</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Search engines trust websites with strong authority. We provide ethical link-building services in Lahore that strengthen domain authority and support long-term ranking improvements.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">Ethical Link Building</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Acquiring pristine, high-authority backlink signals to build genuine domain authority without spam or risky shortcuts.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            AUTHORITY SIGNALS →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">Local SEO Services in Lahore</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">If your business targets nearby customers, we optimize your presence for location-based searches and Google Maps visibility so customers find you at the right time.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">Google Maps & Local SEO</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Optimizing Google Business Profile (GBP), geo-targeted landing pages, and local map pack rankings for "near me" inquiries.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            LOCAL MAP DOMINANCE →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">Content Optimization</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Strong content improves trust. Our content optimization refines structure, clarity, and keyword placement to retain visitors, focusing on readability and organic growth.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">High-Trust Content Hubs</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Creating E-E-A-T compliant articles and service landing pages that answer audience questions and establish business authority.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            E-E-A-T CONTENT →
+                        </div>
                     </div>
-                    <div class="feature-card">
-                        <h4 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 1rem; color: var(--color-dark);">SEO Audit and Reporting</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Our audit services identify technical issues and content gaps. Clear, transparent reporting keeps you informed about progress and how your SEO is improving results.</p>
+
+                    <div class="feature-card-enhanced">
+                        <div>
+                            <div class="feature-icon-badge">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"></line><line x1="12" y1="20" x2="12" y2="4"></line><line x1="6" y1="20" x2="6" y2="14"></line></svg>
+                            </div>
+                            <h3 style="font-size: 1.25rem; font-weight: 700; margin-bottom: 0.75rem; color: var(--color-dark);">SEO Audit & Reporting</h3>
+                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Delivering straightforward, weekly transparent reporting with ranking metrics, traffic analytics, and actionable technical updates.</p>
+                        </div>
+                        <div style="margin-top: 1.5rem; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;">
+                            TRANSPARENT METRICS →
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Local Lahore Hub Coverage Grid -->
+                <div style="margin-top: 5rem; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; padding: 3rem 2.5rem; box-shadow: 0 10px 30px rgba(0,0,0,0.03);">
+                    <div style="text-align: center; max-width: 700px; margin: 0 auto 2rem auto;">
+                        <span style="color: var(--color-primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">GEOGRAPHIC COVERAGE</span>
+                        <h3 style="font-size: 1.8rem; font-weight: 800; color: var(--color-dark); margin-top: 0.25rem;">Dedicated Local SEO Across Lahore Hubs</h3>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">We optimize location signals and Google Map profiles for businesses operating across Lahore's primary commercial sectors.</p>
+                    </div>
+                    <div class="hub-grid">
+                        <div class="hub-card">
+                            <div class="hub-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin: 0;">DHA Lahore</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Phases 1 to 8 Services</span>
+                            </div>
+                        </div>
+                        <div class="hub-card">
+                            <div class="hub-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin: 0;">Gulberg Commercial</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Main Boulevard & M.M. Alam</span>
+                            </div>
+                        </div>
+                        <div class="hub-card">
+                            <div class="hub-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin: 0;">Johar Town</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Local Inquiries & Clinics</span>
+                            </div>
+                        </div>
+                        <div class="hub-card">
+                            <div class="hub-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin: 0;">Model Town</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Consultancies & Offices</span>
+                            </div>
+                        </div>
+                        <div class="hub-card">
+                            <div class="hub-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin: 0;">Bahria Town</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Retail & Service Hubs</span>
+                            </div>
+                        </div>
+                        <div class="hub-card">
+                            <div class="hub-icon">📍</div>
+                            <div>
+                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin: 0;">Faisal Town</h4>
+                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Educational & IT Hubs</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- Why Choose Us Over Others -->
-        <section style="padding: 6rem 0; background-color: var(--color-dark); color: var(--color-white);">
+        <section style="padding: 6rem 0; background-color: #0b1329; color: var(--color-white); position: relative;">
             <div class="container">
-                <div style="max-width: 900px; margin: 0 auto; text-align: center;">
-                    <h2 class="section-title" style="color: var(--color-white);">Why choose you over other SEO agencies in Lahore?</h2>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        SEO is about making your website visible when people actively search for your services. A strong SEO approach helps businesses across Lahore, from selected commercial areas to growing residential locations, connect with users who already have clear intent.
-                    </p>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8; margin-bottom: 1.5rem;">
-                        Better rankings increase exposure, but real value comes from reaching the right audience. Businesses operating in areas like DHA, Gulberg, and Johar Town benefit from SEO because it supports steady, long-term growth without relying only on paid advertising.
-                    </p>
-                    <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; line-height: 1.8;">
-                        At SEO with Ibrar, we work with local businesses across Lahore, including service providers and online brands based in areas such as Model Town and Bahria Town. Our SEO practices follow search engine guidelines and focus on consistent improvement rather than risky shortcuts.
-                    </p>
+                <div style="max-width: 800px; margin: 0 auto 3.5rem auto; text-align: center;">
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">THE DIFFERENCE</span>
+                    <h2 class="section-title" style="color: var(--color-white); font-size: 2.3rem; font-weight: 800; margin-top: 0.25rem;">Why Choose SEO with Ibrar Over Other Agencies in Lahore?</h2>
+                    <p style="color: rgba(255,255,255,0.7); font-size: 1.05rem;">We focus on high-intent buyer traffic, white-hat search compliance, and direct 1-on-1 expert accountability.</p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2rem;">
+                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 2.25rem; backdrop-filter: blur(10px);">
+                        <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(140, 198, 63, 0.15); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: bold; margin-bottom: 1.25rem;">🎯</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">High Buyer-Intent Targeting</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">SEO is about connecting with users actively searching for your services across DHA, Gulberg, and Johar Town who already have clear intent to inquire.</p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 2.25rem; backdrop-filter: blur(10px);">
+                        <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(140, 198, 63, 0.15); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: bold; margin-bottom: 1.25rem;">📈</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">Sustained Long-Term Growth</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">Better rankings build organic momentum that drives steady leads month after month without burning money on continuous paid ad budgets.</p>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.04); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 2.25rem; backdrop-filter: blur(10px);">
+                        <div style="width: 44px; height: 44px; border-radius: 12px; background: rgba(140, 198, 63, 0.15); color: var(--color-primary); display: flex; align-items: center; justify-content: center; font-size: 1.25rem; font-weight: bold; margin-bottom: 1.25rem;">🛡️</div>
+                        <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.75rem;">Strict White-Hat Practices</h3>
+                        <p style="color: rgba(255,255,255,0.7); font-size: 0.95rem; line-height: 1.7;">Our SEO practices strictly follow Google Search Essentials. We focus on continuous optimization rather than risky automated shortcuts.</p>
+                    </div>
                 </div>
             </div>
         </section>
         <!-- SEO Process -->
-        <section style="padding: 6rem 0; background-color: var(--color-white);">
+        <section style="padding: 6rem 0; background-color: #ffffff;">
             <div class="container">
-                <div style="text-align: center; max-width: 800px; margin: 0 auto 3rem auto;">
-                    <h2 class="section-title">How Does Our SEO Process Work for Lahore Businesses?</h2>
-                    <p style="color: var(--color-text-muted);">We follow a clear and transparent process so you always know what is happening. We focus on structured, step-by-step approaches that support long-term growth, combining strategy, execution, and consistent monitoring.</p>
+                <div style="text-align: center; max-width: 800px; margin: 0 auto 3.5rem auto;">
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">WORKFLOW & EXECUTION</span>
+                    <h2 class="section-title" style="font-size: 2.2rem; font-weight: 800; color: var(--color-dark); margin-top: 0.25rem;">How Our SEO Process Works for Lahore Businesses</h2>
+                    <p style="color: var(--color-text-muted); font-size: 1.05rem;">We follow a structured 6-step framework combining technical audits, intent optimization, and transparent reporting.</p>
                 </div>
                 <div class="process-grid">
-                    <div class="process-step">
-                        <div class="step-number">1</div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Website Analysis</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">We review structure, content quality, and technical performance to understand where improvements are needed based on data, not assumptions.</p>
+                    <div class="process-step-enhanced">
+                        <div class="step-badge">01</div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Website & Audit Analysis</h4>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Reviewing technical site structure, speed bottlenecks, indexing barriers, and current search visibility based on data, not assumptions.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">2</div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">SEO Planning</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Using insights, we create a practical SEO plan aligned with your business goals and audience, keeping the campaign focused and efficient.</p>
+                    <div class="process-step-enhanced">
+                        <div class="step-badge">02</div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Custom SEO Planning</h4>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Creating a tailored roadmap targeting high-intent buyer keywords for your specific niche across Lahore.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">3</div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Optimization</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">We implement on-page and technical improvements to strengthen performance, usability, and visibility, making it easier for search engines.</p>
+                    <div class="process-step-enhanced">
+                        <div class="step-badge">03</div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Technical & On-Page Execution</h4>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Implementing speed enhancements, clean HTML schema markup, heading adjustments, and content optimizations.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">4</div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Content Improvement</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">We refine existing content for clarity, relevance, and user experience, ensuring it aligns with search intent and builds trust.</p>
+                    <div class="process-step-enhanced">
+                        <div class="step-badge">04</div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Content Refinement</h4>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Refining landing pages and articles for maximum readability, user conversion, and search engine relevance.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">5</div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Authority Building</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">Search engines value credibility. We strengthen website authority through quality links and brand signals, supporting trust in your market.</p>
+                    <div class="process-step-enhanced">
+                        <div class="step-badge">05</div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Authority & Trust Building</h4>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Strengthening domain authority through ethical link acquisition, Google Maps optimizations, and local directory listings.</p>
                     </div>
-                    <div class="process-step">
-                        <div class="step-number">6</div>
-                        <h4 style="font-size: 1.1rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Monitoring and Reporting</h4>
-                        <p style="color: var(--color-text-muted); font-size: 0.95rem;">We track performance regularly and provide transparent updates to build long-term client trust and show what adjustments are needed.</p>
+                    <div class="process-step-enhanced">
+                        <div class="step-badge">06</div>
+                        <h4 style="font-size: 1.15rem; font-weight: 700; margin-bottom: 0.5rem; color: var(--color-dark);">Weekly Monitoring & Reporting</h4>
+                        <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.6;">Tracking keyword rankings, organic lead counts, and providing transparent reports so you always know your exact growth.</p>
                     </div>
                 </div>
             </div>
@@ -426,9 +1022,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--color-dark);">How Do AI, AEO, and GEO SEO Improve Modern Search Visibility?</h3>
                         <p style="color: var(--color-text-muted); margin-bottom: 1rem;">Search engines are no longer limited to traditional links. Today, users discover businesses through AI-driven answers, direct responses, and generated summaries across modern search platforms.</p>
                         <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">At SEO with Ibrar, we adapt our SEO Strategies to match these changes. We combine modern optimization methods with traditional SEO to keep your website visible and future-ready.</p>
-                        <div style="background: var(--color-white); padding: 1.5rem; border-radius: 8px; border: 1px solid var(--color-border);">
-                            <h4 style="font-weight: 700; margin-bottom: 0.5rem;">Modern SEO Approach</h4>
-                            <p style="color: var(--color-text-muted); font-size: 0.9rem;">We structure pages for direct answers, improve visibility in AI summaries, and support natural, conversational search behavior where users expect quick information.</p>
+                        <div style="background: var(--color-white); padding: 1.75rem; border-radius: 12px; border: 1px solid var(--color-border); box-shadow: 0 4px 12px rgba(0,0,0,0.03);">
+                            <h4 style="font-weight: 700; margin-bottom: 0.5rem; font-size: 1.1rem; color: var(--color-dark);">Modern SEO Approach</h4>
+                            <p style="color: var(--color-text-muted); font-size: 0.9rem; line-height: 1.6; margin-bottom: 1.25rem;">We structure pages for direct answers, improve visibility in AI summaries (AEO), and support natural conversational search behavior where users expect quick information.</p>
+                            <a href="contact" class="btn btn-primary" style="padding: 0.65rem 1.25rem; font-size: 0.85rem; font-weight: 700; display: inline-flex; align-items: center; gap: 0.4rem;">
+                                Get Modern AI SEO Strategy →
+                            </a>
                         </div>
                     </div>
                     <div>
@@ -460,136 +1059,450 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                         </ul>
                     </div>
                     <div>
-                        <h3 style="font-size: 1.75rem; margin-bottom: 1.5rem; color: var(--color-dark);">Industries We Serve</h3>
-                        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">Every industry has different search behavior. Our services in Lahore are tailored to industry-specific needs. We work with businesses across multiple sectors:</p>
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">Local & Service Businesses</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">Education & Institutes</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">Visa Consultancy</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">eCommerce & Online Stores</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">Real Estate & Property</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">IT & Software Companies</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">Healthcare Clinics</div>
-                            <div style="background: var(--color-bg-light); padding: 1rem; border-radius: 8px; font-size: 0.9rem; font-weight: 500;">Legal & Consulting</div>
+                        <h3 style="font-size: 1.75rem; margin-bottom: 1rem; color: var(--color-dark);">Our 2 Specialized Core Industries</h3>
+                        <p style="color: var(--color-text-muted); margin-bottom: 1.5rem;">We focus exclusively on two high-intent niches where our SEO architectures deliver maximum student and client lead conversion:</p>
+                        <div style="display: grid; grid-template-columns: 1fr; gap: 1.25rem;">
+                            <!-- Core Industry 1 -->
+                            <a href="seo-services-visa-consultancy" style="text-decoration: none; display: block; background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #8cc63f; border-radius: 14px; padding: 1.25rem 1.5rem; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                                    <span style="font-size: 0.75rem; font-weight: 800; color: #8cc63f; letter-spacing: 1px; text-transform: uppercase;">SPECIALIZED NICHE 01</span>
+                                    <span style="font-size: 0.85rem; font-weight: 700; color: #0f172a;">Explore Service →</span>
+                                </div>
+                                <h4 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin-bottom: 0.35rem;">Study Abroad & Visa Consultancy SEO</h4>
+                                <p style="color: #64748b; font-size: 0.88rem; margin: 0; line-height: 1.5;">Ranking study visa search terms and generating qualified student consultation inquiries.</p>
+                            </a>
+                            <!-- Core Industry 2 -->
+                            <a href="seo-services-education" style="text-decoration: none; display: block; background: #ffffff; border: 1px solid #e2e8f0; border-left: 5px solid #2563EB; border-radius: 14px; padding: 1.25rem 1.5rem; transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 10px rgba(0,0,0,0.03);">
+                                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.35rem;">
+                                    <span style="font-size: 0.75rem; font-weight: 800; color: #2563EB; letter-spacing: 1px; text-transform: uppercase;">SPECIALIZED NICHE 02</span>
+                                    <span style="font-size: 0.85rem; font-weight: 700; color: #0f172a;">Explore Service →</span>
+                                </div>
+                                <h4 style="font-size: 1.15rem; font-weight: 800; color: #0f172a; margin-bottom: 0.35rem;">Education Institutes & E-Learning SEO</h4>
+                                <p style="color: #64748b; font-size: 0.88rem; margin: 0; line-height: 1.5;">Dominating course searches, student signups, and local Google Maps pack rankings.</p>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         <!-- About Section (My Story) -->
-        <section class="about-modern" id="about">
+        <section class="about-modern" id="about" style="padding: 6rem 0; background-color: #ffffff;">
             <div class="container" style="max-width: 1200px;">
-                <div class="about-modern-grid">
-                    <!-- Left Column: Image & Stats -->
+                <div class="about-modern-grid" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 4rem; align-items: flex-start;">
+                    <!-- Left Column: Image & Performance Metrics -->
                     <div>
                         <!-- Image Wrapper -->
-                        <div style="position: relative; border-radius: 24px; padding: 1.5rem; background: linear-gradient(135deg, rgba(183, 255, 0, 0.4), rgba(183, 255, 0, 0.05)); margin-bottom: 2rem;">
-                            <img src="images/ibrar.png" alt="Ibrar Ahmad" style="width: 100%; border-radius: 16px; display: block;">
+                        <div style="position: relative; border-radius: 24px; padding: 1.25rem; background: linear-gradient(135deg, rgba(140, 198, 63, 0.25), rgba(15, 23, 42, 0.05)); margin-bottom: 2rem;">
+                            <img src="images/ibrar.png" alt="Ibrar Ahmad - SEO Consultant in Lahore" style="width: 100%; border-radius: 16px; display: block; box-shadow: 0 15px 30px rgba(0,0,0,0.1);" loading="lazy" width="500" height="500">
                             <!-- Pill on image -->
-                            <div style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 50%); background: var(--color-dark); color: var(--color-white); padding: 0.5rem 1.5rem; border-radius: 30px; font-size: 0.75rem; font-weight: 700; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; border: 4px solid var(--color-white);">
+                            <div style="position: absolute; bottom: 0; left: 50%; transform: translate(-50%, 50%); background: #0f172a; color: #ffffff; padding: 0.6rem 1.5rem; border-radius: 30px; font-size: 0.8rem; font-weight: 700; white-space: nowrap; display: flex; align-items: center; gap: 0.5rem; border: 4px solid #ffffff; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
                                 <span style="color: var(--color-primary);">●</span> IBRAR AHMAD • LEAD CONSULTANT
                             </div>
                         </div>
+
+                        <!-- Official Social Media Connect Bar under Image Section -->
+                        <div style="margin: 2.25rem 0 1.5rem 0; padding: 1.25rem; background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 16px; text-align: center;">
+                            <div style="font-size: 0.75rem; font-weight: 800; color: #64748b; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.75rem; display: flex; align-items: center; justify-content: center; gap: 0.4rem;">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2.5"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+                                CONNECT WITH IBRAR AHMAD
+                            </div>
+                            <div style="display: flex; gap: 0.75rem; justify-content: center; align-items: center;">
+                                <!-- LinkedIn -->
+                                <a href="https://pk.linkedin.com/in/seowithibrar" target="_blank" rel="noopener noreferrer" title="LinkedIn Profile" style="width: 42px; height: 42px; border-radius: 12px; background: #0a66c2; color: #ffffff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 10px rgba(10,102,194,0.3);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+                                </a>
+                                <!-- YouTube -->
+                                <a href="https://www.youtube.com/@seowithibrar/videos" target="_blank" rel="noopener noreferrer" title="YouTube Channel" style="width: 42px; height: 42px; border-radius: 12px; background: #FF0000; color: #ffffff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 10px rgba(255,0,0,0.3);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                                </a>
+                                <!-- Instagram -->
+                                <a href="https://www.instagram.com/seowithibrar/" target="_blank" rel="noopener noreferrer" title="Instagram Profile" style="width: 42px; height: 42px; border-radius: 12px; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: #ffffff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 10px rgba(220,39,67,0.3);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+                                </a>
+                                <!-- Pinterest -->
+                                <a href="https://www.pinterest.com/SEOWithIbrar/" target="_blank" rel="noopener noreferrer" title="Pinterest Profile" style="width: 42px; height: 42px; border-radius: 12px; background: #E60023; color: #ffffff; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease, box-shadow 0.2s ease; box-shadow: 0 4px 10px rgba(230,0,35,0.3);">
+                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
+                                </a>
+                            </div>
+                        </div>
+
                         <!-- Stats Card -->
-                        <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 2rem; background: var(--color-white);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid var(--color-border); padding-bottom: 1rem;">
-                                <span style="font-size: 0.75rem; font-weight: 700; color: #a1a1aa; letter-spacing: 1px; text-transform: uppercase;">Verified Performance Metrics</span>
-                                <span style="font-size: 0.85rem; font-weight: 600; color: var(--color-primary); display: flex; align-items: center; gap: 0.25rem;"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg> Lahore-Based</span>
+                        <div style="border: 1px solid #e2e8f0; border-radius: 20px; padding: 2rem; background: #f8fafc; margin-top: 1.5rem; box-shadow: 0 4px 15px rgba(0,0,0,0.02);">
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1.5rem; border-bottom: 1px solid #e2e8f0; padding-bottom: 1rem;">
+                                <span style="font-size: 0.75rem; font-weight: 700; color: #64748b; letter-spacing: 1px; text-transform: uppercase;">VERIFIED PERFORMANCE</span>
+                                <span style="font-size: 0.85rem; font-weight: 700; color: var(--color-primary); display: flex; align-items: center; gap: 0.35rem;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"></path></svg>
+                                    Lahore-Based Expert
+                                </span>
                             </div>
                             <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
                                 <div>
-                                    <div style="font-size: 1.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.25rem;">7+ Years</div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.15rem;">7+ Years</div>
                                     <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-dark);">SEO Expertise</div>
-                                    <div style="font-size: 0.75rem; color: #a1a1aa;">Client Deliveries</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Client Campaigns</div>
                                 </div>
                                 <div>
-                                    <div style="font-size: 1.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.25rem;">120+</div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.15rem;">120+</div>
                                     <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-dark);">Projects Completed</div>
-                                    <div style="font-size: 0.75rem; color: #a1a1aa;">Brands Ranked</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Brands Ranked</div>
                                 </div>
                                 <div>
-                                    <div style="font-size: 1.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.25rem;">98%</div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.15rem;">98%</div>
                                     <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-dark);">Core Web Vitals</div>
-                                    <div style="font-size: 0.75rem; color: #a1a1aa;">WordPress Page Speed</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Page Speed Score</div>
                                 </div>
                                 <div>
-                                    <div style="font-size: 1.5rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.25rem;">+340%</div>
+                                    <div style="font-size: 1.6rem; font-weight: 800; color: var(--color-dark); margin-bottom: 0.15rem;">+340%</div>
                                     <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-dark);">Avg. Traffic Growth</div>
-                                    <div style="font-size: 0.75rem; color: #a1a1aa;">Organic Strategy</div>
+                                    <div style="font-size: 0.75rem; color: #64748b;">Organic Leads</div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <!-- Right Column: Content -->
+
+                    <!-- Right Column: Biography & Capabilities -->
                     <div>
-                        <span class="pill-badge" style="background: rgba(140, 198, 63, 0.15); color: var(--color-primary); margin-bottom: 1.5rem; border: 1px solid rgba(140, 198, 63, 0.3);">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="margin-right: 4px;"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+                        <span class="lahore-pill" style="margin-bottom: 1.5rem; background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.3); color: var(--color-primary); padding: 0.4rem 1rem; border-radius: 20px; font-weight: 700; font-size: 0.8rem; display: inline-flex; align-items: center; gap: 0.4rem;">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
                             ABOUT IBRAR AHMAD • LEAD CONSULTANT
                         </span>
-                        <h2 style="font-size: 3rem; font-weight: 800; color: var(--color-dark); line-height: 1.1; margin-bottom: 2rem;">
+                        <h2 style="font-size: 2.6rem; font-weight: 800; color: var(--color-dark); line-height: 1.15; margin-bottom: 1.5rem;">
                             Empowering Business Visibility: Meet Ibrar Ahmad
                         </h2>
-                        <div style="width: 40px; height: 3px; background-color: var(--color-primary); margin-bottom: 2rem;"></div>
+                        <div style="width: 50px; height: 4px; background-color: var(--color-primary); border-radius: 2px; margin-bottom: 2rem;"></div>
+
                         <div style="color: var(--color-text-muted); font-size: 1.05rem; line-height: 1.8; margin-bottom: 2.5rem;">
-                            <p style="margin-bottom: 1.25rem;">As an independent <strong>SEO Consultant</strong> and custom <strong>WordPress Engineer</strong> based right here in Lahore, I bridge the gap between high-performance web speeds and organic search rankings for local businesses. Over the past seven years, I have collaborated with direct enterprise brands and local companies to transform their websites into consistent inquiry pipelines.</p>
-                            <p style="margin-bottom: 1.25rem;">My working philosophy focuses on real-world business objectives rather than empty keywords or vanity metrics. I clean up cluttered code, set up crawlable JSON-LD schemas, and implement white-hat optimization and speed strategies to ensure Google and users enjoy an absolute premium page experience.</p>
-                            <p>Every campaign is managed with direct 1-to-1 support, weekly reports, and transparent work channels.</p>
+                            <p style="margin-bottom: 1.25rem;">As an independent <strong>SEO Consultant</strong> and custom <strong>WordPress Engineer</strong> based in Lahore, I bridge the gap between lightning-fast website speeds and organic Google search rankings for local businesses.</p>
+                            <p style="margin-bottom: 1.25rem;">Over the past seven years, I have collaborated with service providers, education institutes, visa consultancies, and eCommerce stores across DHA, Gulberg, Johar Town, and Bahria Town to transform their websites into consistent inquiry pipelines.</p>
+                            <p>My methodology focuses strictly on real-world business revenue rather than vanity metrics. I clean up cluttered code, set up structured JSON-LD schemas, and implement white-hat optimization strategies for sustainable search growth.</p>
                         </div>
-                        <!-- Checks Grid -->
-                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 1.5rem; margin-bottom: 3rem;">
-                            <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+
+                        <!-- Capability Highlights -->
+                        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.25rem; margin-bottom: 2.5rem;">
+                            <div style="display: flex; gap: 0.75rem; align-items: flex-start; background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                                 <div>
-                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Technical SEO Audit</h4>
-                                    <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">Solving core crawlability and modern site indexing issues.</p>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Technical SEO Audits</h4>
+                                    <p style="font-size: 0.82rem; color: #64748b; margin: 0; line-height: 1.4;">Solving crawlability & indexing barriers.</p>
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                            <div style="display: flex; gap: 0.75rem; align-items: flex-start; background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                                 <div>
-                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">WordPress Clean Code</h4>
-                                    <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">Eliminating bloated plugins for pristine loading speed.</p>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">WordPress Speed Engine</h4>
+                                    <p style="font-size: 0.82rem; color: #64748b; margin: 0; line-height: 1.4;">Eliminating bloat for sub-second speeds.</p>
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                            <div style="display: flex; gap: 0.75rem; align-items: flex-start; background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                                 <div>
-                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Semantic Content Hubs</h4>
-                                    <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">Targeting transactional search intents for real business leads.</p>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Intent-Driven Content</h4>
+                                    <p style="font-size: 0.82rem; color: #64748b; margin: 0; line-height: 1.4;">Targeting transactional keywords for leads.</p>
                                 </div>
                             </div>
-                            <div style="display: flex; gap: 0.75rem; align-items: flex-start;">
-                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
+                            <div style="display: flex; gap: 0.75rem; align-items: flex-start; background: #f8fafc; padding: 1rem; border-radius: 12px; border: 1px solid #e2e8f0;">
+                                <div style="color: var(--color-primary); margin-top: 2px;"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg></div>
                                 <div>
-                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.25rem;">Local Maps Dominance</h4>
-                                    <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">Structuring structured local maps schemas and organic directories.</p>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Local Maps Dominance</h4>
+                                    <p style="font-size: 0.82rem; color: #64748b; margin: 0; line-height: 1.4;">Ranking Google Business Pack profiles.</p>
                                 </div>
                             </div>
                         </div>
-                        <div style="display: flex; gap: 1rem; flex-wrap: wrap;">
-                            <a href="#" class="btn" style="background-color: #0077b5; color: white; display: inline-flex; align-items: center; gap: 0.5rem; border: none; padding: 0.75rem 1.5rem; font-weight: 700;">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-                                CONNECT ON LINKEDIN
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                            <a href="contact" class="btn btn-primary" style="padding: 0.85rem 1.8rem; font-weight: 700; font-size: 0.95rem;">
+                                BOOK FREE CONSULTATION CALL
                             </a>
-                            <a href="contact" class="btn btn-dark" style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; font-weight: 700;">
-                                BOOK CALL WITH IBRAR 
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                            <a href="portfolio" class="btn" style="background: #0f172a; color: #ffffff; padding: 0.85rem 1.5rem; font-weight: 700; font-size: 0.95rem; display: inline-flex; align-items: center; gap: 0.5rem;">
+                                VIEW SEO CASE STUDIES →
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-\n\n        <!-- Testimonials -->
-        <section style="padding: 8rem 0; background-color: #f8f9fa;">
+
+        <!-- SEO Portfolio Slider Section -->
+        <section style="padding: 6rem 0; background-color: #0b1329; color: #ffffff;">
+            <div class="container">
+                <div class="testimonial-header" style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 3rem;">
+                    <div style="max-width: 700px;">
+                        <span style="text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; font-weight: 700; color: var(--color-primary); display: block; margin-bottom: 0.5rem;">PROVEN RESULTS</span>
+                        <h2 style="font-size: 2.4rem; font-weight: 800; color: #ffffff; margin-bottom: 0.75rem; line-height: 1.2;">
+                            SEO Portfolio & Real Organic Growth
+                        </h2>
+                        <p style="color: #cbd5e1; font-size: 1.05rem; margin: 0;">Explore real client case studies and organic traffic achievements delivered for Lahore & international brands.</p>
+                    </div>
+                    <div style="display: flex; gap: 0.5rem;">
+                        <button class="nav-btn-circle" aria-label="Previous Case Study" onclick="document.querySelector('.portfolio-slider').scrollBy({left: -400, behavior: 'smooth'})" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #ffffff;">←</button>
+                        <button class="nav-btn-circle" aria-label="Next Case Study" onclick="document.querySelector('.portfolio-slider').scrollBy({left: 400, behavior: 'smooth'})" style="background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2); color: #ffffff;">→</button>
+                    </div>
+                </div>
+
+                <div class="portfolio-slider testimonial-slider" style="display: flex; gap: 1.75rem; overflow-x: auto; scroll-behavior: smooth; padding-bottom: 1.5rem; scrollbar-width: none;">
+                    <!-- SEO GSC Card 1: Visa Consultancy -->
+                    <div style="min-width: 440px; max-width: 480px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(10px);">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/Visa Consutlacny in Karachi.png" alt="Visa Consultancy Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); letter-spacing: 1px; margin-bottom: 0.35rem;">📍 VISA CONSULTANCY • PAKISTAN</div>
+                                <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">+310% Organic Traffic Growth & #1 Ranking for Visa Terms</h3>
+                                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Achieved #1 position for high-intent study visa search terms in Lahore & Islamabad.</p>
+                            </div>
+                        </div>
+                        <div style="padding: 1rem 1.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">+310%</div>
+                                <div style="font-size: 0.75rem; color: #cbd5e1;">Organic Traffic</div>
+                            </div>
+                            <a href="portfolio" style="color: #ffffff; font-weight: 700; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">View Full Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- SEO GSC Card 2: Education Platform -->
+                    <div style="min-width: 440px; max-width: 480px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(10px);">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/Education platfrom in lahore.png" alt="Education Platform Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); letter-spacing: 1px; margin-bottom: 0.35rem;">📍 EDUCATION PLATFORM • LAHORE</div>
+                                <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">+210% Organic Traffic & 100+ Top 3 Search Positions</h3>
+                                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Dominating local Google search results and student course inquiry traffic.</p>
+                            </div>
+                        </div>
+                        <div style="padding: 1rem 1.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">+210%</div>
+                                <div style="font-size: 0.75rem; color: #cbd5e1;">Organic Visitors</div>
+                            </div>
+                            <a href="portfolio" style="color: #ffffff; font-weight: 700; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">View Full Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- SEO GSC Card 3: eCommerce Brand -->
+                    <div style="min-width: 440px; max-width: 480px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(10px);">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/Local ecommeces.png" alt="Local eCommerce Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); letter-spacing: 1px; margin-bottom: 0.35rem;">📍 ECOMMERCE BRAND • PAKISTAN</div>
+                                <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">+240% Organic Store Revenue & 50+ Commercial Keywords</h3>
+                                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Targeting transactional product keywords with structured product schema.</p>
+                            </div>
+                        </div>
+                        <div style="padding: 1rem 1.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">+240%</div>
+                                <div style="font-size: 0.75rem; color: #cbd5e1;">Organic Revenue</div>
+                            </div>
+                            <a href="portfolio" style="color: #ffffff; font-weight: 700; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">View Full Case Study →</a>
+                        </div>
+                    </div>
+
+                    <!-- SEO GSC Card 4: School & Institute -->
+                    <div style="min-width: 440px; max-width: 480px; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.12); border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; justify-content: space-between; backdrop-filter: blur(10px);">
+                        <div>
+                            <div class="gsc-frame-container">
+                                <div class="gsc-window-header">
+                                    <span class="gsc-dot red"></span>
+                                    <span class="gsc-dot yellow"></span>
+                                    <span class="gsc-dot green"></span>
+                                    <span class="gsc-window-title">Google Search Console • Performance Report</span>
+                                    <span style="margin-left: auto; background: rgba(140,198,63,0.15); color: var(--color-primary); border: 1px solid rgba(140,198,63,0.3); font-size: 0.68rem; font-weight: 800; padding: 0.2rem 0.65rem; border-radius: 20px;">VERIFIED GSC DATA</span>
+                                </div>
+                                <img src="images/School Website.png" alt="School Website Search Console Graph" class="card-gsc-full-img" loading="lazy">
+                            </div>
+                            <div style="padding: 1.5rem;">
+                                <div style="font-size: 0.75rem; font-weight: 800; color: var(--color-primary); letter-spacing: 1px; margin-bottom: 0.35rem;">📍 SCHOOL & INSTITUTE • LAHORE</div>
+                                <h3 style="font-size: 1.2rem; font-weight: 700; color: #ffffff; margin-bottom: 0.5rem;">+180% Student Inquiry Growth & 85% Lower Cost Per Lead</h3>
+                                <p style="color: #94a3b8; font-size: 0.9rem; line-height: 1.6; margin-bottom: 1rem;">Scaling student admissions through local SEO and high-converting lead funnels.</p>
+                            </div>
+                        </div>
+                        <div style="padding: 1rem 1.5rem 1.5rem; border-top: 1px solid rgba(255,255,255,0.08); display: flex; justify-content: space-between; align-items: center;">
+                            <div>
+                                <div style="font-size: 1.25rem; font-weight: 800; color: var(--color-primary);">+180%</div>
+                                <div style="font-size: 0.75rem; color: #cbd5e1;">Student Leads</div>
+                            </div>
+                            <a href="portfolio" style="color: #ffffff; font-weight: 700; font-size: 0.85rem; text-decoration: none; display: flex; align-items: center; gap: 0.25rem;">View Full Case Study →</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Custom WordPress & Web Development Promotion CTA Section -->
+        <section style="padding: 5.5rem 0; background: linear-gradient(135deg, #090d16 0%, #172033 100%); color: #ffffff; border-top: 1px solid rgba(255,255,255,0.08); border-bottom: 1px solid rgba(255,255,255,0.08); position: relative; overflow: hidden;">
+            <!-- Background Glow Overlay -->
+            <div style="position: absolute; top: -30%; right: -10%; width: 450px; height: 450px; background: radial-gradient(circle, rgba(140, 198, 63, 0.15) 0%, rgba(0,0,0,0) 70%); pointer-events: none;"></div>
+            
+            <div class="container">
+                <div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 3.5rem; align-items: center;">
+                    <div>
+                        <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: #8cc63f; padding: 0.45rem 1.15rem; border-radius: 30px; font-size: 0.78rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px; display: inline-block; margin-bottom: 1.25rem;">
+                            💻 CUSTOM WORDPRESS & WEB DEVELOPMENT
+                        </span>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: #ffffff; line-height: 1.2; margin-bottom: 1.25rem;">
+                            Need a Fast, High-Converting Website Built for SEO Success?
+                        </h2>
+                        <p style="color: #cbd5e1; font-size: 1.08rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                            A slow or poorly built website hurts your Google rankings and loses prospective clients. We build custom, clean-coded, lightning-fast WordPress websites optimized for 98%+ Core Web Vitals and max lead conversion.
+                        </p>
+                        <p style="color: #94a3b8; font-size: 0.95rem; line-height: 1.6; margin-bottom: 2rem;">
+                            Whether you need a full website redesign, an immigration portal, or an academy enrollment system, our web development delivers instant speed and pristine search architecture.
+                        </p>
+
+                        <div style="display: flex; gap: 1rem; flex-wrap: wrap; align-items: center;">
+                            <a href="wordpress-design-services" class="btn btn-primary" style="padding: 0.95rem 1.8rem; font-weight: 800; box-shadow: 0 10px 25px rgba(140, 198, 63, 0.3);">
+                                Explore WordPress Development →
+                            </a>
+                            <a href="portfolio" class="btn" style="background: rgba(255, 255, 255, 0.06); color: #ffffff; border: 1px solid rgba(255, 255, 255, 0.2); padding: 0.95rem 1.6rem; font-weight: 700; backdrop-filter: blur(10px);">
+                                View Development Case Studies 📊
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Right Column: Visual Feature Grid -->
+                    <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 20px; padding: 2rem; backdrop-filter: blur(12px); box-shadow: 0 20px 40px rgba(0,0,0,0.4);">
+                        <div style="font-size: 0.8rem; font-weight: 800; color: #8cc63f; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 1.25rem; display: flex; align-items: center; gap: 0.5rem;">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                            WHY OUR WORDPRESS DEVELOPMENT LEADS PAKISTAN
+                        </div>
+
+                        <div style="display: flex; flex-direction: column; gap: 1.25rem;">
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">⚡</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">98%+ Google PageSpeed Score</h4>
+                                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Clean php architecture without plugin bloat for instant sub-second load times.</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">📱</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">100% Pixel-Perfect Mobile Layouts</h4>
+                                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Fluid, responsive designs engineered for smartphones, tablets, and desktops.</p>
+                                </div>
+                            </div>
+                            <div style="display: flex; gap: 1rem; align-items: flex-start;">
+                                <div style="background: rgba(140, 198, 63, 0.15); color: #8cc63f; width: 36px; height: 36px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">🎯</div>
+                                <div>
+                                    <h4 style="font-size: 1rem; font-weight: 700; color: #ffffff; margin-bottom: 0.25rem;">Pre-Optimized Search Engine Architecture</h4>
+                                    <p style="font-size: 0.85rem; color: #94a3b8; line-height: 1.5;">Built-in JSON-LD Schema markup, clean canonicals, and SEO-friendly URLs.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2 Core Specialized Industry Focus Section -->
+        <section style="padding: 6rem 0; background: var(--color-bg-alt); border-top: 1px solid var(--color-border);">
+            <div class="container">
+                <div style="text-align: center; max-width: 750px; margin: 0 auto 3.5rem auto;">
+                    <span class="lahore-pill">OUR SPECIALIZED INDUSTRIES</span>
+                    <h2 class="section-title" style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900);">
+                        We Specialize Exclusively In 2 Core Industries
+                    </h2>
+                    <p style="color: var(--color-gray-600); font-size: 1.05rem;">
+                        Instead of spreading thin across dozens of random fields, we master organic search architecture for two high-converting business niches.
+                    </p>
+                </div>
+
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
+                    <!-- Core Industry 1 -->
+                    <div class="feature-card-enhanced card-animated" style="border-top: 4px solid #8cc63f; background: #ffffff;">
+                        <div>
+                            <span style="background: rgba(140, 198, 63, 0.15); color: var(--color-primary); font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.85rem; border-radius: 20px; text-transform: uppercase; display: inline-block; margin-bottom: 1rem;">
+                                SPECIALIZATION NICHE #1
+                            </span>
+                            <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 0.75rem;">
+                                Study Abroad & Visa Consultancy SEO
+                            </h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                                Specialized organic lead generation for immigration consultants, study abroad advisors, and visa assistance agencies across Lahore and nationwide.
+                            </p>
+                            <ul style="list-style-type: none; padding: 0; margin-bottom: 1.5rem; font-size: 0.88rem; color: var(--color-gray-700);">
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #8cc63f;">✓</span> Target high-intent student visa queries</li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #8cc63f;">✓</span> Country-specific landing page optimization</li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #8cc63f;">✓</span> Direct WhatsApp & call lead conversion</li>
+                            </ul>
+                        </div>
+                        <a href="seo-services-visa-consultancy" class="btn btn-primary" style="padding: 0.85rem 1.5rem; font-weight: 700; font-size: 0.9rem; text-align: center; display: block;">
+                            Explore Visa Consultancy SEO →
+                        </a>
+                    </div>
+
+                    <!-- Core Industry 2 -->
+                    <div class="feature-card-enhanced card-animated" style="border-top: 4px solid #2563EB; background: #ffffff;">
+                        <div>
+                            <span style="background: rgba(37, 99, 235, 0.12); color: #2563EB; font-size: 0.75rem; font-weight: 800; padding: 0.3rem 0.85rem; border-radius: 20px; text-transform: uppercase; display: inline-block; margin-bottom: 1rem;">
+                                SPECIALIZATION NICHE #2
+                            </span>
+                            <h3 style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 0.75rem;">
+                                Education Institutes & E-Learning SEO
+                            </h3>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.6; margin-bottom: 1.25rem;">
+                                Driving verified course enrollments, student applications, and brand authority for private academies, colleges, and e-learning portals.
+                            </p>
+                            <ul style="list-style-type: none; padding: 0; margin-bottom: 1.5rem; font-size: 0.88rem; color: var(--color-gray-700);">
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #2563EB;">✓</span> Academic course Schema & JSON-LD markup</li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #2563EB;">✓</span> Local maps ranking for academies & campuses</li>
+                                <li style="margin-bottom: 0.5rem; display: flex; align-items: center; gap: 0.5rem;"><span style="color: #2563EB;">✓</span> High-converting admission funnel architecture</li>
+                            </ul>
+                        </div>
+                        <a href="seo-services-education" class="btn" style="background: #2563EB; color: #ffffff; padding: 0.85rem 1.5rem; font-weight: 700; font-size: 0.9rem; text-align: center; display: block; border: none;">
+                            Explore Education SEO →
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials -->
+        <section style="padding: 8rem 0; background-color: #f8fafc;">
             <div class="container">
                 <div class="testimonial-header">
                     <div style="max-width: 700px;">
-                        <span style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 700; color: var(--color-dark); display: block; margin-bottom: 1.5rem;">T E S T I M O N I A L S</span>
-                        <h2 style="font-size: 2.5rem; font-weight: 700; color: var(--color-dark); margin-bottom: 1rem; line-height: 1.2;">
-                            What Clients Share About Their <span style="color: #999;">Experience</span>
+                        <span style="text-transform: uppercase; letter-spacing: 4px; font-size: 0.75rem; font-weight: 700; color: var(--color-gray-900); display: block; margin-bottom: 1.5rem;">T E S T I M O N I A L S</span>
+                        <h2 style="font-size: 2.5rem; font-weight: 800; color: var(--color-gray-900); margin-bottom: 1rem; line-height: 1.2;">
+                            What Clients Share About Their <span style="color: #64748b;">Experience</span>
                         </h2>
-                        <p style="color: var(--color-text-muted); font-size: 1.1rem;">Our clients share their experience of working with us, highlighting clear communication, consistent progress, and practical SEO support.</p>
+                        <p style="color: var(--color-gray-600); font-size: 1.1rem; margin-bottom: 1.25rem;">Our clients share their experience of working with us, highlighting clear communication, consistent progress, and practical SEO support.</p>
+                        <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 700; font-size: 0.9rem; color: #4285F4; transition: color 0.2s ease;" onmouseover="this.style.color='#1a73e8'" onmouseout="this.style.color='#4285F4'">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                            </svg>
+                            View Google Business Profile (5.0 ★ Rating) →
+                        </a>
                     </div>
                     <div>
                         <button class="nav-btn-circle" aria-label="Previous" onclick="document.querySelector('.testimonial-slider').scrollBy({left: -400, behavior: 'smooth'})">←</button>
@@ -597,139 +1510,226 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     </div>
                 </div>
                 <div class="testimonial-slider">
-                    <div class="testimonial-green-card">
-                        <div style="font-size: 4rem; font-weight: 300; line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px;">50+</div>
-                        <div style="font-size: 0.9rem; font-weight: 600;">Successfully delivered projects</div>
-                    </div>
-                    <div class="testimonial-card">
+                    <a href="portfolio" class="testimonial-green-card" style="text-decoration: none; display: flex; flex-direction: column; justify-content: flex-end; cursor: pointer;">
+                        <div style="font-size: 4rem; font-weight: 300; line-height: 1; margin-bottom: 1.5rem; letter-spacing: -2px; color: var(--color-dark);">50+</div>
+                        <div style="font-size: 0.9rem; font-weight: 600; color: var(--color-dark);">Successfully delivered projects</div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
                         <div>
-                            <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Our website traffic improved gradually, and more relevant inquiries started coming in. The SEO process was explained clearly, and the results were consistent.</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">AR</div>
-                            <div>
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Ahmed Raza</h4>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">MD, Local Services</span>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
                             </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Our website traffic improved gradually, and more relevant inquiries started coming in. The SEO process was explained clearly, and the results were consistent.</p>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">AR</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Ahmed Raza</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">MD, Local Services</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
                         <div>
-                            <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">They communicated everything in simple terms and focused on long-term improvement instead of quick promises. We saw steady growth in visibility.</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">SK</div>
-                            <div>
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Sarah Khan</h4>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Founder, Online Store</span>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
                             </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">They communicated everything in simple terms and focused on long-term improvement instead of quick promises. We saw steady growth in visibility.</p>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">SK</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Sarah Khan</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Founder, Online Store</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
                         <div>
-                            <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">The team worked professionally and shared clear reports. Our search visibility improved, and the quality of leads also became better.</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">UA</div>
-                            <div>
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Usman Ali</h4>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Marketing Manager</span>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
                             </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">The team worked professionally and shared clear reports. Our search visibility improved, and the quality of leads also became better.</p>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">UA</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Usman Ali</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Marketing Manager</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
                         <div>
-                            <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">What I appreciated most was the honest guidance. They focused on what was best for our business, not unnecessary SEO work.</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">AM</div>
-                            <div>
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Ayesha Malik</h4>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Business Owner</span>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
                             </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">What I appreciated most was the honest guidance. They focused on what was best for our business, not unnecessary SEO work.</p>
                         </div>
-                    </div>
-                    <div class="testimonial-card">
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; gap: 1rem;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">AM</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Ayesha Malik</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Business Owner</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
+                    <a href="https://maps.app.goo.gl/hVHcvTFEmajaphmE9" target="_blank" rel="noopener noreferrer" class="testimonial-card" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; justify-content: space-between; cursor: pointer;">
                         <div>
-                            <div style="font-size: 3rem; font-family: serif; color: var(--color-dark); line-height: 0.5; margin-bottom: 2rem;">“</div>
-                            <p style="color: var(--color-text-muted); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Reliable SEO support with transparent reporting. Our online presence improved, and we gained more confidence in our website’s performance.</p>
-                        </div>
-                        <div style="display: flex; align-items: center; gap: 1rem;">
-                            <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-dark); font-size: 0.8rem;">BH</div>
-                            <div>
-                                <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-dark); margin-bottom: 0.15rem;">Bilal Hussain</h4>
-                                <span style="font-size: 0.8rem; color: var(--color-text-muted);">Operations Head</span>
+                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem;">
+                                <div style="font-size: 3rem; font-family: serif; color: var(--color-gray-900); line-height: 0.5;">“</div>
+                                <div style="display: flex; align-items: center; gap: 6px; background: #f8fafc; padding: 4px 10px; border-radius: 20px; border: 1px solid #e2e8f0;">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" style="display: block;">
+                                        <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
+                                        <path d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" fill="#34A853"/>
+                                        <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
+                                        <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
+                                    </svg>
+                                    <span style="color: #64748b; font-size: 0.75rem; font-weight: 700; line-height: 1;">Google</span>
+                                </div>
                             </div>
+                            <p style="color: var(--color-gray-600); font-size: 0.95rem; line-height: 1.7; margin-bottom: 2rem;">Reliable SEO support with transparent reporting. Our online presence improved, and we gained more confidence in our website’s performance.</p>
                         </div>
-                    </div>
+                        <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; gap: 1rem; margin-top: auto;">
+                                <div style="width: 40px; height: 40px; border-radius: 50%; background: #e9ecef; display: flex; align-items: center; justify-content: center; font-weight: bold; color: var(--color-gray-900); font-size: 0.8rem;">BH</div>
+                                <div>
+                                    <h4 style="font-size: 0.95rem; font-weight: 700; color: var(--color-gray-900); margin-bottom: 0.15rem;">Bilal Hussain</h4>
+                                    <span style="font-size: 0.8rem; color: var(--color-gray-600);">Operations Head</span>
+                                </div>
+                            </div>
+                            <div style="color: #f59e0b; font-size: 0.85rem; letter-spacing: 0.5px;">★★★★★</div>
+                        </div>
+                    </a>
                 </div>
             </div>
         </section>
+
         <!-- FAQs -->
-        <section style="padding: 6rem 0; background-color: var(--color-white);">
-            <div class="container" style="max-width: 800px;">
-                <div style="text-align: center; margin-bottom: 3rem;">
-                    <h2 class="section-title">Frequently Asked Questions</h2>
+        <section style="padding: 6rem 0; background-color: #f8fafc;">
+            <div class="container" style="max-width: 850px;">
+                <div style="text-align: center; margin-bottom: 3.5rem;">
+                    <span style="color: var(--color-primary); font-weight: 700; font-size: 0.8rem; letter-spacing: 2px; text-transform: uppercase;">GOT QUESTIONS?</span>
+                    <h2 class="section-title" style="font-size: 2.3rem; font-weight: 800; color: var(--color-dark); margin-top: 0.25rem;">Frequently Asked Questions</h2>
+                    <p style="color: var(--color-text-muted); font-size: 1.05rem;">Clear, transparent answers about our local SEO process in Lahore.</p>
                 </div>
-                <div class="faq-accordion">
-            <details>
-                <summary>What is SEO, and why is it important for my business?</summary>
-                <div class="faq-content">SEO helps your website appear in Google search results when people search for your services. Better visibility brings more visitors and increases the chances of inquiries and sales. It also supports long-term online growth.</div>
-            </details>
-                <details>
-                <summary>How long does SEO take to show results?</summary>
-                <div class="faq-content">SEO works gradually. Most websites start seeing improvement within 3 to 6 months, depending on the competition and the website's condition. The results are stable and long-lasting.</div>
-            </details>
-                <details>
-                <summary>Do you provide SEO services in specific areas of Lahore?</summary>
-                <div class="faq-content">Yes, we provide SEO services for businesses located across different areas of Lahore. Whether your business operates in DHA, Gulberg, Johar Town, Model Town, or surrounding locations, our SEO strategies are tailored to local search behavior.</div>
-            </details>
-                <details>
-                <summary>Is SEO suitable for small businesses?</summary>
-                <div class="faq-content">Yes, SEO works very well for small businesses. It attracts targeted traffic without ongoing ad costs and supports steady growth.</div>
-            </details>
-                <details>
-                <summary>Will SEO work for my industry?</summary>
-                <div class="faq-content">SEO works for most industries, including services, local businesses, and online stores. The strategy may vary, but the goal remains the same.</div>
-            </details>
-                <details>
-                <summary>Do you follow Google guidelines?</summary>
-                <div class="faq-content">Yes, all our SEO practices follow Google and search engine guidelines to ensure safe and long-term performance.</div>
-            </details>
-                <details>
-                <summary>Will I get SEO reports and updates?</summary>
-                <div class="faq-content">Yes, we provide regular reports that clearly show progress and improvements.</div>
-            </details>
-                <details>
-                <summary>Is modern AI-based SEO important now?</summary>
-                <div class="faq-content">Yes, modern SEO includes AI-driven search, direct answers, and generated summaries. We optimize websites to stay visible in these evolving search systems.</div>
-            </details>
-                <details>
-                <summary>Why should I choose SEO with Ibrar over other agencies?</summary>
-                <div class="faq-content">SEO with Ibrar focuses on honest communication, tailored strategies, and long-term growth. We work closely with clients and focus on real business outcomes, not shortcuts.</div>
-            </details>
-                <details>
-                <summary>Do you provide eCommerce SEO services?</summary>
-                <div class="faq-content">Yes, SEO with Ibrar provides SEO services for eCommerce websites. We optimize product pages, category pages, and site structure to improve visibility, traffic, and sales.</div>
-            </details>
-            </div>
+                <div class="faq-accordion-modern">
+                    <details>
+                        <summary>What is SEO, and why is it important for my business?</summary>
+                        <div class="faq-content">SEO helps your website appear in Google search results when people search for your services. Better visibility brings more targeted visitors and increases the chances of inquiries and sales, creating a sustainable marketing pipeline.</div>
+                    </details>
+                    <details>
+                        <summary>How long does SEO take to show results?</summary>
+                        <div class="faq-content">SEO works gradually. Most websites start seeing noticeable ranking movement and organic traffic growth within 3 to 6 months, depending on keyword competitiveness and your domain's starting state.</div>
+                    </details>
+                    <details>
+                        <summary>Do you provide SEO services in specific areas of Lahore?</summary>
+                        <div class="faq-content">Yes, we provide specialized local SEO for businesses operating in DHA Lahore (Phases 1-8), Gulberg Commercial, Johar Town, Model Town, Bahria Town, and surrounding commercial sectors.</div>
+                    </details>
+                    <details>
+                        <summary>Is SEO suitable for small businesses?</summary>
+                        <div class="faq-content">Yes! SEO is exceptionally powerful for small & local service businesses. It connects you directly with local buyers searching for your exact services without ongoing pay-per-click ad expenses.</div>
+                    </details>
+                    <details>
+                        <summary>Will SEO work for my specific industry?</summary>
+                        <div class="faq-content">Yes, SEO works across service providers, consultancies, educational institutes, local clinics, real estate agencies, and eCommerce stores. We tailor the strategy to your industry's specific search intent.</div>
+                    </details>
+                    <details>
+                        <summary>Do you strictly follow Google guidelines?</summary>
+                        <div class="faq-content">Yes, all our SEO practices strictly adhere to Google Search Essentials and Webmaster Guidelines. We focus on ethical, long-term growth and avoid risky automated techniques.</div>
+                    </details>
+                    <details>
+                        <summary>Will I get regular SEO reports and updates?</summary>
+                        <div class="faq-content">Yes, we provide transparent weekly and monthly reporting covering keyword positions, organic traffic analytics, technical fixes, and strategy updates.</div>
+                    </details>
+                    <details>
+                        <summary>Is modern AI-based SEO (GEO / AEO) included?</summary>
+                        <div class="faq-content">Yes! We optimize your site for Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO) so your brand appears in AI Overviews, ChatGPT recommendations, and Perplexity answers.</div>
+                    </details>
+                    <details>
+                        <summary>Why choose SEO with Ibrar over large marketing agencies?</summary>
+                        <div class="faq-content">SEO with Ibrar provides direct 1-to-1 expert accountability, transparent communication, clean technical execution, and customized strategies without account manager middlemen or generic templates.</div>
+                    </details>
+                    <details>
+                        <summary>Do you provide eCommerce SEO services?</summary>
+                        <div class="faq-content">Yes, we provide end-to-end eCommerce SEO including product schema, category page architecture, speed optimization, and transactional keyword targeting for online stores.</div>
+                    </details>
+                </div>
             </div>
         </section>
-    <!-- CTA Banner -->
-        <section class="cta-banner" style="background-color: var(--color-primary); padding: 5rem 0;">
-            <div class="container text-center" style="max-width: 800px;">
-                <h2 class="cta-title" style="color: var(--color-dark); margin-bottom: 1.5rem;">Ready to Grow Your Business with SEO?</h2>
-                <p class="cta-desc" style="color: var(--color-white); margin-bottom: 1.5rem; font-size: 1.1rem; opacity: 0.9;">
-                    If you want your business to be found by the right people at the right time, SEO is the next step. At SEO with Ibrar, we help businesses build visibility, trust, and long-term growth through practical and well-planned SEO strategies.
+    <!-- Premium Dark Glassmorphic CTA Banner -->
+        <section class="cta-banner" style="background: linear-gradient(145deg, #0b1222 0%, #151f36 100%); padding: 6rem 0; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08);">
+            <div class="container text-center" style="max-width: 850px; position: relative; z-index: 10;">
+                <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: #8cc63f; padding: 0.5rem 1.25rem; border-radius: 30px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem; letter-spacing: 0.5px;">
+                    🚀 DOMINATE GOOGLE SEARCHES ACROSS LAHORE
+                </span>
+                <h2 class="cta-title" style="color: #ffffff; font-size: 2.75rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem;">
+                    Ready to Grow Your Business with SEO?
+                </h2>
+                <p class="cta-desc" style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.25rem;">
+                    If you want your business to be found by the right clients at the right time, SEO is your ultimate growth asset. At <strong>SEO with Ibrar</strong>, we build visibility, search engine trust, and long-term organic revenue for brands across Lahore.
                 </p>
-                <p class="cta-desc" style="color: var(--color-white); margin-bottom: 2rem; font-size: 1.1rem; opacity: 0.9; font-weight: 600;">
-                    Book your free SEO consultation today and let us review your website, identify growth opportunities, and show you how our SEO services in Lahore can support your business goals.
+                <p class="cta-desc" style="color: #94a3b8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 600;">
+                    Book your free SEO consultation today. We will audit your website, pinpoint growth bottlenecks, and show you exactly how our SEO services in Lahore can achieve your business targets.
                 </p>
-                <a href="contact" class="btn btn-dark">Get a Free SEO Consultation</a>
+
+                <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+                    <a href="contact" class="btn btn-primary" style="padding: 1rem 2.25rem; font-size: 1.05rem; font-weight: 800; box-shadow: 0 10px 25px rgba(140,198,63,0.3);">
+                        Get Free SEO Audit & Consultation
+                    </a>
+                    <a href="https://wa.me/923001234567" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; color: #ffffff; padding: 1rem 2rem; font-size: 1.05rem; font-weight: 700; border: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 25px rgba(37,211,102,0.25);">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                        WhatsApp Instant Chat
+                    </a>
+                </div>
             </div>
         </section>
     </main>
@@ -738,7 +1738,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <footer class="footer new-mega-footer">
         <div class="container footer-container-new">
             <div class="footer-col-main">
-                                <a href="index" class="logo footer-logo" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
+                                <a href="/" class="logo footer-logo" style="margin-bottom: 1.5rem; display: inline-flex; align-items: center;">
                     <img src="images/logo-full.png" alt="SEO With Ibrar Logo" class="logo-img">
                 </a>
                 <p class="footer-desc" style="color: rgba(255, 255, 255, 0.6); font-size: 0.85rem; line-height: 1.6; margin-bottom: 2rem;">
@@ -756,7 +1756,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <li><a href="seo-services-visa-consultancy">Visa Consultancy SEO</a></li>
                     <li><a href="seo-services-education">Education SEO</a></li>
                     <li><a href="wordpress-design-services">WordPress Solutions</a></li>
-                    <li><a href="Wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
+                    <li><a href="wordpress-design-services-for-visa-consultancy">WordPress Visa Services</a></li>
                     <li><a href="wordpress-design-services-for-education">WordPress Education Services</a></li>
                 </ul>
             </div>
@@ -799,7 +1799,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                                 Every tactic strictly adheres to webmaster rules. We never employ spam comments, hidden redirects, or low-quality backlink layers.
                             </p>
                             <div style="color: rgba(255, 255, 255, 0.3); font-size: 0.65rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.25rem;">DIRECT CHANNEL</div>
-                            <a href="mailto:ibrar@seowithibrar.com" style="color: white; font-size: 0.85rem; font-weight: 600;">ibrar@seowithibrar.com</a>
+                            <a href="mailto:seowithibrar@gmail.com" style="color: white; font-size: 0.85rem; font-weight: 600;">seowithibrar@gmail.com</a>
                         </div>
                     </div>
                 </div>
@@ -819,6 +1819,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                 </div>
             </div>
         </div>
-    </footer>
+    <!-- Floating Animated Clickable WhatsApp Button Widget -->
+    <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" class="whatsapp-float-widget" title="Chat with Ibrar Ahmad on WhatsApp (+92 317 4835008)">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+        <span class="whatsapp-float-label">WhatsApp +92 317 4835008</span>
+    </a>
 </body>
 </html>
