@@ -2052,3 +2052,93 @@
     width: 100%;
   }
 }
+
+
+/* ==========================================================================
+   POST CONTAINER WIDTH & 1200x628 EXPERT IMAGE & DATA TABLE EXTENSIONS
+   ========================================================================== */
+
+.bp-breadcrumbs-inner {
+  max-width: 1300px !important;
+}
+
+.bp-hero-inner {
+  max-width: 1300px !important;
+}
+
+.bp-hero-image {
+  max-width: 1300px !important;
+}
+
+.bp-article-wrapper {
+  max-width: 1300px !important;
+}
+
+/* 1200x628 Expert Image Banner Layout */
+.bp-expert-header {
+  flex-direction: column !important;
+  gap: 16px !important;
+}
+
+.bp-expert-photo-col {
+  width: 100% !important;
+}
+
+.bp-expert-photo {
+  width: 100% !important;
+  max-width: 1200px !important;
+  height: auto !important;
+  aspect-ratio: 1200 / 628 !important;
+  object-fit: cover !important;
+  border-radius: 12px !important;
+  border: 1px solid var(--color-gray-200) !important;
+  display: block !important;
+}
+
+/* Key-Value Data Tables inside Expert Cards */
+.bp-data-table-wrapper {
+  margin: 20px 0 24px;
+  overflow-x: auto;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.bp-data-table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+  font-size: 0.9375rem;
+}
+
+.bp-data-table tr {
+  border-bottom: 1px solid #e2e8f0;
+}
+
+.bp-data-table tr:last-child {
+  border-bottom: none;
+}
+
+.bp-data-table td {
+  padding: 14px 18px;
+  line-height: 1.65;
+  vertical-align: top;
+}
+
+.bp-data-table td.bp-kv-key {
+  width: 28%;
+  min-width: 180px;
+  font-weight: 700;
+  color: #0f172a;
+  background: #f8fafc;
+  border-right: 1px solid #e2e8f0;
+}
+
+.bp-data-table td.bp-kv-val {
+  width: 72%;
+  color: #334155;
+}
+
+.bp-data-table td.bp-kv-val strong {
+  color: #0f172a;
+}
