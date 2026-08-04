@@ -1,8 +1,5 @@
 RewriteEngine On
 
-# Redirect /top-seo-experts-in-pakistan (without .html) to the correct page
-RewriteCond %{REQUEST_URI} ^/top-seo-experts-in-pakistan/?$
-RewriteRule ^top-seo-experts-in-pakistan/?$ /top-seo-experts-in-pakistan.html [R=301,L]
 
 # Redirect explicit .html requests to extensionless URLs
 RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
