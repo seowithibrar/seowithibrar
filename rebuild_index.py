@@ -35,7 +35,7 @@ new_body = """<body>
                 <a href="blog.html" class="nav-link">BLOG</a>
             </nav>
             
-            <a href="contact.html" class="btn btn-primary nav-cta">Book Consultation</a>
+            <a href="contact" class="btn btn-primary nav-cta">CONTACT US</a>
             
             <button class="mobile-menu-btn" aria-label="Toggle Menu">
                 <span></span>

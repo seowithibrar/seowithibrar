@@ -2151,3 +2151,57 @@ p {
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
     transition: transform 0.3s ease;
 }
+
+/* ==========================================================================
+   Floating WhatsApp Widget
+   ========================================================================== */
+@keyframes pulseGlow {
+    0%, 100% {
+        box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    }
+    50% {
+        box-shadow: 0 14px 35px rgba(37, 211, 102, 0.7);
+    }
+}
+
+.whatsapp-float-widget {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: #25D366;
+    color: #ffffff !important;
+    padding: 0.75rem 1.25rem;
+    border-radius: 40px;
+    text-decoration: none;
+    box-shadow: 0 10px 25px rgba(37, 211, 102, 0.4);
+    animation: pulseGlow 2.5s infinite;
+    transition: all 0.3s ease;
+}
+
+.whatsapp-float-widget:hover {
+    transform: scale(1.06) translateY(-3px);
+    box-shadow: 0 15px 35px rgba(37, 211, 102, 0.5);
+    color: #ffffff !important;
+}
+
+.whatsapp-float-label {
+    font-size: 0.88rem;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+}
+
+@media (max-width: 600px) {
+    .whatsapp-float-label {
+        display: none;
+    }
+    .whatsapp-float-widget {
+        padding: 0.85rem;
+        border-radius: 50%;
+        bottom: 20px;
+        right: 20px;
+    }
+}
