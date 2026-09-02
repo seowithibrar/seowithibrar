@@ -57,7 +57,7 @@ new_body = """<body>
                                 Google SEO Specialist
                             </span>
                             <div style="display: flex; align-items: center; gap: 4px; font-size: 0.875rem; font-weight: 600; color: var(--color-gray-700);">
-                                <span style="color: #F59E0B;">★★★★★</span> 5.0 Google Rating
+                                <span style="color: #F59E0B;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 Google Rating
                             </div>
                         </div>
                         <h1 style="margin-bottom: 24px; line-height: 1.1;">Dominate Search Rankings with Enterprise SEO</h1>
