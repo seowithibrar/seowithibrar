@@ -111,13 +111,53 @@
     <link rel="canonical" href="https://seowithibrar.com/contact">
     <!-- JSON-LD Schema -->
     <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "ContactPage",
-  "name": "Contact SEO With Ibrar | Book a Strategy Call",
-  "description": "Ready to scale your organic traffic? Contact SEO With Ibrar to book a free strategy call and start dominating search engines today.",
-  "url": "https://seowithibrar.com/contact"
-}
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "ContactPage",
+          "@id": "https://seowithibrar.com/contact#webpage",
+          "url": "https://seowithibrar.com/contact",
+          "name": "Contact SEO With Ibrar | Book a Strategy Call",
+          "description": "Ready to scale your organic traffic? Contact SEO With Ibrar to book a free strategy call and start dominating search engines today.",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://seowithibrar.com/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Contact Us",
+                "item": "https://seowithibrar.com/contact"
+              }
+            ]
+          },
+          "mainEntity": {
+            "@type": "ProfessionalService",
+            "name": "SEO With Ibrar",
+            "image": "https://seowithibrar.com/images/ibrar.png",
+            "telephone": "+923174835008",
+            "email": "seowithibrar@gmail.com",
+            "url": "https://seowithibrar.com",
+            "address": {
+              "@type": "PostalAddress",
+              "addressLocality": "Lahore",
+              "addressRegion": "Punjab",
+              "addressCountry": "PK"
+            },
+            "sameAs": [
+              "https://www.linkedin.com/in/seowithibrar/",
+              "https://maps.app.goo.gl/hVHcvTFEmajaphmE9"
+            ]
+          }
+        }
+      ]
+    }
     </script>
     <!-- Google Tag Manager -->
     <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -262,10 +302,13 @@
                             </div>
                         </div>
                         <!-- Footer Info Links -->
-                        <div class="contact-footer-info">
-                            <div style="display: flex; align-items: center; gap: 0.5rem;">
-                                <span style="color: var(--color-primary);">✉</span> mitechagency39@gmail.com
-                            </div>
+                        <div class="contact-footer-info" style="flex-wrap: wrap; gap: 1.5rem;">
+                            <a href="mailto:seowithibrar@gmail.com" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; transition: color 0.2s ease;">
+                                <span style="color: var(--color-primary);">✉</span> seowithibrar@gmail.com
+                            </a>
+                            <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; gap: 0.5rem; text-decoration: none; color: inherit; transition: color 0.2s ease;">
+                                <span style="color: var(--color-primary);">💬</span> +92 317 4835008 (WhatsApp)
+                            </a>
                             <div style="display: flex; align-items: center; gap: 0.5rem;">
                                 <span style="color: var(--color-primary);">📍</span> Lahore • Karachi • Islamabad
                             </div>
@@ -284,6 +327,10 @@
                                 <div class="form-group">
                                     <label class="form-label" for="email">Email Address *</label>
                                     <input type="email" id="email" name="email" class="form-control" placeholder="ibrahim@yourbusiness.pk" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="phone">Phone / WhatsApp Number</label>
+                                    <input type="tel" id="phone" name="phone" class="form-control" placeholder="+92 317 4835008">
                                 </div>
                                 <div class="form-group">
                                     <label class="form-label" for="website">Website URL</label>
@@ -438,12 +485,12 @@
                                 <path d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" fill="#FBBC05"/>
                                 <path d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" fill="#EA4335"/>
                             </svg>
-                            View Google Business Profile (5.0 ★ Rating) ÃƒÂ¢Ã¢â‚¬Â ’
+                            View Google Business Profile (5.0 ★ Rating) &rarr;
                         </a>
                     </div>
                     <div>
-                        <button class="nav-btn-circle" aria-label="Previous" onclick="document.querySelector('.testimonial-slider').scrollBy({left: -400, behavior: 'smooth'})">?</button>
-                        <button class="nav-btn-circle" aria-label="Next" onclick="document.querySelector('.testimonial-slider').scrollBy({left: 400, behavior: 'smooth'})">?</button>
+                        <button class="nav-btn-circle" aria-label="Previous" onclick="document.querySelector('.testimonial-slider').scrollBy({left: -400, behavior: 'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M19 12H5M12 19l-7-7 7-7"/></svg></button>
+                        <button class="nav-btn-circle" aria-label="Next" onclick="document.querySelector('.testimonial-slider').scrollBy({left: 400, behavior: 'smooth'})"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg></button>
                     </div>
                 </div>
                 <div class="testimonial-slider">
@@ -720,54 +767,54 @@
         <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
         <span class="whatsapp-float-label">WhatsApp +92 317 4835008</span>
     </a>
-</body>
-</html>
-<script>
-document.addEventListener('DOMContentLoaded', function() {
-    const contactForm = document.getElementById('contactForm');
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            const form = this;
-            const notification = document.getElementById('formNotification');
-            const submitBtn = form.querySelector('button[type="submit"]');
-            
-            // Disable button and show loading state
-            const originalBtnText = submitBtn.innerHTML;
-            submitBtn.innerHTML = 'Sending...';
-            submitBtn.disabled = true;
-            
-            const formData = new FormData(form);
-            
-            fetch('process_contact.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => response.json())
-            .then(data => {
-                notification.style.display = 'block';
-                if (data.success) {
-                    notification.style.backgroundColor = '#d1fae5';
-                    notification.style.color = '#065f46';
-                    notification.innerHTML = 'Thank you! Your message has been sent successfully. We will get back to you shortly.';
-                    form.reset();
-                } else {
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const contactForm = document.getElementById('contactForm');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const form = this;
+                const notification = document.getElementById('formNotification');
+                const submitBtn = form.querySelector('button[type="submit"]');
+                
+                // Disable button and show loading state
+                const originalBtnText = submitBtn.innerHTML;
+                submitBtn.innerHTML = 'Sending...';
+                submitBtn.disabled = true;
+                
+                const formData = new FormData(form);
+                
+                fetch('process_contact.php', {
+                    method: 'POST',
+                    body: formData
+                })
+                .then(response => response.json())
+                .then(data => {
+                    notification.style.display = 'block';
+                    if (data.success) {
+                        notification.style.backgroundColor = '#d1fae5';
+                        notification.style.color = '#065f46';
+                        notification.innerHTML = 'Thank you! Your message has been sent successfully. We will get back to you shortly.';
+                        form.reset();
+                    } else {
+                        notification.style.backgroundColor = '#fee2e2';
+                        notification.style.color = '#991b1b';
+                        notification.innerHTML = 'Oops! Something went wrong: ' + (data.message || 'Please try again later.');
+                    }
+                })
+                .catch(error => {
+                    notification.style.display = 'block';
                     notification.style.backgroundColor = '#fee2e2';
                     notification.style.color = '#991b1b';
-                    notification.innerHTML = 'Oops! Something went wrong: ' + (data.message || 'Please try again later.');
-                }
-            })
-            .catch(error => {
-                notification.style.display = 'block';
-                notification.style.backgroundColor = '#fee2e2';
-                notification.style.color = '#991b1b';
-                notification.innerHTML = 'Oops! Something went wrong. Please try again later.';
-            })
-            .finally(() => {
-                submitBtn.innerHTML = originalBtnText;
-                submitBtn.disabled = false;
+                    notification.innerHTML = 'Oops! Something went wrong. Please try again later.';
+                })
+                .finally(() => {
+                    submitBtn.innerHTML = originalBtnText;
+                    submitBtn.disabled = false;
+                });
             });
-        });
-    }
-});
-</script>
+        }
+    });
+    </script>
+</body>
+</html>
