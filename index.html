@@ -13,9 +13,646 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
-    <style>
+        <style>
+        /* ==========================================================================
+           HYBRID AGENCY REDESIGN — BESPOKE ARCHITECTURE
+           Dark Obsidian Hero & CTA + Crisp Modern High-Contrast Light Bento Grids
+           ========================================================================== */
         :root {
+            --obsidian-bg: #070c18;
+            --obsidian-surface: #0e1628;
+            --obsidian-border: rgba(255, 255, 255, 0.08);
+            --brand-green: #8cc63f;
+            --brand-green-hover: #7bb332;
+            --brand-green-glow: rgba(140, 198, 63, 0.25);
             --shadow-xl: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+
+        /* 1. HERO SECTION (Dark Obsidian Surface) */
+        .hero-agency {
+            background: radial-gradient(circle at 50% -20%, rgba(140, 198, 63, 0.12) 0%, transparent 60%),
+                        linear-gradient(180deg, #070c18 0%, #0d1527 100%);
+            color: #ffffff;
+            position: relative;
+            padding: 180px 0 100px;
+            overflow: hidden;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+        .hero-agency::before {
+            content: '';
+            position: absolute;
+            top: 25%;
+            right: 8%;
+            width: 480px;
+            height: 480px;
+            background: radial-gradient(circle, rgba(56, 189, 248, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-badge-pill {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(140, 198, 63, 0.12);
+            border: 1px solid rgba(140, 198, 63, 0.3);
+            color: var(--brand-green);
+            padding: 7px 20px;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+        }
+        .hero-badge-pill .pulse-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--brand-green);
+            border-radius: 50%;
+            box-shadow: 0 0 10px var(--brand-green);
+            display: inline-block;
+        }
+
+        .hero-title-main {
+            font-size: 3.6rem;
+            font-weight: 900;
+            line-height: 1.08;
+            letter-spacing: -0.035em;
+            color: #ffffff;
+            margin-bottom: 24px;
+        }
+        .hero-title-main .text-highlight {
+            background: linear-gradient(135deg, #ffffff 30%, #8cc63f 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero-desc-main {
+            font-size: 1.15rem;
+            line-height: 1.7;
+            color: #cbd5e1;
+            max-width: 620px;
+            margin-bottom: 40px;
+        }
+
+        .hero-actions {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            flex-wrap: wrap;
+            margin-bottom: 56px;
+        }
+        .btn-agency-primary {
+            background-color: var(--brand-green);
+            color: #070c18 !important;
+            font-weight: 800;
+            font-size: 1.05rem;
+            padding: 16px 36px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 10px 25px rgba(140, 198, 63, 0.25);
+            text-decoration: none;
+        }
+        .btn-agency-primary:hover {
+            background-color: var(--brand-green-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 14px 30px rgba(140, 198, 63, 0.35);
+        }
+        .btn-agency-secondary {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #ffffff !important;
+            font-weight: 700;
+            font-size: 1.05rem;
+            padding: 16px 32px;
+            border-radius: 12px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.25s ease;
+            text-decoration: none;
+            backdrop-filter: blur(8px);
+        }
+        .btn-agency-secondary:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .hero-metrics-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            padding-top: 32px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .hero-metric-box .metric-num {
+            font-size: 2.25rem;
+            font-weight: 900;
+            letter-spacing: -0.02em;
+            color: #ffffff;
+            line-height: 1;
+            margin-bottom: 6px;
+        }
+        .hero-metric-box .metric-num span {
+            color: var(--brand-green);
+        }
+        .hero-metric-box .metric-tag {
+            font-size: 0.8rem;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* Hero Right: Production Cockpit Card */
+        .hero-cockpit {
+            position: relative;
+            background: rgba(14, 22, 40, 0.7);
+            border: 1px solid rgba(255, 255, 255, 0.12);
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
+            backdrop-filter: blur(16px);
+        }
+        .cockpit-top-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-bottom: 16px;
+            margin-bottom: 20px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.75rem;
+            color: #94a3b8;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        .cockpit-dots {
+            display: flex;
+            gap: 6px;
+        }
+        .cockpit-dot {
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+        }
+        .cockpit-dot.red { background: #ef4444; }
+        .cockpit-dot.yellow { background: #f59e0b; }
+        .cockpit-dot.green { background: #10b981; }
+
+        .cockpit-photo-wrap {
+            position: relative;
+            border-radius: 20px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #131d33 0%, #090e1a 100%);
+            aspect-ratio: 4/4.8;
+            display: flex;
+            align-items: flex-end;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+        .cockpit-photo-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+            pointer-events: none;
+        }
+
+        .cockpit-badge-top {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            background: rgba(9, 14, 26, 0.9);
+            border: 1px solid rgba(140, 198, 63, 0.4);
+            padding: 8px 14px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.75rem;
+            font-weight: 800;
+            color: #ffffff;
+            z-index: 5;
+        }
+        .cockpit-badge-bottom {
+            position: absolute;
+            bottom: 16px;
+            right: 16px;
+            background: rgba(9, 14, 26, 0.92);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 10px 18px;
+            border-radius: 14px;
+            backdrop-filter: blur(12px);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.8rem;
+            font-weight: 800;
+            color: var(--brand-green);
+            z-index: 5;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+        }
+
+        /* 2. TRUSTED MARQUEE RIBBON */
+        .trust-ribbon {
+            background: #090e1a;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 26px 0;
+        }
+        .trust-ribbon-inner {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 24px;
+            flex-wrap: wrap;
+        }
+        .trust-label {
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #64748b;
+        }
+        .trust-logos-list {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            flex-wrap: wrap;
+        }
+        .trust-item-name {
+            font-size: 1.25rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #94a3b8;
+            transition: color 0.2s ease;
+        }
+        .trust-item-name:hover {
+            color: #ffffff;
+        }
+
+        /* 3. SECTION HEADERS */
+        .section-header-modern {
+            text-align: center;
+            max-width: 780px;
+            margin: 0 auto 56px;
+        }
+        .section-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(140, 198, 63, 0.12);
+            color: #4d7c0f;
+            border: 1px solid rgba(140, 198, 63, 0.25);
+            font-size: 0.75rem;
+            font-weight: 800;
+            padding: 6px 16px;
+            border-radius: 999px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 16px;
+        }
+        .section-heading-lg {
+            font-size: 2.85rem;
+            font-weight: 900;
+            line-height: 1.12;
+            letter-spacing: -0.03em;
+            color: #0f172a;
+            margin-bottom: 16px;
+        }
+        .section-subtext {
+            font-size: 1.05rem;
+            line-height: 1.7;
+            color: #64748b;
+        }
+
+        /* 4. ASYMMETRIC BENTO GRID */
+        .bento-grid-12 {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 28px;
+        }
+        .bento-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 24px;
+            padding: 40px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        .bento-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.07);
+            border-color: #cbd5e1;
+        }
+        .bento-card-featured {
+            background: linear-gradient(145deg, #0f172a 0%, #1e293b 100%);
+            color: #ffffff;
+            border-color: rgba(255, 255, 255, 0.1);
+        }
+        .bento-card-featured .bento-title {
+            color: #ffffff;
+        }
+        .bento-card-featured .bento-desc {
+            color: #94a3b8;
+        }
+        .bento-card-featured:hover {
+            border-color: var(--brand-green);
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.35);
+        }
+
+        .bento-icon-box {
+            width: 52px;
+            height: 52px;
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            font-weight: 800;
+        }
+        .bento-icon-light {
+            background: rgba(140, 198, 63, 0.15);
+            color: #4d7c0f;
+        }
+        .bento-icon-dark {
+            background: rgba(140, 198, 63, 0.2);
+            color: var(--brand-green);
+        }
+
+        .bento-tag {
+            font-size: 0.72rem;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            padding: 4px 12px;
+            border-radius: 999px;
+            display: inline-block;
+            margin-bottom: 12px;
+        }
+        .bento-tag-green {
+            background: rgba(140, 198, 63, 0.15);
+            color: #4d7c0f;
+        }
+        .bento-tag-white {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--brand-green);
+        }
+
+        .bento-title {
+            font-size: 1.55rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            line-height: 1.25;
+            letter-spacing: -0.02em;
+        }
+        .bento-desc {
+            font-size: 0.95rem;
+            color: #64748b;
+            line-height: 1.65;
+            margin-bottom: 28px;
+        }
+
+        .bento-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.92rem;
+            font-weight: 800;
+            color: #0f172a;
+            text-decoration: none;
+            transition: color 0.2s ease, gap 0.2s ease;
+        }
+        .bento-card-featured .bento-link {
+            color: var(--brand-green);
+        }
+        .bento-link:hover {
+            gap: 12px;
+            color: var(--brand-green);
+        }
+
+        /* 5. DATA PROOF & CASE STUDIES CARDS */
+        .case-studies-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 28px;
+        }
+        .case-card-modern {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.03);
+            transition: all 0.3s ease;
+        }
+        .case-card-modern:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+            border-color: var(--brand-green);
+        }
+        .case-card-img-wrap {
+            height: 200px;
+            background: #0f172a;
+            position: relative;
+            overflow: hidden;
+        }
+        .case-card-img-wrap img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        .case-card-modern:hover .case-card-img-wrap img {
+            transform: scale(1.04);
+        }
+        .case-card-body {
+            padding: 28px;
+        }
+        .case-pill {
+            font-size: 0.72rem;
+            font-weight: 800;
+            color: #4d7c0f;
+            background: rgba(140, 198, 63, 0.14);
+            padding: 4px 10px;
+            border-radius: 6px;
+            text-transform: uppercase;
+            display: inline-block;
+            margin-bottom: 10px;
+        }
+        .case-card-title {
+            font-size: 1.25rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 12px;
+            line-height: 1.3;
+        }
+        .case-stat-box {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            background: #f8fafc;
+            border: 1px solid #f1f5f9;
+            padding: 14px;
+            border-radius: 12px;
+            margin-top: 16px;
+        }
+        .case-stat-val {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: #0f172a;
+        }
+        .case-stat-label {
+            font-size: 0.72rem;
+            color: #64748b;
+            font-weight: 600;
+        }
+
+        /* 6. SCIENTIFIC FRAMEWORK PROCESS (4 Steps) */
+        .process-steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .process-step-card {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            padding: 32px 24px;
+            position: relative;
+            transition: all 0.25s ease;
+        }
+        .process-step-card:hover {
+            border-color: var(--brand-green);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.05);
+        }
+        .step-num-badge {
+            font-size: 1.75rem;
+            font-weight: 900;
+            color: var(--brand-green);
+            margin-bottom: 16px;
+            line-height: 1;
+        }
+        .step-card-title {
+            font-size: 1.15rem;
+            font-weight: 800;
+            color: #0f172a;
+            margin-bottom: 10px;
+        }
+        .step-card-desc {
+            font-size: 0.88rem;
+            color: #64748b;
+            line-height: 1.6;
+        }
+
+        /* 7. AUTHENTIC CONSULTANT BIO ROW */
+        .bio-section-box {
+            background: #090e1a;
+            color: #ffffff;
+            border-radius: 28px;
+            padding: 64px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 56px;
+            align-items: center;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 30px 60px rgba(0,0,0,0.3);
+        }
+        .bio-photo-card {
+            position: relative;
+            border-radius: 22px;
+            overflow: hidden;
+            background: linear-gradient(180deg, #131c31 0%, #060a12 100%);
+            aspect-ratio: 4/4.8;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .bio-photo-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom;
+        }
+
+        /* 8. FAQ ACCORDION HYBRID */
+        .faq-accordion-box {
+            max-width: 820px;
+            margin: 0 auto;
+        }
+        .faq-card-item {
+            background: #ffffff;
+            border: 1px solid #e2e8f0;
+            border-radius: 14px;
+            margin-bottom: 14px;
+            overflow: hidden;
+            transition: border-color 0.2s ease;
+        }
+        .faq-card-item summary {
+            padding: 22px 28px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            color: #0f172a;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            user-select: none;
+        }
+        .faq-card-item summary::-webkit-details-marker {
+            display: none;
+        }
+        .faq-card-item summary::after {
+            content: '+';
+            font-size: 1.4rem;
+            font-weight: 800;
+            color: var(--brand-green);
+            transition: transform 0.2s ease;
+        }
+        .faq-card-item details[open] summary::after {
+            content: '\2212';
+        }
+        .faq-answer-inner {
+            padding: 0 28px 24px;
+            color: #64748b;
+            font-size: 0.95rem;
+            line-height: 1.7;
+            border-top: 1px solid #f1f5f9;
+            padding-top: 16px;
+        }
+
+        /* Responsive Breakpoints */
+        @media (max-width: 1024px) {
+            .hero-title-main { font-size: 2.75rem; }
+            .hero-agency { padding: 140px 0 80px; }
+            .bento-grid-12 { grid-template-columns: 1fr; }
+            .bento-card { grid-column: span 12 !important; }
+            .hero-metrics-bar { grid-template-columns: repeat(2, 1fr); }
+            .case-studies-grid { grid-template-columns: 1fr; }
+            .process-steps-grid { grid-template-columns: repeat(2, 1fr); }
+            .bio-section-box { grid-template-columns: 1fr; padding: 40px; }
+        }
+        @media (max-width: 768px) {
+            .hero-title-main { font-size: 2.2rem; }
+            .hero-desc-main { font-size: 1rem; }
+            .hero-agency { padding: 120px 0 60px; }
+            .hero-metrics-bar { grid-template-columns: 1fr 1fr; gap: 16px; }
+            .process-steps-grid { grid-template-columns: 1fr; }
+            .trust-ribbon-inner { justify-content: center; }
+            .trust-logos-list { justify-content: center; gap: 20px; }
+            .section-heading-lg { font-size: 2.1rem; }
         }
     </style>
     <!-- Open Graph Tags -->
@@ -170,823 +807,513 @@
         </div>
     </header>
 
-    <main>
-        <!-- Premium Hero Section -->
-        <section class="hero" style="background-color: var(--color-bg-alt); position: relative; overflow: hidden; padding: 180px 0 100px;">
+        <main>
+        <!-- 1. Hero Section (Obsidian Dark Hybrid) -->
+        <section class="hero-agency">
             <div class="container grid-12 items-center">
                 <div class="hero-content" style="grid-column: span 7; position: relative; z-index: 10;">
                     <div class="fade-up">
-                        <div style="display: flex; gap: 12px; margin-bottom: 24px; align-items: center;">
-                            <span class="badge badge-primary">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                                Google SEO Specialist
-                            </span>
-                            <div style="display: flex; align-items: center; gap: 4px; font-size: 0.875rem; font-weight: 600; color: var(--color-gray-700);">
-                                <span style="color: #F59E0B;">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 5.0 Google Rating
-                            </div>
+                        <div class="hero-badge-pill">
+                            <span class="pulse-dot"></span>
+                            Top-Ranked SEO Consultant in Pakistan • 5.0 ★ Rating
                         </div>
-                        <h1 style="margin-bottom: 24px; line-height: 1.1;">Dominate Search Rankings with Enterprise SEO</h1>
-                        <p class="text-xl" style="color: var(--color-gray-600); max-width: 600px; margin-bottom: 40px;">Ibrar Ahmad is a specialized SEO consultant delivering high-ROI organic growth, technical SEO, and premium WordPress architecture for global brands.</p>
+                        <h1 class="hero-title-main">
+                            Dominate Search Rankings with <span class="text-highlight">Enterprise Technical SEO</span>
+                        </h1>
+                        <p class="hero-desc-main">
+                            Ibrar Ahmad is a specialized SEO consultant and WordPress engineer helping high-growth brands, immigration firms, and academies scale verified organic revenue and conquer tough search competition.
+                        </p>
                         
-                        <div class="hero-cta-group" style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap;">
-                            <a href="contact" class="btn btn-primary" style="padding: 16px 36px; font-size: 1.125rem; font-weight: 700; display: inline-flex; align-items: center; gap: 10px; box-shadow: 0 10px 25px rgba(183, 255, 0, 0.25);">
+                        <div class="hero-actions">
+                            <a href="contact" class="btn-agency-primary">
                                 Start Your Growth
                                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                             </a>
-                            <a href="portfolio" class="btn btn-secondary" style="padding: 16px 32px; font-size: 1.125rem; font-weight: 600; display: inline-flex; align-items: center; gap: 8px;">
-                                SEE CASE STUDIES
+                            <a href="portfolio" class="btn-agency-secondary">
+                                View Case Studies
                             </a>
                         </div>
                         
-                        <div class="hero-metrics" style="display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 64px; padding-top: 32px; border-top: 1px solid var(--color-border);">
-                            <div class="metric-item">
-                                <span class="metric-value" style="font-size: 2.5rem; letter-spacing: -1px;">+340%</span>
-                                <span class="metric-label">Avg. Traffic Growth</span>
+                        <div class="hero-metrics-bar">
+                            <div class="hero-metric-box">
+                                <div class="metric-num">+340<span>%</span></div>
+                                <div class="metric-tag">Avg. Traffic Growth</div>
                             </div>
-                            <div class="metric-item">
-                                <span class="metric-value" style="font-size: 2.5rem; letter-spacing: -1px;">120+</span>
-                                <span class="metric-label">Projects Ranked</span>
+                            <div class="hero-metric-box">
+                                <div class="metric-num">120<span>+</span></div>
+                                <div class="metric-tag">Brands Ranked</div>
                             </div>
-                            <div class="metric-item">
-                                <span class="metric-value" style="font-size: 2.5rem; letter-spacing: -1px;">7+</span>
-                                <span class="metric-label">Years Experience</span>
+                            <div class="hero-metric-box">
+                                <div class="metric-num">98<span>%</span></div>
+                                <div class="metric-tag">Core Web Vitals</div>
+                            </div>
+                            <div class="hero-metric-box">
+                                <div class="metric-num">7<span>+</span></div>
+                                <div class="metric-tag">Years Experience</div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="hero-visual fade-up delay-200" style="grid-column: span 5; position: relative; height: 100%; min-height: 480px; display: flex; align-items: center; justify-content: center;">
-                    
-                    <!-- Cyan Rounded Image Container -->
-                    <div style="position: relative; width: 100%; max-width: 420px; aspect-ratio: 4/5; background-color: #61D4E8; border-radius: 32px; box-shadow: var(--shadow-xl); z-index: 2; display: flex; align-items: flex-end; justify-content: center;">
-                        <img src="images/Ibrar Ahmad.png" alt="Ibrar Ahmad SEO Expert" style="width: 100%; height: 100%; object-fit: cover; object-position: bottom; border-radius: 32px; pointer-events: none;">
-                    </div>
 
-                    <!-- Top Left Badge: White-Hat -->
-                    <div style="position: absolute; top: 10%; left: -20px; background: white; padding: 12px 20px; border-radius: 16px; box-shadow: var(--shadow-lg); z-index: 3; display: flex; align-items: center; gap: 12px; animation: floatAnim 6s ease-in-out infinite;">
-                        <div style="width: 40px; height: 40px; border-radius: 12px; background: #1f94ab; display: flex; align-items: center; justify-content: center; color: white;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path><polyline points="9 12 11 14 15 10"></polyline></svg>
+                <div class="fade-up delay-200" style="grid-column: span 5;">
+                    <div class="hero-cockpit">
+                        <div class="cockpit-top-bar">
+                            <div class="cockpit-dots">
+                                <div class="cockpit-dot red"></div>
+                                <div class="cockpit-dot yellow"></div>
+                                <div class="cockpit-dot green"></div>
+                            </div>
+                            <div>Verified Production Data • GSC Active</div>
                         </div>
-                        <div>
-                            <div style="font-weight: 800; font-size: 0.9375rem; color: var(--color-gray-900);">100% White-Hat</div>
-                            <div style="font-size: 0.75rem; color: var(--color-gray-500); font-weight: 600;">SEO Strategies</div>
+                        <div class="cockpit-photo-wrap">
+                            <img src="images/Ibrar Ahmad.png" alt="Ibrar Ahmad - Senior SEO Consultant and WordPress Engineer in Pakistan">
+                            <div class="cockpit-badge-top">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--brand-green)" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                100% White-Hat Only
+                            </div>
+                            <div class="cockpit-badge-bottom">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                                #1 Organic Rankings
+                            </div>
                         </div>
                     </div>
-
-                    <!-- Bottom Right Badge: Local Rankings -->
-                    <div style="position: absolute; bottom: 15%; right: -20px; background: white; padding: 12px 20px; border-radius: 16px; box-shadow: var(--shadow-lg); z-index: 3; display: flex; align-items: center; gap: 12px; animation: floatAnim 7s ease-in-out infinite reverse;">
-                        <div style="width: 40px; height: 40px; border-radius: 12px; background: #1f94ab; display: flex; align-items: center; justify-content: center; color: white;">
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
-                        </div>
-                        <div>
-                            <div style="font-weight: 800; font-size: 0.9375rem; color: var(--color-gray-900);">#1 Local</div>
-                            <div style="font-size: 0.75rem; color: var(--color-gray-500); font-weight: 600;">Rankings</div>
-                        </div>
-                    </div>
-                    
                 </div>
             </div>
         </section>
 
-        <!-- Trust Section -->
-        <section class="trust-section">
-            <div class="container">
-                <p class="text-center text-bold text-muted mb-24" style="font-size: 0.875rem; letter-spacing: 1px; text-transform: uppercase;">Trusted by global brands & powered by industry tools</p>
-                <div class="logo-strip">
-                    <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-400);">ahrefs</span>
-                    <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-400);">SEMRUSH</span>
-                    <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-400);">Google Search Console</span>
-                    <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-400);">WordPress</span>
-                    <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-400);">ScreamingFrog</span>
-                    <span style="font-size: 1.5rem; font-weight: 800; color: var(--color-gray-400);">Cloudflare</span>
+        <!-- 2. Trust Ribbon -->
+        <section class="trust-ribbon">
+            <div class="container trust-ribbon-inner">
+                <div class="trust-label">Industry Tools & Verification:</div>
+                <div class="trust-logos-list">
+                    <span class="trust-item-name">ahrefs</span>
+                    <span class="trust-item-name">SEMRUSH</span>
+                    <span class="trust-item-name">Google Search Console</span>
+                    <span class="trust-item-name">WordPress</span>
+                    <span class="trust-item-name">ScreamingFrog</span>
+                    <span class="trust-item-name">Cloudflare</span>
                 </div>
             </div>
         </section>
 
-        <!-- SEO Services Section -->
-        <section class="py-120" style="background: var(--color-white);">
+        <!-- 3. Asymmetric Bento Grid: Strategic SEO Services -->
+        <section class="py-120" style="background: #ffffff;">
             <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="badge badge-primary mb-16">Organic Growth</span>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">SEO Services</h2>
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #4b5563; max-width: 80ch; line-height: 1.7;">
-                        Data-driven organic search strategies tailored to dominate your specific market and drive consistent, high-converting leads.
+                <div class="section-header-modern fade-up">
+                    <span class="section-eyebrow">Organic Growth Architecture</span>
+                    <h2 class="section-heading-lg">Precision SEO Services Built for Revenue</h2>
+                    <p class="section-subtext">
+                        We don't chase vanity metrics. Every SEO deployment is engineered around high-converting transactional searches, rock-solid technical health, and sustainable market dominance.
                     </p>
                 </div>
-                
-                <div class="grid-12">
-                    <div class="card fade-up delay-100" style="grid-column: span 6; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+
+                <div class="bento-grid-12">
+                    <!-- Featured Bento Card: Enterprise SEO (Span 8) -->
+                    <div class="bento-card bento-card-featured fade-up" style="grid-column: span 8;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-dark">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-white">Pillar Growth Program</span>
+                            <h3 class="bento-title">Enterprise & Nationwide SEO</h3>
+                            <p class="bento-desc">
+                                End-to-end organic growth campaigns designed to dominate competitive high-volume keywords across Pakistan and international markets. Includes deep crawl optimization, semantic content clusters, entity-based internal linking, and white-hat digital PR acquisition.
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.5rem;">SEO Expert Services</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Comprehensive enterprise and nationwide SEO strategies to scale your business and dominate highly competitive search terms.</p>
-                        <a href="seo-services-pakistan" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
-                    </div>
-                    
-                    <div class="card fade-up delay-200" style="grid-column: span 6; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"></circle><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path></svg>
+                        <div>
+                            <a href="seo-services-pakistan" class="bento-link">
+                                Explore Enterprise SEO Solutions
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
                         </div>
-                        <h3 style="font-size: 1.5rem;">Local SEO Services</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Targeted geographic optimization, Google Business Profile management, and local map pack dominance for area-specific businesses.</p>
-                        <a href="seo-services-lahore" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
                     </div>
 
-                    <div class="card fade-up delay-300" style="grid-column: span 6; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    <!-- Bento Card 2: Local Map Pack Dominance (Span 4) -->
+                    <div class="bento-card fade-up delay-100" style="grid-column: span 4;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-light">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="10" r="3"></circle><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-green">Hyper-Local Map Pack</span>
+                            <h3 class="bento-title">Local SEO & Google Maps</h3>
+                            <p class="bento-desc">
+                                Dominate the 3-Pack on Google Maps in Lahore, Karachi, and Islamabad. Local schema markup, geo-tagged citations, and high-trust local relevance.
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.5rem;">Visa Consultancy SEO</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Specialized search optimization to help immigration consultants rank for high-intent visa services and capture targeted leads.</p>
-                        <a href="seo-services-visa-consultancy" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
+                        <div>
+                            <a href="seo-services-lahore" class="bento-link">
+                                Discover Local SEO
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
 
-                    <div class="card fade-up delay-400" style="grid-column: span 6; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                    <!-- Bento Card 3: Visa & Immigration SEO (Span 6) -->
+                    <div class="bento-card fade-up delay-200" style="grid-column: span 6;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-light">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-green">Niche Vertical Authority</span>
+                            <h3 class="bento-title">Visa & Immigration Consultancy SEO</h3>
+                            <p class="bento-desc">
+                                Specialized search strategies built exclusively for visa consultancies. Capture students and professionals searching for study abroad, work visas, and citizenship services with high conversion qualification.
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.5rem;">Education SEO</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Driving organic student enrollments for academies, training centers, and universities through academic content hubs and technical SEO.</p>
-                        <a href="seo-services-education" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
+                        <div>
+                            <a href="seo-services-visa-consultancy" class="bento-link">
+                                Visa Consultancy Strategies
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Bento Card 4: Education & Academy SEO (Span 6) -->
+                    <div class="bento-card fade-up delay-300" style="grid-column: span 6;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-light">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-green">Enrollment Generation</span>
+                            <h3 class="bento-title">Education & Academic Platform SEO</h3>
+                            <p class="bento-desc">
+                                Turn organic search queries into student enrollments for colleges, academies, and online learning platforms through syllabus hubs, high-trust accreditation markup, and localized academic visibility.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="seo-services-education" class="bento-link">
+                                Education SEO Solutions
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- WordPress Services Section -->
-        <section class="py-120" style="background: #f8fafc;">
+        <!-- 4. WordPress Solutions Bento Grid -->
+        <section class="py-120" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
             <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="badge badge-primary mb-16">High-Performance Web</span>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">WordPress Solutions</h2>
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #4b5563; max-width: 80ch; line-height: 1.7;">
-                        Lightning-fast, custom WordPress architectures built precisely for technical SEO performance and maximum user conversion rates.
+                <div class="section-header-modern fade-up">
+                    <span class="section-eyebrow">Engineering Excellence</span>
+                    <h2 class="section-heading-lg">WordPress Built for Extreme Speed & Conversion</h2>
+                    <p class="section-subtext">
+                        A slow or bloated website kills organic rankings. We engineer lightweight, custom WordPress web applications built with zero plugin bloat, sub-second load times, and perfect Core Web Vitals.
                     </p>
                 </div>
-                
-                <div class="grid-12">
-                    <div class="card fade-up delay-100" style="grid-column: span 4; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+
+                <div class="bento-grid-12">
+                    <!-- WordPress Core Card (Span 6) -->
+                    <div class="bento-card fade-up" style="grid-column: span 6; background: #ffffff;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-light">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-green">Core Web Vitals 95+</span>
+                            <h3 class="bento-title">Custom High-Speed WordPress Solutions</h3>
+                            <p class="bento-desc">
+                                Bespoke WordPress themes, streamlined CSS architectures, optimized database queries, and caching configurations engineered to pass Google Core Web Vitals with flawless efficiency.
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.5rem;">WordPress Solutions</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Premium, enterprise-grade WordPress development that ensures extreme loading speeds and perfect Core Web Vitals scores.</p>
-                        <a href="wordpress-design-services" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
-                    </div>
-                    
-                    <div class="card fade-up delay-200" style="grid-column: span 4; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
+                        <div>
+                            <a href="wordpress-design-services" class="bento-link">
+                                View WordPress Architecture
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
                         </div>
-                        <h3 style="font-size: 1.5rem;">WordPress Visa Services</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Customized immigration and visa consulting portals designed to establish absolute trust and streamline client applications.</p>
-                        <a href="wordpress-design-services-for-visa-consultancy" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
                     </div>
 
-                    <div class="card fade-up delay-300" style="grid-column: span 4; display: flex; flex-direction: column; align-items: flex-start; text-align: left;">
-                        <div class="card-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                    <!-- Visa Consultancy Portals (Span 3) -->
+                    <div class="bento-card fade-up delay-100" style="grid-column: span 3; background: #ffffff;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-light">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-green">Lead Funnels</span>
+                            <h3 class="bento-title">Visa Portals</h3>
+                            <p class="bento-desc">
+                                High-trust application portals with interactive eligibility calculators and inquiry funnels.
+                            </p>
                         </div>
-                        <h3 style="font-size: 1.5rem;">WordPress Education</h3>
-                        <p style="font-size: 0.9375rem; margin-bottom: 32px; flex-grow: 1;">Scalable academic platforms, course directories, and robust enrollment gateways for modern educational institutions.</p>
-                        <a href="wordpress-design-services-for-education" class="btn btn-secondary" style="align-self: flex-start;">Explore Service</a>
+                        <div>
+                            <a href="wordpress-design-services-for-visa-consultancy" class="bento-link">
+                                Visa Sites
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Education Platforms (Span 3) -->
+                    <div class="bento-card fade-up delay-200" style="grid-column: span 3; background: #ffffff;">
+                        <div>
+                            <div class="bento-icon-box bento-icon-light">
+                                <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>
+                            </div>
+                            <span class="bento-tag bento-tag-green">Academic LMS</span>
+                            <h3 class="bento-title">Education Portals</h3>
+                            <p class="bento-desc">
+                                Fast course catalogs, teacher directories, and admission portals for academies and colleges.
+                            </p>
+                        </div>
+                        <div>
+                            <a href="wordpress-design-services-for-education" class="bento-link">
+                                Education Sites
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Businesses Choose SEO with Ibrar -->
-        <section class="py-120">
+        <!-- 5. Data Proof: Case Studies Showcase -->
+        <section class="py-120" style="background: #ffffff;">
             <div class="container">
-                <div class="fade-up" style="background: #111827; border-radius: 24px; padding: 64px; color: white; display: grid; grid-template-columns: 1fr 1fr; gap: 64px; box-shadow: var(--shadow-xl);">
-                    
-                    <!-- Left Side -->
+                <div class="section-header-modern fade-up">
+                    <span class="section-eyebrow">Verified Evidence</span>
+                    <h2 class="section-heading-lg">Data Over Promises: Live Case Studies</h2>
+                    <p class="section-subtext">
+                        Explore real Google Search Console organic growth curves, keyword ranking improvements, and revenue increases delivered for our clients.
+                    </p>
+                </div>
+
+                <div class="case-studies-grid">
+                    <!-- Case Study 1 -->
+                    <div class="case-card-modern fade-up">
+                        <div class="case-card-img-wrap">
+                            <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Consultancy SEO Growth Case Study">
+                        </div>
+                        <div class="case-card-body">
+                            <span class="case-pill">Immigration Consultancy</span>
+                            <h3 class="case-card-title">Euro Immigration: 380% Increase in Qualified Visa Inquiries</h3>
+                            <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6;">
+                                Restructured core service silos, resolved deep indexation issues, and secured top-3 rankings across Pakistan for high-ticket study and immigration terms.
+                            </p>
+                            <div class="case-stat-box">
+                                <div>
+                                    <div class="case-stat-val">+380%</div>
+                                    <div class="case-stat-label">Inquiry Growth</div>
+                                </div>
+                                <div>
+                                    <div class="case-stat-val">#1-3</div>
+                                    <div class="case-stat-label">Top Rankings</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 2 -->
+                    <div class="case-card-modern fade-up delay-100">
+                        <div class="case-card-img-wrap">
+                            <img src="images/KIMS.webp" alt="KIMS Academic Platform SEO Case Study">
+                        </div>
+                        <div class="case-card-body">
+                            <span class="case-pill">Education & Academy</span>
+                            <h3 class="case-card-title">KIMS Academy: 240% Lift in Student Enrollments</h3>
+                            <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6;">
+                                Built high-authority course hubs, fixed mobile Core Web Vitals, and captured high-intent academic search queries directly from competitors.
+                            </p>
+                            <div class="case-stat-box">
+                                <div>
+                                    <div class="case-stat-val">+240%</div>
+                                    <div class="case-stat-label">Enrollment Lift</div>
+                                </div>
+                                <div>
+                                    <div class="case-stat-val">99/100</div>
+                                    <div class="case-stat-label">Mobile Speed</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Case Study 3 -->
+                    <div class="case-card-modern fade-up delay-200">
+                        <div class="case-card-img-wrap">
+                            <img src="images/seo_strategy_growth_dashboard.webp" alt="GSC Organic Traffic Growth Case Study">
+                        </div>
+                        <div class="case-card-body">
+                            <span class="case-pill">National Growth</span>
+                            <h3 class="case-card-title">Local Brands: +410% Organic Revenue Lift</h3>
+                            <p style="font-size: 0.9rem; color: #64748b; line-height: 1.6;">
+                                Comprehensive technical clean-up, schema implementation, and intent-targeted content scaling that converted organic traffic into repeat business.
+                            </p>
+                            <div class="case-stat-box">
+                                <div>
+                                    <div class="case-stat-val">+410%</div>
+                                    <div class="case-stat-label">Traffic Lift</div>
+                                </div>
+                                <div>
+                                    <div class="case-stat-val">0</div>
+                                    <div class="case-stat-label">Penalties</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="text-center" style="margin-top: 48px;">
+                    <a href="portfolio" class="btn btn-secondary" style="padding: 14px 32px; font-weight: 700;">
+                        Explore All 12+ Detailed Case Studies &rarr;
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. Scientific 4-Step SEO Process -->
+        <section class="py-120" style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
+            <div class="container">
+                <div class="section-header-modern fade-up">
+                    <span class="section-eyebrow">Methodology</span>
+                    <h2 class="section-heading-lg">The 4-Step Scientific SEO Framework</h2>
+                    <p class="section-subtext">
+                        A rigorous, predictable framework built to systematically identify bottlenecks, build undeniable topical relevance, and capture durable search rankings.
+                    </p>
+                </div>
+
+                <div class="process-steps-grid">
+                    <div class="process-step-card fade-up">
+                        <div class="step-num-badge">01</div>
+                        <h3 class="step-card-title">Deep Technical Audit</h3>
+                        <p class="step-card-desc">
+                            We analyze server logs, crawl budget wastage, indexation barriers, canonical errors, and Core Web Vitals to establish a pristine technical baseline.
+                        </p>
+                    </div>
+
+                    <div class="process-step-card fade-up delay-100">
+                        <div class="step-num-badge">02</div>
+                        <h3 class="step-card-title">Search Intent Architecture</h3>
+                        <p class="step-card-desc">
+                            We map out buyer journeys, group keywords into commercial topic clusters, and restructure site navigation for effortless Google bot crawling.
+                        </p>
+                    </div>
+
+                    <div class="process-step-card fade-up delay-200">
+                        <div class="step-num-badge">03</div>
+                        <h3 class="step-card-title">White-Hat Execution</h3>
+                        <p class="step-card-desc">
+                            Publishing authoritative content hubs, embedding rich JSON-LD schemas, tuning on-page relevance, and acquiring genuine high-trust editorial backlinks.
+                        </p>
+                    </div>
+
+                    <div class="process-step-card fade-up delay-300">
+                        <div class="step-num-badge">04</div>
+                        <h3 class="step-card-title">Revenue Scaling</h3>
+                        <p class="step-card-desc">
+                            Continuous A/B testing of conversion triggers, tracking Google Search Console movements, algorithm defense, and scaling customer inquiry volume.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. Meet Your Consultant: Ibrar Ahmad -->
+        <section class="py-120" style="background: #ffffff;">
+            <div class="container">
+                <div class="bio-section-box fade-up">
+                    <div class="bio-photo-card">
+                        <img src="images/Ibrar Ahmad.png" alt="Ibrar Ahmad SEO Expert and WordPress Developer">
+                    </div>
                     <div>
-                        <h2 style="font-size: 3rem; font-weight: 900; line-height: 1.1; margin-bottom: 24px; color: white; letter-spacing: -1px;">
-                            Why Businesses<br>Choose<br>
-                            <span style="color: var(--color-primary);">SEO with Ibrar</span>
+                        <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: var(--brand-green); font-size: 0.75rem; font-weight: 800; padding: 6px 14px; border-radius: 999px; text-transform: uppercase; letter-spacing: 0.5px; display: inline-block; margin-bottom: 20px;">
+                            Verified Consultant Profile
+                        </span>
+                        <h2 style="font-size: 2.75rem; font-weight: 900; line-height: 1.15; color: #ffffff; letter-spacing: -0.03em; margin-bottom: 20px;">
+                            Work Directly with Ibrar Ahmad
                         </h2>
-                        <p style="font-size: 1.05rem; color: #9ca3af; line-height: 1.7; margin-bottom: 0;">
-                            I don't offer random services. I focus on work that actually supports visibility, trust, and long-term growth. These are the core reasons businesses choose to work with SEO with Ibrar.
+                        <p style="font-size: 1.05rem; line-height: 1.7; color: #cbd5e1; margin-bottom: 20px;">
+                            Unlike bloated marketing agencies that pass your project to inexperienced interns, working with <strong>SEO with Ibrar</strong> means you communicate directly with a Senior Technical SEO Consultant and WordPress Engineer with 7+ years of hands-on experience.
                         </p>
-                    </div>
-                    
-                    <!-- Right Side Grid -->
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-content: center;">
+                        <p style="font-size: 1rem; line-height: 1.7; color: #94a3b8; margin-bottom: 32px;">
+                            Based in Lahore, Pakistan, I provide transparent, weekly communication channels, custom analytics dashboards, and proven white-hat methodologies that protect your business against Google algorithm updates.
+                        </p>
                         
-                        <!-- Item 1 -->
-                        <div style="display: flex; gap: 16px;">
-                            <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.125rem; font-weight: 800; color: white; margin-bottom: 8px;">Results-Focused Approach</h4>
-                                <p style="font-size: 0.875rem; color: #9ca3af; line-height: 1.6; margin-bottom: 0;">Every strategy is built around real business goals, not guesses or vanity metrics.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Item 2 -->
-                        <div style="display: flex; gap: 16px;">
-                            <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.125rem; font-weight: 800; color: white; margin-bottom: 8px;">Clear Communication</h4>
-                                <p style="font-size: 0.875rem; color: #9ca3af; line-height: 1.6; margin-bottom: 0;">You always know what is happening, why it matters, and how it supports growth.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Item 3 -->
-                        <div style="display: flex; gap: 16px;">
-                            <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.125rem; font-weight: 800; color: white; margin-bottom: 8px;">SEO & Website Expertise</h4>
-                                <p style="font-size: 0.875rem; color: #9ca3af; line-height: 1.6; margin-bottom: 0;">SEO and website structure work together to improve visibility, experience, and conversions.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Item 4 -->
-                        <div style="display: flex; gap: 16px;">
-                            <div style="flex-shrink: 0; width: 48px; height: 48px; background: var(--color-primary); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white;">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                            </div>
-                            <div>
-                                <h4 style="font-size: 1.125rem; font-weight: 800; color: white; margin-bottom: 8px;">Long-Term Growth Mindset</h4>
-                                <p style="font-size: 0.875rem; color: #9ca3af; line-height: 1.6; margin-bottom: 0;">Ethical strategies create stable visibility and growth instead of short-term spikes.</p>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- SEO Process Timeline -->
-        <section class="py-120">
-            <div class="container">
-                <div class="fade-up mb-64">
-                    <span class="badge badge-primary mb-16">The Process</span>
-                    <h2>How We Win Together</h2>
-                    <p class="text-xl">A proven, systematic approach to dominating organic search.</p>
-                </div>
-                
-                <div style="position: relative; max-width: 800px; margin: 0 auto;">
-                    <!-- Timeline Line -->
-                    <div style="position: absolute; top: 0; bottom: 0; left: 24px; width: 2px; background: var(--color-border); z-index: 1;"></div>
-                    
-                    <div class="fade-up mb-48" style="position: relative; z-index: 2; display: flex; gap: 32px;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-white); border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-md);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
-                        </div>
-                        <div class="card" style="padding: var(--space-32); width: 100%;">
-                            <h3 style="font-size: 1.25rem;">1. Comprehensive Audit</h3>
-                            <p style="font-size: 0.9375rem; margin-bottom: 0;">We analyze your site architecture, backlink profile, content gaps, and technical hurdles to establish an exact baseline.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="fade-up mb-48" style="position: relative; z-index: 2; display: flex; gap: 32px;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-white); border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-md);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path></svg>
-                        </div>
-                        <div class="card" style="padding: var(--space-32); width: 100%;">
-                            <h3 style="font-size: 1.25rem;">2. Strategy & Architecture</h3>
-                            <p style="font-size: 0.9375rem; margin-bottom: 0;">We build a keyword map, restructure your site hierarchy for optimal crawl depth, and outline a 6-month content runway.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="fade-up mb-48" style="position: relative; z-index: 2; display: flex; gap: 32px;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-white); border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-md);">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                        </div>
-                        <div class="card" style="padding: var(--space-32); width: 100%;">
-                            <h3 style="font-size: 1.25rem;">3. Execution & Optimization</h3>
-                            <p style="font-size: 0.9375rem; margin-bottom: 0;">Fixing technical debt, optimizing on-page elements, publishing authoritative content, and acquiring high-trust backlinks.</p>
-                        </div>
-                    </div>
-                    
-                    <div class="fade-up" style="position: relative; z-index: 2; display: flex; gap: 32px;">
-                        <div style="width: 50px; height: 50px; border-radius: 50%; background: var(--color-primary); border: 2px solid var(--color-primary); display: flex; align-items: center; justify-content: center; flex-shrink: 0; box-shadow: var(--shadow-md); color: white;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline><polyline points="17 6 23 6 23 12"></polyline></svg>
-                        </div>
-                        <div class="card" style="padding: var(--space-32); width: 100%; border: 2px solid var(--color-primary);">
-                            <h3 style="font-size: 1.25rem;">4. Growth & Reporting</h3>
-                            <p style="font-size: 0.9375rem; margin-bottom: 0;">Continuous monitoring, A/B testing conversion elements, adjusting to algorithm updates, and scaling revenue.</p>
+                        <div style="display: flex; gap: 16px; flex-wrap: wrap; align-items: center;">
+                            <a href="https://pk.linkedin.com/in/seowithibrar" target="_blank" rel="noopener noreferrer" style="background: #0077b5; color: #ffffff; padding: 12px 24px; border-radius: 10px; font-weight: 800; font-size: 0.9rem; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
+                                Connect on LinkedIn
+                            </a>
+                            <a href="contact" class="btn-agency-primary" style="padding: 12px 24px; font-size: 0.9rem;">
+                                Book Free Consultation Call
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Why Work With Ibrar Section -->
-        <section class="py-120" style="background: var(--color-white);">
+        <!-- 8. Interactive FAQ Accordion -->
+        <section class="py-120" style="background: #f8fafc; border-top: 1px solid #e2e8f0;">
             <div class="container">
-                <div class="grid-12 gap-48">
-                    
-                    <!-- Left Column: Visuals & Metrics -->
-                    <div class="fade-up" style="grid-column: span 5; display: flex; flex-direction: column; gap: 24px;">
-                        
-                        <!-- Image Card -->
-                        <div style="position: relative; background: #e5f5c8; border-radius: 24px; aspect-ratio: 4/5; display: flex; justify-content: center; align-items: flex-end;">
-                            <img src="images/Ibrar Ahmad.png" alt="Ibrar Ahmad SEO Expert" style="width: 100%; height: 100%; object-fit: contain; object-position: bottom; border-radius: 24px; z-index: 1;">
-                            
-                            <!-- Floating Black Pill -->
-                            <div style="position: absolute; bottom: -16px; background: var(--color-gray-900); color: white; padding: 10px 24px; border-radius: 100px; font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 8px; z-index: 2; box-shadow: var(--shadow-md); letter-spacing: 0.5px; text-transform: uppercase;">
-                                <div style="width: 6px; height: 6px; background: var(--color-primary); border-radius: 50%;"></div>
-                                Ibrar Ahmad • Lead Consultant
-                            </div>
-                        </div>
-                        
-                        <!-- Metrics Card -->
-                        <div style="border: 1px solid var(--color-border); border-radius: 16px; padding: 24px; background: white; margin-top: 16px; box-shadow: var(--shadow-sm);">
-                            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px;">
-                                <span style="font-size: 0.75rem; font-weight: 800; color: var(--color-gray-400); letter-spacing: 1px; text-transform: uppercase;">Verified Performance Metrics</span>
-                                <span style="color: var(--color-primary); font-size: 0.75rem; font-weight: 700; display: flex; align-items: center; gap: 4px;">
-                                    <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
-                                    Lahore-Based
-                                </span>
-                            </div>
-                            <div style="height: 1px; background: var(--color-border); margin-bottom: 24px;"></div>
-                            
-                            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
-                                <div>
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--color-gray-900); margin-bottom: 4px;">7+ Years</div>
-                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">SEO Expertise</div>
-                                    <div style="font-size: 0.75rem; color: var(--color-gray-400);">Client Deliveries</div>
-                                </div>
-                                <div>
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--color-gray-900); margin-bottom: 4px;">120+</div>
-                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">Projects Completed</div>
-                                    <div style="font-size: 0.75rem; color: var(--color-gray-400);">Brands Ranked</div>
-                                </div>
-                                <div>
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--color-gray-900); margin-bottom: 4px;">98%</div>
-                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">Core Web Vitals</div>
-                                    <div style="font-size: 0.75rem; color: var(--color-gray-400);">WordPress Page Speed</div>
-                                </div>
-                                <div>
-                                    <div style="font-size: 1.5rem; font-weight: 900; color: var(--color-gray-900); margin-bottom: 4px;">+340%</div>
-                                    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-gray-800);">Avg. Traffic Growth</div>
-                                    <div style="font-size: 0.75rem; color: var(--color-gray-400);">Organic Strategy</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Right Column: Text & Features -->
-                    <div class="fade-up delay-200" style="grid-column: span 7; padding-left: 24px;">
-                        
-                        <div style="display: inline-flex; align-items: center; gap: 8px; background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.3); color: var(--color-primary); padding: 8px 16px; border-radius: 100px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 24px;">
-                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
-                            About Ibrar Ahmad • Lead Consultant
-                        </div>
-                        
-                        <h2 style="font-size: 3rem; font-weight: 900; line-height: 1.1; margin-bottom: 24px; color: var(--color-gray-900); letter-spacing: -1px;">
-                            Empowering Business Visibility: Meet Ibrar Ahmad
-                        </h2>
-                        
-                        <div style="width: 40px; height: 3px; background: var(--color-primary); margin-bottom: 32px;"></div>
-                        
-                        <p style="font-size: 1.05rem; color: var(--color-gray-600); margin-bottom: 24px; line-height: 1.7;">
-                            As an independent <strong>SEO Consultant</strong> and custom <strong>WordPress Engineer</strong> based in Lahore, Pakistan, I bridge the gap between high-performance web speeds and organic search rankings. Over the past seven years, I have collaborated with direct enterprise brands, immigration authorities, training institutes, and academies to transform their websites into consistent inquiry pipelines.
-                        </p>
-                        
-                        <p style="font-size: 1.05rem; color: var(--color-gray-600); margin-bottom: 24px; line-height: 1.7;">
-                            My working philosophy focuses on real-world business objectives rather than empty keywords or vanity metrics. I clean up cluttered code, set up crawlable JSON-LD schemas, and implement white-hat optimization and speed strategies to ensure Google and users enjoy an absolute premium page experience.
-                        </p>
-                        
-                        <p style="font-size: 1.05rem; color: var(--color-gray-600); margin-bottom: 40px; line-height: 1.7;">
-                            Every campaign is managed with direct 1-to-1 support, weekly reports, and transparent work channels.
-                        </p>
-                        
-                        <!-- 2x2 Feature Grid -->
-                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px; margin-bottom: 48px;">
-                            <div>
-                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                    <h4 style="font-size: 1.125rem; font-weight: 800; margin: 0; color: var(--color-gray-900);">Technical SEO Audit</h4>
-                                </div>
-                                <p style="font-size: 0.875rem; color: var(--color-gray-500); margin: 0;">Solving core crawlability and modern site indexing issues.</p>
-                            </div>
-                            <div>
-                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                    <h4 style="font-size: 1.125rem; font-weight: 800; margin: 0; color: var(--color-gray-900);">WordPress Clean Code</h4>
-                                </div>
-                                <p style="font-size: 0.875rem; color: var(--color-gray-500); margin: 0;">Eliminating bloated plugins for pristine loading speed.</p>
-                            </div>
-                            <div>
-                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                    <h4 style="font-size: 1.125rem; font-weight: 800; margin: 0; color: var(--color-gray-900);">Semantic Content Hubs</h4>
-                                </div>
-                                <p style="font-size: 0.875rem; color: var(--color-gray-500); margin: 0;">Targeting transactional search intents for real business leads.</p>
-                            </div>
-                            <div>
-                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 8px;">
-                                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-                                    <h4 style="font-size: 1.125rem; font-weight: 800; margin: 0; color: var(--color-gray-900);">Local Maps Dominance</h4>
-                                </div>
-                                <p style="font-size: 0.875rem; color: var(--color-gray-500); margin: 0;">Structuring structured local maps schemas and organic directories.</p>
-                            </div>
-                        </div>
-                        
-                        <!-- Actions & Social Media -->
-                        <div style="display: flex; flex-direction: column; gap: 24px; align-items: flex-start;">
-                            <div style="display: flex; gap: 16px; align-items: center; flex-wrap: wrap; justify-content: flex-start;">
-                                <a href="https://pk.linkedin.com/in/seowithibrar" target="_blank" rel="noopener noreferrer" style="background: #0077b5; color: white; padding: 14px 28px; border-radius: 100px; font-weight: 800; font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px; box-shadow: var(--shadow-md);">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.78a1.62 1.62 0 1 0 0 3.24 1.62 1.62 0 0 0 0-3.24z"/></svg>
-                                    CONNECT ON LINKEDIN
-                                </a>
-                                <a href="contact" class="btn btn-primary" style="padding: 14px 28px; font-weight: 800; font-size: 0.9375rem; text-transform: uppercase; letter-spacing: 0.5px; display: flex; align-items: center; gap: 8px;">
-                                    BOOK CALL WITH IBRAR 
-                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
-                                </a>
-                            </div>
-                            
-                            <!-- Other Social Media Icons -->
-                            <div style="display: flex; align-items: center; gap: 16px; margin-top: 8px;">
-                                <span style="font-size: 0.875rem; font-weight: 700; color: var(--color-gray-500); text-transform: uppercase; letter-spacing: 1px;">Follow On:</span>
-                                
-                                <!-- Facebook -->
-                                <a href="#" target="_blank" rel="noopener noreferrer" style="width: 38px; height: 38px; border-radius: 50%; background: #1877F2; color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(24,119,242,0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
-                                </a>
-                                
-                                <!-- Instagram -->
-                                <a href="https://www.instagram.com/seowithibrar/" target="_blank" rel="noopener noreferrer" style="width: 38px; height: 38px; border-radius: 50%; background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(220,39,67,0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0 3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
-                                </a>
-                                
-                                <!-- Pinterest -->
-                                <a href="https://www.pinterest.com/SEOWithIbrar/" target="_blank" rel="noopener noreferrer" style="width: 38px; height: 38px; border-radius: 50%; background: #E60023; color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(230,0,35,0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.372 0 12c0 5.084 3.163 9.426 7.627 11.174-.105-.949-.2-2.405.042-3.441.218-.937 1.407-5.965 1.407-5.965s-.359-.719-.359-1.782c0-1.668.967-2.914 2.171-2.914 1.023 0 1.518.769 1.518 1.69 0 1.029-.655 2.568-.994 3.995-.283 1.194.599 2.169 1.777 2.169 2.133 0 3.772-2.249 3.772-5.495 0-2.873-2.064-4.882-5.012-4.882-3.414 0-5.418 2.561-5.418 5.207 0 1.031.397 2.138.893 2.738.098.119.112.224.083.345l-.333 1.36c-.053.22-.174.267-.402.161-1.499-.698-2.436-2.889-2.436-4.649 0-3.785 2.75-7.262 7.929-7.262 4.163 0 7.398 2.967 7.398 6.931 0 4.136-2.607 7.464-6.227 7.464-1.216 0-2.359-.631-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24 12 24c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12z"/></svg>
-                                </a>
-                                
-                                <!-- YouTube -->
-                                <a href="https://www.youtube.com/@seowithibrar/videos" target="_blank" rel="noopener noreferrer" style="width: 38px; height: 38px; border-radius: 50%; background: #FF0000; color: white; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 10px rgba(255,0,0,0.3); transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
-                                </a>
-                            </div>
-                        </div>
-                        
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Industries I Work With -->
-        <section class="py-120" style="background: #f8fafc;">
-            <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <span class="badge" style="background: #ecfccb; color: #65a30d; border: 1px solid #d9f99d; margin-bottom: 16px; font-weight: 800;">WHO I WORK WITH</span>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">Industries I Work With</h2>
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #4b5563; max-width: 80ch; line-height: 1.7;">
-                        Different industries have different challenges. I work with businesses that need visibility, trust, and consistent leads through SEO and strong websites. The approach is always adjusted based on how each industry works online.
+                <div class="section-header-modern fade-up">
+                    <span class="section-eyebrow">Clear Answers</span>
+                    <h2 class="section-heading-lg">Frequently Asked Questions</h2>
+                    <p class="section-subtext">
+                        Honest answers about deliverables, timelines, guarantees, and working procedures.
                     </p>
                 </div>
-                
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 32px;">
-                    <!-- Card 1 -->
-                    <div class="card fade-up" style="background: white; border-radius: 16px; padding: 48px; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; align-items: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
-                        <div style="width: 56px; height: 56px; background: #f0fdf4; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #65a30d; margin-bottom: 32px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                        </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 800; color: #111827; margin-bottom: 16px;">Education & Training</h3>
-                        <p style="font-size: 1rem; color: #6b7280; line-height: 1.7; margin: 0; margin-bottom: 24px;">
-                            I work with schools, academies, coaching centers, and education platforms that want more inquiries and a stronger online presence. SEO and websites are built to attract students, explain offerings clearly, and support enrollment goals without confusion.
-                        </p>
-                        <a href="seo-services-education" class="btn btn-secondary" style="align-self: flex-start;">Explore Education SEO</a>
+
+                <div class="faq-accordion-box fade-up">
+                    <div class="faq-card-item">
+                        <details>
+                            <summary>How long does it typically take to see measurable SEO results?</summary>
+                            <div class="faq-answer-inner">
+                                For most established websites, early ranking improvements and click growth appear within 60 to 90 days following our technical crawl fixes and intent architecture updates. Competitive commercial terms typically mature into top 3 positions within 4 to 6 months of continuous optimization.
+                            </div>
+                        </details>
                     </div>
-                    
-                    <!-- Card 2 -->
-                    <div class="card fade-up delay-100" style="background: white; border-radius: 16px; padding: 48px; box-shadow: var(--shadow-sm); transition: transform 0.3s ease, box-shadow 0.3s ease; text-align: center; align-items: center;" onmouseover="this.style.transform='translateY(-4px)'; this.style.boxShadow='var(--shadow-lg)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'">
-                        <div style="width: 56px; height: 56px; background: #f0fdf4; border-radius: 12px; display: flex; align-items: center; justify-content: center; color: #65a30d; margin-bottom: 32px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                        </div>
-                        <h3 style="font-size: 1.5rem; font-weight: 800; color: #111827; margin-bottom: 16px;">Visa & Immigration Services</h3>
-                        <p style="font-size: 1rem; color: #6b7280; line-height: 1.7; margin: 0; margin-bottom: 24px;">
-                            Visa and immigration services depend heavily on trust. I help visa consultants and agencies build professional websites and search visibility so potential clients can find them easily and feel confident reaching out.
-                        </p>
-                        <a href="seo-services-visa-consultancy" class="btn btn-secondary" style="align-self: flex-start;">Explore Visa SEO</a>
+
+                    <div class="faq-card-item">
+                        <details>
+                            <summary>Why do you combine Technical SEO with WordPress Development?</summary>
+                            <div class="faq-answer-inner">
+                                SEO and web development are deeply intertwined. If a website is built on bloated code, slow plugins, or improper DOM structures, even the best SEO strategy will fail Google Core Web Vitals. By optimizing both code architecture and organic keyword strategy together, we achieve faster indexing and dramatically higher conversion rates.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-card-item">
+                        <details>
+                            <summary>Do you use 100% white-hat SEO techniques?</summary>
+                            <div class="faq-answer-inner">
+                                Yes. Every tactic adheres strictly to Google Webmaster Guidelines. We never use automated link spam, PBNs, or low-quality scraped content. Our strategies are built to withstand algorithm updates and build long-term business equity.
+                            </div>
+                        </details>
+                    </div>
+
+                    <div class="faq-card-item">
+                        <details>
+                            <summary>How do we get started with an SEO audit?</summary>
+                            <div class="faq-answer-inner">
+                                Simply fill out our contact form or send a WhatsApp message. We will review your current website performance, identify your core keyword targets, and schedule a 20-minute strategic consultation call.
+                            </div>
+                        </details>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Tool Stack Section -->
-        <!-- (Existing Tool Stack code) ... Wait, I can't just replace the end tag without the context. I should match the end of the Tool Stack section. -->
-        <section class="py-120" style="background: #f1f5f9;">
-            <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                        <span style="color: #0369a1; font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">The Stack</span>
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                    </div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">Our Tool Stack</h2>
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #64748b; max-width: 80ch; line-height: 1.7;">
-                        From advanced SEO research and local map rank tracking to WordPress design and page speed optimization, here are the trusted tools we work with to deliver accurate, measurable results.
-                    </p>
-                </div>
-                
-                <div class="fade-up" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 16px; max-width: 1000px; margin: 0 auto;">
-                    <!-- Tools list -->
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Google Search Console
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Google Analytics
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Google Business Profile
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Ahrefs
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> SEMrush
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Ubersuggest
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Screaming Frog
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Surfer SEO
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Local Falcon
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Local Viking
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Whitespark
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> BrightLocal
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Moz Local
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Yoast SEO
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Rank Math
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> Elementor
-                    </div>
-                    <div style="background: white; padding: 12px 24px; border-radius: 100px; box-shadow: var(--shadow-sm); display: inline-flex; align-items: center; gap: 8px; font-weight: 700; font-size: 0.9375rem; color: #0f172a; transition: transform 0.2s ease;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
-                        <div style="width: 6px; height: 6px; background: #38bdf8; border-radius: 50%;"></div> WP Rocket
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Service Areas Section -->
-        <section class="py-120" style="background: #f8fafc;">
-            <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                        <span style="color: #0369a1; font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">Service Areas</span>
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                    </div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">We Serve All Over Pakistan</h2>
-                    
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #4b5563; max-width: 80ch; line-height: 1.7; margin-bottom: 16px;">
-                        I'm <strong>Ibrar Ahmad</strong>, a professional Local SEO expert based in Lahore, providing Local SEO services across Pakistan. Whether your business is in Karachi, Islamabad, Faisalabad, Multan, or Peshawar, I help you rank higher on Google and attract real customers.
-                    </p>
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #4b5563; max-width: 80ch; line-height: 1.7;">
-                        While my office is in Lahore, my services are nationwide. With <strong>100% remote SEO solutions</strong>, distance is never a barrier.
-                    </p>
-                </div>
-                
-                <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; max-width: 1200px; margin: 0 auto;">
-                    <!-- Card 1 -->
-                    <a href="seo-services-lahore" class="fade-up" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">SEO Expert in Lahore</span>
-                    </a>
-                    
-                    <!-- Card 2 -->
-                    <a href="#" class="fade-up delay-100" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">SEO Expert in Karachi</span>
-                    </a>
-                    
-                    <!-- Card 3 -->
-                    <a href="#" class="fade-up delay-200" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">SEO Services in Islamabad</span>
-                    </a>
-                    
-                    <!-- Card 4 -->
-                    <a href="#" class="fade-up delay-300" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">SEO Services in Faisalabad</span>
-                    </a>
-                    
-                    <!-- Card 5 -->
-                    <a href="#" class="fade-up" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">SEO Services in Multan</span>
-                    </a>
-                    
-                    <!-- Card 6 -->
-                    <a href="#" class="fade-up delay-100" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">SEO Services in Sialkot</span>
-                    </a>
-                    
-                    <!-- Card 7 -->
-                    <a href="#" class="fade-up delay-200" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">Local SEO Expert in Dubai</span>
-                    </a>
-                    
-                    <!-- Card 8 -->
-                    <a href="#" class="fade-up delay-300" style="background: white; border-radius: 12px; padding: 24px; display: flex; flex-direction: column; align-items: flex-start; text-align: left; text-decoration: none; box-shadow: var(--shadow-sm); transition: transform 0.2s ease, box-shadow 0.2s ease; border: 1px solid #e2e8f0;" onmouseover="this.style.transform='translateY(-2px)'; this.style.boxShadow='var(--shadow-md)'; this.style.borderColor='#38bdf8';" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='var(--shadow-sm)'; this.style.borderColor='#e2e8f0';">
-                        <div style="width: 48px; height: 48px; background: #e0f2fe; border-radius: 50%; display: flex; align-items: center; justify-content: center; color: #0284c7; margin-bottom: 16px;">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
-                        </div>
-                        <span style="font-weight: 800; color: #0f172a; font-size: 1rem;">Free SEO Tools</span>
-                    </a>
-                </div>
-            </div>
-        </section>
-
-        <!-- Latest Blog Posts -->
-        <section class="py-120" style="background: var(--color-bg-light);">
-            <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                        <span style="color: #0369a1; font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">Insights</span>
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                    </div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">Latest SEO Insights</h2>
-                    <p class="mx-auto" style="font-size: 1.05rem; color: #4b5563; max-width: 80ch; line-height: 1.7;">
-                        Read our latest SEO strategies, technical guides, and proven methods to dominate Google rankings.
-                    </p>
-                </div>
-                
-                <div class="grid-12" style="display: flex; justify-content: center;">
-                    <!-- Blog Card 1: Live Post -->
-                    <div class="card fade-up delay-100" style="grid-column: span 6; max-width: 500px; width: 100%; display: flex; flex-direction: column; align-items: flex-start; text-align: left; padding: 0; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.08); border-radius: 16px;">
-                        <img src="images/top-seo-experts-pakistan.webp" alt="Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!" style="width: 100%; height: 240px; object-fit: cover;">
-                        <div style="padding: 28px; display: flex; flex-direction: column; flex-grow: 1; width: 100%;">
-                            <span style="font-size: 0.75rem; font-weight: 800; color: #0284c7; text-transform: uppercase; margin-bottom: 12px; letter-spacing: 0.5px;">MODERN SEO</span>
-                            <h3 style="font-size: 1.35rem; margin-bottom: 12px; color: #0f172a; line-height: 1.3;">Top 15+ SEO Experts in Pakistan – Ibrar Leads the Way!</h3>
-                            <p style="font-size: 0.9375rem; color: #6b7280; margin-bottom: 24px; flex-grow: 1; line-height: 1.6;">Discover Pakistan's top search engine optimization specialists and learn why Ibrar Ahmad leads in organic growth, technical SEO, and white-hat strategies.</p>
-                            <a href="top-seo-experts-in-pakistan" class="btn btn-secondary" style="align-self: flex-start; padding: 10px 20px; font-size: 0.875rem; font-weight: 700;">Read Article</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="text-center fade-up" style="margin-top: 48px; display: flex; justify-content: center;">
-                    <a href="blog" class="btn btn-primary" style="padding: 14px 28px; font-weight: 800; letter-spacing: 0.5px;">VIEW ALL ARTICLES</a>
-                </div>
-            </div>
-        </section>
-
-        <!-- FAQ Section -->
-        <section class="py-120" style="background: white;">
-            <div class="container">
-                <div class="text-center fade-up mb-64" style="display: flex; flex-direction: column; align-items: center;">
-                    <div style="display: inline-flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                        <span style="color: #0369a1; font-weight: 700; font-size: 0.75rem; letter-spacing: 2px; text-transform: uppercase;">FAQs</span>
-                        <div style="width: 30px; height: 1px; background: #38bdf8;"></div>
-                    </div>
-                    <h2 style="font-size: 3rem; font-weight: 900; letter-spacing: -1px; margin-bottom: 24px; color: #111827;">Frequently Asked Questions</h2>
-                </div>
-                
-                <div class="fade-up" style="max-width: 800px; margin: 0 auto; display: flex; flex-direction: column; gap: 16px;">
-                    <!-- FAQ 1 -->
-                    <details style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm); transition: border-color 0.2s ease;">
-                        <summary style="font-size: 1.125rem; font-weight: 800; color: #0f172a; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            How long does it take to see SEO results?
-                            <span style="color: #0284c7; font-size: 1.5rem; line-height: 1;">+</span>
-                        </summary>
-                        <p style="margin-top: 16px; margin-bottom: 0; color: #4b5563; line-height: 1.7;">
-                            SEO is a long-term strategy. Typically, you can start seeing initial movements in rankings and traffic within 3 to 6 months. However, highly competitive keywords or completely new websites may require 6 to 12 months for significant ROI and top-page dominance.
-                        </p>
-                    </details>
-                    
-                    <!-- FAQ 2 -->
-                    <details style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm); transition: border-color 0.2s ease;">
-                        <summary style="font-size: 1.125rem; font-weight: 800; color: #0f172a; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            Do you offer guarantees in SEO?
-                            <span style="color: #0284c7; font-size: 1.5rem; line-height: 1;">+</span>
-                        </summary>
-                        <p style="margin-top: 16px; margin-bottom: 0; color: #4b5563; line-height: 1.7;">
-                            No ethical SEO professional can guarantee a specific ranking spot (like exactly #1) because Google's algorithm changes constantly. However, I do guarantee that I will employ proven, 100% white-hat strategies that have consistently delivered massive traffic and revenue growth for my clients.
-                        </p>
-                    </details>
-
-                    <!-- FAQ 3 -->
-                    <details style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm); transition: border-color 0.2s ease;">
-                        <summary style="font-size: 1.125rem; font-weight: 800; color: #0f172a; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            Do you provide white-label SEO services?
-                            <span style="color: #0284c7; font-size: 1.5rem; line-height: 1;">+</span>
-                        </summary>
-                        <p style="margin-top: 16px; margin-bottom: 0; color: #4b5563; line-height: 1.7;">
-                            Yes. I frequently partner with digital marketing agencies, PR firms, and web development companies worldwide to provide silent, white-label SEO fulfillment for their clients, complete with unbranded reports.
-                        </p>
-                    </details>
-
-                    <!-- FAQ 4 -->
-                    <details style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm); transition: border-color 0.2s ease;">
-                        <summary style="font-size: 1.125rem; font-weight: 800; color: #0f172a; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            What makes your Local SEO services different?
-                            <span style="color: #0284c7; font-size: 1.5rem; line-height: 1;">+</span>
-                        </summary>
-                        <p style="margin-top: 16px; margin-bottom: 0; color: #4b5563; line-height: 1.7;">
-                            I don't just build random citations. I focus on optimizing the actual geographic proximity signals, generating authentic Google Reviews, optimizing Google Business Profiles, and building localized landing pages that convert browsers into direct phone calls.
-                        </p>
-                    </details>
-
-                    <!-- FAQ 5 -->
-                    <details style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm); transition: border-color 0.2s ease;">
-                        <summary style="font-size: 1.125rem; font-weight: 800; color: #0f172a; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            Can you redesign my website before doing SEO?
-                            <span style="color: #0284c7; font-size: 1.5rem; line-height: 1;">+</span>
-                        </summary>
-                        <p style="margin-top: 16px; margin-bottom: 0; color: #4b5563; line-height: 1.7;">
-                            Absolutely. As a custom WordPress Engineer, I often rebuild slow or poorly structured websites from scratch. An SEO-optimized, lightning-fast architecture is the best foundation for a successful organic campaign.
-                        </p>
-                    </details>
-
-                    <!-- FAQ 6 -->
-                    <details style="background: white; border: 1px solid #e2e8f0; border-radius: 12px; padding: 20px 24px; box-shadow: var(--shadow-sm); transition: border-color 0.2s ease;">
-                        <summary style="font-size: 1.125rem; font-weight: 800; color: #0f172a; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                            Do you provide monthly SEO reports?
-                            <span style="color: #0284c7; font-size: 1.5rem; line-height: 1;">+</span>
-                        </summary>
-                        <p style="margin-top: 16px; margin-bottom: 0; color: #4b5563; line-height: 1.7;">
-                            Yes. Every month you will receive a comprehensive, transparent report detailing ranking movements, traffic growth, conversions, technical improvements made, and our strategic plan for the upcoming month.
-                        </p>
-                    </details>
-                </div>
-            </div>
-            
-            <!-- Hide default details marker -->
-            <style>
-                details > summary::-webkit-details-marker {
-                    display: none;
-                }
-                details[open] summary span {
-                    transform: rotate(45deg);
-                    transition: transform 0.2s ease;
-                }
-                details summary span {
-                    transition: transform 0.2s ease;
-                }
-            </style>
-        </section>
-
-        <!-- Premium Dark Glassmorphic CTA Banner -->
-        <section class="cta-banner" style="background: linear-gradient(145deg, #0b1222 0%, #151f36 100%); padding: 6rem 0; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08);">
-            <div class="container text-center" style="max-width: 850px; position: relative; z-index: 10;">
-                <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: #8cc63f; padding: 0.5rem 1.25rem; border-radius: 30px; font-size: 0.85rem; font-weight: 700; display: inline-block; margin-bottom: 1.5rem; letter-spacing: 0.5px;">
-                    🚀 DOMINATE GOOGLE SEARCHES ACROSS LAHORE
+        <!-- 9. Final High-Impact CTA Banner (Dark Obsidian Glassmorphism) -->
+        <section class="cta-banner" style="background: radial-gradient(circle at 50% 0%, rgba(140, 198, 63, 0.15) 0%, transparent 60%), linear-gradient(145deg, #070c18 0%, #0d1527 100%); padding: 6.5rem 0; position: relative; overflow: hidden; border-top: 1px solid rgba(255,255,255,0.08);">
+            <div class="container text-center" style="max-width: 860px; position: relative; z-index: 10;">
+                <span style="background: rgba(140, 198, 63, 0.15); border: 1px solid rgba(140, 198, 63, 0.35); color: var(--brand-green); padding: 0.5rem 1.25rem; border-radius: 30px; font-size: 0.82rem; font-weight: 800; display: inline-block; margin-bottom: 1.5rem; letter-spacing: 0.5px; text-transform: uppercase;">
+                    🚀 Start Scaling Your Organic Revenue
                 </span>
-                <h2 class="cta-title" style="color: #ffffff; font-size: 2.75rem; font-weight: 800; line-height: 1.2; margin-bottom: 1.25rem;">
-                    Ready to Grow Your Business with SEO?
+                <h2 class="cta-title" style="color: #ffffff; font-size: 2.85rem; font-weight: 900; line-height: 1.15; margin-bottom: 1.25rem; letter-spacing: -0.03em;">
+                    Ready to Outrank Competitors & Capture Real Business Leads?
                 </h2>
                 <p class="cta-desc" style="color: #cbd5e1; font-size: 1.1rem; line-height: 1.7; margin-bottom: 1.25rem;">
-                    If you want your business to be found by the right clients at the right time, SEO is your ultimate growth asset. At <strong>SEO with Ibrar</strong>, we build visibility, search engine trust, and long-term organic revenue for brands across Lahore.
+                    Don't let valuable clients click on competitors. Book your free technical SEO consultation today. We will audit your current website, pinpoint growth bottlenecks, and chart out a clear roadmap to Google dominance.
                 </p>
-                <p class="cta-desc" style="color: #94a3b8; font-size: 1.05rem; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 600;">
-                    Book your free SEO consultation today. We will audit your website, pinpoint growth bottlenecks, and show you exactly how our SEO services in Lahore can achieve your business targets.
+                <p class="cta-desc" style="color: #94a3b8; font-size: 1rem; line-height: 1.7; margin-bottom: 2.5rem; font-weight: 600;">
+                    Direct 1-on-1 consultation with Ibrar Ahmad. No sales pressure, just actionable strategy.
                 </p>
 
                 <div style="display: flex; gap: 1rem; justify-content: center; align-items: center; flex-wrap: wrap;">
-                    <a href="contact" class="btn btn-primary" style="padding: 1rem 2.25rem; font-size: 1.05rem; font-weight: 800; box-shadow: 0 10px 25px rgba(140,198,63,0.3);">
+                    <a href="contact" class="btn-agency-primary" style="padding: 16px 36px;">
                         Get Free SEO Audit & Consultation
                     </a>
-                    <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; color: #ffffff; padding: 1rem 2rem; font-size: 1.05rem; font-weight: 700; border: none; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 25px rgba(37,211,102,0.25);">
-                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                    <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25D366; color: #ffffff; padding: 16px 32px; font-size: 1.05rem; font-weight: 700; border: none; border-radius: 12px; display: inline-flex; align-items: center; gap: 0.5rem; box-shadow: 0 10px 25px rgba(37,211,102,0.25);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                         WhatsApp Instant Chat
                     </a>
                 </div>
