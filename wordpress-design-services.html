@@ -15,6 +15,10 @@
     <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css">
     <style>
+        :root {
+            --glow-primary: 0 0 30px rgba(140, 198, 63, 0.3), 0 0 60px rgba(140, 198, 63, 0.1);
+            --transition-premium: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
         /* Specific Styles for Services Page */
         .service-grid-3 {
             display: grid;
@@ -281,14 +285,14 @@
             display: none;
         }
         .faq-accordion summary::after {
-            content: '?';
+            content: '+';
             font-size: 1.5rem;
             font-weight: 400;
             color: var(--color-primary);
             transition: transform 0.3s ease;
         }
         .faq-accordion details[open] summary::after {
-            content: '?';
+            content: '\2212';
             transform: rotate(180deg);
         }
         .faq-content {

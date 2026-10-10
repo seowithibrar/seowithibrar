@@ -6,6 +6,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $fullname = htmlspecialchars(trim($_POST['fullname'] ?? ''));
     $email = filter_var(trim($_POST['email'] ?? ''), FILTER_SANITIZE_EMAIL);
     $phone = htmlspecialchars(trim($_POST['phone'] ?? ''));
+    $service = htmlspecialchars(trim($_POST['service'] ?? ''));
     $website = htmlspecialchars(trim($_POST['website'] ?? ''));
     $location = htmlspecialchars(trim($_POST['location'] ?? ''));
     $goals = htmlspecialchars(trim($_POST['goals'] ?? ''));
@@ -29,6 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $body .= "Full Name: $fullname\n";
     $body .= "Email: $email\n";
     $body .= "Phone / WhatsApp: " . ($phone ? $phone : "Not provided") . "\n";
+    $body .= "Service Needed: " . ($service ? $service : "Not provided") . "\n";
     $body .= "Website: $website\n";
     $body .= "Target Location: $location\n";
     $body .= "Business Goals / Message:\n$goals\n";
