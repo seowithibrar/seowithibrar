@@ -90,14 +90,13 @@
     <!-- Google Fonts: Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
         /* ==========================================================================
-           PERSONAL BRAND DESIGN SYSTEM — IBRAR AHMAD (SEO With Ibrar)
-           Palette: Navy Blue (#1E3A8A), Emerald Green (#10B981), Dark (#111827), Light (#F3F4F6), White (#FFFFFF)
-           Typography: Inter
-           Focus: Credibility, evidence, clarity, fast load, zero fluff.
+           ADVANCED PERSONAL-BRAND DESIGN SYSTEM — IBRAR AHMAD (SEO With Ibrar)
+           Brand Palette: Navy Blue (#1E3A8A), Emerald Green (#10B981), Slate Dark (#111827),
+           Surface Dark (#1F2937), Subtle Light (#F3F4F6), Pure White (#FFFFFF)
            ========================================================================== */
 
         :root {
@@ -109,6 +108,7 @@
             --brand-green-light: #ECFDF5;
             --bg-dark: #111827;
             --bg-surface-dark: #1F2937;
+            --bg-surface-darker: #0F172A;
             --bg-light: #F3F4F6;
             --bg-white: #FFFFFF;
             --text-dark: #111827;
@@ -120,12 +120,12 @@
             --border-dark: #374151;
             --font-main: 'Inter', system-ui, -apple-system, sans-serif;
             --radius-sm: 6px;
-            --radius-md: 10px;
-            --radius-lg: 16px;
+            --radius-md: 12px;
+            --radius-lg: 18px;
             --shadow-subtle: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.03);
             --shadow-card: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -2px rgba(0, 0, 0, 0.03);
-            --shadow-elevated: 0 10px 15px -3px rgba(0, 0, 0, 0.08), 0 4px 6px -4px rgba(0, 0, 0, 0.04);
-            --container-width: 1180px;
+            --shadow-elevated: 0 12px 24px -4px rgba(0, 0, 0, 0.08), 0 4px 8px -4px rgba(0, 0, 0, 0.04);
+            --container-width: 1200px;
         }
 
         *, *::before, *::after {
@@ -166,28 +166,28 @@
             padding: 0 24px;
         }
 
-        /* Buttons & Actions */
+        /* Buttons & CTAs */
         .btn-primary {
             background-color: var(--brand-green);
             color: #FFFFFF !important;
             font-size: 0.95rem;
             font-weight: 700;
-            padding: 12px 24px;
+            padding: 12px 26px;
             border-radius: var(--radius-sm);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            transition: background-color 0.15s ease, transform 0.15s ease, box-shadow 0.15s ease;
-            box-shadow: 0 1px 2px rgba(16, 185, 129, 0.2);
+            transition: all 0.2s ease;
+            box-shadow: 0 2px 4px rgba(16, 185, 129, 0.25);
             border: none;
             cursor: pointer;
         }
         .btn-primary:hover {
             background-color: var(--brand-green-hover);
-            transform: translateY(-1px);
-            box-shadow: 0 4px 8px rgba(16, 185, 129, 0.25);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 14px rgba(16, 185, 129, 0.35);
         }
 
         .btn-secondary {
@@ -196,26 +196,30 @@
             border: 1.5px solid var(--brand-navy);
             font-size: 0.95rem;
             font-weight: 700;
-            padding: 11px 22px;
+            padding: 11px 24px;
             border-radius: var(--radius-sm);
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 8px;
-            transition: all 0.15s ease;
+            transition: all 0.2s ease;
             cursor: pointer;
         }
         .btn-secondary:hover {
             background-color: var(--brand-navy-light);
             color: var(--brand-navy-dark) !important;
             border-color: var(--brand-navy-dark);
+            transform: translateY(-2px);
         }
 
-        /* Shared Section Header Typography */
+        /* Standard Section Headers */
+        .section-padding {
+            padding: 88px 0;
+        }
         .section-header {
-            max-width: 760px;
-            margin-bottom: 48px;
+            max-width: 780px;
+            margin-bottom: 52px;
         }
         .section-header.text-center {
             margin-left: auto;
@@ -228,26 +232,29 @@
             letter-spacing: 0.08em;
             text-transform: uppercase;
             color: var(--brand-navy);
-            margin-bottom: 12px;
-            display: block;
+            background: var(--brand-navy-light);
+            padding: 4px 12px;
+            border-radius: 4px;
+            display: inline-block;
+            margin-bottom: 14px;
         }
         .section-title {
-            font-size: 2.25rem;
+            font-size: 2.35rem;
             font-weight: 800;
-            line-height: 1.2;
+            line-height: 1.22;
             letter-spacing: -0.025em;
             color: var(--text-dark);
             margin-bottom: 16px;
         }
         .section-lead {
-            font-size: 1.05rem;
-            line-height: 1.65;
+            font-size: 1.075rem;
+            line-height: 1.7;
             color: var(--text-muted);
             margin: 0;
         }
 
         /* ==========================================================================
-           1. HEADER & NAVIGATION
+           1. HEADER & MEGA-MENU NAVIGATION
            ========================================================================== */
         .site-header {
             background-color: var(--bg-white);
@@ -261,7 +268,7 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            padding: 16px 0;
+            padding: 14px 0;
             gap: 20px;
         }
         .brand-logo-wrap {
@@ -279,40 +286,88 @@
             width: auto;
             display: block;
         }
-        .brand-text {
-            display: flex;
-            flex-direction: column;
-            line-height: 1.1;
-        }
-        .brand-name {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--brand-navy);
-        }
-        .brand-tagline {
-            font-size: 0.72rem;
-            font-weight: 600;
-            color: var(--text-muted);
-            letter-spacing: 0.04em;
-            text-transform: uppercase;
-        }
 
         .main-nav {
             display: flex;
             align-items: center;
-            gap: 26px;
+            gap: 28px;
         }
-        .main-nav a {
+        .nav-item {
+            position: relative;
+        }
+        .nav-link {
             color: var(--text-body);
             text-decoration: none;
-            font-size: 0.925rem;
+            font-size: 0.93rem;
             font-weight: 600;
+            padding: 8px 0;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
             transition: color 0.15s ease;
-            padding: 4px 0;
         }
-        .main-nav a:hover, .main-nav a.active {
+        .nav-link:hover, .nav-link.active {
             color: var(--brand-navy);
         }
+        .nav-link svg {
+            transition: transform 0.2s ease;
+        }
+        .nav-item:hover .nav-link svg {
+            transform: rotate(180deg);
+        }
+
+        /* Dropdown Menus */
+        .nav-dropdown {
+            position: absolute;
+            top: 100%;
+            left: -16px;
+            background: var(--bg-white);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 12px;
+            min-width: 280px;
+            box-shadow: var(--shadow-elevated);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(8px);
+            transition: all 0.2s ease;
+            z-index: 50;
+        }
+        .nav-item:hover .nav-dropdown {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+        .dropdown-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 12px;
+            border-radius: var(--radius-sm);
+            text-decoration: none;
+            transition: background 0.15s ease;
+        }
+        .dropdown-item:hover {
+            background: var(--bg-light);
+        }
+        .dropdown-icon {
+            color: var(--brand-green);
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        .dropdown-title {
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            line-height: 1.25;
+            margin-bottom: 2px;
+        }
+        .dropdown-desc {
+            font-size: 0.775rem;
+            color: var(--text-muted);
+            line-height: 1.4;
+        }
+
         .header-actions {
             display: flex;
             align-items: center;
@@ -333,13 +388,14 @@
            ========================================================================== */
         .hero-section {
             background-color: var(--bg-white);
-            padding: 72px 0 64px;
+            padding: 76px 0 68px;
             border-bottom: 1px solid var(--border-color);
+            position: relative;
         }
         .hero-grid {
             display: grid;
             grid-template-columns: 1.15fr 0.85fr;
-            gap: 48px;
+            gap: 52px;
             align-items: center;
         }
         .hero-eyebrow {
@@ -352,29 +408,29 @@
             background-color: var(--brand-navy-light);
             padding: 6px 14px;
             border-radius: 4px;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         .hero-title {
-            font-size: 2.85rem;
-            font-weight: 800;
-            line-height: 1.18;
+            font-size: 2.95rem;
+            font-weight: 900;
+            line-height: 1.16;
             letter-spacing: -0.03em;
             color: var(--text-dark);
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         .hero-lead {
             font-size: 1.125rem;
-            line-height: 1.7;
+            line-height: 1.75;
             color: var(--text-body);
-            margin-bottom: 32px;
-            max-width: 580px;
+            margin-bottom: 34px;
+            max-width: 590px;
         }
         .hero-actions {
             display: flex;
             align-items: center;
             gap: 16px;
             flex-wrap: wrap;
-            margin-bottom: 24px;
+            margin-bottom: 28px;
         }
         .hero-supporting-line {
             font-size: 0.875rem;
@@ -382,17 +438,25 @@
             font-weight: 600;
             letter-spacing: 0.02em;
             border-top: 1px solid var(--border-color);
-            padding-top: 18px;
-            max-width: 540px;
+            padding-top: 20px;
+            max-width: 560px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            flex-wrap: wrap;
         }
+        .hero-supporting-line span.dot {
+            color: var(--brand-green);
+        }
+
         .hero-image-frame {
             position: relative;
-            background: var(--bg-light);
+            background: linear-gradient(180deg, var(--bg-light) 0%, #E5E7EB 100%);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
             overflow: hidden;
-            box-shadow: var(--shadow-card);
-            aspect-ratio: 4 / 4.7;
+            box-shadow: var(--shadow-elevated);
+            aspect-ratio: 4 / 4.75;
             display: flex;
             align-items: flex-end;
             justify-content: center;
@@ -403,28 +467,30 @@
             object-fit: cover;
             object-position: bottom center;
         }
-        .hero-image-caption {
+        .hero-badge-floating {
             position: absolute;
-            bottom: 14px;
-            left: 14px;
-            right: 14px;
-            background: rgba(17, 24, 39, 0.88);
-            backdrop-filter: blur(8px);
+            bottom: 16px;
+            left: 16px;
+            right: 16px;
+            background: rgba(17, 24, 39, 0.92);
+            backdrop-filter: blur(10px);
             color: #FFFFFF;
-            padding: 10px 16px;
+            padding: 12px 18px;
             border-radius: var(--radius-sm);
             border: 1px solid rgba(255, 255, 255, 0.15);
             display: flex;
             align-items: center;
             justify-content: space-between;
-            font-size: 0.825rem;
+            font-size: 0.85rem;
         }
-        .hero-image-caption strong {
+        .hero-badge-floating strong {
             color: #FFFFFF;
+            display: block;
+            font-size: 0.95rem;
         }
-        .hero-image-caption span {
+        .hero-badge-floating span {
             color: var(--brand-green);
-            font-weight: 600;
+            font-weight: 700;
         }
 
         /* ==========================================================================
@@ -432,7 +498,7 @@
            ========================================================================== */
         .trust-strip {
             background-color: var(--bg-light);
-            padding: 32px 0;
+            padding: 34px 0;
             border-bottom: 1px solid var(--border-color);
         }
         .trust-grid {
@@ -443,7 +509,7 @@
         .trust-item {
             display: flex;
             align-items: flex-start;
-            gap: 12px;
+            gap: 14px;
         }
         .trust-icon {
             color: var(--brand-green);
@@ -452,7 +518,7 @@
         }
         .trust-title {
             font-size: 0.95rem;
-            font-weight: 700;
+            font-weight: 800;
             color: var(--text-dark);
             margin-bottom: 2px;
         }
@@ -464,18 +530,18 @@
         }
 
         /* ==========================================================================
-           4. CASE STUDIES SECTION
+           4. CASE STUDIES SECTION (Real Client Evidence)
            ========================================================================== */
         .case-studies-section {
             background-color: var(--bg-white);
-            padding: 80px 0;
+            padding: 88px 0;
             border-bottom: 1px solid var(--border-color);
         }
         .case-cards-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
             gap: 28px;
-            margin-bottom: 40px;
+            margin-bottom: 44px;
         }
         .case-study-card {
             background: var(--bg-white);
@@ -486,15 +552,15 @@
             flex-direction: column;
             justify-content: space-between;
             box-shadow: var(--shadow-subtle);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+            transition: all 0.25s ease;
         }
         .case-study-card:hover {
             border-color: var(--brand-navy);
             box-shadow: var(--shadow-elevated);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
         .case-study-img-wrap {
-            height: 190px;
+            height: 195px;
             background: var(--bg-dark);
             overflow: hidden;
             position: relative;
@@ -503,13 +569,13 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.3s ease;
+            transition: transform 0.35s ease;
         }
         .case-study-card:hover .case-study-img-wrap img {
-            transform: scale(1.03);
+            transform: scale(1.04);
         }
         .case-study-body {
-            padding: 24px;
+            padding: 26px 24px;
             flex-grow: 1;
             display: flex;
             flex-direction: column;
@@ -528,17 +594,17 @@
             align-self: flex-start;
         }
         .case-title {
-            font-size: 1.2rem;
+            font-size: 1.25rem;
             font-weight: 800;
             color: var(--text-dark);
             line-height: 1.35;
-            margin-bottom: 12px;
+            margin-bottom: 14px;
         }
         .case-detail-block {
-            font-size: 0.875rem;
+            font-size: 0.88rem;
             color: var(--text-body);
-            line-height: 1.6;
-            margin-bottom: 16px;
+            line-height: 1.62;
+            margin-bottom: 14px;
         }
         .case-detail-block strong {
             color: var(--text-dark);
@@ -552,7 +618,7 @@
             border: 1px solid var(--border-color);
         }
         .case-metric-highlight {
-            font-size: 1.45rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--brand-green-hover);
             line-height: 1.2;
@@ -562,7 +628,7 @@
             font-size: 0.825rem;
             color: var(--text-muted);
             margin: 0;
-            line-height: 1.4;
+            line-height: 1.45;
         }
         .case-meta-source {
             font-size: 0.75rem;
@@ -578,7 +644,7 @@
             background-color: #FAFAFA;
         }
         .case-link {
-            font-size: 0.875rem;
+            font-size: 0.88rem;
             font-weight: 700;
             color: var(--brand-navy);
             text-decoration: none;
@@ -591,35 +657,35 @@
         }
 
         /* ==========================================================================
-           5. CORE SERVICES SECTION
+           5. COMPLETE SERVICES SUITE (Inspired by Deep Rahul's Comprehensive Grid)
            ========================================================================== */
         .services-section {
             background-color: var(--bg-light);
-            padding: 80px 0;
+            padding: 88px 0;
             border-bottom: 1px solid var(--border-color);
         }
-        .services-grid-3 {
+        .services-grid-bento {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 28px;
+            gap: 26px;
         }
-        .service-card-clean {
+        .service-bento-card {
             background-color: var(--bg-white);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
-            padding: 36px 30px;
+            padding: 34px 28px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
             box-shadow: var(--shadow-subtle);
-            transition: all 0.2s ease;
+            transition: all 0.25s ease;
         }
-        .service-card-clean:hover {
+        .service-bento-card:hover {
             border-color: var(--brand-navy);
-            transform: translateY(-2px);
+            transform: translateY(-3px);
             box-shadow: var(--shadow-elevated);
         }
-        .service-card-icon {
+        .service-bento-icon {
             width: 48px;
             height: 48px;
             border-radius: var(--radius-sm);
@@ -630,94 +696,22 @@
             justify-content: center;
             margin-bottom: 20px;
         }
-        .service-card-title {
-            font-size: 1.35rem;
+        .service-bento-title {
+            font-size: 1.25rem;
             font-weight: 800;
             color: var(--text-dark);
-            margin-bottom: 14px;
-            letter-spacing: -0.01em;
-        }
-        .service-card-copy {
-            font-size: 0.95rem;
-            line-height: 1.65;
-            color: var(--text-body);
-            margin-bottom: 24px;
-            flex-grow: 1;
-        }
-        .service-card-link {
-            font-size: 0.9rem;
-            font-weight: 700;
-            color: var(--brand-navy);
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-        }
-        .service-card-link:hover {
-            color: var(--brand-green-hover);
-        }
-
-        /* ==========================================================================
-           6. INDUSTRY EXPERTISE SECTION
-           ========================================================================== */
-        .industries-section {
-            background-color: var(--bg-white);
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .industries-grid-2 {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 32px;
-        }
-        .industry-card-clean {
-            background-color: var(--bg-white);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 40px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            box-shadow: var(--shadow-subtle);
-            transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
-        }
-        .industry-card-clean:hover {
-            border-color: var(--brand-navy);
-            box-shadow: var(--shadow-elevated);
-            transform: translateY(-2px);
-        }
-        .industry-card-header {
-            display: flex;
-            align-items: center;
-            gap: 16px;
-            margin-bottom: 18px;
-        }
-        .industry-card-icon {
-            width: 48px;
-            height: 48px;
-            background-color: var(--brand-green-light);
-            color: var(--brand-green-hover);
-            border-radius: var(--radius-sm);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-shrink: 0;
-        }
-        .industry-card-title {
-            font-size: 1.5rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin: 0;
+            margin-bottom: 12px;
             letter-spacing: -0.015em;
         }
-        .industry-card-copy {
-            font-size: 0.975rem;
-            line-height: 1.7;
-            color: var(--text-body);
-            margin-bottom: 24px;
-        }
-        .industry-card-link {
+        .service-bento-copy {
             font-size: 0.925rem;
+            line-height: 1.65;
+            color: var(--text-body);
+            margin-bottom: 22px;
+            flex-grow: 1;
+        }
+        .service-bento-link {
+            font-size: 0.88rem;
             font-weight: 700;
             color: var(--brand-navy);
             text-decoration: none;
@@ -725,88 +719,97 @@
             align-items: center;
             gap: 6px;
         }
-        .industry-card-link:hover {
+        .service-bento-link:hover {
             color: var(--brand-green-hover);
         }
 
         /* ==========================================================================
-           7. WHY WORK WITH IBRAR SECTION
+           6. COMPARISON MATRIX: SPECIALIST VS. GENERIC AGENCY
            ========================================================================== */
-        .benefits-section {
-            background-color: var(--bg-light);
-            padding: 80px 0;
+        .comparison-section {
+            background-color: var(--bg-white);
+            padding: 88px 0;
             border-bottom: 1px solid var(--border-color);
         }
-        .benefits-grid {
+        .comparison-table-wrap {
+            max-width: 980px;
+            margin: 0 auto;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            overflow: hidden;
+            box-shadow: var(--shadow-subtle);
+        }
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            text-align: left;
+            font-size: 0.925rem;
+        }
+        .comparison-table th, .comparison-table td {
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .comparison-table th {
+            background-color: #FAFAFA;
+            font-weight: 800;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-dark);
+        }
+        .comparison-table th.highlight-col {
+            background-color: var(--brand-navy-light);
+            color: var(--brand-navy);
+        }
+        .comparison-table td.highlight-col {
+            background-color: #F8FAFC;
+            font-weight: 600;
+            color: var(--text-dark);
+        }
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+        .table-check {
+            color: var(--brand-green);
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .table-cross {
+            color: #EF4444;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        /* ==========================================================================
+           7. 5-STEP WORKING PROCESS ROADMAP
+           ========================================================================== */
+        .process-section {
+            background-color: var(--bg-light);
+            padding: 88px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+        .process-timeline-5 {
             display: grid;
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
         }
-        .benefit-card {
+        .process-node {
             background: var(--bg-white);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-md);
             padding: 28px 20px;
-            box-shadow: var(--shadow-subtle);
             display: flex;
             flex-direction: column;
-            transition: border-color 0.15s ease, box-shadow 0.15s ease;
-        }
-        .benefit-card:hover {
-            border-color: var(--brand-navy);
-            box-shadow: var(--shadow-card);
-        }
-        .benefit-card-num {
-            font-size: 0.85rem;
-            font-weight: 800;
-            color: var(--brand-green-hover);
-            margin-bottom: 12px;
-            background: var(--brand-green-light);
-            display: inline-block;
-            padding: 2px 8px;
-            border-radius: 4px;
-            align-self: flex-start;
-        }
-        .benefit-card-title {
-            font-size: 1.05rem;
-            font-weight: 700;
-            color: var(--text-dark);
-            margin-bottom: 10px;
-            line-height: 1.35;
-        }
-        .benefit-card-desc {
-            font-size: 0.875rem;
-            color: var(--text-muted);
-            line-height: 1.6;
-            margin: 0;
-        }
-
-        /* ==========================================================================
-           8. WORKING PROCESS SECTION
-           ========================================================================== */
-        .process-section {
-            background-color: var(--bg-white);
-            padding: 80px 0;
-            border-bottom: 1px solid var(--border-color);
-        }
-        .process-grid-4 {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 24px;
-        }
-        .process-step-item {
-            background: var(--bg-white);
-            border: 1px solid var(--border-color);
-            border-radius: var(--radius-md);
-            padding: 32px 24px;
+            box-shadow: var(--shadow-subtle);
             position: relative;
-            display: flex;
-            flex-direction: column;
-            box-shadow: var(--shadow-subtle);
         }
-        .process-step-num {
+        .process-node-num {
             font-size: 1.5rem;
-            font-weight: 800;
+            font-weight: 900;
             color: var(--brand-navy);
             margin-bottom: 14px;
             line-height: 1;
@@ -814,28 +817,29 @@
             align-items: center;
             justify-content: space-between;
         }
-        .process-step-num svg {
+        .process-node-num svg {
             color: var(--brand-green);
         }
-        .process-step-title {
-            font-size: 1.15rem;
-            font-weight: 700;
+        .process-node-title {
+            font-size: 1.05rem;
+            font-weight: 800;
             color: var(--text-dark);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
+            line-height: 1.3;
         }
-        .process-step-desc {
-            font-size: 0.88rem;
+        .process-node-desc {
+            font-size: 0.85rem;
             color: var(--text-muted);
-            line-height: 1.6;
+            line-height: 1.55;
             margin: 0;
         }
 
         /* ==========================================================================
-           9. ABOUT IBRAR SECTION
+           8. ABOUT IBRAR AHMAD
            ========================================================================== */
         .about-section {
-            background-color: var(--bg-light);
-            padding: 80px 0;
+            background-color: var(--bg-white);
+            padding: 88px 0;
             border-bottom: 1px solid var(--border-color);
         }
         .about-grid {
@@ -845,7 +849,7 @@
             align-items: center;
         }
         .about-image-card {
-            background: var(--bg-white);
+            background: var(--bg-light);
             border: 1px solid var(--border-color);
             border-radius: var(--radius-lg);
             overflow: hidden;
@@ -859,31 +863,31 @@
             object-position: bottom center;
         }
         .about-content-title {
-            font-size: 2.25rem;
+            font-size: 2.35rem;
             font-weight: 800;
             color: var(--text-dark);
             line-height: 1.2;
             letter-spacing: -0.025em;
-            margin-bottom: 20px;
+            margin-bottom: 22px;
         }
         .about-content-text {
             font-size: 1.025rem;
-            line-height: 1.7;
+            line-height: 1.75;
             color: var(--text-body);
             margin-bottom: 18px;
         }
         .about-highlights {
             list-style: none;
             padding: 0;
-            margin: 24px 0 32px;
+            margin: 26px 0 32px;
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 14px;
         }
         .about-highlights li {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 12px;
             font-size: 0.95rem;
             color: var(--text-dark);
             font-weight: 600;
@@ -900,11 +904,11 @@
         }
 
         /* ==========================================================================
-           11. FAQS SECTION
+           9. FAQS SECTION
            ========================================================================== */
         .faq-section {
-            background-color: var(--bg-white);
-            padding: 80px 0;
+            background-color: var(--bg-light);
+            padding: 88px 0;
             border-bottom: 1px solid var(--border-color);
         }
         .faq-accordion-clean {
@@ -962,12 +966,12 @@
         }
 
         /* ==========================================================================
-           12. FINAL CTA & QUALIFIED AUDIT FORM
+           10. FINAL CTA & AUDIT FORM
            ========================================================================== */
         .final-cta-section {
             background-color: var(--bg-dark);
             color: var(--bg-white);
-            padding: 88px 0;
+            padding: 92px 0;
         }
         .cta-container-grid {
             display: grid;
@@ -976,8 +980,8 @@
             align-items: flex-start;
         }
         .cta-left-title {
-            font-size: 2.5rem;
-            font-weight: 800;
+            font-size: 2.6rem;
+            font-weight: 900;
             line-height: 1.2;
             letter-spacing: -0.025em;
             color: var(--bg-white);
@@ -985,7 +989,7 @@
         }
         .cta-left-copy {
             font-size: 1.05rem;
-            line-height: 1.7;
+            line-height: 1.75;
             color: #9CA3AF;
             margin-bottom: 32px;
         }
@@ -1097,13 +1101,13 @@
         }
 
         /* ==========================================================================
-           13. FOOTER
+           11. FOOTER
            ========================================================================== */
         .site-footer {
             background-color: var(--bg-dark);
             color: #9CA3AF;
             border-top: 1px solid #1F2937;
-            padding: 64px 0 32px;
+            padding: 68px 0 34px;
             font-size: 0.875rem;
         }
         .footer-grid-4 {
@@ -1169,78 +1173,47 @@
             color: var(--bg-white);
         }
 
-        /* Floating WhatsApp Button */
+        /* Floating WhatsApp Widget */
         .whatsapp-float-widget {
             position: fixed;
             bottom: 24px;
             right: 24px;
             background-color: #25D366;
             color: #FFFFFF;
-            width: 54px;
-            height: 54px;
+            width: 56px;
+            height: 56px;
             border-radius: 50%;
             display: flex;
             align-items: center;
             justify-content: center;
-            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
             z-index: 999;
             transition: transform 0.2s ease, box-shadow 0.2s ease;
             text-decoration: none;
         }
         .whatsapp-float-widget:hover {
             transform: scale(1.08);
-            box-shadow: 0 6px 16px rgba(37, 211, 102, 0.5);
+            box-shadow: 0 6px 18px rgba(37, 211, 102, 0.55);
             color: #FFFFFF;
         }
 
-        /* Responsive Media Queries */
+        /* Responsive Breakpoints */
         @media (max-width: 1024px) {
-            .hero-grid {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-            .hero-title {
-                font-size: 2.5rem;
-            }
-            .trust-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .case-cards-grid {
-                grid-template-columns: 1fr;
-            }
-            .services-grid-3 {
-                grid-template-columns: 1fr;
-            }
-            .industries-grid-2 {
-                grid-template-columns: 1fr;
-            }
-            .benefits-grid {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .process-grid-4 {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            .about-grid {
-                grid-template-columns: 1fr;
-            }
-            .cta-container-grid {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid-4 {
-                grid-template-columns: 1fr 1fr;
-            }
+            .hero-grid { grid-template-columns: 1fr; gap: 40px; }
+            .hero-title { font-size: 2.5rem; }
+            .trust-grid { grid-template-columns: repeat(2, 1fr); }
+            .case-cards-grid { grid-template-columns: 1fr; }
+            .services-grid-bento { grid-template-columns: repeat(2, 1fr); }
+            .process-timeline-5 { grid-template-columns: repeat(2, 1fr); }
+            .about-grid { grid-template-columns: 1fr; }
+            .cta-container-grid { grid-template-columns: 1fr; }
+            .footer-grid-4 { grid-template-columns: 1fr 1fr; }
         }
 
         @media (max-width: 768px) {
-            .site-header-inner {
-                position: relative;
-            }
-            .mobile-menu-btn {
-                display: flex;
-            }
-            .main-nav {
-                display: none;
-            }
+            .site-header-inner { position: relative; }
+            .mobile-menu-btn { display: flex; }
+            .main-nav { display: none; }
             .main-nav.active {
                 display: flex;
                 flex-direction: column;
@@ -1255,37 +1228,17 @@
                 gap: 16px;
                 z-index: 999;
             }
-            .header-actions .btn-primary {
-                display: none;
-            }
-            .hero-title {
-                font-size: 2.15rem;
-            }
-            .hero-lead {
-                font-size: 1rem;
-            }
-            .hero-actions {
-                flex-direction: column;
-                align-items: stretch;
-            }
-            .hero-actions .btn-primary, .hero-actions .btn-secondary {
-                width: 100%;
-            }
-            .trust-grid {
-                grid-template-columns: 1fr;
-            }
-            .benefits-grid {
-                grid-template-columns: 1fr;
-            }
-            .process-grid-4 {
-                grid-template-columns: 1fr;
-            }
-            .form-row {
-                grid-template-columns: 1fr;
-            }
-            .footer-grid-4 {
-                grid-template-columns: 1fr;
-            }
+            .header-actions .btn-primary { display: none; }
+            .hero-title { font-size: 2.15rem; }
+            .hero-lead { font-size: 1rem; }
+            .hero-actions { flex-direction: column; align-items: stretch; }
+            .hero-actions .btn-primary, .hero-actions .btn-secondary { width: 100%; }
+            .trust-grid { grid-template-columns: 1fr; }
+            .services-grid-bento { grid-template-columns: 1fr; }
+            .process-timeline-5 { grid-template-columns: 1fr; }
+            .form-row { grid-template-columns: 1fr; }
+            .footer-grid-4 { grid-template-columns: 1fr; }
+            .comparison-table-wrap { overflow-x: auto; }
         }
     </style>
 </head>
@@ -1296,7 +1249,7 @@
     <!-- End Google Tag Manager (noscript) -->
 
     <!-- ==========================================================================
-       SECTION 1: HEADER & NAVIGATION
+       SECTION 1: HEADER & MEGA NAVIGATION
        ========================================================================== -->
     <header class="site-header">
         <div class="container">
@@ -1306,13 +1259,67 @@
                 </a>
 
                 <nav class="main-nav" id="mainNav" aria-label="Primary Navigation">
-                    <a href="/" class="active">Home</a>
-                    <a href="seo-services-pakistan">SEO Services</a>
-                    <a href="#industries">Industries</a>
-                    <a href="portfolio">Case Studies</a>
-                    <a href="about">About</a>
-                    <a href="blog">Blog</a>
-                    <a href="contact">Contact</a>
+                    <a href="/" class="nav-link active">Home</a>
+
+                    <!-- SEO Services Dropdown -->
+                    <div class="nav-item">
+                        <a href="seo-services-pakistan" class="nav-link">
+                            SEO Services
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="seo-services-pakistan" class="dropdown-item">
+                                <span class="dropdown-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg></span>
+                                <div>
+                                    <div class="dropdown-title">SEO Services Pakistan</div>
+                                    <div class="dropdown-desc">National organic search growth</div>
+                                </div>
+                            </a>
+                            <a href="seo-services-lahore" class="dropdown-item">
+                                <span class="dropdown-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path></svg></span>
+                                <div>
+                                    <div class="dropdown-title">Local SEO Lahore</div>
+                                    <div class="dropdown-desc">Map pack & Google Business Profile</div>
+                                </div>
+                            </a>
+                            <a href="wordpress-design-services" class="dropdown-item">
+                                <span class="dropdown-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect></svg></span>
+                                <div>
+                                    <div class="dropdown-title">WordPress Web Design</div>
+                                    <div class="dropdown-desc">Fast, responsive & search-optimized</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Industries Dropdown -->
+                    <div class="nav-item">
+                        <a href="#industries" class="nav-link">
+                            Industries
+                            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="seo-services-education" class="dropdown-item">
+                                <span class="dropdown-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+                                <div>
+                                    <div class="dropdown-title">Education SEO</div>
+                                    <div class="dropdown-desc">Institutes, colleges & academies</div>
+                                </div>
+                            </a>
+                            <a href="seo-services-visa-consultancy" class="dropdown-item">
+                                <span class="dropdown-icon"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></span>
+                                <div>
+                                    <div class="dropdown-title">Visa Consultancy SEO</div>
+                                    <div class="dropdown-desc">Immigration & study visa agencies</div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+
+                    <a href="portfolio" class="nav-link">Case Studies</a>
+                    <a href="about" class="nav-link">About</a>
+                    <a href="blog" class="nav-link">Blog</a>
+                    <a href="contact" class="nav-link">Contact</a>
                 </nav>
 
                 <div class="header-actions">
@@ -1348,19 +1355,19 @@
                             </a>
                         </div>
                         <div class="hero-supporting-line">
-                            Technical SEO · Local SEO · Content Strategy · WordPress
+                            Technical SEO <span class="dot">·</span> Local SEO <span class="dot">·</span> Content Strategy <span class="dot">·</span> WordPress
                         </div>
                     </div>
 
                     <div class="hero-image-col">
                         <div class="hero-image-frame">
                             <img src="images/Ibrar Ahmad.png" alt="Ibrar Ahmad - SEO Consultant & WordPress Web Designer" width="500" height="580" loading="eager">
-                            <div class="hero-image-caption">
+                            <div class="hero-badge-floating">
                                 <div>
                                     <strong>Ibrar Ahmad</strong>
-                                    <div style="font-size: 0.75rem; color: #D1D5DB;">Lahore, Pakistan</div>
+                                    <div style="font-size: 0.775rem; color: #D1D5DB;">Lahore, Punjab, Pakistan</div>
                                 </div>
-                                <span>SEO & WordPress Consultant</span>
+                                <span>SEO & Web Specialist</span>
                             </div>
                         </div>
                     </div>
@@ -1376,7 +1383,7 @@
                 <div class="trust-grid">
                     <div class="trust-item">
                         <div class="trust-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
                         </div>
                         <div>
                             <div class="trust-title">5+ Years Experience</div>
@@ -1386,31 +1393,31 @@
 
                     <div class="trust-item">
                         <div class="trust-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                         </div>
                         <div>
                             <div class="trust-title">Technical & Local SEO</div>
-                            <p class="trust-desc">Data-backed audit fixes, schema markup, and Google Business Profile growth</p>
+                            <p class="trust-desc">Audit fixes, Schema markup, and Google Business Profile growth</p>
                         </div>
                     </div>
 
                     <div class="trust-item">
                         <div class="trust-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="3" y1="9" x2="21" y2="9"></line><line x1="9" y1="21" x2="9" y2="9"></line></svg>
                         </div>
                         <div>
                             <div class="trust-title">WordPress Development</div>
-                            <p class="trust-desc">Clean page architecture, Core Web Vitals optimization, and responsive design</p>
+                            <p class="trust-desc">Clean page architecture, Core Web Vitals optimization & speed</p>
                         </div>
                     </div>
 
                     <div class="trust-item">
                         <div class="trust-icon">
-                            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"></path></svg>
                         </div>
                         <div>
                             <div class="trust-title">Education & Visa Sectors</div>
-                            <p class="trust-desc">Tailored search strategies for academic institutions and visa consultancies</p>
+                            <p class="trust-desc">Tailored search strategies for academic institutes & visa agencies</p>
                         </div>
                     </div>
                 </div>
@@ -1418,7 +1425,7 @@
         </section>
 
         <!-- ==========================================================================
-           SECTION 4: CASE STUDIES
+           SECTION 4: CASE STUDIES (Real Client Evidence)
            ========================================================================== -->
         <section class="case-studies-section" id="case-studies">
             <div class="container">
@@ -1434,7 +1441,7 @@
                     <!-- Case Study 1: KIMS.edu.pk -->
                     <article class="case-study-card">
                         <div class="case-study-img-wrap">
-                            <img src="images/KIMS.webp" alt="KIMS Academic Institute Portal & SEO Case Study" width="380" height="190" loading="lazy">
+                            <img src="images/KIMS.webp" alt="KIMS Academic Institute Portal & SEO Case Study" width="380" height="195" loading="lazy">
                         </div>
                         <div class="case-study-body">
                             <span class="case-client-badge">Education · Academic Institute</span>
@@ -1465,7 +1472,7 @@
                     <!-- Case Study 2: Euro Immigration Consultancy -->
                     <article class="case-study-card">
                         <div class="case-study-img-wrap">
-                            <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Consultancy Pakistan SEO Case Study" width="380" height="190" loading="lazy">
+                            <img src="images/Euro Immigration Consutlancy Pakistan.webp" alt="Euro Immigration Consultancy Pakistan SEO Case Study" width="380" height="195" loading="lazy">
                         </div>
                         <div class="case-study-body">
                             <span class="case-client-badge">Immigration · Visa Consultancy</span>
@@ -1496,7 +1503,7 @@
                     <!-- Case Study 3: NavidSaqib.com -->
                     <article class="case-study-card">
                         <div class="case-study-img-wrap">
-                            <img src="images/Navid saqib.webp" alt="Navid Saqib Corporate Training Portal Case Study" width="380" height="190" loading="lazy">
+                            <img src="images/Navid saqib.webp" alt="Navid Saqib Corporate Training Portal Case Study" width="380" height="195" loading="lazy">
                         </div>
                         <div class="case-study-body">
                             <span class="case-client-badge">Corporate Training · Personal Brand</span>
@@ -1535,121 +1542,117 @@
         </section>
 
         <!-- ==========================================================================
-           SECTION 5: CORE SERVICES
+           SECTION 5: COMPLETE SERVICES SUITE (Bento Architecture)
            ========================================================================== -->
         <section class="services-section" id="services">
             <div class="container">
                 <div class="section-header">
-                    <span class="section-kicker">Specialist Services</span>
-                    <h2 class="section-title">SEO & Web Design Services Designed for Business Growth</h2>
+                    <span class="section-kicker">Comprehensive Capabilities</span>
+                    <h2 class="section-title">Complete SEO & Web Support Built Around Your Business</h2>
                     <p class="section-lead">
-                        Targeted solutions to fix technical barriers, enhance search visibility, and convert organic website visitors into qualified customer inquiries.
+                        From technical foundation repair to conversion-focused WordPress architecture, every service is engineered to transform organic search into a compounding revenue driver.
                     </p>
                 </div>
 
-                <div class="services-grid-3">
-                    <!-- Service 1: SEO Services -->
-                    <div class="service-card-clean">
+                <div class="services-grid-bento">
+                    <!-- Service 1: SEO Services Pakistan -->
+                    <div class="service-bento-card">
                         <div>
-                            <div class="service-card-icon">
+                            <div class="service-bento-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                             </div>
-                            <h3 class="service-card-title">SEO Services</h3>
-                            <p class="service-card-copy">
+                            <h3 class="service-bento-title">SEO Services</h3>
+                            <p class="service-bento-copy">
                                 Improve organic search visibility through technical audits, keyword research, on-page optimization, content strategy, internal linking, and ethical link acquisition.
                             </p>
                         </div>
-                        <a href="seo-services-pakistan" class="service-card-link">
+                        <a href="seo-services-pakistan" class="service-bento-link">
                             Learn More About SEO Services
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
 
                     <!-- Service 2: Local SEO Services -->
-                    <div class="service-card-clean">
+                    <div class="service-bento-card">
                         <div>
-                            <div class="service-card-icon">
+                            <div class="service-bento-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                             </div>
-                            <h3 class="service-card-title">Local SEO Services</h3>
-                            <p class="service-card-copy">
+                            <h3 class="service-bento-title">Local SEO Services</h3>
+                            <p class="service-bento-copy">
                                 Help local customers discover your business through Google Business Profile optimization, local search targeting, location pages, and reputation management.
                             </p>
                         </div>
-                        <a href="seo-services-lahore" class="service-card-link">
+                        <a href="seo-services-lahore" class="service-bento-link">
                             Learn More About Local SEO
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
 
                     <!-- Service 3: WordPress Web Design -->
-                    <div class="service-card-clean">
+                    <div class="service-bento-card">
                         <div>
-                            <div class="service-card-icon">
+                            <div class="service-bento-icon">
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
                             </div>
-                            <h3 class="service-card-title">WordPress Web Design</h3>
-                            <p class="service-card-copy">
+                            <h3 class="service-bento-title">WordPress Web Design</h3>
+                            <p class="service-bento-copy">
                                 Build and improve WordPress websites with clear navigation, responsive layouts, maintainable page structures, and search-friendly implementation.
                             </p>
                         </div>
-                        <a href="wordpress-design-services" class="service-card-link">
-                            Learn More About WordPress Services
+                        <a href="wordpress-design-services" class="service-bento-link">
+                            Learn More About WordPress
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- ==========================================================================
-           SECTION 6: INDUSTRY EXPERTISE
-           ========================================================================== -->
-        <section class="industries-section" id="industries">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-kicker">Industry Focus</span>
-                    <h2 class="section-title">Specialized Experience in Key Sectors</h2>
-                    <p class="section-lead">
-                        Proven organic search strategies structured for the specific user journeys, inquiry timelines, and compliance requirements of specialized industries.
-                    </p>
-                </div>
-
-                <div class="industries-grid-2">
-                    <!-- Industry 1: Education SEO -->
-                    <div class="industry-card-clean">
+                    <!-- Service 4: Education SEO -->
+                    <div class="service-bento-card" id="industries">
                         <div>
-                            <div class="industry-card-header">
-                                <div class="industry-card-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
-                                </div>
-                                <h3 class="industry-card-title">Education SEO</h3>
+                            <div class="service-bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
                             </div>
-                            <p class="industry-card-copy">
+                            <h3 class="service-bento-title">Education SEO</h3>
+                            <p class="service-bento-copy">
                                 SEO strategies for schools, academies, tutors, and education platforms, focusing on relevant program searches, educational content, technical SEO, and admission inquiries.
                             </p>
                         </div>
-                        <a href="seo-services-education" class="industry-card-link">
-                            Explore Education SEO Services
+                        <a href="seo-services-education" class="service-bento-link">
+                            Explore Education SEO
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
 
-                    <!-- Industry 2: Immigration SEO -->
-                    <div class="industry-card-clean">
+                    <!-- Service 5: Immigration SEO -->
+                    <div class="service-bento-card">
                         <div>
-                            <div class="industry-card-header">
-                                <div class="industry-card-icon">
-                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
-                                </div>
-                                <h3 class="industry-card-title">Immigration SEO</h3>
+                            <div class="service-bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg>
                             </div>
-                            <p class="industry-card-copy">
+                            <h3 class="service-bento-title">Immigration SEO</h3>
+                            <p class="service-bento-copy">
                                 Search-focused content, technical improvements, and landing pages for visa and immigration consultancies seeking relevant prospective clients.
                             </p>
                         </div>
-                        <a href="seo-services-visa-consultancy" class="industry-card-link">
-                            Explore Visa Consultancy SEO Services
+                        <a href="seo-services-visa-consultancy" class="service-bento-link">
+                            Explore Visa SEO Services
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+                        </a>
+                    </div>
+
+                    <!-- Service 6: White-Label Agency Fulfillment -->
+                    <div class="service-bento-card">
+                        <div>
+                            <div class="service-bento-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path><circle cx="9" cy="7" r="4"></circle><path d="M23 21v-2a4 4 0 0 0-3-3.87"></path><path d="M16 3.13a4 4 0 0 1 0 7.75"></path></svg>
+                            </div>
+                            <h3 class="service-bento-title">Agency White-Label SEO</h3>
+                            <p class="service-bento-copy">
+                                Reliable SEO and WordPress fulfillment for international agencies and digital studios. Transparent reporting, ethical white-hat deliverables, and zero credit taken.
+                            </p>
+                        </div>
+                        <a href="contact" class="service-bento-link">
+                            Inquire for Agency Partnership
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                         </a>
                     </div>
@@ -1658,115 +1661,123 @@
         </section>
 
         <!-- ==========================================================================
-           SECTION 7: WHY WORK WITH IBRAR?
+           SECTION 6: COMPARISON MATRIX: SPECIALIST VS. TRADITIONAL AGENCY
            ========================================================================== -->
-        <section class="benefits-section">
+        <section class="comparison-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-kicker">Why Choose Ibrar</span>
-                    <h2 class="section-title">Practical, Data-Backed SEO Consulting</h2>
+                <div class="section-header text-center">
+                    <span class="section-kicker">Transparent Difference</span>
+                    <h2 class="section-title">Why Work with an Independent Consultant?</h2>
                     <p class="section-lead">
-                        No junior account managers, no inflated vanity metrics, and no vague recommendations. Just transparent technical depth and measurable results.
+                        Traditional digital agencies pass your project between junior account managers. Here is how direct specialist consulting provides superior accountability and ROI.
                     </p>
                 </div>
 
-                <div class="benefits-grid">
-                    <div class="benefit-card">
-                        <span class="benefit-card-num">01</span>
-                        <h3 class="benefit-card-title">Data-Backed Priorities</h3>
-                        <p class="benefit-card-desc">Clear SEO priorities based on actual website data, search intent, and Google Search Console performance metrics.</p>
-                    </div>
-
-                    <div class="benefit-card">
-                        <span class="benefit-card-num">02</span>
-                        <h3 class="benefit-card-title">Hands-on Fixes</h3>
-                        <p class="benefit-card-desc">Direct implementation of technical, on-page, and code-level fixes rather than passing generic checklists to your team.</p>
-                    </div>
-
-                    <div class="benefit-card">
-                        <span class="benefit-card-num">03</span>
-                        <h3 class="benefit-card-title">Transparent Reporting</h3>
-                        <p class="benefit-card-desc">Honest, regular performance reports highlighting real organic traffic, keyword movement, and inquiry generation.</p>
-                    </div>
-
-                    <div class="benefit-card">
-                        <span class="benefit-card-num">04</span>
-                        <h3 class="benefit-card-title">Long-term Growth</h3>
-                        <p class="benefit-card-desc">Ethical, white-hat strategies built to withstand core algorithm updates and build durable domain equity.</p>
-                    </div>
-
-                    <div class="benefit-card">
-                        <span class="benefit-card-num">05</span>
-                        <h3 class="benefit-card-title">Direct Communication</h3>
-                        <p class="benefit-card-desc">Direct collaboration with Ibrar Ahmad for faster decisions, straightforward guidance, and clear next steps.</p>
-                    </div>
+                <div class="comparison-table-wrap">
+                    <table class="comparison-table">
+                        <thead>
+                            <tr>
+                                <th>Criteria</th>
+                                <th class="highlight-col">SEO With Ibrar (Specialist)</th>
+                                <th>Generic Digital Agency</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Direct Communication</strong></td>
+                                <td class="highlight-col"><span class="table-check">&#10003; 1-on-1 direct access to Ibrar</span></td>
+                                <td><span class="table-cross">&#10007; Filtered through junior account reps</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Technical Execution</strong></td>
+                                <td class="highlight-col"><span class="table-check">&#10003; Hands-on code & WordPress repairs</span></td>
+                                <td><span class="table-cross">&#10007; Generic checklists without implementation</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Sector Specialization</strong></td>
+                                <td class="highlight-col"><span class="table-check">&#10003; Deep focus in Education & Visa sectors</span></td>
+                                <td><span class="table-cross">&#10007; Cookie-cutter approach across all industries</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Performance Reporting</strong></td>
+                                <td class="highlight-col"><span class="table-check">&#10003; Verified GSC clicks & real inquiry leads</span></td>
+                                <td><span class="table-cross">&#10007; Vanity metrics & automated PDF exports</span></td>
+                            </tr>
+                            <tr>
+                                <td><strong>Contract Flexibility</strong></td>
+                                <td class="highlight-col"><span class="table-check">&#10003; Transparent deliverables & milestones</span></td>
+                                <td><span class="table-cross">&#10007; Rigid lock-in annual contracts</span></td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </section>
 
         <!-- ==========================================================================
-           SECTION 8: WORKING PROCESS
+           SECTION 7: 5-STEP WORKING PROCESS ROADMAP
            ========================================================================== -->
         <section class="process-section">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-kicker">How We Work</span>
-                    <h2 class="section-title">A Structured, 4-Step Optimization Process</h2>
+                <div class="section-header text-center">
+                    <span class="section-kicker">Structured Execution</span>
+                    <h2 class="section-title">A Proven 5-Step SEO Growth Framework</h2>
                     <p class="section-lead">
-                        Every successful SEO campaign follows a systematic roadmap from diagnosis to compounding organic visibility.
+                        From initial technical crawl diagnosis to sustained, compounding organic revenue.
                     </p>
                 </div>
 
-                <div class="process-grid-4">
-                    <div class="process-step-item">
-                        <div class="process-step-num">
+                <div class="process-timeline-5">
+                    <div class="process-node">
+                        <div class="process-node-num">
                             <span>01</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
                         </div>
-                        <h3 class="process-step-title">Audit and Discovery</h3>
-                        <p class="process-step-desc">
-                            Comprehensive review of technical health, current keyword rankings, crawl errors, competitor landscape, and website architecture.
-                        </p>
+                        <h3 class="process-node-title">Audit & Discovery</h3>
+                        <p class="process-node-desc">Deep technical audit, crawl inspection, competitor gap analysis, and keyword baseline mapping.</p>
                     </div>
 
-                    <div class="process-step-item">
-                        <div class="process-step-num">
+                    <div class="process-node">
+                        <div class="process-node-num">
                             <span>02</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"></polyline></svg>
                         </div>
-                        <h3 class="process-step-title">Strategy and Prioritization</h3>
-                        <p class="process-step-desc">
-                            Developing a prioritized roadmap targeting highest-impact opportunities for search visibility and organic inquiries.
-                        </p>
+                        <h3 class="process-node-title">Strategy & Roadmap</h3>
+                        <p class="process-node-desc">Custom prioritized action plan targeting highest-impact organic keywords and conversion funnels.</p>
                     </div>
 
-                    <div class="process-step-item">
-                        <div class="process-step-num">
+                    <div class="process-node">
+                        <div class="process-node-num">
                             <span>03</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"></polyline><polyline points="8 6 2 12 8 18"></polyline></svg>
                         </div>
-                        <h3 class="process-step-title">Implementation</h3>
-                        <p class="process-step-desc">
-                            Executing on-page optimization, technical repairs, WordPress improvements, content architecture, and internal linking.
-                        </p>
+                        <h3 class="process-node-title">Technical Fixes</h3>
+                        <p class="process-node-desc">Direct hands-on code corrections, schema markup, site speed tuning, and Core Web Vitals optimization.</p>
                     </div>
 
-                    <div class="process-step-item">
-                        <div class="process-step-num">
+                    <div class="process-node">
+                        <div class="process-node-num">
                             <span>04</span>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line></svg>
+                        </div>
+                        <h3 class="process-node-title">Content & On-Page</h3>
+                        <p class="process-node-desc">Restructuring landing pages, search intent optimization, internal linking, and conversion-focused copy.</p>
+                    </div>
+
+                    <div class="process-node">
+                        <div class="process-node-num">
+                            <span>05</span>
                             <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10"></path><path d="M12 20V4"></path><path d="M6 20v-6"></path></svg>
                         </div>
-                        <h3 class="process-step-title">Measurement and Refinement</h3>
-                        <p class="process-step-desc">
-                            Tracking organic rankings, indexing, and conversions via Google Search Console and analytics to continuously refine results.
-                        </p>
+                        <h3 class="process-node-title">Measurement & Scale</h3>
+                        <p class="process-node-desc">Tracking Google Search Console rankings, CTR, and business inquiries to compound organic growth.</p>
                     </div>
                 </div>
             </div>
         </section>
 
         <!-- ==========================================================================
-           SECTION 9: ABOUT IBRAR AHMAD
+           SECTION 8: ABOUT IBRAR AHMAD
            ========================================================================== -->
         <section class="about-section" id="about">
             <div class="container">
@@ -1789,19 +1800,19 @@
 
                         <ul class="about-highlights">
                             <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 5+ years of verified SEO & WordPress experience
                             </li>
                             <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 Hands-on technical diagnostics and code implementation
                             </li>
                             <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 Deep specialization in education and immigration sectors
                             </li>
                             <li>
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
                                 Direct communication without intermediate account managers
                             </li>
                         </ul>
@@ -1819,11 +1830,7 @@
         </section>
 
         <!-- ==========================================================================
-           SECTION 10: TESTIMONIALS (Omitted per instructions until authenticated client feedback is collected)
-           ========================================================================== -->
-
-        <!-- ==========================================================================
-           SECTION 11: FAQS
+           SECTION 9: FAQS
            ========================================================================== -->
         <section class="faq-section">
             <div class="container">
@@ -1903,7 +1910,7 @@
         </section>
 
         <!-- ==========================================================================
-           SECTION 12: FINAL CTA & AUDIT FORM
+           SECTION 10: FINAL CTA & AUDIT FORM
            ========================================================================== -->
         <section class="final-cta-section" id="audit-form">
             <div class="container">
@@ -1917,15 +1924,15 @@
 
                         <div class="cta-contact-methods">
                             <a href="https://wa.me/923174835008" target="_blank" rel="noopener noreferrer" class="cta-contact-item">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
                                 <span>WhatsApp: +92 317 4835008</span>
                             </a>
                             <a href="mailto:info@seowithibrar.com" class="cta-contact-item">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
                                 <span>Email: info@seowithibrar.com</span>
                             </a>
                             <div class="cta-contact-item">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
                                 <span>Location: Lahore, Punjab, Pakistan</span>
                             </div>
                         </div>
@@ -1969,6 +1976,7 @@
                                             <option value="WordPress Web Design">WordPress Web Design</option>
                                             <option value="Education SEO">Education SEO</option>
                                             <option value="Visa Consultancy SEO">Visa Consultancy SEO</option>
+                                            <option value="Agency White-Label SEO">Agency White-Label SEO</option>
                                         </select>
                                     </div>
                                     <div class="form-group">
@@ -1996,7 +2004,7 @@
     </main>
 
     <!-- ==========================================================================
-       SECTION 13: FOOTER
+       SECTION 11: FOOTER
        ========================================================================== -->
     <footer class="site-footer">
         <div class="container">
