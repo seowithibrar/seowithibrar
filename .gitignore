@@ -2,3 +2,4 @@
 .gemini/
 __pycache__/
 *.pyc
+scratch/
