@@ -1,0 +1,537 @@
+/* ==========================================================================
+   BENTO GRID HERO SECTION (Consistent Across All Service Pages)
+   Matches reference Bento layout with brand Electric Lime & Dark Surfaces
+   ========================================================================== */
+
+.bento-hero-section {
+  position: relative;
+  padding: 48px 0 120px 0;
+  background: radial-gradient(circle at 85% 15%, rgba(163, 234, 67, 0.10) 0%, transparent 55%),
+              radial-gradient(circle at 10% 85%, rgba(20, 24, 33, 0.8) 0%, transparent 50%),
+              #080808;
+  border-bottom: 1px solid var(--bg-dark-border, #1E222D);
+  overflow: hidden;
+}
+
+.hero-layout-grid {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  gap: 44px;
+  align-items: center;
+}
+
+/* Left Column */
+.hero-left-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Eyebrow Pill */
+.eyebrow-pill-dark {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 11.5px;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--accent-brand, #A3EA43);
+  background: rgba(163, 234, 67, 0.1);
+  border: 1px solid rgba(163, 234, 67, 0.25);
+  padding: 6px 14px;
+  border-radius: 9999px;
+  margin-bottom: 16px;
+}
+
+/* H1 Title: Made smaller per user request ("H1 font size kuch small kar doo") */
+.hero-title {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: clamp(28px, 3.2vw, 38px);
+  font-weight: 800;
+  line-height: 1.18;
+  color: #FFFFFF;
+  letter-spacing: -0.025em;
+  margin-bottom: 16px;
+}
+
+.hero-title-italic {
+  font-style: italic;
+  color: var(--accent-brand, #A3EA43);
+  font-weight: 800;
+}
+
+.hero-lead-text {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 15.5px;
+  line-height: 1.65;
+  color: #CBD5E1;
+  margin-bottom: 12px;
+}
+
+.hero-subtext {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 14px;
+  line-height: 1.6;
+  color: #94A3B8;
+  margin-bottom: 14px;
+}
+
+.hero-tags-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.hero-tag-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: #E2E8F0;
+  font-size: 12px;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 6px;
+}
+
+.hero-audit-hook {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  background: rgba(163, 234, 67, 0.08);
+  border-left: 3px solid var(--accent-brand, #A3EA43);
+  padding: 10px 16px;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 22px;
+}
+
+/* Button Row (Pill Buttons matching reference) */
+.hero-btn-row {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+  margin-bottom: 26px;
+}
+
+.btn-pill-lime {
+  background: var(--accent-brand, #A3EA43);
+  color: #080808 !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 13px 26px;
+  border-radius: 9999px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 4px 18px rgba(163, 234, 67, 0.38);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-pill-lime:hover {
+  background: #B6F858;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(163, 234, 67, 0.55);
+}
+
+.btn-pill-outline {
+  background: transparent;
+  color: #FFFFFF !important;
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 13px 24px;
+  border-radius: 9999px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.btn-pill-outline:hover {
+  border-color: var(--accent-brand, #A3EA43);
+  color: var(--accent-brand, #A3EA43) !important;
+  background: rgba(163, 234, 67, 0.08);
+  transform: translateY(-2px);
+}
+
+.btn-pill-lime:focus-visible,
+.btn-pill-outline:focus-visible {
+  outline: 2px solid var(--accent-brand, #A3EA43);
+  outline-offset: 3px;
+}
+
+/* Social Proof Rating Row (Reference layout) */
+.hero-social-proof {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.avatar-group {
+  display: flex;
+  align-items: center;
+}
+
+.avatar-group img,
+.avatar-group .avatar-more {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid #080808;
+  object-fit: cover;
+  margin-left: -9px;
+}
+
+.avatar-group img:first-child {
+  margin-left: 0;
+}
+
+.avatar-more {
+  background: #1E2330;
+  color: var(--accent-brand, #A3EA43);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 11px;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-proof-meta {
+  display: flex;
+  flex-direction: column;
+}
+
+.social-proof-label {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.3;
+}
+
+.social-proof-stars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #FACC15;
+  margin-top: 2px;
+}
+
+.social-proof-score {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 11.5px;
+  color: #94A3B8;
+  font-weight: 600;
+}
+
+/* ==========================================================================
+   RIGHT SIDE: 5-CARD BENTO GRID (Exact match to reference layout)
+   ========================================================================== */
+.hero-bento-grid {
+  display: grid;
+  grid-template-columns: 0.95fr 1.15fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+.bento-col-left {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.bento-col-right {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Card 1: Top Left Stat Card */
+.bento-card-stat {
+  background: #11141E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 22px 20px;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.bento-card-stat:hover {
+  transform: translateY(-2px);
+  border-color: rgba(163, 234, 67, 0.35);
+}
+
+.bento-stat-num {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1;
+  color: #FFFFFF;
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+}
+
+.bento-stat-label {
+  font-family: var(--font-body, 'Inter', sans-serif);
+  font-size: 12.5px;
+  color: #94A3B8;
+  line-height: 1.4;
+  font-weight: 500;
+}
+
+/* Card 3: Tall Image Card */
+.bento-card-image {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #11141E;
+  height: 300px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.4);
+}
+
+.bento-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
+  transition: transform 0.4s ease;
+  display: block;
+}
+
+.bento-card-image:hover img {
+  transform: scale(1.04);
+}
+
+.bento-image-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  right: 12px;
+  background: rgba(8, 10, 15, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 10px;
+  padding: 8px 12px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.bento-badge-name {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 12px;
+  font-weight: 700;
+  color: #FFFFFF;
+}
+
+.bento-badge-role {
+  font-size: 11px;
+  color: var(--accent-brand, #A3EA43);
+  font-weight: 600;
+}
+
+/* Card 2: Top Right Luxury Dark Card */
+.bento-card-balance {
+  background: #0B0D13;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.5);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.bento-card-balance:hover {
+  transform: translateY(-2px);
+  border-color: rgba(163, 234, 67, 0.35);
+}
+
+.bento-balance-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.bento-balance-label {
+  font-size: 11px;
+  font-weight: 600;
+  color: #94A3B8;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.bento-balance-icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 6px;
+  background: rgba(163, 234, 67, 0.15);
+  color: var(--accent-brand, #A3EA43);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bento-balance-value {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 32px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 10px;
+}
+
+.bento-balance-meta {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 11px;
+  color: #64748B;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+  padding-top: 8px;
+}
+
+/* Card 4: Middle Right Metric Trend Card */
+.bento-card-trend {
+  background: #11141E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 20px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.35);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.bento-card-trend:hover {
+  transform: translateY(-2px);
+  border-color: rgba(163, 234, 67, 0.35);
+}
+
+.bento-trend-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.bento-trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(163, 234, 67, 0.15);
+  color: var(--accent-brand, #A3EA43);
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 11px;
+  font-weight: 800;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+.bento-trend-icon {
+  color: #64748B;
+}
+
+.bento-trend-label {
+  font-size: 11.5px;
+  color: #94A3B8;
+  margin-bottom: 3px;
+}
+
+.bento-trend-value {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 26px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+/* Card 5: Bottom Right Electric Lime Accent Card */
+.bento-card-accent {
+  background: linear-gradient(135deg, #A3EA43 0%, #8EE028 100%);
+  border-radius: 20px;
+  padding: 20px 20px;
+  box-shadow: 0 12px 28px rgba(163, 234, 67, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.bento-card-accent::after {
+  content: '';
+  position: absolute;
+  top: -20px;
+  right: -20px;
+  width: 90px;
+  height: 90px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.bento-card-accent:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(163, 234, 67, 0.45);
+}
+
+.bento-accent-num {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 34px;
+  font-weight: 800;
+  line-height: 1;
+  color: #080808;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+}
+
+.bento-accent-label {
+  font-family: var(--font-heading, 'Plus Jakarta Sans', sans-serif);
+  font-size: 12.5px;
+  font-weight: 700;
+  color: #080808;
+  line-height: 1.35;
+}
+
+/* Responsive */
+@media (max-width: 1080px) {
+  .hero-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+  .hero-bento-grid {
+    max-width: 580px;
+  }
+}
+
+@media (max-width: 640px) {
+  .hero-bento-grid {
+    grid-template-columns: 1fr;
+  }
+  .bento-card-image {
+    height: 240px;
+  }
+  .hero-title {
+    font-size: 26px;
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/portfolio",
+      "destination": "/#portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/portfolio.html",
+      "destination": "/#portfolio",
+      "permanent": true
+    },
+    {
+      "source": "/seo-services-for-visa-consultancy",
+      "destination": "/seo-services-visa-consultancy",
+      "permanent": true
+    },
+    {
+      "source": "/seo-services-for-visa-consultancy.html",
+      "destination": "/seo-services-visa-consultancy",
+      "permanent": true
+    },
+    {
+      "source": "/geo-generative-engine-optimization-vs-traditional-seo",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/geo-generative-engine-optimization-vs-traditional-seo.html",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/ultimate-guide-to-wordpress-speed-optimization",
+      "destination": "/blog",
+      "permanent": true
+    },
+    {
+      "source": "/ultimate-guide-to-wordpress-speed-optimization.html",
+      "destination": "/blog",
+      "permanent": true
+    }
+  ]
+}

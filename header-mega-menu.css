@@ -1,0 +1,582 @@
+/* ==========================================================================
+   HEADER & MEGA-MENU LAYOUT (WebFX Style)
+   5-Column Mega Dropdown (4 Category Cards + 1 Featured Promo Card)
+   Designed for SEO With Ibrar Ahmad
+   ========================================================================== */
+
+/* Header Root & Bar */
+.site-header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 74px;
+  background: rgba(8, 8, 8, 0.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  z-index: 10000;
+  transition: all 0.28s ease;
+}
+
+.site-header.scrolled {
+  background: rgba(6, 7, 10, 0.98);
+  border-bottom-color: rgba(163, 234, 67, 0.2);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.header-inner {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+/* Brand Logo */
+.brand-logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  text-decoration: none;
+}
+
+.brand-logo img {
+  height: 40px;
+  width: auto;
+  max-width: 185px;
+  object-fit: contain;
+  display: block;
+}
+
+/* Navigation Menu */
+.nav-menu {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-link {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.78);
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 24px 0;
+  position: relative;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  cursor: pointer;
+}
+
+.nav-link:hover,
+.nav-link.active,
+.nav-item-dropdown:hover > .nav-link {
+  color: #A3EA43;
+}
+
+/* Chevron indicator */
+.nav-chevron {
+  width: 11px;
+  height: 11px;
+  transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), stroke 0.2s ease;
+  stroke: currentColor;
+}
+
+.nav-item-dropdown:hover .nav-chevron,
+.nav-item-dropdown.is-open .nav-chevron {
+  transform: rotate(180deg);
+  stroke: #A3EA43;
+}
+
+/* Action Area (Right) */
+.header-action {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-shrink: 0;
+}
+
+.header-btn {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  padding: 11px 22px;
+  border-radius: 6px;
+  background: #A3EA43;
+  color: #080808 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(163, 234, 67, 0.35);
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  white-space: nowrap;
+}
+
+.header-btn:hover {
+  background: #B8FA5C;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(163, 234, 67, 0.5);
+}
+
+/* ==========================================================================
+   MEGA MENU WRAPPER & 5-COLUMN GRID (WebFX Layout)
+   ========================================================================== */
+.nav-item-dropdown {
+  position: static; /* Allows mega menu to span full header width */
+}
+
+.mega-menu-wrapper {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background: #090B10;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom: 2px solid rgba(163, 234, 67, 0.35);
+  box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.7);
+  padding: 24px 0 28px 0;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+  transform: translateY(8px);
+  transition: opacity 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              visibility 0.25s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  z-index: 999;
+}
+
+.nav-item-dropdown:hover .mega-menu-wrapper,
+.nav-item-dropdown.is-open .mega-menu-wrapper {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transform: translateY(0);
+}
+
+/* 5-Column Grid */
+.mega-menu-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr) 1.25fr;
+  gap: 16px;
+  align-items: stretch;
+}
+
+/* Base Card Style (Columns 1 to 4) */
+.mega-card {
+  background: #11141E;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 22px 20px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.22s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+  position: relative;
+  overflow: hidden;
+}
+
+.mega-card:hover {
+  background: #141824;
+  border-color: rgba(163, 234, 67, 0.4);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.5), 0 0 16px rgba(163, 234, 67, 0.12);
+}
+
+/* Card Header: Title + Icon Badge */
+.mega-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 16px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.mega-card-title {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 800;
+  color: #FFFFFF;
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+  margin: 0;
+}
+
+/* Icon Badge (Top Right of Card) */
+.mega-card-badge {
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.mega-card:hover .mega-card-badge {
+  transform: scale(1.08);
+}
+
+.badge-cyan {
+  background: rgba(56, 189, 248, 0.14);
+  color: #38BDF8;
+  border: 1px solid rgba(56, 189, 248, 0.25);
+}
+
+.badge-mint {
+  background: rgba(45, 212, 191, 0.14);
+  color: #2DD4BF;
+  border: 1px solid rgba(45, 212, 191, 0.25);
+}
+
+.badge-lime {
+  background: rgba(163, 234, 67, 0.14);
+  color: #A3EA43;
+  border: 1px solid rgba(163, 234, 67, 0.25);
+}
+
+.badge-gold {
+  background: rgba(250, 204, 21, 0.14);
+  color: #FACC15;
+  border: 1px solid rgba(250, 204, 21, 0.25);
+}
+
+/* Links List */
+.mega-links-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.mega-link {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  color: #94A3B8;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  line-height: 1.4;
+  padding: 3px 0;
+  transition: all 0.18s ease;
+  position: relative;
+}
+
+.mega-link:hover {
+  color: #FFFFFF;
+  transform: translateX(4px);
+}
+
+.mega-link:hover .link-text {
+  color: #A3EA43;
+}
+
+.mega-link.is-active .link-text {
+  color: #A3EA43;
+  font-weight: 700;
+}
+
+.mega-link-badge {
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background: rgba(163, 234, 67, 0.15);
+  color: #A3EA43;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+/* ==========================================================================
+   FEATURED CASE STUDY CARD (Column 5 - WebFX Target Style)
+   ========================================================================== */
+.mega-card-promo {
+  background: linear-gradient(155deg, rgba(20, 26, 38, 0.95) 0%, rgba(11, 15, 23, 0.98) 100%);
+  border: 1.5px solid rgba(163, 234, 67, 0.45);
+  border-radius: 14px;
+  padding: 24px 22px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4), 0 0 20px rgba(163, 234, 67, 0.12);
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+}
+
+.mega-card-promo::before {
+  content: '';
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  width: 140px;
+  height: 140px;
+  background: radial-gradient(circle, rgba(163, 234, 67, 0.15) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.mega-card-promo:hover {
+  border-color: #A3EA43;
+  transform: translateY(-2px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.55), 0 0 26px rgba(163, 234, 67, 0.25);
+}
+
+.mega-promo-stat {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 42px;
+  font-weight: 800;
+  line-height: 1;
+  color: #A3EA43;
+  letter-spacing: -0.03em;
+  margin-bottom: 6px;
+  text-shadow: 0 0 22px rgba(163, 234, 67, 0.35);
+}
+
+.mega-promo-title {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  font-weight: 700;
+  color: #FFFFFF;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  max-width: 190px;
+}
+
+/* Target Graphic (Exact match to reference illustration) */
+.mega-promo-graphic {
+  width: 100px;
+  height: 100px;
+  margin: 6px auto 16px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.mega-card-promo:hover .mega-promo-graphic {
+  transform: scale(1.05);
+}
+
+/* Promo CTA Button */
+.mega-promo-btn {
+  width: 100%;
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 12.5px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  padding: 12px 18px;
+  border-radius: 8px;
+  background: #A3EA43;
+  color: #080808 !important;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  box-shadow: 0 4px 16px rgba(163, 234, 67, 0.35);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.mega-promo-btn:hover {
+  background: #B6F858;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(163, 234, 67, 0.5);
+}
+
+/* ==========================================================================
+   MOBILE & TABLET RESPONSIVE DRAWER
+   ========================================================================== */
+.mobile-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+  flex-direction: column;
+  gap: 5px;
+  z-index: 1001;
+}
+
+.mobile-toggle span {
+  display: block;
+  width: 24px;
+  height: 2.5px;
+  background: #FFFFFF;
+  border-radius: 2px;
+  transition: all 0.22s ease;
+}
+
+.mobile-drawer {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  background: rgba(8, 10, 15, 0.98);
+  backdrop-filter: blur(16px);
+  z-index: 100000;
+  padding: 24px 20px;
+  overflow-y: auto;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateX(100%);
+  transition: all 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.mobile-drawer.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateX(0);
+}
+
+.mobile-drawer-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 20px;
+}
+
+.close-drawer-btn {
+  background: none;
+  border: none;
+  color: #FFFFFF;
+  font-size: 24px;
+  cursor: pointer;
+  padding: 6px;
+  line-height: 1;
+}
+
+.mobile-nav-items {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-nav-link {
+  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: #FFFFFF;
+  text-decoration: none;
+  padding: 12px 14px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-nav-link:hover,
+.mobile-nav-link.active {
+  background: rgba(163, 234, 67, 0.12);
+  color: #A3EA43;
+}
+
+.mobile-accordion-toggle {
+  cursor: pointer;
+}
+
+.mobile-sub-menu {
+  padding-left: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 4px;
+}
+
+.mobile-sub-link {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 13.5px;
+  color: #94A3B8;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 6px;
+  display: block;
+}
+
+.mobile-sub-link:hover,
+.mobile-sub-link.active {
+  color: #A3EA43;
+  background: rgba(163, 234, 67, 0.08);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1200px) {
+  .nav-menu {
+    gap: 20px;
+  }
+  .mega-menu-grid {
+    grid-template-columns: repeat(2, 1fr) 1.2fr;
+    gap: 14px;
+  }
+  .mega-card-promo {
+    grid-column: span 1;
+  }
+}
+
+@media (max-width: 1024px) {
+  .site-header nav {
+    display: none;
+  }
+  .mega-menu-wrapper {
+    display: none;
+  }
+  .mobile-toggle {
+    display: flex;
+  }
+}
+
+/* ==========================================================================
+   ACCESSIBILITY & FOCUS-VISIBLE ENHANCEMENTS (WCAG AA Compliance)
+   ========================================================================== */
+.nav-link:focus-visible,
+.header-btn:focus-visible,
+.mega-link:focus-visible,
+.mega-promo-btn:focus-visible,
+.mobile-toggle:focus-visible,
+.close-drawer-btn:focus-visible,
+.mobile-nav-link:focus-visible {
+  outline: 2px solid #A3EA43 !important;
+  outline-offset: 3px !important;
+  border-radius: 4px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .mega-menu-wrapper {
+    transition: none !important;
+    transform: none !important;
+  }
+}

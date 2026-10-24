@@ -1,0 +1,12 @@
+# Permanent 301 Redirects
+/portfolio /#portfolio 301
+/portfolio.html /#portfolio 301
+/seo-services-for-visa-consultancy /seo-services-visa-consultancy 301
+/seo-services-for-visa-consultancy.html /seo-services-visa-consultancy 301
+/geo-generative-engine-optimization-vs-traditional-seo /blog 301
+/geo-generative-engine-optimization-vs-traditional-seo.html /blog 301
+/ultimate-guide-to-wordpress-speed-optimization /blog 301
+/ultimate-guide-to-wordpress-speed-optimization.html /blog 301
+
+# Netlify clean URL rules
+/* /:splat.html 200

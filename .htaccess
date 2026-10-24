@@ -1,0 +1,16 @@
+RewriteEngine On
+
+# 301 Redirects for legacy URLs
+RewriteRule ^portfolio(\.html)?$ /#portfolio [R=301,L,NE]
+RewriteRule ^seo-services-for-visa-consultancy(\.html)?$ /seo-services-visa-consultancy [R=301,L]
+RewriteRule ^geo-generative-engine-optimization-vs-traditional-seo(\.html)?$ /blog [R=301,L]
+RewriteRule ^ultimate-guide-to-wordpress-speed-optimization(\.html)?$ /blog [R=301,L]
+
+# Redirect explicit .html requests to extensionless URLs
+RewriteCond %{THE_REQUEST} \s/+(.+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# Internally rewrite extensionless requests to .html files
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.*)$ $1.html [L]
