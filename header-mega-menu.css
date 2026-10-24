@@ -11,18 +11,18 @@
   left: 0;
   width: 100%;
   height: 74px;
-  background: rgba(8, 8, 8, 0.94);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
+  background: rgba(7, 9, 14, 0.88);
+  backdrop-filter: blur(20px) saturate(180%);
+  -webkit-backdrop-filter: blur(20px) saturate(180%);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   z-index: 10000;
   transition: all 0.28s ease;
 }
 
 .site-header.scrolled {
-  background: rgba(6, 7, 10, 0.98);
-  border-bottom-color: rgba(163, 234, 67, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+  background: rgba(5, 7, 11, 0.96);
+  border-bottom-color: rgba(163, 234, 67, 0.28);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.7), 0 0 20px rgba(163, 234, 67, 0.06);
 }
 
 .header-inner {
@@ -142,10 +142,12 @@
   left: 0;
   right: 0;
   width: 100%;
-  background: #090B10;
+  background: rgba(8, 10, 16, 0.96);
+  backdrop-filter: blur(24px);
+  -webkit-backdrop-filter: blur(24px);
   border-top: 1px solid rgba(255, 255, 255, 0.08);
-  border-bottom: 2px solid rgba(163, 234, 67, 0.35);
-  box-shadow: 0 35px 70px -10px rgba(0, 0, 0, 0.9), 0 0 30px rgba(0, 0, 0, 0.7);
+  border-bottom: 2px solid rgba(163, 234, 67, 0.45);
+  box-shadow: 0 40px 80px -10px rgba(0, 0, 0, 0.95), 0 0 40px rgba(163, 234, 67, 0.08);
   padding: 24px 0 28px 0;
   opacity: 0;
   visibility: hidden;
@@ -175,7 +177,9 @@
 
 /* Base Card Style (Columns 1 to 4) */
 .mega-card {
-  background: #11141E;
+  background: rgba(15, 18, 28, 0.85);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   padding: 22px 20px 20px 20px;
@@ -188,10 +192,10 @@
 }
 
 .mega-card:hover {
-  background: #141824;
-  border-color: rgba(163, 234, 67, 0.4);
+  background: rgba(20, 25, 38, 0.95);
+  border-color: rgba(163, 234, 67, 0.45);
   transform: translateY(-2px);
-  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.5), 0 0 16px rgba(163, 234, 67, 0.12);
+  box-shadow: 0 12px 30px -4px rgba(0, 0, 0, 0.6), 0 0 20px rgba(163, 234, 67, 0.15);
 }
 
 /* Card Header: Title + Icon Badge */
@@ -252,7 +256,7 @@
 .badge-gold {
   background: rgba(250, 204, 21, 0.14);
   color: #FACC15;
-  border: 1px solid rgba(250, 204, 21, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 /* Links List */
@@ -294,14 +298,16 @@
 }
 
 .mega-link-badge {
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 9.5px;
   font-weight: 800;
-  padding: 2px 6px;
+  padding: 2px 7px;
   border-radius: 4px;
-  background: rgba(163, 234, 67, 0.15);
+  background: rgba(163, 234, 67, 0.14);
   color: #A3EA43;
   text-transform: uppercase;
-  letter-spacing: 0.04em;
+  letter-spacing: 0.06em;
+  border: 1px solid rgba(163, 234, 67, 0.24);
 }
 
 /* ==========================================================================
@@ -342,14 +348,15 @@
 }
 
 .mega-promo-stat {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-  font-size: 42px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 40px;
   font-weight: 800;
   line-height: 1;
   color: #A3EA43;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.04em;
   margin-bottom: 6px;
   text-shadow: 0 0 22px rgba(163, 234, 67, 0.35);
+  font-variant-numeric: tabular-nums;
 }
 
 .mega-promo-title {

@@ -8,9 +8,9 @@
   inset: 0;
   width: 100vw;
   height: 100vh;
-  background: rgba(4, 6, 10, 0.78);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(4, 6, 11, 0.86);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
   z-index: 999999;
   display: flex;
   align-items: center;
@@ -34,11 +34,13 @@
   max-width: 900px;
   max-height: 94vh;
   overflow-y: auto;
-  background: #0B0D13;
+  background: rgba(11, 14, 22, 0.98);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 20px;
-  border: 1px solid rgba(163, 234, 67, 0.28);
+  border: 1px solid rgba(163, 234, 67, 0.35);
   border-top: 3px solid #A3EA43;
-  box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(163, 234, 67, 0.15);
+  box-shadow: 0 40px 90px -15px rgba(0, 0, 0, 0.95), 0 0 45px rgba(163, 234, 67, 0.16);
   transform: scale(0.94) translateY(14px);
   transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -57,10 +59,10 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   padding: 9px 18px;
   border-radius: 6px;
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 11px;
-  font-weight: 800;
-  letter-spacing: 0.1em;
+  font-weight: 700;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   display: inline-flex;
   align-items: center;
@@ -99,13 +101,26 @@
 }
 
 .consult-kicker {
-  font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
   font-size: 11.5px;
-  font-weight: 800;
+  font-weight: 700;
   letter-spacing: 0.14em;
   color: #A3EA43;
   text-transform: uppercase;
   margin-bottom: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.consult-kicker::before {
+  content: '';
+  display: inline-block;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #A3EA43;
+  box-shadow: 0 0 8px #A3EA43;
 }
 
 .consult-heading {
@@ -145,7 +160,8 @@
   align-items: center;
   justify-content: space-between;
   padding: 14px 18px;
-  background: #12151E;
+  background: rgba(18, 22, 33, 0.85);
+  backdrop-filter: blur(12px);
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: 12px;
   text-decoration: none;
@@ -154,10 +170,10 @@
 }
 
 .consult-channel-card:hover {
-  border-color: rgba(163, 234, 67, 0.6);
-  background: #171B26;
+  border-color: rgba(163, 234, 67, 0.55);
+  background: rgba(23, 28, 42, 0.95);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.5), 0 0 16px rgba(163, 234, 67, 0.18);
+  box-shadow: 0 0 0 1px rgba(163, 234, 67, 0.2), 0 10px 26px -4px rgba(0, 0, 0, 0.6);
 }
 
 .consult-channel-left {
@@ -224,11 +240,12 @@
 }
 
 .consult-channel-detail {
-  font-family: 'Inter', system-ui, -apple-system, sans-serif;
-  font-size: 13px;
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+  font-size: 12.5px;
   color: #94A3B8;
   margin-top: 2px;
   line-height: 1.4;
+  letter-spacing: -0.01em;
 }
 
 .consult-channel-arrow {

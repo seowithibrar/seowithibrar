@@ -17,7 +17,7 @@
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet"/>
 <link href="consult-modal.css" rel="stylesheet"/>
 <link href="sticky-banner.css" rel="stylesheet"/>
 <style>
@@ -26,20 +26,20 @@
        ========================================================================== */
     :root {
       /* Color Palette Per Master Prompt */
-      --bg-dark-primary: #080808;
-      --bg-dark-secondary: #101010;
-      --bg-dark-card: #141414;
-      --bg-dark-border: #222222;
+      --bg-dark-primary: #07090E;
+      --bg-dark-secondary: #0D111A;
+      --bg-dark-card: #121622;
+      --bg-dark-border: rgba(255, 255, 255, 0.08);
 
       --accent-orange: #A3EA43; /* Electric Lime from Logo */
       --accent-orange-warm: #8EE028;
-      --accent-orange-glow: rgba(163, 234, 67, 0.32);
+      --accent-orange-glow: rgba(163, 234, 67, 0.35);
       --accent-orange-subtle: rgba(163, 234, 67, 0.12);
       --accent-green-dark: #3F7504; /* High-contrast text on white (WCAG AA) */
 
       --text-white: #FFFFFF;
       --text-body: #555555;
-      --text-muted: #999999;
+      --text-muted: #94A3B8;
       --text-dark-headings: #111111;
 
       --bg-light: #F7F7F5;
@@ -50,6 +50,7 @@
       /* Typography */
       --font-heading: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
       --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+      --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
 
       /* Spacing & Radii (Crisp, minimal rounded corners per spec) */
       --radius-xs: 4px;
@@ -65,6 +66,7 @@
       --shadow-hover: 0 12px 32px rgba(0, 0, 0, 0.12);
       --shadow-dark-card: 0 16px 40px rgba(0, 0, 0, 0.6);
       --shadow-orange-btn: 0 6px 20px rgba(163, 234, 67, 0.35);
+      --card-glow-lime: 0 0 0 1px rgba(163, 234, 67, 0.3), 0 16px 36px -8px rgba(163, 234, 67, 0.16);
 
       --transition-fast: 0.2s ease;
       --transition-base: 0.28s cubic-bezier(0.16, 1, 0.3, 1);
@@ -509,6 +511,8 @@
        ========================================================================== */
     .hero-section {
       background-color: var(--bg-dark-primary);
+      background-image: radial-gradient(rgba(163, 234, 67, 0.08) 1px, transparent 1px);
+      background-size: 24px 24px;
       padding-top: calc(var(--header-height) + 64px);
       padding-bottom: 84px;
       position: relative;
@@ -547,27 +551,34 @@
       gap: 8px;
       background: rgba(163, 234, 67, 0.1);
       border: 1px solid rgba(163, 234, 67, 0.3);
-      padding: 5px 14px;
-      border-radius: var(--radius-xs);
-      font-family: var(--font-heading);
+      padding: 6px 14px;
+      border-radius: 9999px;
+      font-family: var(--font-mono);
       font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 0.12em;
+      font-weight: 700;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       color: var(--accent-orange);
       margin-bottom: 22px;
     }
     .status-dot {
+      position: relative;
       width: 7px;
       height: 7px;
       background: var(--accent-orange);
       border-radius: 50%;
-      box-shadow: 0 0 10px var(--accent-orange);
-      animation: pulseGlow 2s infinite ease-in-out;
     }
-    @keyframes pulseGlow {
-      0%, 100% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(0.8); opacity: 0.5; }
+    .status-dot::after {
+      content: '';
+      position: absolute;
+      inset: -4px;
+      border-radius: 50%;
+      border: 1.5px solid var(--accent-orange);
+      animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite;
+    }
+    @keyframes pulse-ring {
+      0% { transform: scale(0.6); opacity: 0.9; }
+      70%, 100% { transform: scale(2.2); opacity: 0; }
     }
 
     .hero-h1 {
@@ -606,14 +617,16 @@
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
     .trust-stat-item h4 {
-      font-family: var(--font-heading);
-      font-size: 22px;
+      font-family: var(--font-mono);
+      font-size: 24px;
       font-weight: 800;
       color: #FFFFFF;
-      letter-spacing: -0.02em;
+      letter-spacing: -0.03em;
+      font-variant-numeric: tabular-nums;
     }
     .trust-stat-item p {
-      font-size: 11px;
+      font-family: var(--font-mono);
+      font-size: 10px;
       font-weight: 700;
       letter-spacing: 0.08em;
       text-transform: uppercase;
@@ -622,11 +635,13 @@
 
     /* Hero Right: Marketing Analytics Dashboard */
     .hero-dashboard-mockup {
-      background: var(--bg-dark-secondary);
+      background: rgba(13, 17, 26, 0.9);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
       border: 1px solid rgba(255, 255, 255, 0.1);
       border-radius: var(--radius-sm);
       padding: 24px;
-      box-shadow: var(--shadow-dark-card);
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.8), 0 0 30px rgba(163, 234, 67, 0.08);
       position: relative;
     }
     .dash-topbar {
@@ -652,13 +667,14 @@
     .dash-dot:nth-child(3) { background: #27C93F; }
 
     .dash-badge {
-      font-family: var(--font-heading);
+      font-family: var(--font-mono);
       font-size: 11px;
-      font-weight: 800;
+      font-weight: 700;
       color: var(--accent-orange);
       background: rgba(163, 234, 67, 0.12);
       padding: 3px 10px;
       border-radius: var(--radius-xs);
+      border: 1px solid rgba(163, 234, 67, 0.22);
     }
 
     .dash-metrics-grid {
@@ -669,12 +685,18 @@
     }
     .dash-tile {
       background: rgba(255, 255, 255, 0.03);
-      border: 1px solid rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.06);
       padding: 12px;
       border-radius: var(--radius-xs);
+      transition: all 0.2s ease;
+    }
+    .dash-tile:hover {
+      border-color: rgba(163, 234, 67, 0.35);
+      background: rgba(255, 255, 255, 0.05);
     }
     .dash-tile-label {
-      font-size: 10px;
+      font-family: var(--font-mono);
+      font-size: 9.5px;
       font-weight: 700;
       text-transform: uppercase;
       letter-spacing: 0.08em;
@@ -682,12 +704,14 @@
       margin-bottom: 4px;
     }
     .dash-tile-value {
-      font-family: var(--font-heading);
+      font-family: var(--font-mono);
       font-size: 18px;
       font-weight: 800;
       color: #FFFFFF;
+      font-variant-numeric: tabular-nums;
     }
     .dash-tile-growth {
+      font-family: var(--font-mono);
       font-size: 11px;
       font-weight: 700;
       color: #27C93F;
@@ -709,19 +733,22 @@
       margin-bottom: 12px;
     }
     .dash-chart-title {
-      font-family: var(--font-heading);
-      font-size: 12px;
+      font-family: var(--font-mono);
+      font-size: 11.5px;
       font-weight: 700;
       text-transform: uppercase;
+      letter-spacing: 0.04em;
       color: #CCCCCC;
     }
     .dash-chart-growth-tag {
+      font-family: var(--font-mono);
       font-size: 11px;
       font-weight: 800;
       color: var(--accent-orange);
       background: rgba(163, 234, 67, 0.15);
       padding: 2px 8px;
       border-radius: var(--radius-xs);
+      border: 1px solid rgba(163, 234, 67, 0.25);
     }
 
     .dash-live-campaigns {
@@ -743,6 +770,7 @@
       font-weight: 600;
     }
     .dash-campaign-metric {
+      font-family: var(--font-mono);
       color: #27C93F;
       font-weight: 700;
     }
@@ -865,13 +893,14 @@
       background: rgba(8, 8, 8, 0.18);
     }
     .stat-banner-num {
-      font-family: var(--font-heading);
+      font-family: var(--font-mono);
       font-size: clamp(38px, 4.5vw, 56px);
-      font-weight: 900;
+      font-weight: 800;
       line-height: 1;
       margin-bottom: 8px;
-      letter-spacing: -0.03em;
+      letter-spacing: -0.04em;
       color: #080808;
+      font-variant-numeric: tabular-nums;
     }
     .stat-banner-label {
       font-family: var(--font-heading);
@@ -990,9 +1019,11 @@
       margin-top: 52px;
     }
     .case-card {
-      background: var(--bg-dark-secondary);
-      border: 1px solid var(--bg-dark-border);
-      border-radius: var(--radius-xs);
+      background: rgba(13, 17, 26, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
       overflow: hidden;
       display: flex;
       flex-direction: column;
@@ -1000,9 +1031,9 @@
       cursor: pointer;
     }
     .case-card:hover {
-      border-color: var(--accent-orange);
+      border-color: rgba(163, 234, 67, 0.45);
       transform: translateY(-4px);
-      box-shadow: 0 16px 36px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 0 0 1px rgba(163, 234, 67, 0.25), 0 20px 40px rgba(0, 0, 0, 0.7);
     }
     .case-img-wrap {
       height: 240px;
@@ -1025,10 +1056,10 @@
       left: 16px;
       background: var(--accent-orange);
       color: #080808;
-      font-family: var(--font-heading);
-      font-size: 11px;
+      font-family: var(--font-mono);
+      font-size: 10.5px;
       font-weight: 800;
-      letter-spacing: 0.1em;
+      letter-spacing: 0.08em;
       text-transform: uppercase;
       padding: 4px 10px;
       border-radius: var(--radius-xs);
@@ -1059,9 +1090,11 @@
       border-left: 3px solid var(--accent-orange);
       padding: 10px 14px;
       margin-bottom: 20px;
-      font-size: 13px;
+      font-family: var(--font-mono);
+      font-size: 12.5px;
       color: #DDDDDD;
       font-weight: 600;
+      border-radius: 0 var(--radius-xs) var(--radius-xs) 0;
     }
     .case-link-btn {
       font-family: var(--font-heading);
@@ -1107,17 +1140,19 @@
       margin-bottom: 6px;
     }
     .perf-metric-val {
-      font-family: var(--font-heading);
+      font-family: var(--font-mono);
       font-size: 28px;
       font-weight: 800;
       color: #111111;
       line-height: 1.1;
       margin-bottom: 4px;
+      font-variant-numeric: tabular-nums;
     }
     .perf-metric-badge {
+      font-family: var(--font-mono);
       display: inline-flex;
       align-items: center;
-      font-size: 12px;
+      font-size: 11.5px;
       font-weight: 700;
       color: #0E9F6E;
     }
@@ -1159,7 +1194,8 @@
     .funnel-labels {
       display: flex;
       justify-content: space-between;
-      font-size: 13px;
+      font-family: var(--font-mono);
+      font-size: 12px;
       font-weight: 600;
       color: #333333;
     }
@@ -1184,15 +1220,18 @@
       margin: 48px 0 44px;
     }
     .why-card {
-      background: var(--bg-dark-secondary);
-      border: 1px solid var(--bg-dark-border);
-      border-radius: var(--radius-xs);
+      background: rgba(13, 17, 26, 0.88);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      border: 1px solid rgba(255, 255, 255, 0.08);
+      border-radius: var(--radius-sm);
       padding: 30px 24px;
       transition: all var(--transition-base);
     }
     .why-card:hover {
-      border-color: var(--accent-orange);
+      border-color: rgba(163, 234, 67, 0.45);
       transform: translateY(-4px);
+      box-shadow: 0 0 0 1px rgba(163, 234, 67, 0.2), 0 16px 36px rgba(0, 0, 0, 0.6);
     }
     .why-icon {
       font-size: 24px;
