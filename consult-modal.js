@@ -142,7 +142,7 @@
 
     // Event delegation for links pointing to #open-consult
     document.addEventListener('click', function(e) {
-      const trigger = e.target.closest('a[href="#open-consult"], .btn-open-consult');
+      const trigger = e.target.closest('a[href="#open-consult"], a[href$="#open-consult"], .btn-open-consult');
       if (trigger) {
         e.preventDefault();
         window.openConsultModal(e);

@@ -11,7 +11,7 @@
   background: rgba(4, 6, 10, 0.78);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  z-index: 100000;
+  z-index: 999999;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -32,12 +32,13 @@
   position: relative;
   width: 100%;
   max-width: 900px;
+  max-height: 94vh;
+  overflow-y: auto;
   background: #0B0D13;
   border-radius: 20px;
   border: 1px solid rgba(163, 234, 67, 0.28);
   border-top: 3px solid #A3EA43;
   box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(163, 234, 67, 0.15);
-  overflow: hidden;
   transform: scale(0.94) translateY(14px);
   transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
 }

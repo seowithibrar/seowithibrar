@@ -13,10 +13,15 @@
   <meta property="og:description" content="Grow your brand with strategic digital marketing, technical SEO, and conversion-focused campaign architecture.">
   <meta property="og:image" content="https://seowithibrar.com/images/Ibrar%20Ahmad.png">
 
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="images/logo-full.png">
+
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,700;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="consult-modal.css">
+  <link rel="stylesheet" href="sticky-banner.css">
 
   <style>
     /* ==========================================================================
@@ -1724,7 +1729,7 @@
       background: rgba(4, 6, 10, 0.78);
       backdrop-filter: blur(8px);
       -webkit-backdrop-filter: blur(8px);
-      z-index: 100000;
+      z-index: 999999;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -1745,12 +1750,13 @@
       position: relative;
       width: 100%;
       max-width: 900px;
+      max-height: 94vh;
+      overflow-y: auto;
       background: #0B0D13;
       border-radius: 20px;
       border: 1px solid rgba(163, 234, 67, 0.28);
       border-top: 3px solid #A3EA43;
       box-shadow: 0 35px 80px -15px rgba(0, 0, 0, 0.95), 0 0 35px rgba(163, 234, 67, 0.15);
-      overflow: hidden;
       transform: scale(0.94) translateY(14px);
       transition: transform 0.32s cubic-bezier(0.16, 1, 0.3, 1);
     }
@@ -3685,7 +3691,6 @@
           <div class="consult-footer-note">
             Response within 24 hours · <span class="highlight-lime">No commitment required</span>
           </div>
-          </div>
         </div>
 
         <!-- Right Graphic / Avatar Column -->
@@ -3753,11 +3758,13 @@
         }
       });
 
-      // Bind all consultation modal triggers
-      document.querySelectorAll('a[href="#open-consult"]').forEach(link => {
-        link.addEventListener('click', (e) => {
-          openConsultModal(e);
-        });
+      // Bind all consultation modal triggers via delegated click listener
+      document.addEventListener('click', (e) => {
+        const trigger = e.target.closest('a[href="#open-consult"], a[href$="#open-consult"], .btn-open-consult');
+        if (trigger) {
+          e.preventDefault();
+          window.openConsultModal(e);
+        }
       });
 
       // Close on backdrop overlay click
@@ -3765,28 +3772,28 @@
       if (consultModalEl) {
         consultModalEl.addEventListener('click', (e) => {
           if (e.target === consultModalEl) {
-            closeConsultModal();
+            window.closeConsultModal();
           }
         });
       }
 
       // Check if URL loaded with #open-consult hash
       if (window.location.hash === '#open-consult') {
-        setTimeout(openConsultModal, 200);
+        setTimeout(window.openConsultModal, 200);
       }
     });
 
     // Consultation Modal Controls
-    function openConsultModal(e) {
+    window.openConsultModal = function(e) {
       if (e && e.preventDefault) e.preventDefault();
       const modal = document.getElementById('consultModal');
       if (modal) {
         modal.classList.add('active');
         document.body.style.overflow = 'hidden';
       }
-    }
+    };
 
-    function closeConsultModal() {
+    window.closeConsultModal = function() {
       const modal = document.getElementById('consultModal');
       if (modal) {
         modal.classList.remove('active');
@@ -3798,7 +3805,7 @@
           document.body.style.overflow = '';
         }
       }
-    }
+    };
 
     // Lightbox Modal Controls
     function openLightbox(title, tag, challenge, strategy, outcome) {
