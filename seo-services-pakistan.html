@@ -190,6 +190,20 @@
       }
     }
 
+    /* Two-column split sections (About, WordPress) stack on tablets/phones */
+    @media (max-width: 900px) {
+      .pak-split-grid {
+        grid-template-columns: 1fr !important;
+        gap: 40px !important;
+      }
+      #about .pak-split-grid img {
+        height: auto !important;
+        max-height: 440px;
+        object-fit: cover;
+        object-position: top center;
+      }
+    }
+
     /* Mobile Drawer */
     .mobile-drawer {
       position: fixed;
@@ -684,29 +698,13 @@
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KGLHCFG9" style="display:none;visibility:hidden" width="0"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-<!-- Top Announcement Bar -->
-<div class="top-bar">
-<div class="container top-bar-content">
-<div class="top-bar-left">
-<span class="pulse-dot"></span>
-<span class="top-bar-text"><strong>NOW ACCEPTING CLIENTS FOR 2026:</strong> Independent SEO Consultant Across Pakistan</span>
-</div>
-<div class="top-bar-right">
-<a class="top-link" href="tel:+923174835008">
-<svg fill="none" height="12" stroke="currentColor" stroke-width="2" viewbox="0 0 24 24" width="12"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          +92 317 4835008
-        </a>
-<a class="top-link text-lime" href="https://wa.me/923174835008" rel="noopener noreferrer" target="_blank">
-          WhatsApp Direct →
-        </a>
-</div>
-</div>
-</div>
-<!-- Main Navigation Header -->
-<header class="header">
-<div class="container header-container">
-<a aria-label="SEO With Ibrar — Home" class="logo-link" href="/">
-<img alt="SEO With Ibrar Logo" decoding="async" height="42" loading="eager" src="images/logo-full.webp" width="168"/>
+<!-- ==========================================================================
+       HEADER & NAVIGATION
+       ========================================================================== -->
+<header class="site-header" id="siteHeader">
+<div class="container header-inner">
+<a aria-label="SEO With Ibrar Home" class="brand-logo" href="/">
+<img alt="SEO With Ibrar Logo" decoding="async" height="63" loading="eager" src="images/logo-full.webp" width="180"/>
 </a>
 <!-- Desktop Nav Menu -->
 <nav aria-label="Main Navigation">
@@ -715,7 +713,7 @@
 <li><a class="nav-link" href="/about">ABOUT</a></li>
 <!-- Services Mega Dropdown (WebFX 5-Column Layout) -->
 <li class="nav-item-dropdown" id="servicesDropdown">
-<a aria-expanded="false" aria-haspopup="true" class="nav-link active" href="/seo-services-pakistan">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link active" href="/top-seo-experts-in-pakistan">
               SERVICES
               <svg class="nav-chevron" fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </a>
@@ -777,11 +775,10 @@
 <ul class="mega-links-list">
 <li><a class="mega-link" href="/about"><span class="link-text">About Ibrar Ahmad</span></a></li>
 <li><a class="mega-link" href="/blog"><span class="link-text">SEO Blog &amp; Guides</span></a></li>
-<li><a class="mega-link" href="/top-seo-experts-in-pakistan"><span class="link-text">Top 15+ SEO Experts</span> <span class="mega-link-badge">GUIDE</span></a></li>
 <li><a class="mega-link" href="/contact"><span class="link-text">Contact &amp; Free Proposal</span></a></li>
 </ul>
 </div>
-<!-- Card 5: Featured Case Study Promo Card -->
+<!-- Card 5: Featured Case Study Promo Card (WebFX Target Style) -->
 <div class="mega-card-promo">
 <div>
 <div class="mega-promo-stat">+485%</div>
@@ -1016,7 +1013,7 @@
          ========================================================================== -->
 <section class="pak-section-base" id="about">
 <div class="container">
-<div style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;">
+<div class="pak-split-grid" style="display: grid; grid-template-columns: 0.9fr 1.1fr; gap: 64px; align-items: center;">
 <!-- Left Column: Portrait & Metrics -->
 <div>
 <div style="position: relative; border-radius: 24px; padding: 20px; background: linear-gradient(135deg, rgba(163, 234, 67, 0.15), rgba(163, 234, 67, 0.02)); border: 1px solid rgba(163, 234, 67, 0.25); margin-bottom: 24px;">
@@ -1026,7 +1023,7 @@
               </div>
 </div>
 <!-- Social Links -->
-<div style="display: flex; gap: 12px; justify-content: center; margin-bottom: 28px; flex-wrap: wrap;">
+<div style="display: flex; gap: 12px; justify-content: center; margin-top: 36px; margin-bottom: 28px; flex-wrap: wrap;">
 <a href="https://www.linkedin.com/in/seowithibrar/" rel="noopener noreferrer" style="background: #0077b5; color: #ffffff; width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; transition: transform 0.2s ease;" target="_blank" title="LinkedIn Profile">
 <svg fill="currentColor" height="18" viewbox="0 0 24 24" width="18"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-.5 15.5v-5.3a3.26 3.26 0 0 0-3.26-3.26c-.85 0-1.84.52-2.28 1.3v-1.11h-2.79v8.37h2.79v-4.93c0-.77.62-1.4 1.39-1.4a1.4 1.4 0 0 1 1.4 1.4v4.93h2.75M6.46 10.9v8.37H9.25V10.9H6.46M7.86 6.75a1.49 1.49 0 1 0 0 2.98 1.49 1.49 0 0 0 0-2.98z"></path></svg>
 </a>
@@ -1119,42 +1116,42 @@
 <div class="service-grid-3">
 <div class="card-dark-feature">
 <div>
-<div class="feature-icon-badge">📈</div>
+<div class="feature-icon-badge"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div>
 <h3 class="feature-card-title">Improve Search Rankings</h3>
 <p class="feature-card-desc">Achieve sustainable top 3 placements on high-value commercial keywords that your competitors are fighting for.</p>
 </div>
 </div>
 <div class="card-dark-feature">
 <div>
-<div class="feature-icon-badge">🎯</div>
+<div class="feature-icon-badge"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
 <h3 class="feature-card-title">Target High-Intent Users</h3>
 <p class="feature-card-desc">Focus strictly on prospective buyers who are actively searching to buy your services or products right now.</p>
 </div>
 </div>
 <div class="card-dark-feature">
 <div>
-<div class="feature-icon-badge">🌍</div>
+<div class="feature-icon-badge"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><circle cx="12" cy="12" r="10"></circle><line x1="2" x2="22" y1="12" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg></div>
 <h3 class="feature-card-title">National &amp; Local Visibility</h3>
 <p class="feature-card-desc">Dominate city searches in Lahore, Karachi, Islamabad, or rank nationwide across all provinces in Pakistan.</p>
 </div>
 </div>
 <div class="card-dark-feature">
 <div>
-<div class="feature-icon-badge">⚡</div>
+<div class="feature-icon-badge"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
 <h3 class="feature-card-title">PageSpeed &amp; Core Web Vitals</h3>
 <p class="feature-card-desc">Optimize WordPress code, eliminate render-blocking assets, and achieve 95%+ Core Web Vitals passing scores.</p>
 </div>
 </div>
 <div class="card-dark-feature">
 <div>
-<div class="feature-icon-badge">📊</div>
+<div class="feature-icon-badge"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg></div>
 <h3 class="feature-card-title">Direct GSC Data Tracking</h3>
 <p class="feature-card-desc">Access unfiltered Google Search Console performance data so you always see exactly what is working and why.</p>
 </div>
 </div>
 <div class="card-dark-feature">
 <div>
-<div class="feature-icon-badge">💬</div>
+<div class="feature-icon-badge"><svg aria-hidden="true" fill="none" height="22" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="22"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
 <h3 class="feature-card-title">Direct Communication</h3>
 <p class="feature-card-desc">Talk directly with the strategist doing the actual work on your site via WhatsApp, Google Meet, and shared dashboards.</p>
 </div>
@@ -1347,7 +1344,7 @@
          ========================================================================== -->
 <section style="background: linear-gradient(135deg, #090E17 0%, #121927 100%); padding: 80px 0; border-top: 1px solid var(--bg-dark-border); border-bottom: 1px solid var(--bg-dark-border); position: relative;">
 <div class="container">
-<div style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;">
+<div class="pak-split-grid" style="display: grid; grid-template-columns: 1.1fr 0.9fr; gap: 48px; align-items: center;">
 <div>
 <div class="eyebrow-pill-dark"><span>●</span> CUSTOM WORDPRESS DEVELOPMENT</div>
 <h2 class="section-title-dark">Need a Fast, High-Converting Website Built for SEO?</h2>
@@ -1369,21 +1366,21 @@
             </div>
 <div style="display: flex; flex-direction: column; gap: 20px;">
 <div style="display: flex; gap: 16px; align-items: flex-start;">
-<div style="background: rgba(163, 234, 67, 0.12); color: var(--accent-brand); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">⚡</div>
+<div style="background: rgba(163, 234, 67, 0.12); color: var(--accent-brand); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg></div>
 <div>
 <h3 style="font-size: 16px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">98%+ Google PageSpeed Scores</h3>
 <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5;">Clean PHP templates without bloated site-builder code for sub-second load times.</p>
 </div>
 </div>
 <div style="display: flex; gap: 16px; align-items: flex-start;">
-<div style="background: rgba(163, 234, 67, 0.12); color: var(--accent-brand); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">📱</div>
+<div style="background: rgba(163, 234, 67, 0.12); color: var(--accent-brand); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><rect height="20" rx="2" ry="2" width="14" x="5" y="2"></rect><line x1="12" x2="12.01" y1="18" y2="18"></line></svg></div>
 <div>
 <h3 style="font-size: 16px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">100% Mobile Fluidity</h3>
 <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5;">Pixel-perfect mobile interfaces tailored for Pakistan's 85%+ smartphone web traffic.</p>
 </div>
 </div>
 <div style="display: flex; gap: 16px; align-items: flex-start;">
-<div style="background: rgba(163, 234, 67, 0.12); color: var(--accent-brand); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;">🎯</div>
+<div style="background: rgba(163, 234, 67, 0.12); color: var(--accent-brand); width: 38px; height: 38px; border-radius: 10px; display: flex; align-items: center; justify-content: center; font-weight: bold; flex-shrink: 0;"><svg aria-hidden="true" fill="none" height="18" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="18"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
 <div>
 <h3 style="font-size: 16px; font-weight: 700; color: #FFFFFF; margin-bottom: 4px;">Pre-Optimized Search Engine Setup</h3>
 <p style="font-size: 13.5px; color: var(--text-muted); line-height: 1.5;">Built-in JSON-LD Schema markup, clean permalinks, and dynamic sitemaps.</p>
@@ -1537,61 +1534,84 @@
 </section>
 </main>
 <!-- ==========================================================================
-       FOOTER
+       UNIFIED 4-COLUMN MEGA FOOTER
        ========================================================================== -->
-<footer style="background: #050608; border-top: 1px solid var(--bg-dark-border); padding: 70px 0 30px 0;">
+<footer class="site-footer">
 <div class="container">
-<div style="display: grid; grid-template-columns: 1.4fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 50px;">
+<div class="footer-grid">
+<!-- Col 1: Brand & Bio -->
 <div>
-<a href="/" style="display: inline-block; margin-bottom: 18px;">
-<img alt="SEO With Ibrar Logo" decoding="async" height="42" loading="lazy" src="images/logo-full.webp" width="168"/>
+<a class="brand-logo" href="/" style="margin-bottom: 20px; display: inline-block;">
+<img alt="SEO With Ibrar" decoding="async" height="350" loading="lazy" src="images/logo-full.webp" style="height: 42px; width: auto;" width="997"/>
 </a>
-<p style="font-size: 14px; color: var(--text-muted); line-height: 1.6; margin-bottom: 20px;">
-            Results-driven organic search engine optimization and custom WordPress development. Delivering white-hat growth, transparent reporting, and qualified business inquiries across Pakistan.
+<p style="color: rgba(255, 255, 255, 0.55); font-size: 13.5px; line-height: 1.7; margin-bottom: 24px; max-width: 320px;">
+            Senior Digital Marketing &amp; SEO Expert helping ambitious businesses dominate search engine rankings, attract high-intent organic traffic, and scale revenue profitably.
           </p>
-<div style="display: flex; align-items: center; gap: 8px; color: var(--text-body); font-size: 13.5px;">
-<span style="color: var(--accent-brand);">📍</span> Lahore, Punjab, Pakistan (Serving Nationwide)
-          </div>
+<div style="display: flex; gap: 14px; align-items: center;">
+<a aria-label="LinkedIn Profile" class="footer-social-btn" href="https://www.linkedin.com/in/seowithibrar/" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+</a>
+<a aria-label="YouTube Channel" class="footer-social-btn" href="https://www.youtube.com/@seowithibrar/videos" rel="noopener noreferrer" target="_blank">
+<svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"></path></svg>
+</a>
 </div>
+</div>
+<!-- Col 2: Quick Links -->
 <div>
-<div style="font-family: var(--font-heading); font-size: 13px; font-weight: 800; color: #FFFFFF; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;">
-            LOCAL SEO CITIES
-          </div>
-<ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--text-body);">
-<li><a href="/seo-services-pakistan" style="color: var(--accent-brand); font-weight: 700;">SEO Services Pakistan</a></li>
-<li><a href="/seo-services-islamabad">SEO Services Islamabad</a></li>
-<li><a href="/seo-services-karachi">SEO Services Karachi</a></li>
-<li><a href="/seo-services-lahore">SEO Services Lahore</a></li>
-</ul>
+<div class="footer-col-header">QUICK LINKS</div>
+<div class="footer-links-col">
+<a href="/">Home</a>
+<a href="/about">About Ibrar</a>
+<a href="/#portfolio">Portfolio</a>
+<a href="/#results">GSC Case Studies</a>
+<a href="/blog">SEO Blog &amp; Guides</a>
+<a href="/contact">Contact Support</a>
 </div>
+</div>
+<!-- Col 3: Services -->
 <div>
-<div style="font-family: var(--font-heading); font-size: 13px; font-weight: 800; color: #FFFFFF; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;">
-            INDUSTRY SOLUTIONS
-          </div>
-<ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--text-body);">
-<li><a href="/seo-services-visa-consultancy">Visa Consultancy SEO</a></li>
-<li><a href="/seo-services-visa-consultancy-karachi">Karachi Visa SEO</a></li>
-<li><a href="/seo-services-education">Education Institutes SEO</a></li>
-<li><a href="/wordpress-design-services">WordPress Design Services</a></li>
-</ul>
+<div class="footer-col-header">OUR SERVICES</div>
+<div class="footer-links-col">
+<a href="/seo-services-islamabad">SEO Services Islamabad</a>
+<a href="/seo-services-karachi">SEO Services Karachi</a>
+<a href="/seo-services-lahore">SEO Services Lahore</a>
+<a href="/seo-services-visa-consultancy-karachi">Visa SEO Karachi</a>
+<a href="/seo-services-visa-consultancy">Visa Consultancy SEO</a>
+<a href="/seo-services-pakistan" style="color: var(--accent-brand); font-weight: 700;">SEO Services Pakistan</a>
+<a href="/seo-services-education">Education Institutes SEO</a>
+<a href="/wordpress-design-services">WordPress Solutions</a>
+<a href="/wordpress-design-services-for-visa-consultancy">WordPress Visa Portals</a>
+<a href="/wordpress-design-services-for-education">WordPress Education Portals</a>
+<a href="/contact">Free Consultation</a>
 </div>
+</div>
+<!-- Col 4: Quality & Support -->
 <div>
-<div style="font-family: var(--font-heading); font-size: 13px; font-weight: 800; color: #FFFFFF; letter-spacing: 1px; text-transform: uppercase; margin-bottom: 18px;">
-            COMPANY &amp; INSIGHTS
-          </div>
-<ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; font-size: 14px; color: var(--text-body);">
-<li><a href="/about">About Ibrar Ahmad</a></li>
-<li><a href="/blog">SEO Blog &amp; Guides</a></li>
-<li><a href="/top-seo-experts-in-pakistan">Top 15+ SEO Experts Guide</a></li>
-<li><a href="/contact">Contact &amp; Free Proposal</a></li>
-</ul>
+<div class="footer-col-header">QUALITY &amp; SUPPORT</div>
+<div class="footer-whitehat-box">
+<div style="color: var(--accent-brand); font-family: var(--font-heading); font-size: 12px; font-weight: 800; display: flex; align-items: center; gap: 6px; margin-bottom: 10px; text-transform: uppercase;">
+<svg fill="none" height="14" stroke="currentColor" stroke-width="3" viewbox="0 0 24 24" width="14"><polyline points="20 6 9 17 4 12"></polyline></svg>
+              WHITEHAT CERTIFIED
+            </div>
+<p style="color: rgba(255, 255, 255, 0.5); font-size: 12px; line-height: 1.6; margin-bottom: 16px;">
+              Every tactic strictly adheres to Google Search Central webmaster guidelines. We never employ spam comments, hidden redirects, or low-quality backlink layers.
+            </p>
+<div style="color: rgba(255, 255, 255, 0.35); font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;">WHATSAPP DIRECT</div>
+<a href="https://wa.me/923174835008" rel="noopener noreferrer" style="color: #25D366; font-family: var(--font-heading); font-weight: 800; font-size: 14px; display: inline-flex; align-items: center; gap: 6px;" target="_blank">
+<span>+92 317 4835008</span>
+<svg fill="none" height="12" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="12"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
+</a>
 </div>
 </div>
-<div style="border-top: 1px solid rgba(255, 255, 255, 0.06); padding-top: 24px; display: flex; justify-content: space-between; align-items: center; font-size: 13px; color: var(--text-muted); flex-wrap: wrap; gap: 12px;">
-<div>© 2026 SEO with Ibrar. All rights reserved. Registered Lahore SEO Agency.</div>
-<div style="display: flex; gap: 20px;">
-<a href="https://www.linkedin.com/in/seowithibrar/" rel="noopener noreferrer" style="color: var(--text-body);" target="_blank">LinkedIn Profile →</a>
-<span>GSC VERIFIED REPORTING</span>
+</div>
+<div class="footer-bottom-row">
+<div>
+          © <span id="siteYear">2026</span> SEO With Ibrar. All rights reserved. Registered Lahore SEO Agency.
+        </div>
+<div style="display: flex; gap: 16px; align-items: center;">
+<span>Google Search Console Verified</span>
+<span>·</span>
+<span>Whitehat Certified</span>
 </div>
 </div>
 </div>
@@ -1607,11 +1627,6 @@
 </div>
 </div>
 </div>
-<!-- Floating Animated Clickable WhatsApp Button Widget -->
-<a class="whatsapp-float-widget" href="https://wa.me/923174835008" rel="noopener noreferrer" target="_blank" title="Chat with Ibrar Ahmad on WhatsApp (+92 317 4835008)">
-<svg fill="currentColor" height="22" viewbox="0 0 24 24" width="22"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"></path></svg>
-<span>WhatsApp +92 317 4835008</span>
-</a>
 <script>
     // Mobile Drawer Toggle
     const mobileToggle = document.getElementById('mobileToggle');
