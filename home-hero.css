@@ -470,20 +470,17 @@
 }
 
 /* ==========================================================================
-   Desktop: fit the whole hero (frame + stats row) in one screen
-   Frame height follows the viewport; portrait, word and cards scale with it.
+   Desktop: full-bleed hero that fills the whole screen (width + height)
+   The frame becomes the section itself; content keeps a readable width via
+   --hh-pad, and the portrait, word and cards scale with the screen height.
    ========================================================================== */
 @media (min-width: 1024px) {
   .home-hero {
     /* visible area below the fixed header (header is 72px + 2px border) */
     --hh-screen: calc(100vh - var(--header-height, 72px) - 2px);
-    --hh-stats-h: 80px;
-    min-height: var(--hh-screen);
-    padding: 14px 0 18px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    box-sizing: border-box;
+    /* side gutter: grows on very wide screens so content stays ~1560px wide */
+    --hh-pad: max(clamp(28px, 4vw, 72px), calc((100vw - 1560px) / 2));
+    padding: 0;
   }
   @supports (height: 100svh) {
     .home-hero {
@@ -491,13 +488,35 @@
     }
   }
   .home-hero > .container {
+    max-width: none;
     width: 100%;
+    padding: 0;
+    height: var(--hh-screen);
+    min-height: 600px;
+    display: flex;
+    flex-direction: column;
   }
   .hh-frame {
-    height: calc(var(--hh-screen) - 14px - 18px - 16px - var(--hh-stats-h));
-    min-height: 480px;
-    max-height: 700px;
-    padding: 18px 44px 30px;
+    flex: 1 1 auto;
+    height: auto;
+    min-height: 0;
+    max-height: none;
+    padding: 20px var(--hh-pad) 32px;
+    border: none;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 0;
+    box-shadow: none;
+  }
+  .hh-glow {
+    width: 780px;
+    height: 780px;
+    left: 57%;
+  }
+  .hh-card {
+    right: var(--hh-pad);
+  }
+  .hh-card-clicks {
+    right: calc(var(--hh-pad) + 28px);
   }
   .hh-top {
     margin-top: 20px;
@@ -512,19 +531,21 @@
   }
   .hh-word {
     top: 17%;
-    font-size: min(17vw, 34vh, 250px);
+    font-size: min(17vw, 36vh, 330px);
   }
   .hh-portrait {
-    height: min(90%, 600px);
+    left: 57%;
+    height: min(92%, 780px);
   }
   .hh-card-rank { top: 25%; }
   .hh-card-clicks { top: 43%; }
   .hh-card-leads { top: auto; bottom: 9%; }
   .hh-content {
+    max-width: min(520px, 38vw);
     padding-top: 20px;
   }
   .hh-h1 {
-    font-size: clamp(32px, 5.4vh, 46px);
+    font-size: clamp(32px, 5.4vh, 54px);
   }
   .hh-lead {
     margin-top: 14px;
@@ -533,8 +554,11 @@
   .hh-ctas {
     margin-top: 22px;
   }
+  /* stats band runs along the bottom of the screen, aligned to the content */
   .hh-stats {
-    margin-top: 16px;
+    margin: 0;
+    padding: 14px var(--hh-pad) 16px;
+    background: #07090E;
   }
   .hh-stat {
     padding: 14px 20px;
