@@ -11,13 +11,17 @@
 <meta content="website" property="og:type"/>
 <meta content="SEO Consultant in Lahore | SEO With Ibrar" property="og:title"/>
 <meta content="Looking for an SEO consultant in Lahore? Ibrar Ahmad provides technical SEO, local search optimization, and WordPress design to grow organic leads. Book a call." property="og:description"/>
-<meta content="https://seowithibrar.com/images/ibrar.png" property="og:image"/>
+<meta content="https://seowithibrar.com/images/og/ibrar.jpg" property="og:image"/>
+<meta content="1200" property="og:image:width"/>
+<meta content="630" property="og:image:height"/>
 <!-- Favicon -->
-<link href="images/logo-full.png" rel="icon" type="image/png"/>
+<link href="/favicon.ico" rel="icon" sizes="any"/>
+<link href="/images/favicon-192.png" rel="icon" sizes="192x192" type="image/png"/>
+<link href="/images/apple-touch-icon.png" rel="apple-touch-icon"/>
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com" rel="preconnect"/>
 <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;600;700;800&amp;family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,700;1,800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=JetBrains+Mono:wght@500;700&amp;family=Plus+Jakarta+Sans:ital,wght@0,600;0,700;0,800;1,700&amp;display=swap" rel="stylesheet"/>
 <link href="consult-modal.css" rel="stylesheet"/>
 <link href="sticky-banner.css" rel="stylesheet"/>
 <style>
@@ -31,6 +35,7 @@
       --bg-dark-card: #121622;
       --bg-dark-border: rgba(255, 255, 255, 0.08);
 
+      --accent-lime: #A3EA43;
       --accent-orange: #A3EA43; /* Electric Lime from Logo */
       --accent-orange-warm: #8EE028;
       --accent-orange-glow: rgba(163, 234, 67, 0.35);
@@ -616,7 +621,7 @@
       padding-top: 28px;
       border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
-    .trust-stat-item h4 {
+    .trust-stat-item .stat-value {
       font-family: var(--font-mono);
       font-size: 24px;
       font-weight: 800;
@@ -1656,6 +1661,14 @@
       color: #0E9F6E;
       display: block;
     }
+    .form-msg-status.error {
+      color: #DC2626;
+      display: block;
+    }
+    .form-msg-status.error a {
+      color: #25D366;
+      text-decoration: underline;
+    }
 
     /* ==========================================================================
        15. MINIMAL DARK FOOTER
@@ -2357,9 +2370,63 @@
       }
     }
 
+
+    /* ==========================================================================
+       FAQ ACCORDION (HOMEPAGE)
+       ========================================================================== */
+    .faq-container-narrow {
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .faq-details-item {
+      background: #FFFFFF;
+      border: 1px solid #E2E8F0;
+      border-radius: 14px;
+      margin-bottom: 14px;
+      padding: 20px 24px;
+      transition: all 0.3s ease;
+    }
+    .faq-details-item[open] {
+      border-color: var(--accent-orange, #A3EA43);
+      box-shadow: 0 8px 24px rgba(163, 234, 67, 0.14);
+    }
+    .faq-summary {
+      font-family: var(--font-heading);
+      font-weight: 700;
+      font-size: 17px;
+      color: var(--text-dark-headings);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .faq-summary::-webkit-details-marker {
+      display: none;
+    }
+    .faq-summary::after {
+      content: '+';
+      font-size: 24px;
+      font-weight: 400;
+      color: var(--accent-green-dark, #3F7504);
+      transition: transform 0.3s ease;
+    }
+    .faq-details-item[open] .faq-summary::after {
+      content: '−';
+      transform: rotate(180deg);
+    }
+    .faq-content-inner {
+      margin-top: 14px;
+      color: var(--text-body);
+      line-height: 1.7;
+      font-size: 14.5px;
+      border-top: 1px dashed #E2E8F0;
+      padding-top: 14px;
+    }
+
   </style>
 <link href="header-mega-menu.css" rel="stylesheet"/>
-<meta content="https://seowithibrar.com/" property="og:url"/><meta content="SEO With Ibrar" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="SEO Consultant in Lahore | SEO With Ibrar" name="twitter:title"/><meta content="Looking for an SEO consultant in Lahore? Ibrar Ahmad provides technical SEO, local search optimization, and WordPress design to grow organic leads. Book a call." name="twitter:description"/><meta content="https://seowithibrar.com/images/ibrar.png" name="twitter:image"/><script type="application/ld+json">{
+<meta content="https://seowithibrar.com/" property="og:url"/><meta content="SEO With Ibrar" property="og:site_name"/><meta content="summary_large_image" name="twitter:card"/><meta content="SEO Consultant in Lahore | SEO With Ibrar" name="twitter:title"/><meta content="Looking for an SEO consultant in Lahore? Ibrar Ahmad provides technical SEO, local search optimization, and WordPress design to grow organic leads. Book a call." name="twitter:description"/><meta content="https://seowithibrar.com/images/og/ibrar.jpg" name="twitter:image"/><script type="application/ld+json">{
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -2378,7 +2445,7 @@
       "name": "Ibrar Ahmad",
       "jobTitle": "SEO Consultant & WordPress Specialist",
       "url": "https://seowithibrar.com/about",
-      "image": "https://seowithibrar.com/images/ibrar.png",
+      "image": "https://seowithibrar.com/images/ibrar.webp",
       "telephone": "+923174835008",
       "email": "seowithibrar@gmail.com",
       "address": {
@@ -2388,7 +2455,7 @@
         "addressCountry": "PK"
       },
       "sameAs": [
-        "https://pk.linkedin.com/in/seowithibrar",
+        "https://www.linkedin.com/in/seowithibrar/",
         "https://www.youtube.com/@seowithibrar/videos"
       ],
       "knowsAbout": [
@@ -2406,7 +2473,7 @@
       "name": "SEO With Ibrar",
       "url": "https://seowithibrar.com/",
       "logo": "https://seowithibrar.com/images/logo-full.png",
-      "image": "https://seowithibrar.com/images/ibrar.png",
+      "image": "https://seowithibrar.com/images/ibrar.webp",
       "telephone": "+923174835008",
       "email": "seowithibrar@gmail.com",
       "priceRange": "$$",
@@ -2437,9 +2504,64 @@
           "name": "Islamabad"
         }
       ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://seowithibrar.com/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How soon can my business expect to see organic traffic results?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "SEO is a compounding organic growth asset. For most established domains, technical cleanups and quick-win keyword optimizations produce measurable traction within 60 to 90 days. For highly competitive niches or newer domains, sustained authority building and top-ranking lead generation typically mature over 4 to 6 months of systematic execution."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is your SEO process for Lahore and Pakistani businesses?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "My strategy follows a verified 5-phase framework: (1) Full Technical & Core Web Vitals Audit, (2) Competitor Gap & High-Intent Keyword Intelligence, (3) On-Page Architecture & Semantic Content Restructuring, (4) Local Map Pack (Google Business Profile) Dominance, and (5) Authoritative Outreach with Transparent Monthly GSC Reporting."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you offer guaranteed #1 Google rankings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No ethical SEO consultant can guarantee a specific #1 spot because Google's algorithm evaluates hundreds of live variables and competitor actions. What I do guarantee is verified white-hat methodologies, transparent weekly/monthly deliverables, zero black-hat risks, and a relentless focus on qualified organic leads that impact your bottom line."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Why hire an independent SEO consultant instead of an agency?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "When you hire an agency, your account is often handed off to junior interns while you pay for corporate overhead. Working directly with me gives you 1-on-1 strategic consultation, direct WhatsApp access, senior-level technical execution, and customized growth plans tailored specifically to your business goals."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How do you prepare websites for Google AI Overviews & Perplexity (GEO/AEO)?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Modern SEO requires Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). I structure your content into direct entity-based answers, add robust Schema.org Knowledge Graph markup, optimize for conversational queries, and build verifiable digital citations so AI engines quote your brand as a primary authoritative source."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What do your monthly SEO consulting packages include?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Every engagement includes continuous technical health monitoring, indexation management, on-page optimization, localized keyword ranking tracking, high-intent landing page conversion recommendations, and a transparent video-walkthrough monthly report reviewing real Google Search Console data."
+          }
+        }
+      ]
     }
   ]
-}</script></head>
+}</script><link href="site-ux.css" rel="stylesheet"/>
+</head>
 <body>
 <!-- Skip to content for accessibility -->
 <a class="skip-link" href="#hero">Skip to Content</a>
@@ -2448,17 +2570,17 @@
        ========================================================================== -->
 <header class="site-header" id="siteHeader">
 <div class="container header-inner">
-<a aria-label="SEO With Ibrar Home" class="brand-logo" href="index.html">
-<img alt="SEO With Ibrar Logo" decoding="async" height="63" loading="lazy" src="images/logo-full.png" width="180"/>
+<a aria-label="SEO With Ibrar Home" class="brand-logo" href="/">
+<img alt="SEO With Ibrar Logo" decoding="async" height="63" loading="eager" src="images/logo-full.webp" width="180"/>
 </a>
 <!-- Desktop Nav Menu -->
 <nav aria-label="Main Navigation">
 <ul class="nav-menu">
-<li><a class="nav-link active" href="index.html">HOME</a></li>
-<li><a class="nav-link" href="about.html">ABOUT</a></li>
+<li><a class="nav-link active" href="/">HOME</a></li>
+<li><a class="nav-link" href="/about">ABOUT</a></li>
 <!-- Services Mega Dropdown (WebFX 5-Column Layout) -->
 <li class="nav-item-dropdown" id="servicesDropdown">
-<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="top-seo-experts-in-pakistan.html">
+<a aria-expanded="false" aria-haspopup="true" class="nav-link" href="/top-seo-experts-in-pakistan">
               SERVICES
               <svg class="nav-chevron" fill="none" height="11" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="11"><polyline points="6 9 12 15 18 9"></polyline></svg>
 </a>
@@ -2475,10 +2597,10 @@
 </div>
 </div>
 <ul class="mega-links-list">
-<li><a class="mega-link" href="seo-services-islamabad.html"><span class="link-text">SEO Services Islamabad</span></a></li>
-<li><a class="mega-link" href="seo-services-karachi.html"><span class="link-text">SEO Services Karachi</span></a></li>
-<li><a class="mega-link" href="seo-services-lahore.html"><span class="link-text">SEO Services Lahore</span></a></li>
-<li><a class="mega-link" href="seo-services-pakistan.html"><span class="link-text">SEO Services Pakistan</span></a></li>
+<li><a class="mega-link" href="/seo-services-islamabad"><span class="link-text">SEO Services Islamabad</span></a></li>
+<li><a class="mega-link" href="/seo-services-karachi"><span class="link-text">SEO Services Karachi</span></a></li>
+<li><a class="mega-link" href="/seo-services-lahore"><span class="link-text">SEO Services Lahore</span></a></li>
+<li><a class="mega-link" href="/seo-services-pakistan"><span class="link-text">SEO Services Pakistan</span></a></li>
 </ul>
 </div>
 <!-- Card 2: Industry & Niche SEO -->
@@ -2490,9 +2612,9 @@
 </div>
 </div>
 <ul class="mega-links-list">
-<li><a class="mega-link" href="seo-services-visa-consultancy.html"><span class="link-text">Visa Consultancy SEO</span> <span class="mega-link-badge">PROVEN</span></a></li>
-<li><a class="mega-link" href="seo-services-visa-consultancy-karachi.html"><span class="link-text">Karachi Visa Consultancy SEO</span></a></li>
-<li><a class="mega-link" href="seo-services-education.html"><span class="link-text">Education Institutes SEO</span></a></li>
+<li><a class="mega-link" href="/seo-services-visa-consultancy"><span class="link-text">Visa Consultancy SEO</span> <span class="mega-link-badge">PROVEN</span></a></li>
+<li><a class="mega-link" href="/seo-services-visa-consultancy-karachi"><span class="link-text">Karachi Visa Consultancy SEO</span></a></li>
+<li><a class="mega-link" href="/seo-services-education"><span class="link-text">Education Institutes SEO</span></a></li>
 </ul>
 </div>
 <!-- Card 3: WordPress Solutions -->
@@ -2504,9 +2626,9 @@
 </div>
 </div>
 <ul class="mega-links-list">
-<li><a class="mega-link" href="wordpress-design-services.html"><span class="link-text">WordPress Design Services</span></a></li>
-<li><a class="mega-link" href="wordpress-design-services-for-visa-consultancy.html"><span class="link-text">WordPress Visa Portals</span></a></li>
-<li><a class="mega-link" href="wordpress-design-services-for-education.html"><span class="link-text">WordPress Education Portals</span></a></li>
+<li><a class="mega-link" href="/wordpress-design-services"><span class="link-text">WordPress Design Services</span></a></li>
+<li><a class="mega-link" href="/wordpress-design-services-for-visa-consultancy"><span class="link-text">WordPress Visa Portals</span></a></li>
+<li><a class="mega-link" href="/wordpress-design-services-for-education"><span class="link-text">WordPress Education Portals</span></a></li>
 </ul>
 </div>
 <!-- Card 4: Company & Insights -->
@@ -2518,9 +2640,9 @@
 </div>
 </div>
 <ul class="mega-links-list">
-<li><a class="mega-link" href="about.html"><span class="link-text">About Ibrar Ahmad</span></a></li>
-<li><a class="mega-link" href="blog.html"><span class="link-text">SEO Blog &amp; Guides</span></a></li>
-<li><a class="mega-link" href="contact.html"><span class="link-text">Contact &amp; Free Proposal</span></a></li>
+<li><a class="mega-link" href="/about"><span class="link-text">About Ibrar Ahmad</span></a></li>
+<li><a class="mega-link" href="/blog"><span class="link-text">SEO Blog &amp; Guides</span></a></li>
+<li><a class="mega-link" href="/contact"><span class="link-text">Contact &amp; Free Proposal</span></a></li>
 </ul>
 </div>
 <!-- Card 5: Featured Case Study Promo Card (WebFX Target Style) -->
@@ -2552,7 +2674,7 @@
 </g>
 </svg>
 </div>
-<a class="mega-promo-btn" href="contact.html">
+<a class="mega-promo-btn" href="/contact">
 <span>Get Free Proposal</span>
 <svg fill="none" height="14" stroke="currentColor" stroke-width="2.5" viewbox="0 0 24 24" width="14"><path d="M5 12h14M12 5l7 7-7 7"></path></svg>
 </a>
@@ -2561,8 +2683,8 @@
 </div>
 </div>
 </li>
-<li><a class="nav-link" href="blog.html">BLOG</a></li>
-<li><a class="nav-link" href="contact.html">CONTACT</a></li>
+<li><a class="nav-link" href="/blog">BLOG</a></li>
+<li><a class="nav-link" href="/contact">CONTACT</a></li>
 </ul>
 </nav>
 <div class="header-action">
@@ -2579,32 +2701,32 @@
 <div aria-label="Mobile Navigation" aria-modal="true" class="mobile-drawer" id="mobileDrawer" role="dialog">
 <div>
 <div class="mobile-drawer-header">
-<img alt="SEO With Ibrar Logo" decoding="async" height="63" loading="lazy" src="images/logo-full.png" style="height: 38px;" width="180"/>
+<img alt="SEO With Ibrar Logo" decoding="async" height="63" loading="lazy" src="images/logo-full.webp" style="height: 38px;" width="180"/>
 <button aria-label="Close menu" class="close-drawer-btn" id="closeDrawerBtn">✕</button>
 </div>
 <ul class="mobile-nav-items">
-<li><a class="mobile-nav-link active" href="index.html">HOME</a></li>
-<li><a class="mobile-nav-link" href="about.html">ABOUT</a></li>
-<li><a class="mobile-nav-link" href="seo-services-islamabad.html">SEO SERVICES ISLAMABAD</a></li>
-<li><a class="mobile-nav-link" href="seo-services-karachi.html">SEO SERVICES KARACHI</a></li>
-<li><a class="mobile-nav-link" href="seo-services-lahore.html">SEO SERVICES LAHORE</a></li>
-<li><a class="mobile-nav-link" href="seo-services-pakistan.html">SEO SERVICES PAKISTAN</a></li>
-<li><a class="mobile-nav-link" href="seo-services-visa-consultancy.html">VISA CONSULTANCY SEO</a></li>
-<li><a class="mobile-nav-link" href="seo-services-visa-consultancy-karachi.html">VISA SEO KARACHI</a></li>
-<li><a class="mobile-nav-link" href="seo-services-education.html">EDUCATION SEO</a></li>
-<li><a class="mobile-nav-link" href="wordpress-design-services.html">WORDPRESS SOLUTIONS</a></li>
-<li><a class="mobile-nav-link" href="wordpress-design-services-for-visa-consultancy.html">WORDPRESS VISA PORTALS</a></li>
-<li><a class="mobile-nav-link" href="wordpress-design-services-for-education.html">WORDPRESS EDUCATION PORTALS</a></li>
-<li><a class="mobile-nav-link" href="top-seo-experts-in-pakistan.html">TOP 15+ SEO EXPERTS GUIDE</a></li>
-<li><a class="mobile-nav-link" href="blog.html">BLOG</a></li>
-<li><a class="mobile-nav-link" href="contact.html">CONTACT</a></li>
+<li><a class="mobile-nav-link active" href="/">HOME</a></li>
+<li><a class="mobile-nav-link" href="/about">ABOUT</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-islamabad">SEO SERVICES ISLAMABAD</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-karachi">SEO SERVICES KARACHI</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-lahore">SEO SERVICES LAHORE</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-pakistan">SEO SERVICES PAKISTAN</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-visa-consultancy">VISA CONSULTANCY SEO</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-visa-consultancy-karachi">VISA SEO KARACHI</a></li>
+<li><a class="mobile-nav-link" href="/seo-services-education">EDUCATION SEO</a></li>
+<li><a class="mobile-nav-link" href="/wordpress-design-services">WORDPRESS SOLUTIONS</a></li>
+<li><a class="mobile-nav-link" href="/wordpress-design-services-for-visa-consultancy">WORDPRESS VISA PORTALS</a></li>
+<li><a class="mobile-nav-link" href="/wordpress-design-services-for-education">WORDPRESS EDUCATION PORTALS</a></li>
+<li><a class="mobile-nav-link" href="/top-seo-experts-in-pakistan">TOP 15+ SEO EXPERTS GUIDE</a></li>
+<li><a class="mobile-nav-link" href="/blog">BLOG</a></li>
+<li><a class="mobile-nav-link" href="/contact">CONTACT</a></li>
 </ul>
 </div>
 <div style="padding-top: 24px; border-top: 1px solid var(--bg-dark-border);">
-<a class="btn btn-lime" href="contact.html" style="width: 100%; text-align: center;">LET'S TALK</a>
+<a class="btn btn-lime" href="/contact" style="width: 100%; text-align: center;">LET'S TALK</a>
 </div>
 </div>
-<main>
+<main id="main-content">
 <!-- ==========================================================================
          3. HERO SECTION — DARK EDITORIAL LAYOUT
          ========================================================================== -->
@@ -2629,19 +2751,19 @@
 <!-- Hero Bottom Trust Metrics -->
 <div class="hero-trust-bar">
 <div class="trust-stat-item">
-<h4>05+</h4>
+<div class="stat-value">05+</div>
 <p>Years Mastery</p>
 </div>
 <div class="trust-stat-item">
-<h4>100+</h4>
+<div class="stat-value">100+</div>
 <p>Campaigns</p>
 </div>
 <div class="trust-stat-item">
-<h4>$10M+</h4>
+<div class="stat-value">$10M+</div>
 <p>Client Revenue</p>
 </div>
 <div class="trust-stat-item">
-<h4>98%</h4>
+<div class="stat-value">98%</div>
 <p>Satisfaction</p>
 </div>
 </div>
@@ -2723,7 +2845,7 @@
 <!-- Left: Rectangular Professional Portrait -->
 <div class="about-image-container">
 <div class="about-portrait-frame">
-<img alt="Ibrar Ahmad — SEO Consultant &amp; Digital Marketing Expert" decoding="async" height="1024" loading="lazy" src="images/ibrar-suit.png" width="576"/>
+<img alt="Ibrar Ahmad — SEO Consultant &amp; Digital Marketing Expert" decoding="async" height="1024" loading="lazy" src="images/ibrar-suit.webp" width="576"/>
 </div>
 <!-- Overlapping Orange Badge -->
 <div class="about-exp-badge">
@@ -2800,7 +2922,7 @@
 <div class="service-card">
 <div>
 <div class="service-card-top">
-<div class="service-icon">🔍</div>
+<div class="service-icon"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="11" cy="11" r="7"></circle><line x1="21" x2="16.65" y1="21" y2="16.65"></line></svg></div>
 <span class="service-index">01</span>
 </div>
 <h3>Search Engine Optimization</h3>
@@ -2818,7 +2940,7 @@
 <div class="service-card">
 <div>
 <div class="service-card-top">
-<div class="service-icon">🎯</div>
+<div class="service-icon"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
 <span class="service-index">02</span>
 </div>
 <h3>Google Ads &amp; PPC</h3>
@@ -2836,7 +2958,7 @@
 <div class="service-card">
 <div>
 <div class="service-card-top">
-<div class="service-icon">📱</div>
+<div class="service-icon"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" x2="15.42" y1="13.51" y2="17.49"></line><line x1="15.41" x2="8.59" y1="6.51" y2="10.49"></line></svg></div>
 <span class="service-index">03</span>
 </div>
 <h3>Social Media Marketing</h3>
@@ -2854,7 +2976,7 @@
 <div class="service-card">
 <div>
 <div class="service-card-top">
-<div class="service-icon">✍️</div>
+<div class="service-icon"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M12 20h9"></path><path d="M16.5 3.5a2.12 2.12 0 0 1 3 3L7 19l-4 1 1-4Z"></path></svg></div>
 <span class="service-index">04</span>
 </div>
 <h3>Content Marketing</h3>
@@ -2872,7 +2994,7 @@
 <div class="service-card">
 <div>
 <div class="service-card-top">
-<div class="service-icon">⚡</div>
+<div class="service-icon"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><rect height="18" rx="2" width="18" x="3" y="3"></rect><line x1="3" x2="21" y1="9" y2="9"></line><line x1="9" x2="9" y1="21" y2="9"></line></svg></div>
 <span class="service-index">05</span>
 </div>
 <h3>Website Design &amp; CRO</h3>
@@ -2890,7 +3012,7 @@
 <div class="service-card">
 <div>
 <div class="service-card-top">
-<div class="service-icon">📊</div>
+<div class="service-icon"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg></div>
 <span class="service-index">06</span>
 </div>
 <h3>Analytics &amp; Growth Strategy</h3>
@@ -2923,7 +3045,7 @@
 <!-- Case 1 -->
 <div class="case-card" onclick="openLightbox('KIMS Education Institute', 'Education Institute SEO &amp; Traffic Growth', 'Rankings stalled outside top 30 for major Lahore educational keywords, restricting direct applicant volume.', 'Pillar-cluster content restructuring, elimination of duplicate pagination, and localized entity schema markup.', '+240% Organic Applicants · #1 Google Position in Lahore')">
 <div class="case-img-wrap">
-<img alt="KIMS Education Institute Case Study" class="case-img" decoding="async" height="524" loading="lazy" src="images/Education%20platfrom%20in%20lahore.png" width="1577"/>
+<img alt="KIMS Education Institute Case Study" class="case-img" decoding="async" height="524" loading="lazy" src="images/education-platform-lahore.webp" width="1577"/>
 <span class="case-badge-pill">Education SEO</span>
 </div>
 <div class="case-card-body">
@@ -2940,7 +3062,7 @@
 <!-- Case 2 -->
 <div class="case-card" onclick="openLightbox('Euro Immigration Consultancy', 'Lead-Generation &amp; Local Map Dominance', 'Consultancy was heavily reliant on unpredictable word-of-mouth with zero direct digital search capture.', 'Local citation cleanup, Google Business Profile optimization, and high-intent student visa search PPC.', '+380% Qualified Consultation Inquiries · #1 Suburb 3-Pack')">
 <div class="case-img-wrap">
-<img alt="Euro Immigration Case Study" class="case-img" decoding="async" height="523" loading="lazy" src="images/Visa%20Consutlacny%20in%20Karachi.png" width="1561"/>
+<img alt="Euro Immigration Case Study" class="case-img" decoding="async" height="523" loading="lazy" src="images/visa-consultancy-karachi.webp" width="1561"/>
 <span class="case-badge-pill">Lead Generation</span>
 </div>
 <div class="case-card-body">
@@ -2957,7 +3079,7 @@
 <!-- Case 3 -->
 <div class="case-card" onclick="openLightbox('Navid Saqib Corporate Advisory', 'Authority Branding &amp; Organic Visibility', 'High-end consulting services lacked visibility for high-ticket commercial legal and compliance terms.', 'Built C-suite executive content clusters, E-E-A-T author credentials, and Knowledge Graph schema.', '10x Google Visibility · #1–#3 Positions for Commercial Terms')">
 <div class="case-img-wrap">
-<img alt="Navid Saqib Corporate Advisory Case Study" class="case-img" decoding="async" height="521" loading="lazy" src="images/School%20Website.png" width="1564"/>
+<img alt="Navid Saqib Corporate Advisory Case Study" class="case-img" decoding="async" height="521" loading="lazy" src="images/school-website.webp" width="1564"/>
 <span class="case-badge-pill">Organic Traffic</span>
 </div>
 <div class="case-card-body">
@@ -2974,7 +3096,7 @@
 <!-- Case 4 -->
 <div class="case-card" onclick="openLightbox('Modest Apparel E-Commerce', 'Website Conversion Optimization &amp; ROAS Scaling', 'High bounce rates on mobile product categories and subpar organic return on ad spend.', 'Implemented faceted navigation fixes, mobile checkout simplification, and Product JSON-LD.', '+310% Organic Revenue · 5.2x Blended ROAS on Paid Media')">
 <div class="case-img-wrap">
-<img alt="E-Commerce Fashion CRO Case Study" class="case-img" decoding="async" height="527" loading="lazy" src="images/Local%20ecommeces.png" width="1563"/>
+<img alt="E-Commerce Fashion CRO Case Study" class="case-img" decoding="async" height="527" loading="lazy" src="images/local-ecommerce.webp" width="1563"/>
 <span class="case-badge-pill">Conversion CRO</span>
 </div>
 <div class="case-card-body">
@@ -3121,22 +3243,22 @@
         </p>
 <div class="why-cards-grid">
 <div class="why-card">
-<div class="why-icon">📊</div>
+<div class="why-icon"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><line x1="18" x2="18" y1="20" y2="10"></line><line x1="12" x2="12" y1="20" y2="4"></line><line x1="6" x2="6" y1="20" y2="14"></line></svg></div>
 <h3>Data-Driven Decisions</h3>
 <p>Every tactic is justified with mathematical evidence from Google Search Console, GA4 analytics, and competitive intelligence.</p>
 </div>
 <div class="why-card">
-<div class="why-icon">🎯</div>
+<div class="why-icon"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><circle cx="12" cy="12" r="9"></circle><circle cx="12" cy="12" r="5"></circle><circle cx="12" cy="12" r="1"></circle></svg></div>
 <h3>Customized Strategies</h3>
 <p>No cookie-cutter packages. Every growth plan is engineered specifically around your niche, market rivals, and economics.</p>
 </div>
 <div class="why-card">
-<div class="why-icon">🔍</div>
+<div class="why-icon"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12Z"></path><circle cx="12" cy="12" r="3"></circle></svg></div>
 <h3>Transparent Reporting</h3>
 <p>Access clean, live dashboards tracking real leads, keyword movements, and exact actions completed without jargon.</p>
 </div>
 <div class="why-card">
-<div class="why-icon">📈</div>
+<div class="why-icon"><svg aria-hidden="true" fill="none" height="26" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="26"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"></polyline><polyline points="16 7 22 7 22 13"></polyline></svg></div>
 <h3>Measurable Goals</h3>
 <p>I measure success by inquiries, booked discovery meetings, and bottom-line revenue rather than unhelpful vanity metrics.</p>
 </div>
@@ -3400,6 +3522,60 @@
 </div>
 </section>
 <!-- ==========================================================================
+       13. FREQUENTLY ASKED QUESTIONS (FAQ ACCORDION)
+       ========================================================================== -->
+<section class="section-light" id="faq" style="padding: 96px 0;">
+<div class="container">
+<div style="text-align: center; max-width: 680px; margin: 0 auto 48px;">
+<span class="eyebrow-light">FREQUENTLY ASKED QUESTIONS</span>
+<h2 class="section-title-light">
+Got Questions About <span class="text-orange">SEO Growth?</span>
+</h2>
+<p class="section-subtitle-light" style="margin: 0 auto;">
+Clear, transparent answers about timelines, strategy, deliverables, and how I help businesses rank and convert.
+</p>
+</div>
+<div class="faq-container-narrow">
+<details class="faq-details-item" open="">
+<summary class="faq-summary">How soon can my business expect to see organic traffic results?</summary>
+<div class="faq-content-inner">
+SEO is a compounding organic growth asset. For most established domains, technical cleanups and quick-win keyword optimizations produce measurable traction within 60 to 90 days. For highly competitive niches or newer domains, sustained authority building and top-ranking lead generation typically mature over 4 to 6 months of systematic execution.
+</div>
+</details>
+<details class="faq-details-item">
+<summary class="faq-summary">What is your SEO process for Lahore and Pakistani businesses?</summary>
+<div class="faq-content-inner">
+My strategy follows a verified 5-phase framework: (1) Full Technical &amp; Core Web Vitals Audit, (2) Competitor Gap &amp; High-Intent Keyword Intelligence, (3) On-Page Architecture &amp; Semantic Content Restructuring, (4) Local Map Pack (Google Business Profile) Dominance, and (5) Authoritative Outreach with Transparent Monthly GSC Reporting.
+</div>
+</details>
+<details class="faq-details-item">
+<summary class="faq-summary">Do you offer guaranteed #1 Google rankings?</summary>
+<div class="faq-content-inner">
+No ethical SEO consultant can guarantee a specific #1 spot because Google's algorithm evaluates hundreds of live variables and competitor actions. What I do guarantee is verified white-hat methodologies, transparent weekly/monthly deliverables, zero black-hat risks, and a relentless focus on qualified organic leads that impact your bottom line.
+</div>
+</details>
+<details class="faq-details-item">
+<summary class="faq-summary">Why hire an independent SEO consultant instead of an agency?</summary>
+<div class="faq-content-inner">
+When you hire an agency, your account is often handed off to junior interns while you pay for corporate overhead. Working directly with me gives you 1-on-1 strategic consultation, direct WhatsApp access, senior-level technical execution, and customized growth plans tailored specifically to your business goals.
+</div>
+</details>
+<details class="faq-details-item">
+<summary class="faq-summary">How do you prepare websites for Google AI Overviews &amp; Perplexity (GEO/AEO)?</summary>
+<div class="faq-content-inner">
+Modern SEO requires Answer Engine Optimization (AEO) and Generative Engine Optimization (GEO). I structure your content into direct entity-based answers, add robust Schema.org Knowledge Graph markup, optimize for conversational queries, and build verifiable digital citations so AI engines quote your brand as a primary authoritative source.
+</div>
+</details>
+<details class="faq-details-item">
+<summary class="faq-summary">What do your monthly SEO consulting packages include?</summary>
+<div class="faq-content-inner">
+Every engagement includes continuous technical health monitoring, indexation management, on-page optimization, localized keyword ranking tracking, high-intent landing page conversion recommendations, and a transparent video-walkthrough monthly report reviewing real Google Search Console data.
+</div>
+</details>
+</div>
+</div>
+</section>
+<!-- ==========================================================================
        13. FINAL CTA BANNER (BLACK 2-COL WITH ORANGE GLOW)
        ========================================================================== -->
 <section class="section-dark" style="padding: 60px 0;">
@@ -3439,21 +3615,21 @@
             </p>
 <div class="contact-direct-items">
 <div class="contact-direct-item">
-<div class="contact-icon-box">✉️</div>
+<div class="contact-icon-box"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><rect height="16" rx="2" width="20" x="2" y="4"></rect><path d="m22 7-10 6L2 7"></path></svg></div>
 <div class="contact-item-text">
 <span>Direct Email</span>
-<a href="mailto:info@seowithibrar.com">info@seowithibrar.com</a>
+<a href="mailto:seowithibrar@gmail.com">seowithibrar@gmail.com</a>
 </div>
 </div>
 <div class="contact-direct-item">
-<div class="contact-icon-box">💬</div>
+<div class="contact-icon-box"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg></div>
 <div class="contact-item-text">
 <span>WhatsApp / Phone</span>
 <a href="https://wa.me/923174835008" rel="noopener noreferrer" target="_blank">+92 317 4835008</a>
 </div>
 </div>
 <div class="contact-direct-item">
-<div class="contact-icon-box">📍</div>
+<div class="contact-icon-box"><svg aria-hidden="true" fill="none" height="20" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" viewbox="0 0 24 24" width="20"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"></path><circle cx="12" cy="10" r="3"></circle></svg></div>
 <div class="contact-item-text">
 <span>Location</span>
 <p>Lahore, Punjab, Pakistan</p>
@@ -3501,6 +3677,7 @@
 <label for="contactDetails">Project Details &amp; Objectives *</label>
 <textarea class="form-control" id="contactDetails" placeholder="Tell me about your current website traffic, target audience, and primary revenue goals..." required=""></textarea>
 </div>
+<input autocomplete="off" name="_honey" style="display: none;" tabindex="-1" type="text"/>
 <button class="btn btn-orange" style="width: 100%;" type="submit">SEND MESSAGE</button>
 <div class="form-msg-status" id="formStatusMsg"></div>
 </form>
@@ -3517,14 +3694,14 @@
 <div class="footer-grid">
 <!-- Col 1: Brand & Bio -->
 <div>
-<a class="brand-logo" href="index.html" style="margin-bottom: 20px; display: inline-block;">
-<img alt="SEO With Ibrar" decoding="async" height="350" loading="lazy" src="images/logo-full.png" style="height: 42px; width: auto;" width="997"/>
+<a class="brand-logo" href="/" style="margin-bottom: 20px; display: inline-block;">
+<img alt="SEO With Ibrar" decoding="async" height="350" loading="lazy" src="images/logo-full.webp" style="height: 42px; width: auto;" width="997"/>
 </a>
 <p style="color: rgba(255, 255, 255, 0.55); font-size: 13.5px; line-height: 1.7; margin-bottom: 24px; max-width: 320px;">
             Senior Digital Marketing &amp; SEO Expert helping ambitious businesses dominate search engine rankings, attract high-intent organic traffic, and scale revenue profitably.
           </p>
 <div style="display: flex; gap: 14px; align-items: center;">
-<a aria-label="LinkedIn Profile" class="footer-social-btn" href="https://pk.linkedin.com/in/seowithibrar" rel="noopener noreferrer" target="_blank">
+<a aria-label="LinkedIn Profile" class="footer-social-btn" href="https://www.linkedin.com/in/seowithibrar/" rel="noopener noreferrer" target="_blank">
 <svg fill="currentColor" height="16" viewbox="0 0 24 24" width="16"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
 </a>
 <a aria-label="YouTube Channel" class="footer-social-btn" href="https://www.youtube.com/@seowithibrar/videos" rel="noopener noreferrer" target="_blank">
@@ -3536,29 +3713,29 @@
 <div>
 <div class="footer-col-header">QUICK LINKS</div>
 <div class="footer-links-col">
-<a href="index.html">Home</a>
-<a href="about.html">About Ibrar</a>
-<a href="index.html#portfolio">Portfolio</a>
-<a href="index.html#results">GSC Case Studies</a>
-<a href="blog.html">SEO Blog &amp; Guides</a>
-<a href="contact.html">Contact Support</a>
+<a href="/">Home</a>
+<a href="/about">About Ibrar</a>
+<a href="#portfolio">Portfolio</a>
+<a href="#results">GSC Case Studies</a>
+<a href="/blog">SEO Blog &amp; Guides</a>
+<a href="/contact">Contact Support</a>
 </div>
 </div>
 <!-- Col 3: Services -->
 <div>
 <div class="footer-col-header">OUR SERVICES</div>
 <div class="footer-links-col">
-<a href="seo-services-islamabad.html">SEO Services Islamabad</a>
-<a href="seo-services-karachi.html">SEO Services Karachi</a>
-<a href="seo-services-lahore.html">SEO Services Lahore</a>
-<a href="seo-services-visa-consultancy-karachi.html">Visa SEO Karachi</a>
-<a href="seo-services-visa-consultancy.html">Visa Consultancy SEO</a>
-<a href="seo-services-pakistan.html">SEO Services Pakistan</a>
-<a href="seo-services-education.html">Education Institutes SEO</a>
-<a href="wordpress-design-services.html">WordPress Solutions</a>
-<a href="wordpress-design-services-for-visa-consultancy.html">WordPress Visa Portals</a>
-<a href="wordpress-design-services-for-education.html">WordPress Education Portals</a>
-<a href="contact.html">Free Consultation</a>
+<a href="/seo-services-islamabad">SEO Services Islamabad</a>
+<a href="/seo-services-karachi">SEO Services Karachi</a>
+<a href="/seo-services-lahore">SEO Services Lahore</a>
+<a href="/seo-services-visa-consultancy-karachi">Visa SEO Karachi</a>
+<a href="/seo-services-visa-consultancy">Visa Consultancy SEO</a>
+<a href="/seo-services-pakistan">SEO Services Pakistan</a>
+<a href="/seo-services-education">Education Institutes SEO</a>
+<a href="/wordpress-design-services">WordPress Solutions</a>
+<a href="/wordpress-design-services-for-visa-consultancy">WordPress Visa Portals</a>
+<a href="/wordpress-design-services-for-education">WordPress Education Portals</a>
+<a href="/contact">Free Consultation</a>
 </div>
 </div>
 <!-- Col 4: Quality & Support -->
@@ -3601,15 +3778,15 @@
 <span class="eyebrow-dark" id="modalTag">CASE STUDY</span>
 <h3 id="modalTitle" style="font-family: var(--font-heading); font-size: 24px; font-weight: 800; margin-bottom: 16px;">Case Title</h3>
 <div style="background: rgba(255, 255, 255, 0.04); border-radius: var(--radius-xs); padding: 16px; margin-bottom: 16px;">
-<h5 style="color: var(--accent-orange); font-size: 12px; text-transform: uppercase; margin-bottom: 6px;">The Challenge:</h5>
+<h4 style="color: var(--accent-orange); font-size: 12px; text-transform: uppercase; margin-bottom: 6px;">The Challenge:</h4>
 <p id="modalChallenge" style="font-size: 13px; color: #CCCCCC; line-height: 1.5;"></p>
 </div>
 <div style="background: rgba(255, 255, 255, 0.04); border-radius: var(--radius-xs); padding: 16px; margin-bottom: 16px;">
-<h5 style="color: #FFFFFF; font-size: 12px; text-transform: uppercase; margin-bottom: 6px;">Strategy Executed:</h5>
+<h4 style="color: #FFFFFF; font-size: 12px; text-transform: uppercase; margin-bottom: 6px;">Strategy Executed:</h4>
 <p id="modalStrategy" style="font-size: 13px; color: #CCCCCC; line-height: 1.5;"></p>
 </div>
 <div style="background: rgba(163, 234, 67, 0.12); border: 1px solid rgba(163, 234, 67, 0.3); border-radius: var(--radius-xs); padding: 16px; margin-bottom: 24px;">
-<h5 style="color: var(--accent-orange); font-size: 12px; text-transform: uppercase; margin-bottom: 4px;">Verified Outcome:</h5>
+<h4 style="color: var(--accent-orange); font-size: 12px; text-transform: uppercase; margin-bottom: 4px;">Verified Outcome:</h4>
 <p id="modalOutcome" style="font-size: 14px; font-weight: 700; color: #FFFFFF;"></p>
 </div>
 <a class="btn btn-orange" href="#open-consult" onclick="closeLightbox(); openConsultModal(event);" style="width: 100%;">DISCUSS SIMILAR RESULTS FOR YOUR SITE</a>
@@ -3833,18 +4010,50 @@
     // Contact Form Handler with Validation
     function handleFormSubmit(e) {
       e.preventDefault();
+      const form = e.target;
       const status = document.getElementById('formStatusMsg');
-      const name = document.getElementById('contactName').value;
-      const email = document.getElementById('contactEmail').value;
+      const btn = form.querySelector('button[type="submit"]');
+      const name = document.getElementById('contactName').value.trim();
+      const email = document.getElementById('contactEmail').value.trim();
       const service = document.getElementById('contactService').value;
+      const fields = {
+        'Name': name,
+        'Email': email,
+        'Website': document.getElementById('contactWebsite').value.trim(),
+        'Service': service,
+        'Details': document.getElementById('contactDetails').value.trim()
+      };
 
-      status.textContent = `Thank you, ${name}! Your inquiry for ${service} has been received. Ibrar will reply to ${email} within 24 hours.`;
-      status.className = 'form-msg-status success';
+      // Bots fill the hidden honeypot field; humans never see it
+      if (form._honey && form._honey.value) return;
 
-      // Reset fields
-      e.target.reset();
+      const originalBtnText = btn.textContent;
+      btn.textContent = 'SENDING...';
+      btn.disabled = true;
+
+      window.submitLead(fields).then((delivered) => {
+        status.replaceChildren();
+        if (delivered) {
+          status.textContent = `Thank you, ${name}! Your inquiry for ${service} has been received. Ibrar will reply to ${email} within 24 hours.`;
+          status.className = 'form-msg-status success';
+          form.reset();
+        } else {
+          status.className = 'form-msg-status error';
+          status.append('Sorry, your message could not be sent. ');
+          const link = document.createElement('a');
+          link.href = window.whatsAppLeadUrl(fields);
+          link.target = '_blank';
+          link.rel = 'noopener noreferrer';
+          link.textContent = 'Send it on WhatsApp instead →';
+          status.append(link);
+        }
+      }).finally(() => {
+        btn.textContent = originalBtnText;
+        btn.disabled = false;
+      });
     }
   </script>
+<script defer="" src="lead-form.js"></script>
 <!-- Consultation Popup Modal Sitewide -->
 <script defer="" src="consult-modal.js"></script>
 <script defer="" src="sticky-banner.js"></script>

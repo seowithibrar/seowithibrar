@@ -58,7 +58,7 @@
 
       <!-- Minimized Floating Trigger Bubble -->
       <button type="button" class="seo-sticky-bubble" id="seoStickyBubble" aria-label="Expand Free SEO Review Bar">
-        <img src="images/ibrar-consult-avatar.webp" alt="Free Review" class="seo-bubble-avatar-img" width="38" height="38" loading="lazy" onerror="this.src='images/ibrar-consult-avatar.png'">
+        <img src="images/thumbs/ibrar-consult-avatar-76.webp" alt="Free Review" class="seo-bubble-avatar-img" width="38" height="38" loading="lazy" onerror="this.src='images/ibrar-consult-avatar.png'">
         <div class="seo-bubble-text">
           <span class="seo-bubble-kicker">FREE SEO REVIEW</span>
           <span class="seo-bubble-title">Book Free Call →</span>
@@ -100,9 +100,48 @@
     }
   };
 
+  // Keep the bar out of the way: hidden over the hero, and whenever a form,
+  // the contact section or the footer is on screen (it would cover them).
+  function initVisibilityRules() {
+    const banner = document.getElementById('seoStickyBannerWrap');
+    const bubble = document.getElementById('seoStickyBubble');
+    const blockers = document.querySelectorAll('form, footer, .site-footer, #contact');
+    const visibleBlockers = new Set();
+    let pastHero = false;
+
+    function update() {
+      const suppressed = !pastHero || visibleBlockers.size > 0;
+      banner.classList.toggle('is-offscreen', suppressed);
+      bubble.classList.toggle('is-suppressed', suppressed);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const io = new IntersectionObserver(function(entries) {
+        entries.forEach(function(entry) {
+          if (entry.isIntersecting) visibleBlockers.add(entry.target);
+          else visibleBlockers.delete(entry.target);
+        });
+        update();
+      });
+      blockers.forEach(function(el) { io.observe(el); });
+    }
+
+    function onScroll() {
+      const next = window.scrollY > window.innerHeight * 0.6;
+      if (next !== pastHero) { pastHero = next; update(); }
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+    update();
+  }
+
   function initStickyBanner() {
+    // The contact page is already the conversion point; the bar would only cover its form
+    if (/\/contact(\.html)?\/?$/.test(window.location.pathname)) return;
+
     ensureStyles();
     ensureBannerDOM();
+    initVisibilityRules();
 
     // Check if previously minimized in this session
     try {
@@ -139,7 +178,7 @@
           window.openConsultModal(e);
         } else {
           // Fallback if modal script not ready: jump to contact
-          window.location.href = 'contact.html';
+          window.location.href = '/contact';
         }
       });
     }

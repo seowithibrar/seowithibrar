@@ -1,0 +1,203 @@
+/* ==========================================================================
+   SITE-WIDE UX LAYER
+   Loaded last on every page. Holds shared accessibility, readability,
+   touch-target and mobile-rhythm rules so they don't need repeating in
+   each page's inline styles.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Keyboard focus + anchor offsets
+   -------------------------------------------------------------------------- */
+html {
+  scroll-padding-top: 96px; /* anchor jumps clear the fixed header */
+}
+
+:focus-visible {
+  outline: 2px solid #A3EA43 !important;
+  outline-offset: 3px !important;
+  border-radius: 4px;
+}
+
+/* light sections: lime has low contrast on white, use dark green ring */
+.section-light :focus-visible,
+.section-light-alt :focus-visible,
+.faq-details-item :focus-visible,
+form :focus-visible {
+  outline-color: #3F6212 !important;
+}
+
+.skip-link {
+  position: absolute;
+  left: 16px;
+  top: -100px;
+  z-index: 100000;
+  background: #A3EA43;
+  color: #080808;
+  font-weight: 800;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 12px;
+}
+
+/* --------------------------------------------------------------------------
+   2. Reduced motion
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   3. Readability floor
+   Content labels never render below 12px; decorative dashboard / phone
+   mockups never below 11px.
+   -------------------------------------------------------------------------- */
+.seo-sticky-kicker, .proof-stat-label, .footer-whitehat-box > div,
+.trust-stat-item > p, .ai-badge-tag, .proof-verified-pill, .bp-spotlight-crown,
+.blog-card-badge, .case-badge-pill, .bp-related-category, .bp-sidebar-cta-label,
+.eyebrow-pill, .eyebrow-pill-light, .eyebrow-pill-dark, .eyebrow-dark, .eyebrow-light,
+.social-connect-label, .v-header-title, .v-stat-tile > span, .google-badge,
+.google-badge > span, .footer-col-header, .pill-badge, .form-header-badge,
+.hero-availability-pill > span, .about-exp-text, .perf-metric-title, .t-role,
+.skill-level-tag, .contact-item-text > span, .bento-badge-role, .edu-photo-pill,
+.lahore-photo-pill, .visa-photo-pill, .wp-photo-pill, .sub, .ai-badge-title,
+.proof-result-badge-top, .proof-category-tag, #modalTag, #modalCategory,
+.google-badge-pill, .service-num, .proof-badge-overlay, .stat-caption,
+.proof-modal-tag, .bp-hero-label > span, .bp-digest-badge > span, .bp-digest-status,
+.bp-digest-label, .bp-section-label, .bp-top3-tag, .bp-filter-count,
+.bp-expert-section-label, .bp-expert-bestfor-label, .bp-editor-note-label,
+.bp-decision-type, .bp-authority-label, .bp-author-box-label, .wp-project-badge-top,
+.wp-project-category, .synergy-formula-badge, .form-guarantee-note,
+.social-proof-score, .about-metrics-label, .about-metrics-tag, .btn-view-proof,
+.t-author-role, .feature-card-cta, .hub-sub, .bp-trust-badge, .bp-expert-tag,
+.btn-view-project, .perf-metric-badge, .seo-bubble-kicker,
+.author-meta-block span, .bp-table th,
+span[style*="font-size: 11px"], a[style*="font-size: 11px"], div[style*="font-size: 11px"] {
+  font-size: 12px !important;
+}
+
+.phone-screen-tag, .phone-screen-stat, .dash-tile-label, .dash-tile-growth,
+.dash-badge, .dash-chart-growth-tag, .dash-chart-title, .lbl, .bento-balance-label,
+.bento-balance-meta > span, .bento-trend-badge, .bento-trend-label, .avatar-more,
+.seo-sticky-btn > span {
+  font-size: 11px !important;
+}
+
+/* secondary body copy on dark backgrounds: lift contrast slightly */
+.site-footer p,
+.footer-links-col a {
+  color: rgba(255, 255, 255, 0.72);
+}
+
+/* --------------------------------------------------------------------------
+   4. Touch targets (44px hit area without changing visual layout)
+   Inline / short links get invisible vertical padding offset by an equal
+   negative margin, so the box grows but surrounding layout does not move.
+   -------------------------------------------------------------------------- */
+.service-action-link, .blog-card-cta, .bp-related-link, .bp-table-link,
+.bp-author-box-link, .channel-link, .quick-link-item, .footer-whitehat-box > a,
+.contact-item-text > a, a.top-link, .breadcrumbs > a, .bp-breadcrumbs-inner > a,
+.pillar-title > a, .service-block-title > a, .bp-toc-mobile-content a,
+a[href*="maps.app.goo.gl"], a[href*="linkedin.com"][style], a[href*="youtube.com"][style] {
+  padding-top: 11px;
+  padding-bottom: 11px;
+  margin-top: -11px;
+  margin-bottom: -11px;
+}
+
+.footer-social-btn {
+  width: 44px !important;
+  height: 44px !important;
+}
+
+.mobile-toggle {
+  min-width: 44px;
+  min-height: 44px;
+}
+
+.seo-sticky-toggle-btn {
+  width: 34px !important;
+  height: 34px !important;
+}
+
+.faq-summary,
+.bp-filter-btn,
+.filter-btn {
+  min-height: 44px;
+}
+
+/* --------------------------------------------------------------------------
+   5. Homepage icon polish (SVG icons replaced emoji)
+   -------------------------------------------------------------------------- */
+.service-icon {
+  color: #3F6212 !important;
+  background: #F1FBE4 !important;
+  border: 1px solid #DCF5BC;
+}
+.contact-icon-box {
+  color: #3F6212 !important;
+  background: #F1FBE4 !important;
+}
+.why-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: rgba(163, 234, 67, 0.1);
+  border: 1px solid rgba(163, 234, 67, 0.22);
+}
+
+/* --------------------------------------------------------------------------
+   6. Mobile rhythm: tighter section spacing, compact footer
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  section.section-light, section.section-light-alt, section.section-dark,
+  section.section-dark-secondary, section.pak-section-base, section.pak-section-dark,
+  section.wordpress-promo-section, section.edu-final-cta, section.proof-showcase-section,
+  section.contact-cta-section,
+  section[class*="islamabad-"]:not([class*="hero"]),
+  section[class*="karachi-"]:not([class*="hero"]) {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  /* footer: brand + trust box full width, the two link lists side by side */
+  .footer-grid {
+    grid-template-columns: 1fr 1fr !important;
+    column-gap: 20px !important;
+    row-gap: 32px !important;
+  }
+  .footer-grid > :first-child,
+  .footer-grid > :last-child {
+    grid-column: 1 / -1;
+  }
+  .footer-links-col {
+    gap: 0 !important;
+  }
+  .footer-links-col a {
+    display: block;
+    padding: 11px 0;
+    line-height: 1.35;
+  }
+  .footer-links-col a:hover {
+    transform: none;
+  }
+
+  /* decorative phone-mockup showcase adds ~800px of scrolling on phones */
+  #showcase {
+    display: none;
+  }
+}
